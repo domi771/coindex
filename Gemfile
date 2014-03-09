@@ -60,6 +60,7 @@ gem 'browser'
 gem 'introjs-rails'
 gem 'rbtree'
 gem 'liability-proof', '0.0.8'
+gem 'money-tree'
 
 group :development, :test do
   gem 'factory_girl_rails'
@@ -74,6 +75,7 @@ group :development, :test do
   gem 'timecop'
   gem 'dotenv-rails'
   gem 'rspec-rails'
+  gem 'debugger'
 end
 
 group :test do
