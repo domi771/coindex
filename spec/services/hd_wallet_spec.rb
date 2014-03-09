@@ -20,4 +20,14 @@ describe HDWallet do
       end
     end
   end
+
+  describe '#address_at' do
+    it 'generate address at the specified index at 1 level down from the root' do
+      address = wallet.address_at(42)
+
+      subnode = wallet.root_node.subnode(42)
+      expect(subnode.depth).to eq(wallet.root_node.depth + 1)
+      expect(address).to eq(subnode.to_address)
+    end
+  end
 end

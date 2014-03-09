@@ -9,4 +9,7 @@ class HDWallet
     @root_node = root_node
   end
 
+  def address_at i
+    root_node.subnode(i).to_address
+  end
 end
