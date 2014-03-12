@@ -25,7 +25,7 @@ class Account < ActiveRecord::Base
   FUNS = {:unlock_funds => 1, :lock_funds => 2, :plus_funds => 3, :sub_funds => 4, :unlock_and_sub_funds => 5}
 
   belongs_to :member
-  has_many :payment_addresses
+  has_many :payment_addresses, -> { order('id ASC') }
   has_many :withdraw_addresses
   has_many :versions, class_name: "::AccountVersion"
 
@@ -33,6 +33,15 @@ class Account < ActiveRecord::Base
     wallet = Currency.coin_wallets[self.currency]
     address = wallet.next_address
     self.payment_addresses.create(address: address, address_index: wallet.last_index, currency: self.currency)
+  end
+
+  def payment_address
+    last_address = payment_addresses.last
+    if last_address && last_address.transactions.blank?
+      return last_address
+    end
+
+    gen_payment_address
   end
 
   def self.after(*names)

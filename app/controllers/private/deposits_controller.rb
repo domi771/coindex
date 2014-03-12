@@ -7,8 +7,7 @@ module Private
       redirect_to root_path unless Currency.coins.keys.include?(currency)
 
       @account = current_user.get_account(currency)
-      @account.gen_payment_address if @account.payment_addresses.empty?
-      @address = @account.payment_addresses.using
+      @address = @account.payment_address
     end
 
     def bank
