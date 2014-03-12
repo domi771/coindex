@@ -3,7 +3,9 @@ defaults: &defaults
     cny: 1
     btc: 2
   coins:
-    btc: http://username:password@127.0.0.1:18332
+    btc:
+      rpc: http://username:password@127.0.0.1:18332
+      hdwallet: xpub6AhiyLjMpHPdCo2UXZPtjhjyQkh4JDYBYGParSbcg2okbzV7R6bTsBei3Z9kPHpQ1n6cXB1FmakgfXzvoCUpN1sWrwYjAa7oC1Yd5kdjnev
 
 development:
   <<: *defaults

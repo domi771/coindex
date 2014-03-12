@@ -5,7 +5,13 @@ class Currency < Settingslogic
   end
 
   def self.coin_urls
-    @coins ||= self.coins.symbolize_keys
+    @coins ||= extract_coin_property :rpc
+  end
+
+  def self.coin_wallets
+    @wallets ||= extract_coin_property(:hdwallet) do |hex|
+      HDWallet.new hex
+    end
   end
 
   def self.codes
@@ -16,4 +22,16 @@ class Currency < Settingslogic
   source "#{Rails.root}/config/currency.yml"
   namespace Rails.env
   suppress_errors Rails.env.production?
+
+  private
+
+  def extract_coin_property(property)
+    HashWithIndifferentAccess[
+      self.coins.map do |k, v|
+        value = v[property.to_s]
+        value = yield value if block_given?
+        [k, value]
+      end
+    ]
+  end
 end
