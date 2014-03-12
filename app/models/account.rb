@@ -30,8 +30,9 @@ class Account < ActiveRecord::Base
   has_many :versions, class_name: "::AccountVersion"
 
   def gen_payment_address
-    address = CoinRPC[self.currency].getnewaddress("payment")
-    self.payment_addresses.create(address: address, currency: self.currency)
+    wallet = Currency.coin_wallets[self.currency]
+    address = wallet.next_address
+    self.payment_addresses.create(address: address, address_index: wallet.last_index, currency: self.currency)
   end
 
   def self.after(*names)

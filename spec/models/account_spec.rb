@@ -204,4 +204,24 @@ describe Account do
       end
     end
   end
+
+  describe "gen_payment_address" do
+    let(:account) { create(:account_btc) }
+    let(:address) { Faker::Bitcoin.address }
+    let(:wallet) { Currency.coin_wallets[account.currency] }
+
+    it 'gets it from HD wallet' do
+      wallet.expects(:next_address).returns(address)
+      expect(account.gen_payment_address.address).to eq(address)
+    end
+
+    it 'stores the address with index and currency' do
+      payment_address = nil
+      expect {
+        payment_address = account.gen_payment_address
+      }.to change { PaymentAddress.max_address_index(account.currency) }.by(1)
+
+      expect(payment_address.address_index).to eq(wallet.last_index)
+    end
+  end
 end
