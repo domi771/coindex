@@ -215,16 +215,13 @@ describe Account do
       expect(account.gen_payment_address).to eq(address)
     end
 
-    it 'stores the address with index and currency' do
+    it 'declare ownership of the generated address' do
       payment_address = nil
       expect {
         payment_address = account.gen_payment_address
-      }.to change(PaymentAddress, :count).by(1)
+      }.to change(account.payment_addresses, :count).by(1)
 
-      expect(payment_address.currency).to eq(account.currency)
-
-      next_payment_address = HDWallet.next_address(account.currency_value)
-      expect(next_payment_address.address_index).to eq(payment_address.address_index + 1)
+      expect(payment_address.account).to eq account
     end
   end
 

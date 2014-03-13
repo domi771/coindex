@@ -56,4 +56,45 @@ describe HDWallet do
       expect(address).to eq(subnode.to_address)
     end
   end
+
+  describe '.next_address' do
+    let(:currency) { Currency.codes[:btc] }
+
+    it 'increment the next_index for the wallet' do
+      expect {
+        described_class.next_address(currency)
+      }.to change{ HDWallet.where(currency: currency).last.next_index }.by(1)
+    end
+
+    it 'stores the address with index and currency' do
+      payment_address = nil
+      expect {
+        payment_address = described_class.next_address(currency)
+      }.to change(PaymentAddress, :count).by(1)
+
+      expect(payment_address.currency_value).to eq(currency)
+
+      next_payment_address = described_class.next_address(currency)
+      expect(next_payment_address.address_index).to eq(payment_address.address_index + 1)
+    end
+
+    context 'when there exists multiple wallets for the same currency' do
+      def create_wallet
+        HDWallet.create serialized_address: MoneyTree::Master.new.to_serialized_address, currency: currency
+      end
+
+      let(:wallet) { create_wallet }
+
+      before do
+        create_wallet
+        wallet
+      end
+
+      it 'uses the last created one' do
+        expect {
+          described_class.next_address(currency)
+        }.to change{ wallet.reload.next_index }.by(1)
+      end
+    end
+  end
 end
