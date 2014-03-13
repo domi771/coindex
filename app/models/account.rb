@@ -30,9 +30,11 @@ class Account < ActiveRecord::Base
   has_many :versions, class_name: "::AccountVersion"
 
   def gen_payment_address
-    wallet = Currency.coin_wallets[self.currency]
-    address = wallet.next_address
-    self.payment_addresses.create(address: address, address_index: wallet.last_index, currency: self.currency)
+    Account.transaction do
+      address = HDWallet.next_address(self.currency_value)
+      self.payment_addresses << address
+      address
+    end
   end
 
   def payment_address

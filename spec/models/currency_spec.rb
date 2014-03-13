@@ -13,12 +13,22 @@ describe Currency do
     end
   end
 
-  describe '.coin_wallets' do
-    it 'returns all available currency mapped to their respective deserialized wallet' do
-      wallet = Currency.coin_wallets[:btc]
-      expect(wallet).to be_a(HDWallet)
-      expect(wallet.currency).to eq(Currency.currencies.btc)
-      expect(wallet.keychain).to be_a(HDKeychain)
+  describe '.find_or_create_wallets_from_config' do
+    it 'does nothing if the wallet is found in database' do
+      wallet = HDWallet.create(serialized_address: Currency.coins.btc.hdwallet, currency: Currency.codes[:btc])
+
+      expect {
+        described_class.find_or_create_wallets_from_config
+      }.to_not change(HDWallet, :count)
+    end
+
+    it 'creates a wallet if the configured wallet is not found in database' do
+      expect {
+        described_class.find_or_create_wallets_from_config
+      }.to change(HDWallet, :count).by(1)
+
+      expect(HDWallet.last.serialized_address).to eq Currency.coins.btc.hdwallet
+      expect(HDWallet.last.currency_value).to eq Currency.codes[:btc]
     end
   end
 end

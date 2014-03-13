@@ -207,27 +207,30 @@ describe Account do
 
   describe "gen_payment_address" do
     let(:account) { create(:account_btc) }
-    let(:wallet) { Currency.coin_wallets[account.currency] }
+    before { Currency.find_or_create_wallets_from_config }
 
     it 'gets it from HD wallet' do
-      address = Faker::Bitcoin.address
-      wallet.expects(:next_address).returns(address)
-      expect(account.gen_payment_address.address).to eq(address)
+      address = create(:payment_address)
+      HDWallet.expects(:next_address).with(account.currency_value).returns(address)
+      expect(account.gen_payment_address).to eq(address)
     end
 
     it 'stores the address with index and currency' do
       payment_address = nil
       expect {
         payment_address = account.gen_payment_address
-      }.to change { PaymentAddress.max_address_index(account.currency) }.by(1)
+      }.to change(PaymentAddress, :count).by(1)
 
-      expect(payment_address.address_index).to eq(wallet.last_index)
+      expect(payment_address.currency).to eq(account.currency)
+
+      next_payment_address = HDWallet.next_address(account.currency_value)
+      expect(next_payment_address.address_index).to eq(payment_address.address_index + 1)
     end
   end
 
   describe "payment_address" do
     let(:account) { create(:account_btc) }
-    let(:wallet) { Currency.coin_wallets[account.currency] }
+    before { Currency.find_or_create_wallets_from_config }
 
     context 'when there is no address associated with the account' do
       it 'generates a payment address' do
