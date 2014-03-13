@@ -1,4 +1,4 @@
-class HDWallet
+class HDKeychain
   class RootNodeError < StandardError
     def initialize message
       super message << " For security, only a base58 serialized public node stripped of private key is allowed."

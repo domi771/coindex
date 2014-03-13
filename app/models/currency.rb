@@ -9,8 +9,10 @@ class Currency < Settingslogic
   end
 
   def self.coin_wallets
-    @wallets ||= extract_coin_property(:hdwallet) do |hex|
-      HDWallet.new hex
+    @wallets ||= extract_coin_property(:hdwallet) do |currency, hex|
+      wallet = HDWallet.wallet_where(serialized_address: hex, currency: currencies[currency])
+      wallet.keychain = HDKeychain.new hex
+      wallet
     end
   end
 
@@ -29,7 +31,7 @@ class Currency < Settingslogic
     HashWithIndifferentAccess[
       self.coins.map do |k, v|
         value = v[property.to_s]
-        value = yield value if block_given?
+        value = yield(k, value) if block_given?
         [k, value]
       end
     ]

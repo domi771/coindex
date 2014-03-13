@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312073557) do
+ActiveRecord::Schema.define(version: 20140312151825) do
 
   create_table "account_versions", force: true do |t|
     t.integer  "member_id"
@@ -86,6 +86,14 @@ ActiveRecord::Schema.define(version: 20140312073557) do
     t.string   "title"
     t.text     "body"
     t.boolean  "is_auth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hd_wallets", force: true do |t|
+    t.string   "serialized_address"
+    t.integer  "next_index",         default: 0
+    t.integer  "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
