@@ -16,7 +16,7 @@ class Currency < Settingslogic
   def self.find_or_create_wallets_from_config
     extract_coin_property(:hdwallet) do |currency, hex|
       query = { serialized_address: hex, currency: currencies[currency] }
-      HDWallet.where(query).first_or_create
+      HDWallet.where(query).first_or_create!
     end
   end
 
