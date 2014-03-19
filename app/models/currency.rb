@@ -26,7 +26,7 @@ class Currency < Settingslogic
 
   private
 
-  def extract_coin_property(property)
+  def self.extract_coin_property(property)
     HashWithIndifferentAccess[
       self.coins.map do |k, v|
         value = v[property.to_s]
