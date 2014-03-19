@@ -81,7 +81,13 @@ module ApplicationHelper
   end
 
   def btc_block_url(address)
-    CoinRPC[:btc].getinfo[:testnet] ? "http://testnet.btclook.com/addr/#{address}" : "https://blockchain.info/address/#{address}"
+    begin
+      is_testnet = CoinRPC[:btc].getinfo[:testnet]
+    rescue CoinRPC::ConnectionRefusedError
+      is_testnet = false
+    end
+
+    is_testnet ? "http://testnet.btclook.com/addr/#{address}" : "https://blockchain.info/address/#{address}"
   end
 
   def top_nav_link(link_text, link_path, link_icon, controllers: [])
