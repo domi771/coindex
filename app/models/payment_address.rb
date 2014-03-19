@@ -9,4 +9,8 @@ class PaymentAddress < ActiveRecord::Base
   scope :using, -> { last }
 
   validates_uniqueness_of :address
+
+  def used?
+    self.transactions.present?
+  end
 end

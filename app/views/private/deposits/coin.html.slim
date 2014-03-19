@@ -6,6 +6,8 @@ p
   h4 = t('.step-2')
   p = t('.send-coin')
   h4.text-info = @address.address
+  - if @address.used?
+    = link_to t('.refresh-address'), payment_addresses_path(currency: params[:currency]), method: :post, class: 'btn btn-primary refresh'
   == link_to_block(@address)
   .divider
     = t('.or')

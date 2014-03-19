@@ -72,6 +72,8 @@ Peatio::Application.routes.draw do
       resources :order_bids, :only => [:create]
       resources :order_asks, :only => [:create]
     end
+
+    resources :payment_addresses, :only => :create
   end
 
   get 'payment_transaction/:currency/:txid', to: 'payment_transaction#create'

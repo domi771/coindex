@@ -205,34 +205,34 @@ describe Account do
     end
   end
 
-  describe "gen_payment_address" do
+  describe "generate_payment_address" do
     let(:account) { create(:account_btc) }
     before { Currency.find_or_create_wallets_from_config }
 
     it 'gets it from HD wallet' do
       address = create(:payment_address)
       HDWallet.expects(:next_address).with(account.currency_value).returns(address)
-      expect(account.gen_payment_address).to eq(address)
+      expect(account.generate_payment_address).to eq(address)
     end
 
     it 'declare ownership of the generated address' do
       payment_address = nil
       expect {
-        payment_address = account.gen_payment_address
+        payment_address = account.generate_payment_address
       }.to change(account.payment_addresses, :count).by(1)
 
       expect(payment_address.account).to eq account
     end
   end
 
-  describe "payment_address" do
+  describe "next_payment_address" do
     let(:account) { create(:account_btc) }
     before { Currency.find_or_create_wallets_from_config }
 
     context 'when there is no address associated with the account' do
       it 'generates a payment address' do
         expect {
-          account.payment_address
+          account.next_payment_address
         }.to change(PaymentAddress, :count).by(1)
       end
     end
@@ -247,7 +247,7 @@ describe Account do
       it 'uses the last address if it does not have any transaction associated with it' do
         payment_address = nil
         expect {
-          payment_address = account.payment_address
+          payment_address = account.next_payment_address
         }.to_not change(PaymentAddress, :count).by(1)
 
         expect(payment_address).to eq(address)
@@ -256,8 +256,42 @@ describe Account do
       it 'generates a payment address if last address is used' do
         address.transactions << PaymentTransaction.new(address: address.address)
         expect {
-          account.payment_address
+          account.next_payment_address
         }.to change(PaymentAddress, :count).by(1)
+      end
+    end
+  end
+
+  describe "payment_address" do
+    let(:account) { create(:account_btc) }
+    before { Currency.find_or_create_wallets_from_config }
+
+    context 'when there is no address associated with the account' do
+      it 'generates a payment address' do
+        payment_address = nil
+        expect {
+          payment_address = account.payment_address
+        }.to change(PaymentAddress, :count).by(1)
+
+        expect(payment_address).to eq(PaymentAddress.last)
+      end
+    end
+
+    context 'when there are addresses associated with the account' do
+      let(:address) { create(:payment_address) }
+
+      before do
+        account.payment_addresses << address
+        address.transactions << PaymentTransaction.new(address: address.address)
+      end
+
+      it 'uses the last address' do
+        payment_address = nil
+        expect {
+          payment_address = account.payment_address
+        }.to_not change(PaymentAddress, :count).by(1)
+
+        expect(payment_address).to eq(address)
       end
     end
   end
