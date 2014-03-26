@@ -15,7 +15,7 @@ module Matching
       raise TradeExecutionError.new({ask: @ask, bid: @bid, price: @price, volume: @volume}) unless valid?
 
       ActiveRecord::Base.transaction do
-        lock_account!
+        lock_accounts!
 
         trade = Trade.create(ask_id: @ask.id, bid_id: @bid_id,
                              price: @price, volume: @volume,
@@ -38,12 +38,12 @@ module Matching
         @bid.price >= @price
     end
 
-    def lock_account!
-      @bid.hold_account.lock!
-      @ask.hold_account.lock!
+    def involved_accounts
+      Account.where(member_id: [@ask.member_id, @bid.member_id]).with_currency(*@market.currency_pair)
+    end
 
-      @bid.expect_account.lock!
-      @ask.expect_account.lock!
+    def lock_accounts!
+      involved_accounts.lock.to_a
     end
 
     def trend

@@ -31,6 +31,10 @@ class Market < ActiveYaml::Base
     Trade.latest_price(id.to_sym)
   end
 
+  def currency_pair
+    [ask['currency'], bid['currency']]
+  end
+
   def to_s
     id
   end
