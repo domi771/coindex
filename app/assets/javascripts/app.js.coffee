@@ -47,7 +47,12 @@ $ ->
   #   Pusher.log = (message) ->
   #     window.console && console.log(message)
 
-  pusher = new Pusher(gon.pusher_key, {encrypted: true})
+  if gon.pusher.host
+    Pusher.host     = gon.pusher.host
+    Pusher.ws_port  = gon.pusher.ws_port
+    Pusher.wss_port = gon.pusher.ws_port # the same as ws_port
+
+  pusher = new Pusher(gon.pusher.key, {encrypted: true, disableStats: true})
   pusher.connection.bind 'state_change', (state) ->
     if state.current is 'unavailable'
       $('#markets-show .pusher-unavailable').removeClass('hide')

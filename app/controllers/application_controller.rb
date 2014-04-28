@@ -11,7 +11,11 @@ class ApplicationController < ActionController::Base
     gon.env = Rails.env
     gon.local = I18n.locale
     gon.market = Market.find(latest_market).attributes
-    gon.pusher_key = ENV["PUSHER_KEY"]
+    gon.pusher = {
+      key: ENV['PUSHER_KEY'],
+      host: ENV['PUSHER_HOST'],
+      ws_port: ENV['PUSHER_WS_PORT']
+    }
 
     gon.clipboard = {
       :click => I18n.t('actions.clipboard.click'),

@@ -50,6 +50,11 @@ defaults: &defaults
   PUSHER_KEY: YOUR_PUSHER_KEY
   PUSHER_SECRET: YOUR_PUSHER_SECRET
 
+  # If you use self hosted pusher sever
+  #PUSHER_HOST: peatio.dev
+  #PUSHER_PORT: 4567
+  #PUSHER_WS_PORT: 8080
+
   # twilio setting
   # --------------------------------------------------------------
   # https://github.com/twilio/twilio-ruby
