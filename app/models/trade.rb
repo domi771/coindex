@@ -18,7 +18,7 @@ class Trade < ActiveRecord::Base
   class << self
     def latest_price(currency)
       with_currency(currency).order(:id).reverse_order
-        .limit(1).first.try(:price) || "0.0".to_d
+        .limit(1).first.try(:price) || ZERO
     end
 
     def for_member(currency, member, options={})

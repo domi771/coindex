@@ -43,6 +43,12 @@ html lang="en"
               - if can? :stat, Member
                 li class='#{check_active(Member)}'
                   a href='#{admin_statistic_members_path}' = Member.model_name.human
+              - if can? :stat, Trade
+                li class='#{check_active(Trade)}'
+                  a href='#{admin_statistic_trades_path}' = Trade.model_name.human
+              - if can? :stat, Order
+                li class='#{check_active(Order)}'
+                  a href='#{admin_statistic_orders_path}' = Order.model_name.human
         ul.nav.navbar-nav.navbar-right
           p.navbar-text = current_user.email
           li: a href="#{main_app.root_path}" = t('actions.back')

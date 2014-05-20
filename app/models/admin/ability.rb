@@ -20,6 +20,8 @@ module Admin
       can :manage, ::Withdraws::Satoshi
 
       can :stat, ::Member
+      can :stat, ::Trade
+      can :stat, ::Order
     end
   end
 end
