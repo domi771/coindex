@@ -1,6 +1,40 @@
-.row: .col-md-12.alert
-  #filter-accordion.panel-group
-    = render "admin/statistic/shared/filter", form_target: @trades_grid, url: admin_statistic_trades_path
-    = render  "admin/statistic/shared/summary", groups: @groups
-.row: .col-md-12
-  = datagrid_table(@trades_grid, @assets)
+.row
+  .col-md-5
+    .panel.panel-primary
+      .panel-heading
+        span 累计成交总数
+      .panel-body
+        = search_form_for @q do |f|
+          = f.label :currency
+          = f.select :currency_eq, Market.enumerize
+          = f.label :created_at
+          = f.datetime_field :created_at_gteq
+          = f.label :created_at
+          = f.datetime_field :created_at_lteq
+          hr.split
+          = f.submit
+    .panel.panel-primary
+      .panel-heading
+        span 当日累计成交总数
+      .panel-body
+        span = @today_trade_count
+    .panel.panel-primary
+      .panel-heading
+        span 当日累计成交总币数
+      .panel-body
+        span = @today_coin_count
+    .panel.panel-primary
+      .panel-heading
+        span 当日累计成交总钱数
+      .panel-body
+        span = @today_total_price
+  .col-md-19
+      .panel.panel-primary
+        .panel-heading
+          span 累计总数
+        .panel-body
+          span = @count
+          br
+          span = @volume_count
+          br
+          span = @total_price
