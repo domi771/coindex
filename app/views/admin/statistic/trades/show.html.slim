@@ -1,40 +1,54 @@
-.row
-  .col-md-5
+.column
+  .col-md-6
     .panel.panel-primary
       .panel-heading
-        span 累计成交总数
+        span 当日成交总笔数
+        .panel-body
+          span = @today_trade_count
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交btc额
+        .panel-body
+          span = @today_coin_count
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交cny额
+        .panel-body
+          span = @today_total_price
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交用户数
+        .panel-body
+          span = @today_trade_members_count
+
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span Search
       .panel-body
         = search_form_for @q do |f|
           = f.label :currency
           = f.select :currency_eq, Market.enumerize
+          br
           = f.label :created_at
           = f.datetime_field :created_at_gteq
           = f.label :created_at
           = f.datetime_field :created_at_lteq
           hr.split
           = f.submit
-    .panel.panel-primary
-      .panel-heading
-        span 当日累计成交总数
-      .panel-body
-        span = @today_trade_count
-    .panel.panel-primary
-      .panel-heading
-        span 当日累计成交总币数
-      .panel-body
-        span = @today_coin_count
-    .panel.panel-primary
-      .panel-heading
-        span 当日累计成交总钱数
-      .panel-body
-        span = @today_total_price
-  .col-md-19
+  .col-md-18
       .panel.panel-primary
         .panel-heading
           span 累计总数
         .panel-body
-          span = @count
+          span 累计成交总笔数: #{@count}
           br
-          span = @volume_count
+          span 累计成交coin总额: #{@volume_count}
           br
-          span = @total_price
+          span 累计成交cny总额: #{@total_price}
+          br
+          span 累计成交用户总数: #{@trade_members_count}
