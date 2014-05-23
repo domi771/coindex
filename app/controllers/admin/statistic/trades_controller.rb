@@ -9,6 +9,10 @@ module Admin
         @total_price = @q.result.sum("(volume * price)")
         @trade_members_count = (@q.result.pluck("DISTINCT(ask_member_id)") | @q.result.pluck("DISTINCT(bid_member_id)")).count
 
+        gon.stat_count = @q.result.group("date(created_at)").count
+        gon.stat_volume_count = @q.result.group("date(created_at)").sum(:volume)
+        gon.stat_trade_members_count = @q.result.group("date(created_at)").sum("(volume * price)")
+
         @today_trade_count = today_trade_count
         @today_coin_count  = today_coin_count
         @today_total_price = today_total_price
@@ -19,7 +23,7 @@ module Admin
 
         def init_query
           start_time = Time.now.beginning_of_day
-          end_time  = Time.now
+          end_time   = Time.now
 
           Trade.search(created_at_gteq: start_time, created_at_lteq: end_time).result
         end
