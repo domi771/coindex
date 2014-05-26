@@ -35,7 +35,7 @@ $ ->
 
   $(".trades-chart-1").highcharts
     title:
-      text: "累计成交coin总额"
+      text: "累计成交数量"
       x: -20
     subtitle:
       text: ""
