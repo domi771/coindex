@@ -22,7 +22,7 @@
 
 /*
  * Improvement by CuGBabyBeaR @ 2013-09-12
- * 
+ *
  * Make it work in bootstrap v3
  */
 
@@ -440,6 +440,11 @@
 				offset = this.element.offset();
 				left = offset.left;
 			}
+
+			if(left+220 > document.body.clientWidth){
+            			left = document.body.clientWidth-220;
+          		}
+
 			if (this.pickerPosition == 'top-left' || this.pickerPosition == 'top-right') {
 				top = offset.top - this.picker.outerHeight();
 			} else {
@@ -1227,7 +1232,8 @@
 	$.fn.datetimepicker = function (option) {
 		var args = Array.apply(null, arguments);
 		args.shift();
-		return this.each(function () {
+		var internal_return;
+		this.each(function () {
 			var $this = $(this),
 				data = $this.data('datetimepicker'),
 				options = typeof option == 'object' && option;
@@ -1235,9 +1241,16 @@
 				$this.data('datetimepicker', (data = new Datetimepicker(this, $.extend({}, $.fn.datetimepicker.defaults, options))));
 			}
 			if (typeof option == 'string' && typeof data[option] == 'function') {
-				data[option].apply(data, args);
+				internal_return = data[option].apply(data, args);
+				if (internal_return !== undefined) {
+					return false;
+				}
 			}
 		});
+		if (internal_return !== undefined)
+			return internal_return;
+		else
+			return this;
 	};
 
 	$.fn.datetimepicker.defaults = {
