@@ -63,14 +63,14 @@ $ ->
       borderWidth: 0
 
     series: [
-      name: "累计成交coin总额"
+      name: "累计成交总额"
       color: "#8bbc21"
       data: $.map(gon.stat_volume_count, (key, value) -> parseFloat(key))
     ]
 
   $(".trades-chart-2").highcharts
     title:
-      text: "累计成交cny总额"
+      text: "累计成交总额"
       x: -20
     subtitle:
       text: ""
@@ -98,7 +98,7 @@ $ ->
       borderWidth: 0
 
     series: [
-      name: "累计成交cny总额"
+      name: "累计成交总额"
       color: "#910000"
       data: $.map(gon.stat_trade_members_count, (key, value) -> parseFloat(key))
     ]

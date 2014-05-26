@@ -1,32 +1,31 @@
 .column
-  .col-md-24
+  .panel.panel-primary
+    .panel-heading
+      span 币种 #{@coin_name}
+  .col-md-6
     .panel.panel-primary
       .panel-heading
-        span 币种 #{@coin_name}
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading
-          span 当日成交总笔数
-          .panel-body
-            span = @today_trade_count
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading
-          span 当日成交#{@coin_name}数量
-          .panel-body
-            span = @today_coin_count
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading
-          span 当日成交#{@coin_name}总额
-          .panel-body
-            span = @today_total_price
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading
-          span 当日成交用户数
-          .panel-body
-            span = @today_trade_members_count
+        span 当日成交总笔数
+        .panel-body
+          span = @today_trade_count
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交#{@coin_name}数量
+        .panel-body
+          span = @today_coin_count
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交#{@coin_name}总额
+        .panel-body
+          span = @today_total_price
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span 当日成交用户数
+        .panel-body
+          span = @today_trade_members_count
 
 .row
   .col-md-6
@@ -39,9 +38,9 @@
           = f.select :currency_eq, Market.enumerize
           br
           = f.label :created_at
-          = f.datetime_field :created_at_gteq
+          = f.datetime_field :created_at_gteq, value: @created_at_gteq
           = f.label :created_at
-          = f.datetime_field :created_at_lteq
+          = f.datetime_field :created_at_lteq, value: @created_at_lteq
           hr.split
           = f.submit
   .col-md-18
