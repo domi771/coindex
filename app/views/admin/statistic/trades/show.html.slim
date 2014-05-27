@@ -34,12 +34,12 @@
         span Search
       .panel-body
         = search_form_for @q do |f|
-          = f.label :currency
-          = f.select :currency_eq, Market.enumerize
+          = f.label :currency_eq
+          = f.select :currency_eq, Market.enumerize, {}, {class: 'form-control'}
           br
-          = f.label :created_at
+          = f.label :created_at_gteq
           = f.datetime_field :created_at_gteq, class: 'form-control', value: @created_at_gteq
-          = f.label :created_at
+          = f.label :created_at_lteq
           = f.datetime_field :created_at_lteq, class: 'form-control', value: @created_at_lteq
           hr.split
           = f.submit class: :btn

@@ -6,7 +6,7 @@ module Admin
         @coin_name = Market.find_by_code(currency).id
 
         @created_at_gteq = if params[:q] && params[:q].has_key?(:created_at_gteq)
-          params[:q][:created_at_at_gteq]
+          params[:q][:created_at_gteq]
         else
           Date.today
         end

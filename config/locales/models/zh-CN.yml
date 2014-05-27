@@ -75,6 +75,8 @@ zh-CN:
         volume: 成交量
         category: 买/卖
         order: 订单
+        currency: 币种
+        created_at: 交易时间
       order:
         bid: 买入
         ask: 卖出
