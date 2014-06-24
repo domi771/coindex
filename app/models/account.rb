@@ -75,8 +75,6 @@ class Account < ActiveRecord::Base
     fee = opts[:fee] || ZERO
     reason = opts[:reason] || Account::UNKNOWN
 
-    account = Account.find(account.id).lock!
-
     attributes = {
       fun: fun, fee: fee, reason: reason, amount: account.amount,
       currency: account.currency, member_id: account.member_id }
