@@ -4,11 +4,19 @@ require 'mina/git'
 require 'mina/rbenv'
 require 'mina/slack/tasks'
 
-set :repository, 'https://github.com/peatio/peatio.git'
-set :user, 'deploy'
-set :deploy_to, '/home/deploy/peatio'
-set :branch, 'master'
-set :domain, 'demo.peat.io'
+set :repository,  'git@github.com:peatio/peatio_australia.git'
+set :user,        'deploy'
+set :deploy_to,   '/home/deploy/peatio'
+set :branch,      'master'
+
+case ENV['to']
+when 'acx-prod'
+  set :domain, 'acx-prod'
+when 'acx-admin'
+  set :domain, 'acx-admin'
+else
+  set :domain, 'acx-stg'
+end
 
 set :shared_paths, [
   'config/database.yml',
