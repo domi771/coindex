@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: members
+#
+#  id                    :integer          not null, primary key
+#  sn                    :string(255)
+#  name                  :string(255)
+#  display_name          :string(255)
+#  email                 :string(255)
+#  identity_id           :integer
+#  created_at            :datetime
+#  updated_at            :datetime
+#  state                 :integer
+#  activated             :boolean
+#  country_code          :integer
+#  phone_number          :string(255)
+#  phone_number_verified :boolean
+#
+
 require 'spec_helper'
 
 describe Member do
@@ -46,6 +65,26 @@ describe Member do
       t2 = create(:trade, bid: bid)
       member.trades.order('id').should == [t1, t2]
     end
+  end
+
+  describe ".current" do
+    let(:member) { create(:member) }
+    before do
+      Thread.current[:user] = member
+    end
+
+    after do
+      Thread.current[:user] = nil
+    end
+
+    specify { Member.current.should == member }
+  end
+
+  describe ".current=" do
+    let(:member) { create(:member) }
+    before { Member.current = member }
+    after { Member.current = nil }
+    specify { Thread.current[:user].should == member }
   end
 
 end

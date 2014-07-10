@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id         :integer          not null, primary key
+#  member_id  :integer
+#  currency   :integer
+#  balance    :decimal(32, 16)
+#  locked     :decimal(32, 16)
+#  created_at :datetime
+#  updated_at :datetime
+#  in         :decimal(32, 16)
+#  out        :decimal(32, 16)
+#
+
 class Account < ActiveRecord::Base
   include Currencible
 
@@ -80,7 +95,7 @@ class Account < ActiveRecord::Base
                      fee: fee,
                      reason: reason,
                      amount: account.amount,
-                     currency: account.currency,
+                     currency: account.currency.to_sym,
                      member_id: account.member_id,
                      account_id: account.id }
 

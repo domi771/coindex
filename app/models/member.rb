@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: members
+#
+#  id                    :integer          not null, primary key
+#  sn                    :string(255)
+#  name                  :string(255)
+#  display_name          :string(255)
+#  email                 :string(255)
+#  identity_id           :integer
+#  created_at            :datetime
+#  updated_at            :datetime
+#  state                 :integer
+#  activated             :boolean
+#  country_code          :integer
+#  phone_number          :string(255)
+#  phone_number_verified :boolean
+#
+
 class Member < ActiveRecord::Base
   acts_as_taggable
 
@@ -30,6 +49,14 @@ class Member < ActiveRecord::Base
     def from_auth(auth_hash)
       member = locate_auth(auth_hash) || locate_email(auth_hash) || create_from_auth(auth_hash)
       member
+    end
+
+    def current
+      Thread.current[:user]
+    end
+
+    def current=(user)
+      Thread.current[:user] = user
     end
 
     private
