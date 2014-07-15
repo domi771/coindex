@@ -74,14 +74,34 @@ Peatio::Application.routes.draw do
     end
 
     post '/pusher/auth', to: 'pusher#auth'
+
+    resources :tickets, only: [:index, :new, :create, :show] do
+      member do
+        patch :close
+      end
+      resources :comments, only: [:create]
+    end
+
   end
 
   namespace :admin do
     get '/', to: 'dashboard#index', as: :dashboard
+
     resources :documents
     resource :currency_deposit, :only => [:new, :create]
-    resources :members, :only => [:index, :show, :update]
     resources :proofs
+    resources :tickets, only: [:index, :show] do
+      member do
+        patch :close
+      end
+      resources :comments, only: [:create]
+    end
+
+    resources :members, :only => [:index, :show, :update] do
+      member do
+        post :toggle
+      end
+    end
 
     namespace :deposits do
       Deposit.descendants.each do |d|
