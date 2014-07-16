@@ -22,6 +22,7 @@ class IdDocument < ActiveRecord::Base
   enumerize :category, in: {id_card: 0, passport: 1}
 
   before_create :set_verified
+  after_update :handle_award_logic
   after_commit :set_member_name
 
   private
@@ -32,4 +33,11 @@ class IdDocument < ActiveRecord::Base
   def set_member_name
     self.member.update_attribute(:name, self.name)
   end
+
+  def handle_award_logic
+    if self.aasm_state_changed? && self.aasm_state == "approved"
+      #
+    end
+  end
+
 end
