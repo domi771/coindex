@@ -16,13 +16,14 @@
 
 class Identity < OmniAuth::Identity::Models::ActiveRecord
   auth_key :email
-  attr_accessor :old_password
+  attr_accessor :old_password, :referral_code
 
   MAX_LOGIN_ATTEMPTS = 5
 
   validates :email, presence: true, uniqueness: true, email: true
   validates :password, presence: true, length: { minimum: 6, maximum: 64 }
   validates :password_confirmation, presence: true, length: { minimum: 6, maximum: 64 }
+  validates :referral_code, referral_code: true
 
   def increment_retry_count
     self.retry_count = (retry_count || 0) + 1
@@ -30,5 +31,12 @@ class Identity < OmniAuth::Identity::Models::ActiveRecord
 
   def too_many_failed_login_attempts
     retry_count.present? && retry_count >= MAX_LOGIN_ATTEMPTS
+  end
+
+  def info
+    {
+      "email" => self.email,
+      "referral_code" => self.referral_code
+    }
   end
 end

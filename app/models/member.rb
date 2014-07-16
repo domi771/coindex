@@ -86,7 +86,7 @@ class Member < ActiveRecord::Base
     end
 
     def create_from_auth(auth_hash)
-      member = create(email: auth_hash['info']['email'], activated: false)
+      member = create(email: auth_hash['info']['email'], activated: false, inviter_id: Member.where(referral_code: auth_hash['info']['referral_code']).first.try(:id))
       member.add_auth(auth_hash)
       member.send_activation
       member

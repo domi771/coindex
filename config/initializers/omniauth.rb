@@ -7,7 +7,7 @@ failure = lambda { |env|
 }
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :identity, fields: [:email], on_failed_registration: signup
+  provider :identity, fields: [:email, :referral_code], on_failed_registration: signup
 end
 
 OmniAuth.config.on_failure = failure

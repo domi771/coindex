@@ -153,6 +153,8 @@ en:
               invalid: Invalid Password
             password_confirmation:
               confirmation: Inconsistent with the new password you enter, please re-enter.
+            referral_code:
+              invalid: Invalid referral code.
         reset_two_factor:
           attributes:
             base:

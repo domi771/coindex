@@ -139,6 +139,8 @@ zh-CN:
               invalid: 无效的密码格式，请重新输入。
             password_confirmation:
               confirmation: 与您输入的新密码不一致，请重新输入。
+            referral_code:
+              invalid: 无效的推荐码。
         reset_two_factor:
           attributes:
             base:
