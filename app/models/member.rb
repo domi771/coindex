@@ -16,6 +16,8 @@
 #  phone_number          :string(255)
 #  phone_number_verified :boolean
 #  disabled              :boolean          default(FALSE)
+#  referral_code         :string(8)
+#  inviter_id            :integer
 #
 
 class Member < ActiveRecord::Base
@@ -37,6 +39,10 @@ class Member < ActiveRecord::Base
 
   has_many :authentications, dependent: :destroy
 
+  has_many :invitees, class_name: 'Member', foreign_key: 'inviter_id'
+  belongs_to :inviter, class_name: 'Member', foreign_key: 'inviter_id'
+
+
   scope :enabled, -> { where(disabled: false) }
 
   delegate :activated?, to: :two_factors, prefix: true, allow_nil: true
@@ -50,6 +56,7 @@ class Member < ActiveRecord::Base
   alias_attribute :full_name, :name
 
   after_create :touch_accounts
+  after_create :generate_referral_code
 
   class << self
     def from_auth(auth_hash)
@@ -179,4 +186,12 @@ class Member < ActiveRecord::Base
       self.sn = "PEA#{ROTP::Base32.random_base32(8).upcase}TIO"
     end while Member.where(:sn => self.sn).any?
   end
+
+  def generate_referral_code
+    begin
+      referral_code  = SecureRandom.hex(16)
+    end while Member.where(referral_code: referral_code).exists?
+    self.referral_code = referral_code
+  end
+
 end

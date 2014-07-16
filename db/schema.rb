@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140714143823) do
+ActiveRecord::Schema.define(version: 20140716034828) do
 
   create_table "account_versions", force: true do |t|
     t.integer  "member_id"
@@ -183,8 +183,12 @@ ActiveRecord::Schema.define(version: 20140714143823) do
     t.integer  "country_code"
     t.string   "phone_number"
     t.boolean  "phone_number_verified"
-    t.boolean  "disabled",              default: false
+    t.boolean  "disabled",                         default: false
+    t.string   "referral_code",         limit: 32
+    t.integer  "inviter_id"
   end
+
+  add_index "members", ["inviter_id"], name: "index_members_on_inviter_id", using: :btree
 
   create_table "orders", force: true do |t|
     t.integer  "bid"

@@ -16,6 +16,8 @@
 #  phone_number          :string(255)
 #  phone_number_verified :boolean
 #  disabled              :boolean          default(FALSE)
+#  referral_code         :string(8)
+#  inviter_id            :integer
 #
 
 require 'spec_helper'
@@ -97,6 +99,20 @@ describe Member do
     before { ReadMark.delete_all }
 
     specify { user.unread_comments.count.should == 1 }
+
+  end
+
+
+  describe "#generate_referral_code" do
+    let!(:member) { create(:member) }
+    let!(:member2) { create(:member) }
+
+    subject { member }
+
+    its(:referral_code) { should be_instance_of String }
+    its(:referral_code) { should have(32).words }
+    its(:referral_code) { should_not == member2.referral_code }
+
 
   end
 
