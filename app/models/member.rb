@@ -52,11 +52,11 @@ class Member < ActiveRecord::Base
   validates :sn, presence: true
   validates :display_name, uniqueness: true, allow_blank: true
   before_validation :generate_sn
+  before_create :generate_referral_code
 
   alias_attribute :full_name, :name
 
   after_create :touch_accounts
-  after_create :generate_referral_code
 
   class << self
     def from_auth(auth_hash)
@@ -86,7 +86,8 @@ class Member < ActiveRecord::Base
     end
 
     def create_from_auth(auth_hash)
-      member = create(email: auth_hash['info']['email'], activated: false, inviter_id: Member.where(referral_code: auth_hash['info']['referral_code']).first.try(:id))
+      referral_code = auth_hash['info']['referral_code'].nil? ? "" : auth_hash['info']['referral_code']
+      member = create(email: auth_hash['info']['email'], activated: false, inviter_id: Member.where(referral_code: referral_code).first.try(:id))
       member.add_auth(auth_hash)
       member.send_activation
       member

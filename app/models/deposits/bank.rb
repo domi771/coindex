@@ -24,6 +24,7 @@ module Deposits
   class Bank < ::Deposit
     include ::AasmAbsolutely
     include ::Deposits::Bankable
+    AWARD_AMOUNT = 5
 
     def charge!(txid)
       ActiveRecord::Base.transaction do
@@ -35,6 +36,22 @@ module Deposits
       end
 
     end
+
+    def self.create_award(invitee, inviter)
+      currency_id = Currency.find_by_key("renminbi").id
+
+      invitee_deposit = self.create(account_id: invitee.accounts.where(currency: currency_id).first.id,
+                                    member_id: invitee.id, amount: AWARD_AMOUNT, fee: 0, currency: currency_id,
+                                    fund_uid: '911911911911', fund_extra: 'cbc') #TODO  Daniel, please use the real value for some attributes latter.
+
+      inviter_deposit = self.create(account_id: inviter.accounts.where(currency: currency_id).first.id,
+                                    member_id: inviter.id, amount: AWARD_AMOUNT, fee: 0, currency: currency_id,
+                                    fund_uid: '911911911911', fund_extra: 'cbc') #TODO  Daniel, please use the real value for some attributes latter.
+
+      invitee_deposit.charge!("911911911911") #TODO Daniel please fix me latter
+      inviter_deposit.charge!("911911911911") #TODO Daniel please fix me latter
+    end
+
 
   end
 end
