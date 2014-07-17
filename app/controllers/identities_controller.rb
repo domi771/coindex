@@ -3,6 +3,9 @@ class IdentitiesController < ApplicationController
 
   def new
     @identity = env['omniauth.identity'] || Identity.new
+    # links with referral code signup
+    # example: http://peatio.com/signup?referral_code=123321123321
+    @identity.referral_code = params[:referral_code]
   end
 
   def edit

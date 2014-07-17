@@ -73,6 +73,7 @@ zh-CN:
         old_password: 旧密码
         password: 新密码
         password_confirmation: 确认密码
+        referral_code: 推荐码
       reset_password:
         password: 新密码
       ticket:
