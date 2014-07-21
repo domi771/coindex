@@ -60,6 +60,8 @@ class IdDocument < ActiveRecord::Base
   end
 
   def handle_award_logic
+    return true
+
     if self.aasm_state_changed? && self.aasm_state == "verified" && self.member.inviter_id.present?
       Deposits::Bank.create_award(self.member, self.member.inviter)
     end
