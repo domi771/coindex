@@ -133,7 +133,6 @@ en:
   'no': 'No'
 
   banks:
-    bc: Bank of China
-    abc: Agriculture Bank of China
-    cbc: Construction Bank of China
-    icbc: Industryand Commercial Bank of China
+    cba: Commonwealth Bank of Australia
+    nba: National Australia Bank
+    bom: Bank of Melbourne
