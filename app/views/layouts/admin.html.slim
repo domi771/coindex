@@ -20,7 +20,7 @@ html lang="en"
             li class = check_active('id_documents')
               = link_to t('admin_header.id_documents'), admin_id_documents_path
 
-          - if can? :read, Proof
+          /- if can? :read, Proof
             li class = check_active(Proof)
               = link_to t(".menus.items.operating.proofs"), admin_proofs_path
 
