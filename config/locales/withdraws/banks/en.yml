@@ -20,7 +20,7 @@ en:
         fund_source: Bank
         fund_extra_text: Bank
         fund_uid: Bank Account
-        sum: Amount
+        sum: Sum
         fee: Fee
         amount: Amount
         remark: Remark

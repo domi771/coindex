@@ -22,7 +22,7 @@ zh-CN:
         fund_uid: 提现银行账户
         sum: 提现金额
         fee: 手续费
-        amount: 提现金额
+        amount: 合计
         remark: 备注
         created_at: 时间
 

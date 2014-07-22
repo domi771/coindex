@@ -17,6 +17,10 @@
             span.fa.fa-copy data-clipboard-text='#{@bank.fund_uid}' = @bank.fund_uid
           = item_for @bank, :bsb do
             span.fa.fa-copy data-clipboard-text='#{@bank.bsb}' = @bank.bsb
+          = item_for @bank, :sum do
+            span.fa.fa-copy data-clipboard-text='#{@bank.sum}' = @bank.sum
+          = item_for @bank, :fee do
+            span.fa.fa-copy data-clipboard-text='#{@bank.fee}' = @bank.fee
           = item_for @bank, :amount
             span.fa.fa-copy data-clipboard-text='#{@bank.amount}' = @bank.amount
           hr.split

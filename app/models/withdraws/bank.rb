@@ -24,5 +24,9 @@ module Withdraws
   class Bank < ::Withdraw
     include ::AasmAbsolutely
     include ::Withdraws::Bankable
+
+    def set_fee
+      self.fee = self.sum.mult(0.01, 2)
+    end
   end
 end
