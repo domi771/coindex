@@ -15,7 +15,7 @@
 #  phone_number          :string(255)
 #  phone_number_verified :boolean
 #  disabled              :boolean          default(FALSE)
-#  referral_code         :string(8)
+#  referral_code         :string(32)
 #  inviter_id            :integer
 #
 

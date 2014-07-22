@@ -15,6 +15,8 @@
             span.fa.fa-copy data-clipboard-text='#{@bank.fund_extra_text}' = @bank.fund_extra_text
           = item_for @bank, :fund_uid do
             span.fa.fa-copy data-clipboard-text='#{@bank.fund_uid}' = @bank.fund_uid
+          = item_for @bank, :bsb do
+            span.fa.fa-copy data-clipboard-text='#{@bank.bsb}' = @bank.bsb
           = item_for @bank, :amount
             span.fa.fa-copy data-clipboard-text='#{@bank.amount}' = @bank.amount
           hr.split
@@ -32,4 +34,4 @@
               li
                 = link_to t('.succeed'), url_for([:admin, @bank]), class: 'btn btn-success', method: 'PATCH', confirm: t('.succeed_confirm')
   .col-md-8
-    = render partial: 'shared/admin/member', locals: {member: @bank.member} 
+    = render partial: 'shared/admin/member', locals: {member: @bank.member}

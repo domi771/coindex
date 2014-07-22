@@ -54,6 +54,9 @@ zh-CN:
           allin: 全部提取
           fund_uid: 使用已有银行账号或输入新账号
           fund_extra: 选择开户行
+          bsb: BSB
+        edit:
+          bsb: BSB
 
   admin:
     withdraws:

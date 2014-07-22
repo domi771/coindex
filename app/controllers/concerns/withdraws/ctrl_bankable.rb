@@ -59,7 +59,7 @@ module Withdraws
       params[:withdraw][:currency] = channel.currency
       params[:withdraw][:member_id] = current_user.id
       params.require(:withdraw).permit(:member_id, :currency, :sum, :type,
-                                       :fund_uid, :fund_extra, :save_fund_source)
+                                       :fund_uid, :fund_extra, :bsb, :save_fund_source)
     end
 
     def two_factor_auth_verified?

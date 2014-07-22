@@ -55,6 +55,9 @@ en:
           allin: All-In
           fund_uid: Use existing bank account or enter a new account
           fund_extra: Select Bank
+          bsb: BSB
+        edit:
+          bsb: BSB
 
   admin:
     withdraws:
