@@ -1,0 +1,197 @@
+de:
+  activerecord:
+    models:
+      trade: Transaktionen
+      order: Aufträge
+      order_bid: ANKAUF
+      order_ask: VERKAUF
+      document: Dokument
+      withdraw: Auszahlung
+      deposit: Einzahlung
+      payment_transaction: Zahlung
+      id_document: Dokument ID
+      statistic/orders_grid: Orders Stat
+      statistic/trades_grid: Trading Stat
+      statistic/members_grid: Members Stat
+      statistic/deposits_grid: Deposits Stat
+      statistic/withdraws_grid: Withdraws Stat
+      admin/deposits_grid: Deposits
+      admin/withdraws_grid: Withdraws
+    attributes:
+      id_document:
+        name: Name
+        sn: ID Dokument Nummer
+        category: ID Dokument Typ
+      identity:
+        email: Email
+        password: Neues Passwort
+        password_confirmation: Neues Passwort bestätigen
+      document:
+        zh_cn_body: Chinese content
+        zh_cn_title: Chinese title
+        zh_cn_desc: Chinese description
+        zh_cn_keywords: Chinese keyword
+        en_body: English content
+        en_title: English title
+        en_desc: English description
+        en_keywords: English keyword
+        key: Key
+        is_auth: Is Auth
+      fund_source:
+        address: Adresse
+        category: Kategorie
+        label: Label
+      account:
+        currency: Währung
+        currency_text: Währung
+        balance: Kontostand
+        locked: Reserviert
+      deposit:
+        currency-address-type: Währung - Einzahlungsart
+        state: Status
+        tx_id: TX ID
+        member_id: User ID
+        created_at: Erstellt am
+        address: Adresse
+        address_label: Adresszusatz
+        amount: Betrag
+        done_at: Verbucht am
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: Erstellt am
+        done_at: Ausgeführt am
+        sum: Summe
+        fee: Gebühr
+        currency: Währung
+        amount: Betrag
+        address: Adresse
+        address_label: Adresszusatz
+        address_type: Typ der Adresse
+        address_type_text: Typ der Adresse
+        state: Status
+        state_text: Status
+        tx_id: TX ID
+        fund_source_id: Auszahlungsadresse
+        position_in_queue: Position
+        detail: Detail
+      account_version:
+        id: ID
+        locked: Reserviert
+        amount: Betrag
+        balance: Kontostand
+        reason: Grund
+        modifiable_id: LINK ID
+        modifiable_type: LINK
+        created_at : Erstellt am
+      reset_password:
+        email:  Email
+      trade:
+        bid: Ankauf
+        ask: Verkauf
+        fee: Gebühr
+        price: Preis
+        volume: Umsatz
+        category: Ankauf/Verlauf
+        order: Auftrag
+      order:
+        bid: Ankauf
+        ask: Verkauf
+        price: Preis
+        total: Toal
+        volume: Umsatz
+        origin_volume: Umsatz
+        sum: Summe
+        category: Ankauf/Verkauf
+        kind: Kind
+        at: um
+        id: ID
+        state: Status
+        operation: Operation
+      payment_transaction:
+        at: Datum Zeit
+        txid: TX ID
+        amount: Betrag
+        confirmations: Konfirmationen
+        state: Status
+        state_done: Erledigt
+        state_wait: Warten
+      member:
+        name: Name
+        email: Email
+        created_at: Registriert am
+        sn: SN
+        tag_list: Tags
+        activated: Aktiviert
+    errors:
+      models:
+        order_bid:
+          attributes:
+            sum:
+              expensive: Expensive Account
+            price:
+              range: Ungültige Preisspanne
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: Expensive Account
+            price:
+              range: Ungültige Preisspanne
+        account:
+          attributes:
+            balance:
+              less: Ungenügender Kontostand
+        identity:
+          attributes:
+            email:
+              invalid: Ungültige Email
+            password:
+              invalid: Ungültiges Passwort
+            password_confirmation:
+              confirmation: Die beiden Passwörter stimmen nicht überein.
+        reset_two_factor:
+          attributes:
+            base:
+              too_soon: Bitte warten Sie einen Moment.
+        reset_password:
+          attributes:
+            base:
+              too_soon: Bitte warten Sie einen Moment. 
+            email:
+              match: Ungültige Login E-mail
+              not-member: Diese Email ist nicht registriert
+            password:
+              invalid: Ungültiges Passwort
+        activation:
+          attributes:
+            base:
+              too_soon: Eine E-mail um Ihr Konto zu aktivieren wurde vor weniger als 5 Minuten versendet.
+        fund_source:
+          attributes:
+            label:
+            address:
+              satoshi_ismine: Benutzte Adresse
+              satoshi_invalid: Ungültige Adresse
+        withdraw:
+          attributes:
+            password:
+              match: Ungültiges Passwort
+            amount:
+              poor: Ungenügender Kontostand
+              bank_min: Weniger als 5000.00
+        two_factor:
+          attributes:
+            otp:
+              invalid: Falsches Passwort! Bitte versuchen Sie es nocheinmal.
+      messages:
+        undef: Unbekannter Fehler
+        less: Wenig Guthaben
+        verify: Verifikationsfehler
+        strength: Ungültiges Passwort (zu einfach)
+        password: Bitte benutzen Sie ein Passwort mit mindestens 8 Zeichen. Es muss mindestens 1 Grossbuchstabe, 1 kleiner Buchstabe 1 Zahl behinhalten.
+        orders:
+          price: limit price %{l} ~ %{h}
+          sum: limit sum price %{l} ~ %{h}
+          precision: minimum precision %{p}

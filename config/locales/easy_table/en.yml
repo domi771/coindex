@@ -6,7 +6,7 @@ en:
       created_at: Created At
       memo: Confirmations
       member_name: Member
-      state_and_actions: State/Actions
+      state_and_actions: State
       currency_obj_key_text: Currency
     bank:
       sn: SN
@@ -15,5 +15,5 @@ en:
       fund_source: Fund Source
       memo: Memo
       member_name: Member
-      state_and_actions: State/Action
+      state_and_actions: State
       currency_obj_key_text: Currency

@@ -1,11 +1,14 @@
-ul#menu.nav.navbar-nav.navbar-left
-  = top_nav(t('header.market'), market_path(current_market), 'exchange', market_links)
-  = top_nav_link(t('header.deposit'), deposits_path, 'credit-card', controllers: ['deposits'])
-  = top_nav_link(t('header.withdraw'), withdraws_path, 'money', controllers: ['withdraws'])
-  = top_nav_link(t('header.assets'), exchange_assets_path, 'bar-chart-o')
-  = top_nav_link(t('header.history'), order_history_path, 'book')
-
-ul.nav.navbar-nav.navbar-right
+ul#menu.nav.navbar-nav.navbar-left style="margin-top: 24px;"
+  a href="/"  
+   img src='/assets/logo_small.png' style="margin-top: -3px; float: left; margin-right: 25px; border: 0px;"
+  - if current_user
+    = top_nav(t('header.market'), market_path(current_market), 'exchange', market_links)
+    = top_nav_link(t('header.deposit'), deposits_path, 'credit-card', controllers: ['deposits'])
+    = top_nav_link(t('header.withdraw'), withdraws_path, 'money', controllers: ['withdraws'])
+    = top_nav_link(t('header.history'), order_history_path, 'book')
+  - else
+    = 
+ul.nav.navbar-nav.navbar-right style="margin-top: 24px;"
   - if current_user
     = top_nav_link(t('header.my_profile'), settings_path, 'user', controllers: ['two_factors', 'identities', 'id_documents'])
     - if is_admin?
@@ -15,13 +18,6 @@ ul.nav.navbar-nav.navbar-right
       i.fa.fa-sign-out
       span = t('header.signout')
   - else
-    = top_nav_link(t('header.signin'), signin_path, '')
-    = top_nav_link(t('header.signup'), signup_path, '')
+    = top_nav_link(t('header.signin'), signin_path, 'fa fa-sign-out')
+    = top_nav_link(t('header.signup'), signup_path, 'fa fa-edit')
 
-  li.dropdown
-    a.dropdown-toggle href="#" data-toggle="dropdown"
-      img src='#{language_path}'
-      b.caret
-    ul#languages.dropdown-menu
-      - I18n.available_locales.each do |lang|
-        li: a href="?lang=#{lang}": img src='#{language_path(lang)}'

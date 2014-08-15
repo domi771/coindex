@@ -2,17 +2,24 @@ en:
   private:
     funds:
       show:
-        cny_format: '0.00'
+        chf_format: '0.00'
         btc_format: '0.00000000'
+        ltc_format: '0.00000000'
         account_history: Account History
         reason:
-          cny:
+          chf:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
             withdraw: Withdraw
             fix: Fix
           btc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          ltc:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit

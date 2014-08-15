@@ -196,6 +196,11 @@ module ApplicationHelper
     asset_path("languages/#{lang}.png")
   end
 
+  def language_path2(lang=nil)
+    lang ||= I18n.locale
+    t("sprache_#{lang}")
+  end
+
   def i18n_meta(key)
     t("#{i18n_controller_path}.#{action_name}.#{key}", default: :"layouts.meta.#{key}")
   end

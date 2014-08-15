@@ -3,24 +3,30 @@ en:
     satoshi:
       key: BTC
     renminbi:
-      key: CNY
-
+      key: CHF
+    litecoin:
+      key: LTC
     name:
-      cny: Chinese Yuan
+      chf: Swiss Franc
       btc: Bitcoin
+      ltc: Litecoin
     code:
-      cny: CNY
+      chf: CHF
       btc: BTC
+      ltc: LTC
     format:
       zero: 'N/A'
-      cny: '0,0.00'
+      chf: '0,0.00'
       btc: '0,0.0000'
+      ltc: '0,0.0000'
     icon-large:
-      cny: <i class='fa fa-2x fa-yen'></i>
+      chf: <i class='fa fa-2x fa-yen'></i>
       btc: <i class='fa fa-2x fa-btc'></i>
+      ltc: <i class='fa fa-2x fa-btc'></i>
     icon:
-      cny: <i class='fa fa-yen'></i>
+      chf: <i class='fa fa-yen'></i>
       btc: <i class='fa fa-btc'></i>
+      ltc: <i class='fa fa-btc'></i>
     sum:
       bid: Total Price <span class=bid_totle></span>%{bid_icon}
       ask: Total Price <span class=ask_totle></span>%{bid_icon}

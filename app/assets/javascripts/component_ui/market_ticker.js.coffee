@@ -22,7 +22,7 @@ window.MarketTickerUI = flight.component ->
     @update @select('highPriceSelector'), data.high
     @update @select('latestPriceSelector'), data.last
 
-    document.title = "#{gon.market.id}: #{data.last}"
+    document.title = "(#{gon.market.bid.currency.toUpperCase()} #{data.last})"
 
   @after 'initialize', ->
     @refresh 'market::ticker', gon.ticker

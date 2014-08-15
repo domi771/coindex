@@ -1,0 +1,23 @@
+en:
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: Members
+          deposits: Deposits
+          sites_statistics: Analytics
+          operating: Operations
+        items:
+          operating:
+            deposits: Deposits
+            documents: Documents
+            withdraws: Withdraws
+            tickets: Tickets
+          deposits:
+            currency: Deposit
+    application:
+      close: Schliessen
+    meta:
+      page_title: COINDEX - Schweizer Bitcoin Börse
+      page_description: COINDEX - Schweizer Bitcoin Börse 
+      page_keywords: COINDEX,Schweiz,Bitcoin,Litcoin,Kaufen,Verkaufen,Börse,Cryptocurrency

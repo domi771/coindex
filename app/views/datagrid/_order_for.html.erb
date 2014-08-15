@@ -5,6 +5,6 @@
       :class => "asc") %>
   <%= link_to(
       I18n.t("datagrid.table.order.desc", :default => "&darr;".html_safe).html_safe,
-      url_for(grid.param_name => grid.as_query.merge(:order => column.name, :descending => true )),
+      url_for(grid.param_name => grid.as_query.merge(:order => column.name, :descending => true)),
       :class => "desc") %>
 </div>

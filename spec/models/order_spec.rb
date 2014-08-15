@@ -34,13 +34,13 @@ describe Order, 'validations' do
 
   context "limit order" do
     it "should make sure price is present" do
-      order = Order.new(currency: 'btccny', price: nil, ord_type: 'limit')
+      order = Order.new(currency: 'btcchf', price: nil, ord_type: 'limit')
       order.should_not be_valid
       order.errors[:price].should == ["is not a number"]
     end
 
     it "should make sure price is greater than zero" do
-      order = Order.new(currency: 'btccny', price: '0.0'.to_d, ord_type: 'limit')
+      order = Order.new(currency: 'btcchf', price: '0.0'.to_d, ord_type: 'limit')
       order.should_not be_valid
       order.errors[:price].should == ["must be greater than 0"]
     end
@@ -48,7 +48,7 @@ describe Order, 'validations' do
 
   context "market order" do
     it "should make sure price is not present" do
-      order = Order.new(currency: 'btccny', price: '0.0'.to_d, ord_type: 'market')
+      order = Order.new(currency: 'btcchf', price: '0.0'.to_d, ord_type: 'market')
       order.should_not be_valid
       order.errors[:price].should == ['must not be present']
     end
@@ -56,8 +56,8 @@ describe Order, 'validations' do
 end
 
 describe Order, "#fix_number_precision" do
-  let(:order_bid) { create(:order_bid, currency: 'btccny', price: '12.326'.to_d, volume: '123.123456789') }
-  let(:order_ask) { create(:order_ask, currency: 'btccny', price: '12.326'.to_d, volume: '123.123456789') }
+  let(:order_bid) { create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789') }
+  let(:order_ask) { create(:order_ask, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789') }
   it { expect(order_bid.price).to be_d '12.32' }
   it { expect(order_bid.volume).to be_d '123.1234' }
   it { expect(order_bid.origin_volume).to be_d '123.1234' }
@@ -191,7 +191,7 @@ describe Order, "#done" do
 end
 
 describe Order, "#head" do
-  let(:currency) { :btccny }
+  let(:currency) { :btcchf }
 
   describe OrderAsk do
     it "price priority" do
@@ -276,7 +276,7 @@ describe Order, "#estimate_required_funds" do
   end
 
   before do
-    global = Global.new('btccny')
+    global = Global.new('btcchf')
     global.stubs(:asks).returns(price_levels)
     Global.stubs(:[]).returns(global)
   end

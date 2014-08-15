@@ -93,7 +93,7 @@
           td: pre: code
             | {"at":1398410899, "ticker":{"buy":"3000.0","sell":"3100.0","low":"3000.0","high":"3000.0","last":"3000.0","vol":"0.11"}}
           td
-            p Market包含了某一个市场(例如btccny)的所有信息:
+            p Market包含了某一个市场(例如btcchf)的所有信息:
             p at: 以秒为单位的时间戳
             p buy/sell: 当前买入/卖出价
             p low/high: 过去24小时之内的最低/最高成交价
@@ -122,7 +122,7 @@
         tr
           td Order
           td: pre: code
-            | {"id":7,"side":"sell","price":"3100.0","avg_price":"3101.2","state":"wait","market":"btccny","created_at":"2014-04-18T02:02:33Z","volume":"100.0","remaining_volume":"89.8","executed_volume":"10.2","trades":[{"id":2,"price":"3100.0","volume":"10.2","market":"btccny","created_at":"2014-04-18T02:04:49Z","side":"sell"}]}
+            | {"id":7,"side":"sell","price":"3100.0","avg_price":"3101.2","state":"wait","market":"btcchf","created_at":"2014-04-18T02:02:33Z","volume":"100.0","remaining_volume":"89.8","executed_volume":"10.2","trades":[{"id":2,"price":"3100.0","volume":"10.2","market":"btcchf","created_at":"2014-04-18T02:04:49Z","side":"sell"}]}
           td
             p Order包含了某一个订单的所有信息:
             p id: 唯一的Order ID
@@ -139,7 +139,7 @@
         tr
           td Trade
           td: pre: code
-            | {"id":2,"price":"3100.0","volume":"10.2","market":"btccny","created_at":"2014-04-18T02:04:49Z","side":"sell"}
+            | {"id":2,"price":"3100.0","volume":"10.2","market":"btcchf","created_at":"2014-04-18T02:04:49Z","side":"sell"}
           td
             p Trade代表订单撮合后形成的一笔交易:
             p id: 交易的唯一ID
@@ -164,11 +164,11 @@
   .panel-body
     p 以4000CNY的价格买入1BTC:
     pre: code
-      | curl -X POST 'https://peatio.com/api/v2/orders' -d 'access_key=your_access_key&tonce=1234567&signature=computed_signature&market=btccny&price=4000&side=buy&volume=1'
+      | curl -X POST 'https://peatio.com/api/v2/orders' -d 'access_key=your_access_key&tonce=1234567&signature=computed_signature&market=btcchf&price=4000&side=buy&volume=1'
 
     p 同时创建多个委托:
     pre: code
-      | curl -X POST 'https://peatio.com/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=btccny&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
+      | curl -X POST 'https://peatio.com/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=btcchf&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
 
 .panel.panel-default
   .panel-heading

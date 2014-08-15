@@ -1,0 +1,16 @@
+de:
+  private:
+    history:
+      account:
+        buy: Ankauf
+        sell: Verkauf
+        filter_by_type: Filter nach Typ
+        account_history: Kontoverlauf
+        type: Typ
+        timestamp: Datum/Zeit
+        fiat_currency: Fiat Währung
+        fiat_amount: Fiat Betrag
+        coin_currency: Crypto Währung 
+        coin_amount: Crypto Betrag
+        coin_price: Preis
+        fee: Gebühren

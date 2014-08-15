@@ -1,0 +1,37 @@
+de:
+  private:
+    two_factors:
+      auth:
+        please_active_two_factor: Bitte aktivieren Sie zuerst die Zwei-Faktorn Authentifikation.
+        submit: Ausführen
+        otp_placeholder: 6-Zeichen Passwort
+        google_app: Google Authentikator
+        sms: SMS Code
+        sms_message: "Ihre SMS Verfikationsnummer lautet: %{code}"
+        send_code: Code senden
+        send_code_alt: Erneut senden in COUNT Sekunden
+        hints:
+          app: Ihr Google Authentikator generiert alle 30 Sekunden ein neues Passwort.
+          sms: Wir senden Ihnen eine SMS mit der Verifikationsnummer.
+      edit:
+        submit: Deaktivieren
+        warning: "Tip: Falls Sie Ihr Gerät für die Zwei-Faktoren Authentifizierung verloren haben kontaktieren Sie uns."
+      show:
+        step-1: Schritt 1
+        step-2: Schritt 2
+        step-3: Schritt 3
+        or: OR
+        download-app: Installieren Sie die Google Authentikator App auf Ihrem Smartphone und öffnen Sie die App.
+        guide-link: Für weitere Informationen zum Gebrauch klicken Sie <a href='https://support.google.com/accounts/answer/1066447?hl=en' target='_blank'>hier</a>.
+        scan-qr-code: Scannen Sie den QR Code mit Ihrer Google Authentikator App oder geben Sie den Text ein.
+        enter-passcode: Geben Sie das generierte Passwort welches Sie auf Ihrem Smartphone sehen ein um die Zwei-Faktoen Authentifikation zu aktivieren.
+        submit: Aktivieren
+        ios: iPhone iOS
+        android: Android
+        blackbery: Blackberry
+      update:
+        alert: Das Passwort ist ungültig. Bitte versuchen Sie es nocheinmal.
+        notice: Zwei-Faktoren Authentifikation erfolgreich aktiviert.
+      destroy:
+        alert: Das Passwort ist ungültig. Bitte versuchen Sie es nocheinmal.
+        notice: Zwei-Faktoren Authentifikation erfolgreich deaktiviert.

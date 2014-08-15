@@ -24,7 +24,7 @@ module Matching
         timestamp: Time.now.to_i,
         volume: 1+rand(10),
         price:  3000+rand(3000),
-        market: 'btccny'
+        market: 'btcchf'
       }.merge(attrs))
     end
 
@@ -35,7 +35,7 @@ module Matching
         timestamp: Time.now.to_i,
         volume: 1+rand(10),
         locked: 15000+rand(15000),
-        market: 'btccny'
+        market: 'btcchf'
       }.merge(attrs))
     end
   end

@@ -1,15 +1,15 @@
 en:
   member_mailer:
     notify_signin:
-      subject: You have just signed in
+      subject: '[COINDEX] You have just signed in'
   withdraw_mailer:
     withdraw_state:
-      subject: Your withdraw state
+      subject: '[COINDEX] Your withdraw state'
   token_mailer:
     reset_password:
-      subject: '[Peatio] Please Reset Your Password'
+      subject: '[COINDEX] Please Reset Your Password'
     reset_two_factor:
-      subject: '[Peatio] Please Reset Your Two Factor'
+      subject: '[COINDEX] Please Reset Your Two Factor Auth'
     activation:
-      subject: '[Peatio] Account Activation'
+      subject: '[COINDEX] Account Activation'
 

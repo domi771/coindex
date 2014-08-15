@@ -3,10 +3,10 @@ en:
     satoshi:
       key: Blockchain
       title: Bitcoin Blockchain
-      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      intro: Withdraw Bitcoin from COINDEX to your own Bitcoin wallet
       latency: 30 minutes
       transfer: Manual
-      go: Withdraw
+      go: Withdraw Now
 
   activerecord:
     models:
@@ -16,7 +16,7 @@ en:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
-        state_and_actions: State/Action
+        state_and_actions: State
         fund_extra_text: Withdraw Label
         fund_extrat: Withdraw Label
         fund_source: Bank
@@ -26,17 +26,19 @@ en:
         amount: Amount
         remark: Remark
         fee: Fee
+        state: State
+        state_and_action: State
     errors:
       models:
         withdraws/satoshi:
           attributes:
             sum:
-              poor: 账户余额不足，请核对。
-              greater_than: 小于单笔最低限额。
+              poor: Insufficent account balance
+              greater_than: Invalid withdrawal amount 
             fund_uid:
-              blank: 请输入您的提现地址。
-              invalid: 无效的提现地址，请核对。
-              ismine: 提现地址为系统所有，请更换其他地址。
+              blank: You did not enter a withdrawal address
+              invalid: Invalid withdrawal address
+              ismine: Invalid withdrawal address
 
   withdraws/satoshi:
     aasm_state:
@@ -108,12 +110,17 @@ en:
     private:
       withdraws:
         satoshis:
-          panel: Withdraw
+          panel: Bitcoin Blockchain
           new:
-            intro: Enter the Bitcoin address and amount you want to withdraw.
-            default-panel: Withdraw History
+            panel: Withdraw
+            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            default-panel: Bitcoin Withdraw History
           create:
-            intro: Enter the Bitcoin address and amount you want to withdraw.
-            default-panel: Withdraw History
+            panel: Withdraw
+            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            default-panel: Bitcoin Withdraw History
           edit:
-            intro: Enter the Bitcoin address and amount you want to withdraw.
+            panel: Withdraw
+            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            default-panel: Bitcoin Withdraw History
+

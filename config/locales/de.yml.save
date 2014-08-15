@@ -1,0 +1,188 @@
+de:
+  "true": Yes
+  "false": No
+
+  slogan: DIE SCHWEIZER BITCOIN BÖRSE
+  slogan_small: Sie können Bitcoins ohne Mittelsmann und an jeden über das Internet versenden. Bitcoins werden weltweit gehandelt. COINDEX ist die zurzeit einzige Bitcoin Börse mit welcher Sie direkt Bitcoin mit Schweizer Franken handeln können.
+  signup_button: JETZT KOSTENLOS REGISTRIEREN
+  main_1h: Einfach & Stabil
+  main_1a: Egal ob Bitcoin-Neuling oder erfahrener Händler, Sie werden an unserer Börse gefallen finden. 
+  main_1b: Einfache Einzahlung auf Ihr Konto per Inland Banküberweisung.
+  main_2h: Tiefe Gebühren
+  main_2a: Keine Kontoführungsgebüren. Keine Banktransfergebühren.
+  main_2b: Die Handelsgebühren sind Umsatzbasierend und varieren zwischen 0-0.5%.
+  main_3h: Sicherheit
+  main_3a: 2-Faktoren Autentifizierung. 100% der Bitcoins werden offline gelagert.
+  main_3b: Wir haben keine fraktionelle Reserve und gegen DDOS attacken geschützt.
+  main_ann: Mitteilungen
+  main_ann_1t: COINDEX Bitcoin ATM's             
+  main_ann_1b: Im Verlauf der nächten Monate werden mehrere Bitcoin ATM's in der ganzen Schweiz platziert werden. Mehr in Kürze. 
+  main_ann_2t: COINDEX im TESTNET Betrieb   
+  main_ann_2b: Seit Heute können Sie COINDEX mit Testnet Bitcoin testen! Kontaktieren Sie uns unter coindex@coindex.ch.
+  price: Preis
+  sprache_de: Deutsch
+  sprache_fr: Francais
+  sprache_it: Italiano
+  sprache_en: English
+  tags:
+    vip: VIP
+    hero: Hero Member
+    admin: Admin
+  trade:
+    markets: Märkte
+    realtime_price:
+      title: Aktueller Preis
+    account_balance:
+      title: Kontoübersicht
+      available_btc: BTC
+      available_btc: LTC
+      available_chf: CHF
+  gon:
+    ask: Verkauf
+    bid: Ankauf
+    brand: COINDEX
+    code: CHF
+  back: Zurück
+  invalid_password: Ungültiges Passwort
+  all: Alle
+
+  date:
+    formats:
+      short: '%m-%d %H:%M'
+      default: '%m/%d/%Y %H:%M'
+  time:
+    formats:
+      short: '%m-%d %H:%M'
+      default: '%m/%d/%Y %H:%M'
+
+  currency:
+    name:
+      chf: Schweizer Franken
+      btc: Bitcoin
+      ltc: Litecoin
+    code:
+      chf: CHF
+      btc: BTC
+      ltc: LTC
+    format:
+      zero: 'N/A'
+      chf: '0,0.00'
+      btc: '0,0.0000'
+      ltc: '0,0.0000'
+    icon-large:
+      chf: <i class='fa fa-2x fa-yen'></i>
+      btc: <i class='fa fa-2x fa-btc'></i>
+      ltc: <i class='fa fa-2x fa-btc'></i>
+    icon:
+      chf: <i class='fa fa-yen'></i>
+      btc: <i class='fa fa-btc'></i>
+      ltc: <i class='fa fa-btc'></i>
+    sum:
+      bid: Gesammtpreis <span class=bid_totle></span>%{bid_icon}
+      ask: Gesammtpreis <span class=ask_totle></span>%{bid_icon}
+  reset_two_factors:
+    create:
+      success: Wir haben Ihnen eine Email gesendet mit der Anleitung um die Zwei-Faktor Authentifizierung zurückzusetzem.
+    edit:
+      success: Sie haben die Zwei-Faktor Authentifizuerung efolgreich abgestellt.
+
+  private:
+    trade:
+      trades:
+        orders:
+          title: Aufträge
+        trades:
+          title: Transaktionen
+        charges:
+          title: Gebühren
+      orders:
+        index:
+          done: Erledigt
+          cancel: Annulieren
+          confirm: "Wollen Sie Auftrag #%{id} wirklich annulieren?"
+        destroy:
+          :true: "#%{id} Cancel Order Successful"
+          :false: "#%{id} Cancel Order Reject"
+    withdraws:
+      update:
+        request_accepted: Withdraw request accepted.
+      index:
+        fee: Fee
+        total: Total
+
+  header:
+    dashboard: Übersicht
+    admin: Admin
+    market: Handeln
+    settings: Profil
+    signin: Anmelden
+    signout: Abmelden
+    signup: Registrieren
+    deposit: Einzahlen
+    withdraw: Auszahlen
+    getstart: Starten
+    assets: Konten
+    my_assets: Konten
+    history: Verlauf
+    order_history: Autragsverlauf
+    trade_history: Handelsverlauf
+    account_history: Kontoverlauf
+    my_profile: Profil
+    tickets: Tickets
+
+
+  admin_header:
+    deposits: Depoists
+    withdraws: Withdraws
+    statistics: Data Statistics
+
+  footer:
+    about: Über uns
+    privacy: Privatsphäre
+    contact: Kontakt
+    price: Preis
+
+  recaptcha:
+    errors:
+      verification_failed: Ungültige Verifikation
+      recaptcha_unavailable: Verikication zur Zeit nicht möglich
+
+  actions:
+    go: Los
+    submit: Ausführen
+    deposit: Einzahlen
+    select: Bitte wählen
+    unlock: Aktivieren
+    confirm: Bestätigen
+    back: Zurück
+    block: view in block
+    destroy: Löschen
+    destroy_confirm: Löschen bestätigen?
+    detail: Detail
+    publish: Publish
+    edit: Editieren
+    preview: Vorschau
+    close: Schliessen
+    cancel: Annulieren
+    view: Ansehen
+    transact: Transakt
+    reject: Ablehnen
+    clipboard:
+      click: Um zu kopieren bitte klicken
+      done: Kopiert
+
+  global:
+    ask_price: Ankauf
+    bid_price: Verkauf
+    high_price: Tageshoch
+    low_price: Tagestief
+    volume: Tagesumsatz
+    latest_price: Letzter Preis
+
+  chart:
+    price: Preis
+    volume: Umsatz
+
+  'yes': 'Ja'
+  'no': 'Nein'
+

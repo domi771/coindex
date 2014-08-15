@@ -53,6 +53,7 @@ json.i18n do
   json.buy I18n.t('private.history.account.buy')
   json.deposit I18n.t('header.deposit')
   json.withdraw I18n.t('header.withdraw')
-  json.cny I18n.t('currency.name.cny')
+  json.chf I18n.t('currency.name.chf')
   json.btc I18n.t('currency.name.btc')
+  json.ltc I18n.t('currency.name.ltc')
 end

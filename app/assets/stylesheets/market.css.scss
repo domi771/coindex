@@ -85,18 +85,9 @@ $grid-columns: 24;
       &.place-order {
         height: 390px;
 
-        .last-price .value {
-          margin-left: 10px;
-          cursor: pointer;
-        }
-
         .input-group-addon {
           min-width: 75px;
           text-align: right;
-        }
-
-        .input-group-addon:last-child {
-          min-width: 45px;
         }
 
         .current-balance label {
@@ -105,6 +96,10 @@ $grid-columns: 24;
           &.currency {
             text-transform: uppercase;
           }
+        }
+
+        .input-group-addon:last-child {
+          min-width: 45px;
         }
 
         span.label + span.label {
@@ -119,7 +114,7 @@ $grid-columns: 24;
     li {
       text-align: center;
       span {
-        display: block;
+#        display: block;
         &.name {
           font-size: 16px;
           color: #999;
@@ -161,7 +156,7 @@ $grid-columns: 24;
         }
       }
       &.active {
-        background-color: $btn-primary-bg;
+        background-color: #3e4c5a;
         border-color: #34404b;
         a {
           color: white;

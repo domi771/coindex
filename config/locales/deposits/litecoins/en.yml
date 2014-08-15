@@ -1,0 +1,55 @@
+en:
+  deposit_channel:
+    litecoin:
+      key: Block Chain
+      title: Litecoin Blockchain
+      intro: Deposit Litecoin from your own wallet to your COINDEX account
+      latency: 1 confirmation
+      transfer: Automatic
+      go: Deposit
+
+  activerecord:
+    attributes:
+      deposits/litecoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        memo: Confirmation
+        aasm_state_text: State
+
+  deposits/litecoin:
+    aasm_state:
+      submitted: Processing
+      accepted: Done
+      checked: Checked
+      warning: Warning
+
+  guides:
+    private:
+      deposits:
+        litecoins:
+          panel: Litecoin Blockchain
+          intro: Deposit Litecoin from your own wallet to your COINDEX account.
+          new:
+            panel: Deposit
+            default-panel: Litecoin Deposit History
+
+  admin:
+    deposits:
+      litecoins:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 充值充值
+          accept_confirm: 确定立刻确认此充值？
+
+  private:
+    deposits:
+      litecoins:
+        panel: Litecoin
+        new:
+          panel: Litecoin Blockchain
+          step-1: Step one
+          open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
+          step-2: Step Two
+          send-coin: Send the desired amount of Litecoin to the following address

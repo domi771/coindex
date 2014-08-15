@@ -1,0 +1,15 @@
+de:
+  member_mailer:
+    notify_signin:
+      subject: '[COINDEX] Sie haben sich eben angemeldet'
+  withdraw_mailer:
+    withdraw_state:
+      subject: '[COINDEX] Status Ihrer Auszahlung'
+  token_mailer:
+    reset_password:
+      subject: '[COINDEX] Neues Passwort erstellen'
+    reset_two_factor:
+      subject: '[COINDEX] Zwei-Faktoren Authentikation Reset'
+    activation:
+      subject: '[COINDEX] Konto Aktivierung'
+
