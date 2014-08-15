@@ -40,7 +40,7 @@ describe OrderAsk do
     end
 
     before do
-      global = Global.new('btccny')
+      global = Global.new('btcchf')
       global.stubs(:asks).returns(price_levels)
       Global.stubs(:[]).returns(global)
     end

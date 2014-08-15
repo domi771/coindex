@@ -5,9 +5,9 @@ en:
 
     private:
       settings:
-        panel: Settings
+        panel: My Account
         index:
-          intro: Admin and revise your profile.
+          intro: Change Account Settings
 
       two_factors:
         panel: Two-Factor Authentication
@@ -26,13 +26,11 @@ en:
 
       deposits:
         panel: Deposit
-        intro: You can recharge the CNY to buy bitcoins, or recharge Bitcoin to exchange CNY.
-      tickets:
-        panel: Tickets
+        intro: You can recharge Swiss Francs (CHF) to buy Bitcoin, or recharge Bitcoin/Litecoin to exchange with Swiss Francs.
 
       withdraws:
-        panel: Withdrawal
-        default-panel: Withdrawal
+        panel: Withdraw
+        intro: You can withdraw Bitcoin/Litecoin to your own wallet, or withdraw Swiss Francs (CHF) to your bank account.
         new:
           title: Select your preferred withdrawal option
           intro: Select  your withdrawals address and enter the amount you want to withdraw.
@@ -50,6 +48,11 @@ en:
           title: Submit real-name authentication information
           intro: In line with the national laws , identity verification is required. please verify your account to proceed.
 
+      my_assets:
+        panel: My Assets
+        index:
+          intro: This page contains your asset information, including account balances, successfully completed trading, deposit, and withdraw transaction history.
+
     verify:
       sms_tokens:
         panel: Verify Phone Number
@@ -62,7 +65,7 @@ en:
     reset_passwords:
       panel: Password
       new:
-        title: Reset Password
+        title: Reset Passwore
         intro: Please enter your e-mail address which is verified by your  account, enter verification code to submit,and login your mailbox, follow the prompts to reset your password.
       create:
         title: Reset password
@@ -76,16 +79,16 @@ en:
       panel: Login
       new:
         title: Login my account
-        intro: Login Peatio now for you to exchange.
+        intro: Login COINDEX now for you to exchange.
       failure:
         title: Login my account
-        intro: Login Peatio now for you to exchange.
+        intro: Login COINDEX now for you to exchange.
 
     identities:
       panel: Create Account
       new:
         title: Create My Account
-        intro: This will be your only ID on Peatio which is necessary for your exchange , deposit and withdrawal . please fill it out carefully.
+        intro: This will be your only ID in COINDEX which is necessary for your exchange , despoit and withdrawal . please fill it out carefully.
       edit:
         panel: My Account
         title: Reset Password

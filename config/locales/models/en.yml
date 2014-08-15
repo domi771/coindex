@@ -152,14 +152,14 @@ en:
         reset_two_factor:
           attributes:
             base:
-              too_soon: Visit too soon
+              too_soon: Request too soon. Please wait a moment.
         reset_password:
           attributes:
             base:
-              too_soon: Visit too soon
+              too_soon: Request too soon. Please wait a moment.
             email:
               match: Invalid Sign in Email
-              match: Invalid Sign in Email
+              not-member: This Email is not registered.
             password:
               invalid: Invalid Password
         activation:

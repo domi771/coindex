@@ -1,0 +1,14 @@
+en:
+  sessions:
+    new:
+      reset_password: Passwort vergessen?
+    new_with_two_factor_auth:
+      title: Zwei-Faktoren Verifikation
+      reset_two_factor: Verlorenes Zwei-Faktoren Gerät
+    create_with_two_factor_auth:
+      session_expired: Session abgelaufen. Nochmals versuchen.
+    create:
+      error: Ihr Konto wurde deaktiviert. Bei Fragen kontaktieren Sie uns.
+    failure:
+      account_locked: Zuviele falsche Anmeldeversuche. Um die Sicherheit Ihres Kontos zu gewährleisten habe wir Ihr Konto gesperrt. Bitte setzten Sie Ihr Passwort zurück um das Konto zu reaktiviern.
+      error: Ungültige Login E-mail oder falsches Passwort.

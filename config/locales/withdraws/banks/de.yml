@@ -1,0 +1,112 @@
+de:
+  withdraw_channel:
+    bank:
+      key: Banküberweisung
+      title: Banküberweisung
+      intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+      latency: 1 Arbeitstag
+      transfer: Manuell
+      go: Jetzt Auszahlen
+
+  activerecord:
+    models:
+      withdraws/bank: Banküberweisung
+    attributes:
+      withdraws/bank:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Währung
+        state_and_actions: Status
+        fund_source: Bank
+        fund_extra_text: Ihre Bank
+        fund_uid: Ihre Kontonummer
+        sum: Betrag
+        fee: Gebühr
+        amount: Betrag
+        remark: Bemerkung
+        created_at: Erstellt am
+        state_and_action: Status
+
+  withdraws/bank:
+    aasm_state:
+      submitting: in Bearbeitung
+      submitted: in Bearbeitung
+      rejected: Abgelehnt
+      accepted: in Bearbeitung
+      suspect: Suspekt
+      processing: in Bearbeitung
+      coin_ready: Coin Ready
+      coin_done: Coin Done
+      done: Erledigt
+      almost_done: Almost Done
+      canceled: Annuliert
+      failed: Fehler
+
+
+  private:
+    withdraws:
+      banks:
+        update:
+          notice: Ihr Auszahlungsantrag wurde erfolgreich übermittelt und sobald als Möglich bearbeitet.
+          alert_two_factor: Falsches Zwei-Faktoren Authentifizierung Passwort
+        destroy:
+          notice: Ihre Auzahlung wurde annuliert und der reservierte Betrag dem Konto wieder gutgeschrieben.
+        new:
+          submit: Ausführen
+          allin: All-In
+          fund_uid: Gespeicherte Bankverbindung oder Neue erstellen
+          fund_extra: Wählen Sie Ihre Bank
+
+  admin:
+    withdraws:
+      banks:
+        index:
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
+
+  simple_form:
+    labels:
+      withdraw:
+        bank:
+          fund_extra: Bank
+          sum: Betrag
+          account_balance: Kontostand
+          member_name: Kontoinhaber
+    placeholders:
+      withdraw:
+        bank:
+          sum: Minimum Betrag 100 CHF
+    hints:
+      withdraw:
+        bank:
+          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr COINDEX Konto angegeben haben</span>
+          sum: "<a target='_balance' href='#'>Gebühren</a>"
+          fund_extra: Falls Ihre Bank nicht in der Liste ist kontaktieren Sie bitte den Support
+
+  guides:
+    private:
+      withdraws:
+        banks:
+          panel: Banküberweisung
+          new:
+            panel: Auszahlen
+            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            default-panel: Auszahlungsverlauf Banküberweisung
+          edit:
+            panel: Auszahlen
+            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            default-panel: Auszahlungsverlauf Banküberweisung
+          create:
+            panel: Auszahlen
+            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            default-panel: Auszahlungsverlauf Banküberweisung
+

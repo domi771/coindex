@@ -11,6 +11,9 @@ module Private
       @ask_name = I18n.t("currency.name.#{@ask}")
       @bid_name = I18n.t("currency.name.#{@bid}")
 
+      @ask_code = I18n.t("currency.code.#{@ask}")
+      @bid_code = I18n.t("currency.code.#{@bid}")
+
       @market = current_market
 
       @bids   = Global[@market].bids
@@ -38,7 +41,8 @@ module Private
     private
 
     def set_default_market
-      cookies[:market_id] = @market.id
+      #cookies[:market_id] = @market.id
+      cookies[:market_id] = 'btcchf'
     end
 
   end

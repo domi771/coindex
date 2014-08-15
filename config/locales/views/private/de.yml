@@ -1,0 +1,53 @@
+de:
+  private:
+    markets:
+      show:
+        error: Fehler beim übermittlen des Auftrags
+        success: Auftrag erfolgreich übermittelt
+        analysis_panel: Analyse
+        help_panel: Hilfe
+        done: ERLEDIGT
+        cancel: ANNULIEREN
+        cancel_confirm: Auftrag wirklich annulieren?
+        confirm: BESTÄTIGEN
+        ask_order: 'ANKAUF ##sn#'
+        bid_order: 'VERKAUF ##sn#'
+      ticker:
+        markets: Markt
+      account_balance:
+        title: Kontostand
+        available: Verfügbar %{currency}
+      place_order:
+        place_order: Auftrag Erstellen
+        bid_panel: Ankauf %{currency}
+        ask_panel: Verkauf %{currency}
+        price: Preis
+        amount: Anzahl
+        total: Total
+        available: Verfügbar
+        last_price: Letzter Preis
+        price_high: Preis mehr als 10% über aktuellem Kurs
+        price_low: Preis mehr als 10% unter aktuellem Kurs
+      order_book:
+        order_book: Auftragsbuch
+      market_trades:
+        trades: Transaktionen
+        time: Zeit
+        price: Preis
+        volume: Umsatz
+      my_orders:
+        my_orders: Meine Aufträge
+        orders_wait: Offene Aufträge
+        orders_done: Erledigte Aufträge
+        orders_cancel: Aufträge annulieren
+      price_chart:
+        price_chart: Preis-Chart
+      global:
+        global_orders_title: AUFTRÄGE
+        global_trades_title: TRANSAKTIONEN
+    withdraws:
+      index:
+        withdraw_history: Auszahlungsverlauf
+    funds:
+      show:
+        account_history: Kontoverlauf

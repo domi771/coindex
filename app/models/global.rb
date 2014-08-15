@@ -67,6 +67,14 @@ class Global
     trades.map(&:for_global)
   end
 
+  def ohlcs
+    Rails.cache.fetch key('ohlc') do
+       @ohlc = Ohlc.with_currency(3).order(:mydate).reverse_order.limit(10000)
+#      @ohlc = Ohlc.where("currency = ?", 3).order(:mydate).reverse_order.limit(10000)
+       @ohlc.map(&:for_global)
+    end
+  end
+
   def price
     Rails.cache.fetch key('price', 300) do
       Trade.with_currency(currency)

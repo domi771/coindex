@@ -1,0 +1,169 @@
+en:
+  "true": Yes
+  "false": No
+
+  slogan: SWISS BITCOIN EXCHANGE
+  slogan_small: You can send Bitcoins over the Internet directly to anyone with no middlemen. Bitcoins are traded worldwide. COINDEX is currently the only Bitcoin exchange worldwide where you can trade Bitcoin directly with Swiss Francs.
+  signup_button: FREE SIGNUP &  START TRADING
+  price: Price
+  main_1h: Fast, Easy, Stable
+  main_1a: Whether you're just getting into Bitcoin or an experienced trader, it's fast to set up an account.
+  main_1b: You can fund your account easily from your bank account to buy/sell bitcoins.
+  main_2h: Trade More, Pay Less
+  main_2a: No Account Opening Fees. No Bank Transfer Deposit Fees. No Crypto Transfer Fees.
+  main_2b: Trading fees are based on your volume. Trading fee ranges from 0 to 0.5%.
+  main_3h: Security & Trust
+  main_3a: Support for 2-Factor Authentication. 100% of our customer funds are held in cold storage.
+  main_3b: We do not operate a fractional reserve and have partnered with the world's leading DDOS Service.
+  main_ann: Announcements
+  main_ann_1t: COINDEX launches Bitcoin ATM's
+  main_ann_1b: During the next few months we will setup several Bitcoin ATM's in various Swiss cities. More info soon.
+  main_ann_2t: COINDEX running in TESTNET
+  main_ann_2b: Since today you can test COINDEX with Testnet Bitcoins. Any feedback welcome at coindex@coindex.ch
+  sprache_de: Deutsch
+  sprache_fr: Francais
+  sprache_it: Italiano
+  sprache_en: English
+
+  tags:
+    vip: VIP
+    hero: Hero Member
+    admin: Admin
+  trade:
+    markets: Market
+    realtime_price:
+      title: Realtime Price
+    account_balance:
+      title: Account Balance
+      available_btc: BTC
+      available_chf: CHF
+      available_ltc: LTC
+  gon:
+    ask: Ask
+    bid: Bid
+    brand: COINDEX
+    code: CHF
+  back: Back
+  invalid_password: Invalid password
+  all: All
+
+  date:
+    formats:
+      short: '%m-%d %H:%M'
+      default: '%m/%d/%Y %H:%M'
+  time:
+    formats:
+      short: '%m-%d %H:%M'
+      default: '%m/%d/%Y %H:%M'
+
+  currency:
+    name:
+      chf: Swiss Franc
+      btc: Bitcoin
+      ltc: Litecoin
+    code:
+      chf: CHF
+      btc: BTC
+      ltc: LTC
+
+  reset_two_factors:
+    create:
+      success: We have sent an email with instructions for resetting your Two-Factor Authentication.
+    edit:
+      success: You have successfully disabled Two-Factor Authentication. You could reset it in your account setting.
+
+  private:
+    trade:
+      trades:
+        orders:
+          title: Orders
+        trades:
+          title: Trades
+        charges:
+          title: Charges
+      orders:
+        index:
+          done: Done
+          cancel: Cancel
+          confirm: "Are you sure cancel order #%{id}?"
+        destroy:
+          :true: "#%{id} Cancel Order Successful"
+          :false: "#%{id} Cancel Order Reject"
+    withdraws:
+      update:
+        request_accepted: Withdraw request accepted.
+      index:
+        fee: Fee
+        total: Total
+
+  header:
+    dashboard: Dashboard
+    admin: Admin
+    market: Trade
+    settings: Profile
+    signin: Sign In
+    signout: Exit
+    signup: Sign Up
+    deposit: Deposit
+    withdraw: Withdraw
+    getstart: Get Start
+    assets: Solvency
+    history: History
+    order_history: Order History
+    trade_history: Trade History
+    account_history: Account History
+    my_profile: My Profile
+    tickets: Tickets
+
+  admin_header:
+    deposits: Deposits
+    withdraws: Withdraws
+    statistics: Data Statistics
+    id_documents: Verify Account
+
+  footer:
+    about: About
+    privacy: privacy
+    contact: Contact
+    price: Price
+
+  actions:
+    go: Go
+    submit: Submit
+    deposit: Deposit
+    select: Please Select
+    unlock: Unlock
+    confirm: Confirm
+    back: Back
+    block: view in block
+    destroy: Delete
+    destroy_confirm: Are you sure delete it?
+    detail: Detail
+    publish: Publish
+    edit: Edit
+    preview: Preview
+    close: Close
+    cancel: Cancel
+    view: View
+    transact: Transact
+    reject: Reject
+    clipboard:
+      click: Click to copy
+      done: Copied
+
+  global:
+    ask_price: Ask
+    bid_price: Bid
+    high_price: High
+    low_price: Low
+    volume: Volume
+    latest_price: Last
+
+  chart:
+    price: Price
+    volume: Volume
+
+  'yes': 'Yes'
+  'no': 'No'
+
+

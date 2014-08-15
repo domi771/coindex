@@ -101,6 +101,7 @@ Peatio::Application.routes.draw do
         resources :trades, :only => :show
         resources :tickers, :only => :show
         resources :prices, :only => :show
+        resources :ohlcs, :only => :show
       end
     end
   end

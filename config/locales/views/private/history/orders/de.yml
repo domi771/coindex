@@ -1,0 +1,20 @@
+de:
+  private:
+    history:
+      orders:
+        order_history: Auftragsverlauf
+        id: ID
+        type: Typ
+        state: Status
+        market: Markt
+        price: Preis
+        volume: Volumen
+        average_price: Avg. Preis
+        fullfilled_volume: Erfüllt
+        timestamp: Erstellt um
+      order:
+        ask: Verkauf
+        bid: Ankauf
+        wait: Offen
+        cancel: Annuliert
+        done: Erledigt

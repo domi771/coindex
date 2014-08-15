@@ -6,11 +6,11 @@ en:
         sell: Sell
         filter_by_type: Filter by type
         account_history: Account History
-        type: type
-        timestamp: date and time
-        fiat_currency: fiat currency
-        fiat_amount: fiat amount
-        coin_currency: crypto currency
-        coin_amount: crypto amount
-        coin_price: price
-        fee: fee
+        type: Type
+        timestamp: Date/Time
+        fiat_currency: Fiat Currency
+        fiat_amount: Fiat Amount
+        coin_currency: Crypto Currency
+        coin_amount: Crypto Amount
+        coin_price: Price
+        fee: Fee

@@ -1,0 +1,15 @@
+de:
+  private:
+    history:
+      trades:
+        trade_history: Handelsverlauf
+        side: Side
+        created_at: Zeit
+        base_currency: Basiswährung
+        base_amount: Basisbetrag
+        quote_currency: Kurswährung
+        quote_amount: Kursbetrag
+        price: Preis
+      trade:
+        sell: Verkauf
+        buy: Ankauf

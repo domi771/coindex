@@ -1,0 +1,123 @@
+de:
+  deposit_channel:
+    bank:
+      key: Banküberweisung
+      title: Banküberweisung
+      intro: Zahlen Sie Schweizer Franken per Banküberweisung auf Ihr Konto ein. 
+      latency: 1 Arbeitstag
+      transfer: Automatisch
+      go: Einzahlen
+
+  activerecord:
+    models:
+      deposits/bank: Banküberweisung
+    attributes:
+      deposits/bank:
+        fund_extra: Banküberweisung
+        fund_extra_text: Ihre Bank
+        fund_uid: Ihre Kontonummer
+        created_at: Erstellt am
+        holder: Kontoinhaber
+        receive_fund_holder_text: Kontoinhaber
+        receive_fund_uid_text: Kontonummer
+        receive_fund_extra_text: xx
+        member_sn: Personal Identification Number
+        amount: Betrag
+        sn: ID
+        state_and_action: Status
+        fund_source: Bankverbindung
+
+
+  deposits/bank:
+    aasm_state:
+      submitting: In Bearbeitung
+      cancelled: Annuliert
+      submitted: In Bearbeitung
+      accepted: Erledigt
+      rejected: Abgelehnt
+      checked: Checked
+      warning: Warnung
+
+  private:
+    deposits:
+      banks:
+        destroy:
+          notice: Einzahlungsauftrag erfolgreich annuliert.
+        create:
+          notice: Einzahlungsauftrag erfolgreich übermittelt. Benutzen Sie untenstehende Daten um die Banküberweisung zu tätigen.
+          submit: Ausführen
+        new:
+          step-1: Step One
+          select-bank: Large recharge can choose to transfer to our bank account, in order to quickly recharge your arrival, please try to select the same with our bank transfers recharge. You can choose to use the online bank transfer or transfer counter.
+          step-2: Step Two
+          send-money: No matter which way you choose to transfer, please fill in the remarks your personal identification number  , so that you can recharge quickly.
+          step-3: Step Three
+          check-confirm: Interbank transfer generally takes an hour or even longer time. If the delay exceeds your expectations, please contact our customer service staff timely.
+          bank: Bank
+          card: Karten NO.
+          name: Kontoname
+          fund_uid: Gespeicherte Bankverbindung oder Neue erstellen
+          fund_extra: Wählen Sie Ihre Bank
+          submit: Ausführen
+        edit:
+          bank: Empfänger Bank
+          branch: Empfänger Bankadresse
+          hodler: Empfänger Kontoinhaber
+          account: Empfänger Kontonummer 
+          holder: Empfänger Name
+
+  guides:
+    private:
+      deposits:
+        banks:
+          panel: Banküberweisung
+          intro: Zahlen Sie Schweizer Franken per Banküberweisung auf Ihr COINDEX Konto ein.
+          new:
+            panel: Einzahlen
+            default-panel: Einzahlungsverlauf Banküberweisung
+          edit:
+            panel: Einzahlen
+            default-panel: Einzahlungsverlauf Banküberweisung
+          create:
+            panel: Einzahlen
+            default-panel: Einzahlungsverlauf Banküberweisung
+
+  simple_form:
+    labels:
+      deposit:
+        bank:
+          fund_extra: Ihre Bank
+          member_name: Kontoinhaber
+    placeholders:
+      deposit:
+        bank:
+          amount: Minimum Betrag 100 CHF
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>Gebühren</a>"
+          fund_extra: Falls Ihre Bank nicht in der Liste ist kontaktieren Sie bitte den Support
+          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr COINDEX Konto angegeben haben</span>
+          sn: <span class='text-danger'>Bitte kopieren Sie die ID und geben Sie diese als Mitteilung bei Ihrer Banküberweisung an.</span>
+
+
+  helpers:
+    submit:
+      deposits_bank:
+        create: Ausführen
+        update: Bestätigen
+
+  admin:
+    deposits:
+      banks:
+        index:
+          oneday: 二十四小时内充值订单
+          available: 全部未完成充值订单
+        show:
+          empty_target: 无充值账单
+          alert: 未发现外部充值账单，无法处理充值。
+          notice: 此账目已经充值成功，请手工记录。
+          deposit: System Deposit SN - %{sn}
+          target_deposit: Target Depsoit - %{sn}
+          deposit: 充值
+          confirm: 确认给用户进行充值吗？

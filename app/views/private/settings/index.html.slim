@@ -1,5 +1,6 @@
 = content_for :before_content do
-  .container = render partial: 'account_balance'
+  .container style="max-width: 1150px; width: auto; padding-left: 35px; padding-right: 35px;"
+   = render partial: 'account_balance' 
 
 ul.list-group
 
@@ -31,7 +32,10 @@ ul.list-group
         h4
           span = t('.verification.title')
           i.fa.fa-bolt.text-warning
-        p.text-ignore = t('.verification.description')
+        - if current_user.id_document_verified?
+          p.text-ignore = t('.verification.description-activated')
+        - else
+          p.text-ignore = t('.verification.description')
       .col-md-3
         - if current_user.id_document_verified?
           a href="#" class="btn btn-success btn-block disabled" role="button"

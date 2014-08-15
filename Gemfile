@@ -48,7 +48,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem "jquery-rails"
 gem 'bootstrap-sass'
-gem 'bootstrap-wysihtml5-rails'
+gem 'bootstrap-wysihtml5-rails', '0.3.1.23'
 gem 'font-awesome-sass'
 gem 'momentjs-rails'
 gem 'flot-rails'

@@ -1,0 +1,124 @@
+de:
+  withdraw_channel:
+    litecoin:
+      key: Blockchain
+      title: Litecoin Blockchain
+      intro: Zahlen Sie Litecoin von COINDEX zu Ihrem eigenen Wallet aus.
+      latency: 30 Minuten
+      transfer: Manuell
+      go: Jetzt Auszahlen
+
+  activerecord:
+    models:
+      withdraws/litecoin: Auszahlen
+    attributes:
+      withdraws/litecoin:
+        id: ID
+        member_name: Transaktions ID
+        currency_obj_key_text: Währung
+        state_and_actions: Status
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Litecoin Adresse
+        created_at: Erstellt am
+        sum: Betrag
+        amount: Betrag
+        remark: Remark
+        fee: Gebühren
+        state: Status
+        state_and_action: Status
+    errors:
+      models:
+        withdraws/litecoin:
+          attributes:
+            sum:
+              poor: Ihr Kontostand ist ungenügend
+              greater_than: Ungültiger Auszahlungsbetrag 
+            fund_uid:
+              blank: Sie haben keine Auszahlungsadresse angegeben
+              invalid: Dies ist keine gültige Auszahlungsadresse
+              ismine: Dies ist keine gültige Auszahlungsadresse 
+
+  withdraws/litecoin:
+    aasm_state:
+      submitting: in Bearbeitung
+      submitted: in Bearbeitung
+      rejected: Abgelehnt
+      accepted: in Bearbeitung
+      suspect: Suspekt
+      processing: in Bearbeitung
+      coin_ready: Coin Ready
+      coin_done: Coin Done
+      done: Erledigt
+      almost_done: Almost Done
+      canceled: Annuliert
+      failed: Fehler
+
+  private:
+    withdraws:
+      litecoins:
+        destroy:
+          notice: Ihre Auzahlung wurde annuliert und der reservierte Betrag dem Konto wieder gutgeschrieben.
+        update:
+          notice: Ihr Auszahlungsantrag wurde erfolgreich übermittelt und sobald als Möglich bearbeitet.
+          alert_two_factor: Falsches Zwei-Faktoren Authentifizierung Passwort.
+        new:
+          submit: Ausführen
+          allin: All-In
+          fund_uid: Gespeicherte Adresse oder Neue erstellen
+          fund_extra: 选择开户行
+
+  admin:
+    withdraws:
+      litecoins:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+
+  simple_form:
+    labels:
+      withdraw:
+        litecoin:
+          fee: Gebühren
+          sum: Betrag
+          fund_uid: Litecoin Adresse
+          fund_extra: Memo
+          account_balance: Kontostand
+          member_name: Konto
+    placeholders:
+      withdraw:
+        litecoin:
+          sum: Minimum Betrag 0.001
+          fund_extra: Memo für diese Adresse (optional)
+    hints:
+      withdraw:
+        litecoin:
+          sum: "<a target='_balance' href='#'>Gebühren</a>"
+
+  guides:
+    private:
+      withdraws:
+        litecoins:
+          panel: Litecoin Blockchain
+          new:
+            panel: Auszahlen
+            intro: Geben Sie die Litecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: Litecoin Auszahlungsverlauf
+          create:
+            panel: Auszahlen
+            intro: Geben Sie die Litecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: Litecoin Auszahlungsverlauf
+          edit:
+            panel: Auszahlen
+            intro: Geben Sie die Litecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: Litecoin Auszahlungsverlauf
+

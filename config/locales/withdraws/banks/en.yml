@@ -3,10 +3,10 @@ en:
     bank:
       key: Bank Transfer
       title: Bank Transfer
-      intro: Bank transfer deposits, Recommend for large recharge
-      latency: 30 minutes
+      intro: Transfer Swiss Francs from your COINDEX account to your Bank account
+      latency: 1 business day
       transfer: Manual
-      go: Withdraw
+      go: Withdraw Now
 
   activerecord:
     models:
@@ -16,7 +16,7 @@ en:
         id: ID
         member_name: Member
         currency_obj_key_text: Currency
-        state_and_actions: State/Action
+        state_and_actions: State
         fund_source: Bank
         fund_extra_text: Bank
         fund_uid: Bank Account
@@ -25,6 +25,7 @@ en:
         amount: Amount
         remark: Remark
         created_at: Created At
+        state_and_action: State
 
   withdraws/bank:
     aasm_state:
@@ -100,8 +101,12 @@ en:
           panel: Bank Transfer
           new:
             panel: Withdraw
-            intro: Select the bank to cash withdrawal amount and enter the account number and complete submission. Withdraw your bank account and your name must be consistent with the real-name authentication name.
-            default-panel: Withdraw History
+            intro: Transfer Swiss Francs from your COINDEX account to your Bank account.
+            default-panel: Bank Transfer Withdraw History
           edit:
-            panel: Withdraw
-            intro: Select the bank to cash withdrawal amount and enter the account number and complete submission. Withdraw your bank account and your name must be consistent with the real-name authentication name.
+            intro: Transfer Swiss Francs from your COINDEX account to your Bank account.
+            default-panel: Bank Transfer Withdraw History
+          create:
+            intro: Transfer Swiss Francs from your COINDEX account to your Bank account.
+            default-panel: Bank Transfer Withdraw History
+

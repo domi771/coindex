@@ -3,12 +3,6 @@
 - else
   p
     h4 = t('.step-1')
-    p = t('.open-wallet')
-
-  hr.split
-
-  p
-    h4 = t('.step-2')
     p = send_coin
 
   .input-group.col-sm-8
@@ -18,22 +12,15 @@
       i.fa.fa-copy data-clipboard-text = address.address
 
   p
-    div
-      = t('.or')
+    div style = "margin-bottom: 10px;"
       = t('.scan-qr')
     = qr_tag address.address
 
   hr.split
 
   p
-    h4 = t('.step-3')
-    p = check_confirm
-
-  hr.split
-
-  p
-    h4 = t('.step-4')
-    p = t('.history_html')
+    h4 = t('.step-2')
+    p == t('.history')
 
   = content_for :after
     = panel do

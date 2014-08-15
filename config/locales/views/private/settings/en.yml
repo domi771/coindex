@@ -6,17 +6,17 @@ en:
 
       index:
         safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use  Two-factor Authentication
-        reset_password: Rest your Password
+        reset_password: Reset your Password
 
         reauthenticate: Authentication
         activated:  An  email has been sent to your mailbox, please check it  for verification as soon as possible. If you do not received it , please click "send it again" button
         auth-activated: Please confirm your email address first.
-        auth-verified: Please verify your account first.
+        auth-verified: Please verify your id first.
 
         email:
           title: E-mail verification
           description: Your e-mail has not been verified, click the "Send Mail" button to complete the verification
-          description-activated: Your email adress has been verified successfully, remember and protect this e-mail address, it is the single certificate for your  account
+          description-activated: Your email adress has been successfully verified.
 
           resend: Send it again
           activated: Verified
@@ -24,7 +24,7 @@ en:
 
         phone_number:
           title: Phone Number
-          description: Provide a phone number will make your account more secure. you can quickly reset your password and your account operations will be notified.
+          description: Providing a phone number will make your account more secure. Easy reset your password and get notified by SMS.
           go: Set
           verified: Verified
 
@@ -35,9 +35,10 @@ en:
           disable: Disable
 
         verification:
-          title: Verify Account
-          description: Help keep the bad guys out of your account by using both your password and your phone
-          go: Submit
+          title: KYC Verification
+          description: Your account and details have not been verified by our KYC process. Click Verify to begin the process.
+          description-activated: Your account has been successfully verified.
+          go: Verify
           verified: Verified
 
         asset_passwords:
@@ -48,7 +49,7 @@ en:
 
         passwords:
           title: Password
-          description: This  passwords is required for login , please keep it in mind.
+          description: This password is required for login, please keep it in mind.
           go: Change Password
 
     otps:

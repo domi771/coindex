@@ -1,2 +1,23 @@
 footer: .container: .row: .col-md-24.text-center
-  = render "shared/footer_content"
+  .container
+    .text-muted.footer-content style = "float: left;"
+      ul.nav.nav-pills.social-icons
+        li Copyright &copy; COINDEX 2014 | All Rights Reserved
+
+      nav.footer-menu role="navigation" style = "float: right !important;"
+    ul.list-inline style = "float: right;"
+      li: a target='_blank' href='#' Fees
+      li: a target='_blank' href='#' Documents
+      li: a target='_blank' href='#' About
+      li: a target='_blank' href='#' Issues
+      li: a target='_blank' href='#' Releases
+
+      li.dropdown
+        a.dropdown-toggle href="#" data-toggle="dropdown"
+          | #{language_path2}
+          b.caret
+        ul#languages.dropdown-menu style = "top: inherit; bottom: 100%; width: 100px; left: -30px; font-size: 12px;"
+          - I18n.available_locales.each do |lang|
+            li: a href="?lang=#{lang}" #{language_path2(lang)}
+
+

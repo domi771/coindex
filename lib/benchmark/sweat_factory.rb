@@ -17,7 +17,7 @@ module Benchmark
           bid: :cny,
           ask: :btc,
           state: Order::WAIT,
-          currency: :btccny,
+          currency: :btcchf,
           origin_volume: attrs[:volume],
           source: 'Web'
         }.merge(attrs))
