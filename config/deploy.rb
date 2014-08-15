@@ -4,11 +4,11 @@ require 'mina/git'
 require 'mina/rbenv'
 require 'mina/slack/tasks'
 
-set :repository, 'https://github.com/peatio/peatio.git'
+set :repository, 'git@github.com:domi771/coindex.git'
 set :user, 'deploy'
 set :deploy_to, '/home/deploy/peatio'
 set :branch, 'master'
-set :domain, 'demo.peat.io'
+set :domain, 'coindex'
 set :keep_releases, 20
 
 set :shared_paths, [
