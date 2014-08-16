@@ -37,7 +37,7 @@
                 series[0].setData ohlc
                 series[1].setData volume
 
-            ), 1000
+            ), 3000
            return
 
       plotOptions:

@@ -2,7 +2,7 @@ en:
   private:
     tickets:
       new:
-        intro: If you have any problems, start a new discussion so that our staff can help you out as soon as possible. All discussions are private between you and the support staff.
+        intro: If you experience any problems or simply have a question or feedback please submit a ticket here.
       ticket_create_succ: Ticket created successfully.
       ticket_create_fail: Failed to create ticket, please try again latter.
       comment_succ: Comment successfully.
@@ -18,10 +18,24 @@ en:
       view_open_tickets: View open tickets
       admin_notification_title: User %{email} created a new ticket
       admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
+      title: Subject
+      more_detail: Message
       comments:
         user_notification_title: Your ticket got a new reply
         user_notification_content: "Your ticket got a new reply, please follow the link below to see the detail:"
         admin_notification_title: User %{email} reply a ticket
         admin_notification_content: User %{email} reply a ticket, please follow the link below to see the detail
 
-
+  guides:
+    private:
+        tickets:
+          panel: Support
+          new:
+            panel: Tickets
+            intro: We reply within 24 hours to your support tickets.
+          edit:
+            panel: Tickets
+            intro: We reply within 24 hours to your support tickets.  
+          create:
+            panel: Tickets
+            intro: We reply within 24 hours to your support tickets.  

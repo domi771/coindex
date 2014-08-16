@@ -54,6 +54,7 @@ de:
       default_message: "Bitte korrigieren Sie untenstehende Fehler:"
     labels:
       defaults:
+        title: Betreff
         save_fund_source: "... Angaben speichern"
         recaptcha: Authentifikations Code
       two_factor:
@@ -74,6 +75,8 @@ de:
         password_confirmation:  Neues Passwort bestätigen
       reset_password:
         password: Neues Password
+      ticket:
+        content: Mitteilung
     placeholders:
       session:
         email: E-mail Adresse

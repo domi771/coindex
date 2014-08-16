@@ -53,7 +53,7 @@ en:
       default_message: "Please review the problems below:"
     labels:
       defaults:
-        title: Title
+        title: Subject
       two_factor:
         uri: Two-dimensional code
         otp_secret: Ciphertext
@@ -73,7 +73,7 @@ en:
       reset_password:
         password: New Password
       ticket:
-        content: More detail
+        content: Message
     placeholders:
       session:
         email: E-mail Address

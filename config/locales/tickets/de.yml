@@ -1,0 +1,41 @@
+de:
+  private:
+    tickets:
+      new:
+        intro: Falls Sie eine Frage haben oder uns Feedback senden wollen senden Sie uns bitte ein Ticket hier.
+      ticket_create_succ: Ticket erfolgreich erstellt.
+      ticket_create_fail: Fehler beim erstellen des Tickets.
+      comment_succ: Kommentar erfolgreich hinzugefügt.
+      cooment_fail: Kommentar nicht hinzugefügt
+      me: Ich
+      supporter: Support
+      close: Ticket Schliessen
+      close_succ: Ticket erfolgreich geschlossen
+      close_confirm: Sind Sie sicher?
+      title_content_both_blank: Betreff und/oder Mitteilung haben keinen Inhalt.
+      from: von
+      view_closed_tickets: Geschlossene Tickets
+      view_open_tickets: Offene Tickets
+      admin_notification_title: User %{email} created a new ticket
+      admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
+      title: Betreff
+      more_detail: Mitteilung
+      comments:
+        user_notification_title: Ihr Ticket wurde beantwortet
+        user_notification_content: "Ihr Ticket wurde beantwortet, bitte klicken Sie den Link:"
+        admin_notification_title: User %{email} reply a ticket
+        admin_notification_content: User %{email} reply a ticket, please follow the link below to see the detail
+
+  guides:
+    private:
+        tickets:
+          panel: Support
+          new:
+            panel: Tickets
+            intro: Wir antworten innerhalb von 24 Stunden auf Support Tickets.
+          edit:
+            panel: Tickets
+            intro: Wir antworten innerhalb von 24 Stunden auf Support Tickets.  
+          create:
+            panel: Tickets
+            intro: Wir antworten innerhalb von 24 Stunden auf Support Tickets.  
