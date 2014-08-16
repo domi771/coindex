@@ -14,7 +14,7 @@
            series = @series
            setInterval (->
 
-              $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=8760&period=1", (data) ->
+              $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=1", (data) ->
 
                 ohlc = []
                 volume = []
@@ -55,8 +55,8 @@
         enabled: false
 
       rangeSelector:
-        inputEnabled: true
-        selected: 0
+        inputEnabled: false
+        selected: 3
         buttons: [
           {
             type: 'day'
@@ -112,6 +112,10 @@
              enabled: true
              forced: true
              units: [ 
+               [
+                'hour'
+                [1]
+               ]
                [
                 'hour'
                 [6]
