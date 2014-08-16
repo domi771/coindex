@@ -5,11 +5,11 @@ module Private
     before_action :auth_activated!
 
     def index
-      @cny_assets  = Currency.assets('cny')
+      @chf_assets  = Currency.assets('chf')
       @btc_proof   = Proof.current :btc
-      @cny_proof   = Proof.current :cny
+      @chf_proof   = Proof.current :chf
       @btc_account = current_user.accounts.with_currency(:btc).first
-      @cny_account = current_user.accounts.with_currency(:cny).first
+      @chf_account = current_user.accounts.with_currency(:chf).first
     end
 
     def partial_tree

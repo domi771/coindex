@@ -1,6 +1,6 @@
 - id: 1
   key: renminbi
-  code: cny
+  code: chf
   coin: false
   assets:
     accounts:

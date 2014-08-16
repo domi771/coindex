@@ -4,7 +4,7 @@ describe Private::OrderBidsController do
 
   let(:member) do
     create(:member).tap {|m|
-      m.get_account('cny').update_attributes(balance: '30000')
+      m.get_account('chf').update_attributes(balance: '30000')
     }
   end
 

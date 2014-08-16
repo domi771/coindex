@@ -237,17 +237,17 @@ describe Order, "related accounts" do
   let(:bob)    { who_is_billionaire }
 
   context OrderAsk do
-    it "should hold btc and expect cny" do
+    it "should hold btc and expect chf" do
       ask = create(:order_ask, member: alice)
       ask.hold_account.should == alice.get_account(:btc)
-      ask.expect_account.should == alice.get_account(:cny)
+      ask.expect_account.should == alice.get_account(:chf)
     end
   end
 
   context OrderBid do
-    it "should hold cny and expect btc" do
+    it "should hold chf and expect btc" do
       bid = create(:order_bid, member: bob)
-      bid.hold_account.should == bob.get_account(:cny)
+      bid.hold_account.should == bob.get_account(:chf)
       bid.expect_account.should == bob.get_account(:btc)
     end
   end

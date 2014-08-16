@@ -1,6 +1,6 @@
 - id: 1
   key: dollar
-  code: cny
+  code: chf
   coin: false
 - id: 2
   key: satoshi

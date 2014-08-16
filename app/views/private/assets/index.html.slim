@@ -11,11 +11,11 @@
         li        data-scroll-nav='1'
           a = t('.btc-assets')
         li        data-scroll-nav='2'
-          a = t('.cny-assets')
+          a = t('.chf-assets')
 
 = content_for :frame do
   .container style="margin-top: 150px; margin-bottom: 240px;"
     div data-scroll-index=0 = render 'liability_proof'
     div data-scroll-index=1 = render 'btc_assets'
-    div data-scroll-index=2 = render 'cny_assets'
+    div data-scroll-index=2 = render 'chf_assets'
 

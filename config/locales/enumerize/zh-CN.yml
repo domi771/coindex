@@ -19,7 +19,7 @@ zh-CN:
       wait: 等待
       cancel: 取消
     currency:
-      cny: CNY
+      chf: CHF
       btc: BTC
     order:
       state:

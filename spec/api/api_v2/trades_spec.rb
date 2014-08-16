@@ -5,7 +5,7 @@ describe APIv2::Trades do
   let(:member) do
     create(:verified_member).tap {|m|
       m.get_account(:btc).update_attributes(balance: 12.13,   locked: 3.14)
-      m.get_account(:cny).update_attributes(balance: 2014.47, locked: 0)
+      m.get_account(:chf).update_attributes(balance: 2014.47, locked: 0)
     }
   end
   let(:token)  { create(:api_token, member: member) }
@@ -55,7 +55,7 @@ describe APIv2::Trades do
 
     it "should get trades by from and limit" do
       another = create(:trade, bid: bid, created_at: 6.hours.ago)
-      get '/api/v2/trades', market: 'btccny', from: ask_trade.id, limit: 1, order_by: 'asc'
+      get '/api/v2/trades', market: 'btcchf', from: ask_trade.id, limit: 1, order_by: 'asc'
       response.should be_success
       JSON.parse(response.body).first['id'].should == bid_trade.id
     end

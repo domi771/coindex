@@ -4,8 +4,8 @@
 # who submit *bid* orders.
 #
 # ID of market is always in the form "#{B}#{A}". For example, in 'btcchf'
-# market, the commodity pair is `{btc, cny}`. Sellers sell out _btc_ for
-# _cny_, buyers buy in _btc_ with _cny_. _btc_ is the `target`, while _cny_
+# market, the commodity pair is `{btc, chf}`. Sellers sell out _btc_ for
+# _chf_, buyers buy in _btc_ with _chf_. _btc_ is the `target`, while _chf_
 # is the `price`.
 
 class Market < ActiveYamlBase
@@ -15,7 +15,7 @@ class Market < ActiveYamlBase
 
   # TODO: our market id is the opposite of conventional market name.
   # e.g. our 'btcchf' market should use 'btcchf' as id, and its name should
-  # be 'BTC/CNY'
+  # be 'BTC/CHF'
   def initialize(*args)
     super
 

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :order_bid do
-    bid :cny
+    bid :chf
     ask :btc
     currency :btcchf
     state :wait
@@ -14,7 +14,7 @@ FactoryGirl.define do
   end
 
   factory :order_ask do
-    bid :cny
+    bid :chf
     ask :btc
     currency :btcchf
     state :wait

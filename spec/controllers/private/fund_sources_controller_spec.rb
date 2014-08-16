@@ -23,7 +23,7 @@ describe Private::FundSourcesController do
 
   describe 'POST create' do
     it "should not create fund_source with blank extra" do
-      params = { currency: :cny,
+      params = { currency: :chf,
                  fund_source: { extra: '',
                                 uid: '1234 1234 1234'} }
 
@@ -34,7 +34,7 @@ describe Private::FundSourcesController do
     end
 
     it "should not create fund_source with blank uid" do
-      params = { currency: :cny,
+      params = { currency: :chf,
                  fund_source: { extra: 'bank_code_1',
                                 uid: ''} }
 
@@ -45,7 +45,7 @@ describe Private::FundSourcesController do
     end
 
     it "should create fund_source successful" do
-      params = { currency: :cny,
+      params = { currency: :chf,
                  fund_source: { extra: 'bank_code_1',
                                 uid: '1234 1234 1234'} }
 

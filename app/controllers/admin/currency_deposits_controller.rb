@@ -32,7 +32,7 @@ module Admin
       @member = Member.find_by_sn params[:deposit][:sn]
       @member or return
 
-      account = @member.get_account(:cny)
+      account = @member.get_account(:chf)
       params[:deposit][:member_id] = @member.id
       params[:deposit][:account_id] = account.id
       params[:deposit][:currency] = account.currency

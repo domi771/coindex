@@ -2,11 +2,11 @@ zh-CN:
   private:
     funds:
       show:
-        cny_format: '0.00'
+        chf_format: '0.00'
         btc_format: '0.00000000'
         account_history: 账户历史记录
         reason:
-          cny:
+          chf:
             strike_add: 成交卖出
             strike_sub: 成交买入
             deposit: 充值

@@ -100,7 +100,7 @@
         tr
           td Member
           td: pre: code
-            | {"sn":"PEA5TFFOGQHTIO","name":"foo","email":"foo@peatio.dev","activated":true,"accounts":[{"currency":"cny","balance":"100243840.0","locked":"0.0"},{"currency":"btc","balance":"99999708.26","locked":"210.8"}]}
+            | {"sn":"PEA5TFFOGQHTIO","name":"foo","email":"foo@peatio.dev","activated":true,"accounts":[{"currency":"chf","balance":"100243840.0","locked":"0.0"},{"currency":"btc","balance":"99999708.26","locked":"210.8"}]}
           td
             p sn: Unique identifier of user
             p name: User name
@@ -110,9 +110,9 @@
         tr
           td Account
           td: pre: code
-            | {"currency":"cny","balance":"100243840.0","locked":"0.0"}
+            | {"currency":"chf","balance":"100243840.0","locked":"0.0"}
           td
-            p currency: Account type, like 'btc' or 'cny'
+            p currency: Account type, like 'btc' or 'chf'
             p balance: Account balance, exclude locked funds
             p locked: locked funds
         tr
@@ -153,7 +153,7 @@
     h3 Some Examples
 
   .panel-body
-    p Buy 1BTC at price 4000CNY:
+    p Buy 1BTC at price 4000CHF:
     pre: code
       | curl -X POST 'https://peatio.com/api/v2/orders' -d 'access_key=your_access_key&tonce=1234567&signature=computed_signature&market=btcchf&price=4000&side=buy&volume=1'
 

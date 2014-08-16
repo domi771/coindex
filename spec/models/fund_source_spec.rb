@@ -11,7 +11,7 @@ describe FundSource do
     end
 
     context 'bank' do
-      let(:fund_source) { build(:cny_fund_source) }
+      let(:fund_source) { build(:chf_fund_source) }
       subject { fund_source }
 
       its(:label) { should eq('bank_code_1#****1234') }
