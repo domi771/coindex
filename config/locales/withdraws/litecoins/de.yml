@@ -68,6 +68,10 @@ de:
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
           fund_extra: 选择开户行
+          fund_source_label: Litecoin Adresse
+          manage_fund_source: Litecoin Adressen verwalten
+        create:
+          notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
   admin:
     withdraws:

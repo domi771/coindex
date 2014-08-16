@@ -52,10 +52,14 @@ de:
         destroy:
           notice: Ihre Auzahlung wurde annuliert und der reservierte Betrag dem Konto wieder gutgeschrieben.
         new:
+          fund_source: Bankverbindung
+          manage_fund_source: Bankverbindungen verwalten
           submit: Ausführen
           allin: All-In
           fund_uid: Gespeicherte Bankverbindung oder Neue erstellen
           fund_extra: Wählen Sie Ihre Bank
+        create:
+          notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
   admin:
     withdraws:

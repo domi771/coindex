@@ -17,7 +17,7 @@ en:
         member_name: Member
         currency_obj_key_text: Currency
         state_and_actions: State
-        fund_source: Bank
+        fund_source: Bank Account
         fund_extra_text: Bank
         fund_uid: Bank Account
         sum: Amount
@@ -52,12 +52,12 @@ en:
         destroy:
           notice: Bank Transfer withdraw has been cancelled, frozen amount has been returned to your account.
         new:
-          fund_source: Select Fund Source
-          manage_fund_source: Manage Fund Source
+          fund_source: Bank Account
+          manage_fund_source: Manage Funding Sources
           submit: Submit
           allin: All-In
         create:
-          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+          notice: Review the data below and confirm the withdrawal.
 
   admin:
     withdraws:

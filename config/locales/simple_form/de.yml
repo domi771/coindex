@@ -29,7 +29,7 @@ de:
         update: Password Aktualisieren 
         create: Password Zurücksetzen
       fund_source:
-        create: Auszahlungs Addresse Hinzufügen
+        create: Hinzufügen
       deposit:
         create: Einzahlen
       id_document:

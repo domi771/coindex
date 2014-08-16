@@ -47,6 +47,8 @@ de:
           notice: Einzahlungsauftrag erfolgreich übermittelt. Benutzen Sie untenstehende Daten um die Banküberweisung zu tätigen.
           submit: Ausführen
         new:
+          fund_source: Bankverbindung
+          manage_fund_source: Bankverbindungen verwalten
           step-1: Step One
           select-bank: Large recharge can choose to transfer to our bank account, in order to quickly recharge your arrival, please try to select the same with our bank transfers recharge. You can choose to use the online bank transfer or transfer counter.
           step-2: Step Two

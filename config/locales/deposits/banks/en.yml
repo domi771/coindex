@@ -47,6 +47,8 @@ en:
           notice: Recharge request successfully submitted. Use the info below to complete the bank transfer.
           submit: Submit
         new:
+          fund_source: Bank Account
+          manage_fund_source: Manage Funding Sources
           step-1: Step One
           select-bank: Large recharge can choose to transfer to our bank account, in order to quickly recharge your arrival, please try to select the same with our bank transfers recharge. You can choose to use the online bank transfer or transfer counter.
           step-2: Step Two

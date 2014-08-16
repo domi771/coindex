@@ -67,7 +67,10 @@ de:
           submit: Ausführen
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
-          fund_extra: 选择开户行
+          label: Bitcoin Adresse
+          manage_fund_source: Bitcoin Adressen verwalten
+        create:
+          notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
   admin:
     withdraws:

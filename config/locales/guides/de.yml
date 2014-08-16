@@ -37,10 +37,14 @@ de:
           default-panel: Auszahlungsverlauf
 
       fund_sources:
-        panel: Auszahlen
+        panel: Mein Profil
         index:
-          title: Create new withraw address
-          intro: You can creat one new withdraw address , and it can be available for your withdrawal later.
+          title: Zahlungsverbindungen
+          intro: Erstellen Sie Zahlungsverbindungen welche Sie für Einzahlungen sowie und Auszahlungen verwenden können.
+        new:
+          title: Zahlungsverbindungen
+          intro: Erstellen Sie Zahlungsverbindungen welche Sie für Einzahlungen sowie und Auszahlungen verwenden können.
+
 
       id_documents:
         panel: Real-name Authentication

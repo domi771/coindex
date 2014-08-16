@@ -8,6 +8,7 @@ set :repository, 'git@github.com:domi771/coindex.git'
 set :user, 'deploy'
 set :deploy_to, '/home/deploy/peatio'
 set :branch, 'master'
+#set :domain, '178.17.8.128'
 set :domain, 'coindex'
 set :keep_releases, 20
 
@@ -16,7 +17,7 @@ set :shared_paths, [
   'config/application.yml',
   'config/currencies.yml',
   'config/markets.yml',
-  'config/amqp.yml',
+   'config/amqp.yml',
   'config/banks.yml',
   'config/deposit_channels.yml',
   'config/withdraw_channels.yml',

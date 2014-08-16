@@ -37,10 +37,14 @@ en:
           default-panel: Withdrawal History
 
       fund_sources:
-        panel: Fund source
+        panel: My Profile
         index:
-          title: Create new fund source
-          intro: You can creat one new fund source, and it can be available for your deposit or withdrawal later.
+          title: Funding Sources
+          intro: You can create funding sources which will be available for your deposit or withdrawal requests.
+        new:
+          title: Funding Sources
+          intro: You can create funding sources which will be available for your deposit or withdrawal requests.
+
 
       id_documents:
         panel: Real-name Authentication

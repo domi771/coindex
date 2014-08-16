@@ -66,6 +66,10 @@ en:
           allin: All-In
           fund_uid: Use saved address or enter a new address
           fund_extra: 选择开户行
+          fund_source_label: Litecoin Address
+          manage_fund_source: Manage Funding Sources
+        create:
+          notice: Review the data below and confirm the withdrawal request.
 
   admin:
     withdraws:

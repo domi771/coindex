@@ -66,10 +66,10 @@ en:
         new:
           submit: Submit
           allin: All-In
-          fund_source_label: Label
-          manage_fund_source: Manage Fund Source
+          fund_source_label: Bitcoin Address
+          manage_fund_source: Manage Funding Sources
         create:
-          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+          notice: Review the data below and confirm the withdrawal request.
 
   admin:
     withdraws:
