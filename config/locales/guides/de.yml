@@ -75,11 +75,12 @@ de:
     reset_passwords:
       panel: Passwort zurücksetzen
       new:
+        panel: Anmelden
         title: Passwort anfordern
         intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf COINDEX registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
       create:
         title: Passwort anfordern
-        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf COINDEX registriert haben. Wir senden Ihnen unverzüg$
+        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf COINDEX registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
       edit:
         title: Neues Passwort erstellen
       update:
@@ -102,4 +103,3 @@ de:
       edit:
         panel: Mein Profil
         title: Passwort zurücksetzen
-
