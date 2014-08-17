@@ -1,0 +1,21 @@
+de:
+  private:
+    id_documents:
+      edit:
+        state: Status
+        state_unverified: NICHT VERIFIZIERT
+        state_verifying: IN BEARBEITUNG
+        state_verified: VERIFIZIERT
+        name: Vor- und Nachname
+        birth_date: Geburtsdatum
+        address: Adresse
+        city: Stadt
+        country: Land
+        zipcode: Postleitzahl
+        id_document_type: Ausweis Dokument
+        id_document_number: Ausweis Dokument Nummer
+        id_document_file: Ausweis Dokument Foto
+        id_bill_type: Wohnsitznachweis
+        id_bill_file: Wohnsitznachweis Foto
+      update:
+        notice: Ihre KYC Verifikation wurde übermittelt.

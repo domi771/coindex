@@ -14,7 +14,7 @@ de:
         auth-verified: Bitte verifizieren Sie Ihr Konto (KYC Verifizierung) zuerst.
 
         email:
-          title: E-mail Verifikation
+          title: E-mail Verifizierung
           description: Ihre E-mail Adresse wurde noch nicht verifiziert. 
           description-activated: Ihre E-mail Adresse wurde erfolgreich verifiziert.
 
@@ -23,14 +23,14 @@ de:
           go: Los
 
         phone_number:
-          title: Telefonnummer
+          title: SMS Zwei-Faktoren Authentifizierung
           description: Machen Sie Ihr Konto sicherer durch Zwei-Faktoren Authentifizierung per SMS.
           go: Aktivieren
           verified: Aktiviert
 
         two_factor_auth:
-          title: Zwei-Faktoren Authentifikation
-          description: Zwei-Faktoren Authentifikation gibt Ihrem Konto die ultimative Sicherheit gegen Missbrauch.
+          title: Google Zwei-Faktoren Authentifizierung
+          description: Google Zwei-Faktoren Authentifikation gibt Ihrem Konto die ultimative Sicherheit gegen Missbrauch.
           enable: Aktivieren
           disable: Deaktivieren
 

@@ -31,7 +31,6 @@ ul.list-group
       .col-md-8
         h4
           span = t('.verification.title')
-          i.fa.fa-bolt.text-warning
         - if current_user.id_document_verified?
           p.text-ignore = t('.verification.description-activated')
         - else

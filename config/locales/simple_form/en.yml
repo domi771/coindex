@@ -67,9 +67,9 @@ en:
         password: Login Password
       identity:
         email: Login E-mail
-        old_password: Original password
+        old_password: Current Password
         password: New Password
-        password_confirmation: Confirm new password
+        password_confirmation: Confirm new Password
       reset_password:
         password: New Password
       ticket:
@@ -80,10 +80,10 @@ en:
         password: ''
       identity:
         email: Example：xiaobai@example.com
-        password: Please set your login password
-        password_confirmation: Confirm your password
+        password: Password
+        password_confirmation: Confirm Password
         edit:
-          password: Please set your login password!
+          password: New Password
       document:
         key: Document link URL key
         title: Document Title
@@ -104,8 +104,8 @@ en:
         otp_secret: We recommend that you back up  two-dimensional code image or ciphertext to avoid that you accidental loss of the phone for the inconvenience.
         otp: Your validator will re-generate a new password every thirty seconds, please input timely.
       identity:
-        password: Set a password which has at least 6 characters and it's better to contain uppercase and lowercase letters and numbers.
+        password: 
       reset_password:
-        password: Set a password which has at least 6 characters and it's better to contain uppercase and lowercase letters and numbers.
+        password: Set a password which has at least 8 characters and it's better to contain uppercase and lowercase letters and numbers.
       id_document:
         name: Please fill in the name which  is consistent with your Credentials.

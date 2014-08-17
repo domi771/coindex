@@ -1,0 +1,23 @@
+de:
+  verify:
+    two_factors:
+      new:
+        timeout: SMS Zwei-Faktoren Authentifizierung Timeout
+      create:
+        error: SMS Zwei-Faktoren Authentifizierung Fehler
+    sms_tokens:
+      new:
+        title: SMS Zwei-Faktoren Authentifizierung
+        description: Machen Sie Ihr Konto sicherer durch Zwei-Faktoren Authentifizierung per SMS.
+        warning: "Tip: Falls Sie Ihr Gerät für die Zwei-Faktoren Authentifizierung verloren haben kontaktieren Sie uns."
+        send_code: Code Senden
+        send_code_alt: "Nochmals senden in COUNT sek."
+        phone_number: "+41794403020"
+        input_verify_code: Geben Sie den 6-Zeichen Code ein
+        submit: Speichern
+        sms_message: "Ihr COINDEX SMS Verifikations Code ist: %{code}"
+        notice:
+          send_code_success: SMS Code erfolgreich versendet
+          verify_code_success: SMS Zwei-Faktoren Authentifizierung erfolgreich aktiviert.
+        alert:
+          phone_number_error: Telefonnummer Fehler

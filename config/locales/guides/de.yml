@@ -10,19 +10,19 @@ de:
           intro: Kontoeinstellungen verwalten
 
       two_factors:
-        panel: Zwei-Faktoren Authentifizierung
-        new:
-          title: Zwei-Faktoren Authentifizierung
-          intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
+        panel: Google Zwei-Faktoren Authentifizierung
         edit:
-          title: Deaktivierung der Zwei-Faktoren Authentifizierung
-          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
-        create:
-          title: Deaktivierung der Zwei-Faktoren Authentifizierung
-          intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
+          panel: Mein Profil
+          title: Google Zwei-Faktoren Authentifizierung
+          intro: Falls Sie ein neues Smartphone haben können Sie die Zwei-Faktoren Authentifizierung auf dem alten Gerät deaktivieren.
         destroy:
-          title: Deaktivierung der Zwei-Faktoren Authentifizierung
-          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
+          panel: Mein Profil
+          title: Google Faktoren Authentifizierung
+          intro: Falls Sie ein neues Smartphone haben können Sie die Zwei-Faktoren Authentifizierung auf dem alten Gerät deaktivieren.
+        show:
+          panel: Mein Profil
+          title: Google Zwei-Faktoren Authentifizierung
+          intro: Mit Zwei-Faktoren Authentifizierung schützen Sie Ihr Konto mit dem Passwort sowie Ihrem Smartphone.
 
       deposits:
         panel: Einzahlen
@@ -45,12 +45,18 @@ de:
           title: Zahlungsverbindungen
           intro: Erstellen Sie Zahlungsverbindungen welche Sie für Einzahlungen sowie und Auszahlungen verwenden können.
 
-
       id_documents:
-        panel: Real-name Authentication
+        panel: KYC Verifizierung
+        intro: Die nationalen Gesetze erfordern die Identifikation der Benutzer. Bitte verifizieren Sie Ihr Konto.
         new:
           title: Submit real-name authentication information
-          intro: In line with the national laws , identity verification is required. please verify your account to proceed.
+          intro: Die nationalen Gesetze erfordern die Identifikation der Benutzer. Bitte verifizieren Sie Ihr Konto.
+        update:
+          panel: Mein Profil
+          title: KYC Verifizierung
+        edit:
+          panel: Mein Profil
+          title: KYC Verifizierung
 
       my_assets:
         panel: My Assets
@@ -59,7 +65,7 @@ de:
 
     verify:
       sms_tokens:
-        panel: Verify Phone Number
+        panel: Mein Profil
 
       two_factors:
         panel: Two-Factor Authentication
@@ -67,7 +73,7 @@ de:
           intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
 
     reset_passwords:
-      panel: Passwort vergessen?
+      panel: Passwort zurücksetzen
       new:
         title: Passwort anfordern
         intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf COINDEX registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
@@ -94,6 +100,6 @@ de:
         title: Konto Erstellen
         intro: Dies ist Ihre einzige ID nötig ist um bei COINDEX zu handeln. Bitte wählen Sie die ID vorsichtig aus.
       edit:
-        panel: Konto Erstellen
-        title: Passwort vergessen?
+        panel: Mein Profil
+        title: Passwort zurücksetzen
 

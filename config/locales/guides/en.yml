@@ -10,19 +10,19 @@ en:
           intro: Manage your account settings.
 
       two_factors:
-        panel: Two-Factor Authentication
-        new:
-          title: Set Two-Factor Authentication
-          intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
+        panel: Google Two-Step Authentication
         edit:
-          title: Disable Two-Factor Authentication
-          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
-        create:
-          title: Set Two-Factor Authentication
-          intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
+          panel: My Profile
+          title: Google Two-Step Authentication
+          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication with the new one.
+        show:
+          panel: My Profile
+          title: Google Two-Step Authentication
+          intro: With 2-Step Verification, you’ll protect your account with both your password and your phone.
         destroy:
-          title: Disable Two-Factor Authentication
-          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
+          panel: My Profile
+          title: Google Two-Step Authentication
+          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication with the new one.
 
       deposits:
         panel: Deposit
@@ -45,12 +45,16 @@ en:
           title: Funding Sources
           intro: You can create funding sources which will be available for your deposit or withdrawal requests.
 
-
       id_documents:
-        panel: Real-name Authentication
-        new:
-          title: Submit real-name authentication information
-          intro: In line with the national laws , identity verification is required. please verify your account to proceed.
+        panel: My Profile
+        intro: In line with the national laws , identity verification is required. please verify your account to proceed.
+        update:
+          panel: My Profile
+          title: KYC Verification
+        edit:
+          panel: My Profile
+          title: KYC Verification
+
 
       my_assets:
         panel: My Assets
@@ -59,7 +63,7 @@ en:
 
     verify:
       sms_tokens:
-        panel: Verify Phone Number
+        panel: My Profile
 
       two_factors:
         panel: Two-Factor Authentication
@@ -69,10 +73,10 @@ en:
     reset_passwords:
       panel: Password
       new:
-        title: Reset Passwore
+        title: Reset Password
         intro: Please enter your e-mail address which is verified by your  account, enter verification code to submit,and login your mailbox, follow the prompts to reset your password.
       create:
-        title: Reset password
+        title: Reset Password
         intro: Please enter your e-mail address which is verified by your  account, enter verification code to submit,and login your mailbox, follow the prompts to reset your password.
       edit:
         title: Set Password
@@ -94,6 +98,6 @@ en:
         title: Create My Account
         intro: This will be your only ID in COINDEX which is necessary for your exchange , despoit and withdrawal . please fill it out carefully.
       edit:
-        panel: My Account
+        panel: My Profile
         title: Reset Password
 

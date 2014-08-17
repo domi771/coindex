@@ -9,7 +9,7 @@ de:
       withdraw: Auszahlung
       deposit: Einzahlung
       payment_transaction: Zahlung
-      id_document: Dokument ID
+      id_document: Daten
       statistic/orders_grid: Orders Stat
       statistic/trades_grid: Trading Stat
       statistic/members_grid: Members Stat
@@ -125,6 +125,9 @@ de:
         sn: SN
         tag_list: Tags
         activated: Aktiviert
+      sms_token:
+        phone_number: Telefonnummer
+        verify_code: SMS Code
     errors:
       models:
         order_bid:

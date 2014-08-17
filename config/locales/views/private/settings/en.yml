@@ -14,7 +14,7 @@ en:
         auth-verified: Please start the KYC Verification first.
 
         email:
-          title: E-mail verification
+          title: E-mail Verification
           description: Your e-mail has not been verified, please check your mailbox.
           description-activated: Your email adress has been successfully verified.
 
@@ -23,14 +23,14 @@ en:
           go: Set
 
         phone_number:
-          title: Phone Number
-          description: Providing a phone number will make your account more secure providing Two-Factor Authentication.
-          go: Set
+          title: SMS Two-Step Authentication
+          description: Providing a phone number will make your account more secure with Two-Factor Authentication by SMS.
+          go: Enable
           verified: Verified
 
         two_factor_auth:
-          title: Two-Step authentication
-          description: Two-Step authentication provides another layer of security to your account.
+          title: Google Two-Step Authentication
+          description: Google Two-Step authentication provides another layer of security to your account.
           enable: Enable
           disable: Disable
 
