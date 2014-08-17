@@ -18,5 +18,5 @@ while($running) do
     Global[currency].tap { |global| global.trigger_ticker }
   end
 
-  sleep 2
+  sleep 5
 end
