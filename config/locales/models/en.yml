@@ -84,7 +84,7 @@ en:
         modifiable_type: LINK
         created_at : Created At
       reset_password:
-        email: Sign in email
+        email: E-mail
       trade:
         bid: Bid
         ask: Ask

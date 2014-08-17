@@ -44,6 +44,12 @@ en:
         new:
           title: Funding Sources
           intro: You can create funding sources which will be available for your deposit or withdrawal requests.
+        create:
+          title: Funding Sources
+          intro: You can create funding sources which will be available for your deposit or withdrawal requests.
+        destroy:
+          title: Funding Sources
+          intro: You can create funding sources which will be available for your deposit or withdrawal requests.
 
       id_documents:
         panel: My Profile
@@ -71,11 +77,13 @@ en:
           intro: With 2-Step Verification, you’ll protect your account with both your password and your phone. Here we use Google Authenticator.
 
     reset_passwords:
-      panel: Password
+      panel: Reset Password
       new:
+        panel: Sign In
         title: Reset Password
         intro: Please enter your e-mail address which is verified by your  account, enter verification code to submit,and login your mailbox, follow the prompts to reset your password.
       create:
+        panel: Sign In
         title: Reset Password
         intro: Please enter your e-mail address which is verified by your  account, enter verification code to submit,and login your mailbox, follow the prompts to reset your password.
       edit:
@@ -84,19 +92,19 @@ en:
         title: Set Password
 
     sessions:
-      panel: Login
+      panel: Sign In
       new:
-        title: Login my account
-        intro: Login COINDEX now for you to exchange.
+        title: User Login
+        intro: Login to COINDEX and buy/sell Bitcoins.
       failure:
-        title: Login my account
-        intro: Login COINDEX now for you to exchange.
+        title: User Login
+        intro: Login to COINDEX and buy/sell Bitcoins.
 
     identities:
-      panel: Create Account
+      panel: Sign Up
       new:
-        title: Create My Account
-        intro: This will be your only ID in COINDEX which is necessary for your exchange , despoit and withdrawal . please fill it out carefully.
+        title: Create Account
+        intro: Please choose your Login E-mail and a safe Password.
       edit:
         panel: My Profile
         title: Reset Password

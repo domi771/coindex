@@ -87,7 +87,7 @@ de:
         modifiable_type: LINK
         created_at : Erstellt am
       reset_password:
-        email:  Email
+        email:  Login E-mail
       trade:
         bid: Ankauf
         ask: Verkauf
