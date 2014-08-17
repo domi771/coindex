@@ -8,14 +8,14 @@ de:
         safety_instruction: Um Ihre Bitcoin und privaten Informationen zu schützen, empfehlen wir Ihnen ausdrücklich die Zwei-Faktoren Authentifizierung zu aktiviern.
         reset_password: Rest your Password
 
-        reauthenticate: Authentifakion
-        activated:  Eine E-mail wurde an Sie gesendet. Bitte aktivieren Sie Ihr Konto so rasch als Möglich. Falls Sie keine E-mail erhalten haben, klicken Sie bitte unten auf  "Nochmals senden".
+        reauthenticate: Authentifikation
+        activated:  Eine E-mail wurde an Ihre Mailbox gesendet mit weiteren Informationen.
         auth-activated: Bitte bestätigen Sie Ihre E-mail Adresse zuerst.
         auth-verified: Bitte verifizieren Sie Ihr Konto (KYC Verifizierung) zuerst.
 
         email:
           title: E-mail Verifikation
-          description: Ihre E-mail Adresse wurde noch nicht verifiziert, klicken Sie den  "E-Mail senden" Button um die Verifikation abzuschliessen
+          description: Ihre E-mail Adresse wurde noch nicht verifiziert. 
           description-activated: Ihre E-mail Adresse wurde erfolgreich verifiziert.
 
           resend: Nochmals senden
@@ -24,7 +24,7 @@ de:
 
         phone_number:
           title: Telefonnummer
-          description: Machen Sie Ihr Konto sicherer durch die Angabe Ihrer Nummer. Erhalten Sie wichtige Informationen per SMS.
+          description: Machen Sie Ihr Konto sicherer durch Zwei-Faktoren Authentifizierung per SMS.
           go: Aktivieren
           verified: Aktiviert
 
@@ -36,7 +36,7 @@ de:
 
         verification:
           title: KYC Verifizierung
-          description: Ihr Konto und Ihre Daten wurden noch nicht verifiziert durch unseren KYC Prozess. Klicken Sie auf Verifizieren um den Prozess zu starten.
+          description: Ihr Konto wurde noch nicht verifiziert durch unseren KYC Prozess. Klicken Sie auf Verifizieren um den Prozess zu starten.
           description-activated: Ihr Konto wurde erfolgreich verifiziert.
           go: Verifizieren
           verified: Verifiziert

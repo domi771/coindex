@@ -6,7 +6,7 @@ en:
           step-1: Step One
           open-wallet: Use your external wallet and create a new payment.
           step-2: Step Two
-          gen_address: Your deposit address is being generated, please wait for a moment then click <a href='javascript:window.location.reload();'>refresh</a> to check result.
+          gen_address_html: Your deposit address is being generated, please wait for a moment then click <a href='javascript:window.location.reload();'>refresh</a> to check result.
           or:
           scan-qr: or scan the following QR code
           step-3: Step Three

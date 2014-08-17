@@ -5,9 +5,9 @@ de:
 
     private:
       settings:
-        panel: Mein Konto
+        panel: Mein Profil
         index:
-          intro: Konto Einstellungen ändern
+          intro: Kontoeinstellungen verwalten
 
       two_factors:
         panel: Zwei-Faktoren Authentifizierung

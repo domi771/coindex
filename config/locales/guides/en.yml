@@ -5,9 +5,9 @@ en:
 
     private:
       settings:
-        panel: My Account
+        panel: My Profile
         index:
-          intro: Change Account Settings
+          intro: Manage your account settings.
 
       two_factors:
         panel: Two-Factor Authentication

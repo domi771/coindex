@@ -6,7 +6,7 @@ de:
           step-1: Schritt 1
           open-wallet:  Benutzen Sie Ihren externes Wallet um Ihr COINDEX Konto mit Bitcoin zu laden.
           step-2: Schritt 2
-          gen_address: Ihre persönliche Adresse wird generiert. Bitte warten Sie einen Moment und klicken Sie dann <a href='javascript:window.location.reload();'>hier</a>.
+          gen_address_html: Ihre persönliche Adresse wird generiert. Bitte warten Sie einen Moment und klicken Sie dann <a href='javascript:window.location.reload();'>hier</a>.
           or:  
           scan-qr: oder scannen Sie den QR-Code ein
           step-3: Schritt 3

@@ -9,13 +9,13 @@ en:
         reset_password: Reset your Password
 
         reauthenticate: Authentication
-        activated:  An  email has been sent to your mailbox, please check it  for verification as soon as possible. If you do not received it , please click "send it again" button
+        activated:  An email has been sent to your mailbox. Please follow the instructions in the email. 
         auth-activated: Please confirm your email address first.
-        auth-verified: Please verify your id first.
+        auth-verified: Please start the KYC Verification first.
 
         email:
           title: E-mail verification
-          description: Your e-mail has not been verified, click the "Send Mail" button to complete the verification
+          description: Your e-mail has not been verified, please check your mailbox.
           description-activated: Your email adress has been successfully verified.
 
           resend: Send it again
@@ -24,7 +24,7 @@ en:
 
         phone_number:
           title: Phone Number
-          description: Providing a phone number will make your account more secure. Easy reset your password and get notified by SMS.
+          description: Providing a phone number will make your account more secure providing Two-Factor Authentication.
           go: Set
           verified: Verified
 
@@ -36,7 +36,7 @@ en:
 
         verification:
           title: KYC Verification
-          description: Your account and details have not been verified by our KYC process. Click Verify to begin the process.
+          description: Your account has not been verified by our KYC process. Click Verify to begin the process.
           description-activated: Your account has been successfully verified.
           go: Verify
           verified: Verified
