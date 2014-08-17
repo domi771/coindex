@@ -10,7 +10,6 @@ set :deploy_to, '/home/deploy/peatio'
 set :branch, 'master'
 #set :domain, '178.17.8.128'
 set :domain, 'coindex'
-set :keep_releases, 20
 
 set :shared_paths, [
   'config/database.yml',
@@ -65,7 +64,6 @@ task deploy: :environment do
 
     to :launch do
       invoke :'passenger:restart'
-      invoke :'deploy:cleanup'
     end
   end
 end
