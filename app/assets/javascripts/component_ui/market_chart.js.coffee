@@ -11,7 +11,6 @@
         events:
           load: ->
 
-           chartName.showLoading()
            series = @series
            setInterval (->
 
@@ -37,7 +36,6 @@
 
                 series[0].setData ohlc
                 series[1].setData volume
-                chartName.hideLoading()
 
             ), 3000
            return
