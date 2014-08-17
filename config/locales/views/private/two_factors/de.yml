@@ -5,7 +5,7 @@ de:
         please_active_two_factor: Bitte aktivieren Sie zuerst die SMS oder Google Zwei-Faktoren Authentifizierung.
         submit: Ausführen
         otp_placeholder: 6-Zeichen Passwort
-        google_app: Google Authentikator
+        google_app: Google Auth.
         sms: SMS Code
         sms_message: "Ihre SMS Verfikationsnummer lautet: %{code}"
         send_code: Code senden
