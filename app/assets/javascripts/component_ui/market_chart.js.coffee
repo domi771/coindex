@@ -62,7 +62,7 @@
 
       rangeSelector:
         inputEnabled: false
-        selected: 0
+        selected: 3
         buttons: [
           {
             type: 'day'
