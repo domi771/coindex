@@ -11,4 +11,4 @@ en:
           scan-qr: or scan the following QR code
           step-3: Step Three
           step-4: Step Four
-          history_html: Once you complete sending, click <a href='javascript:window.location.reload();'>refresh</a> to check the status of your new deposit below.
+          history: Once you complete sending, click <a href='javascript:window.location.reload();'>refresh</a> to check the status of your new deposit below.
