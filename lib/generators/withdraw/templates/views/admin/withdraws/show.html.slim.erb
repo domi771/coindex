@@ -1,0 +1,28 @@
+.row
+  .col-md-8
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @<%= name.underscore %>.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @<%= name.underscore %>, :id
+          = item_for @<%= name.underscore %>, :created_at
+          = item_for @<%= name.underscore %>, :aasm_state_text
+          hr.split
+          = item_for @<%= name.underscore %>.member, :name
+          = item_for @<%= name.underscore %>, :fund_extra
+          = item_for @<%= name.underscore %>, :fund_uid do
+            span = @<%= name.underscore %>.fund_uid.truncate(22)
+          = item_for @<%= name.underscore %>, :amount
+          hr.split
+          = item_for @<%= name.underscore %>, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @<%= name.underscore %>.may_process?
+              li
+                = link_to t('.reject'), url_for([:admin, @<%= name.underscore %>]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @<%= name.underscore %>.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @<%= name.underscore %>]), class: 'btn btn-primary', method: 'PATCH'
+  .col-md-8
+    = render partial: 'shared/admin/member', locals: {member: @<%= name.underscore %>.member} 

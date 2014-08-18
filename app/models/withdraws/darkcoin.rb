@@ -21,7 +21,7 @@
 #
 
 module Withdraws
-  class <%= name %> < ::Withdraw
+  class Darkcoin < ::Withdraw
     include ::AasmAbsolutely
     include ::Withdraws::Coinable
     include ::FundSourceable

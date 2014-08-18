@@ -1,0 +1,26 @@
+module Admin
+  module Withdraws
+    class <%= name.pluralize %>Controller < ::Admin::Withdraws::BaseController
+      load_and_authorize_resource :class => '::Withdraws::<%= name %>'
+
+      def index
+        start_at = DateTime.now.ago(60 * 60 * 24)
+        @one_<%= name.underscore.pluralize %> = @<%= name.underscore.pluralize %>.with_aasm_state(:accepted).order("id DESC")
+        @all_<%= name.underscore.pluralize %> = @<%= name.underscore.pluralize %>.without_aasm_state(:accepted).where('created_at > ?', start_at).order("id DESC")
+      end
+
+      def show
+      end
+
+      def update
+        @<%= name.underscore %>.process!
+        redirect_to :back, notice: t('.notice')
+      end
+
+      def destroy
+        @<%= name.underscore %>.reject!
+        redirect_to :back, notice: t('.notice')
+      end
+    end
+  end
+end

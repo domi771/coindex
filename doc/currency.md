@@ -1,13 +1,16 @@
-## Deposit
+If you want to setup a new currency/coin in Peatio please follow these steps:
 
-One coin currency may have one coin deposit
+(example Setup id done with Litecoin) 
+
+### 1) Deposit Setup
 
 * Currency record
 * DepositChannel record
 * Deposit inheritable model
 * Deposit inheritable controller and views
 
-e.g. add litecoin currency and deposit
+(example Setup id done with Litecoin)
+
 
 ### add currency config to `config/currencies.yml`
 
@@ -43,7 +46,19 @@ e.g. add litecoin currency and deposit
       end
     end
 
-### check your routes result have below path helper
+### for admin control edit the file `app/models/admin/ability.rb` and add these two lines where they belong
 
-    deposits_litecoins POST /deposits/litecoins(.:format) private/deposits/litecoins#create
-    new_deposits_litecoin GET /deposits/litecoins/new(.:format) private/deposits/litecoins#new
+     can :manage, ::Deposits::Litecoin
+     can :manage, ::Withdraws::Litecoin
+    
+### 2) Run the generator located at lib/generator
+
+### - Deposit go to `lib/generator/deposit` and run
+
+    rails generate withdraw Litecoin LTC
+
+### - Withdraw go to `lib/generator/deposit` and run
+
+    rails generate deposit Litecoin LTC
+
+### Finished! Restart your Daemons and Rails Server and you have a new coin added to the system

@@ -1,23 +1,23 @@
 en:
   deposit_channel:
-    <%= name.underscore %>:
+    darkcoin:
       key: Block Chain
-      title: <%= name %> Blockchain
-      intro: Deposit <%= name %> from your own wallet to your COINDEX account
+      title: Darkcoin Blockchain
+      intro: Deposit Darkcoin from your own wallet to your COINDEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
 
   activerecord:
     attributes:
-      deposits/<%= name.underscore %>:
+      deposits/darkcoin:
         created_at: Created At
         txid: Transaction ID
         amount: Amount
         memo: Confirmation
         aasm_state_text: State
 
-  deposits/<%= name.underscore %>:
+  deposits/darkcoin:
     aasm_state:
       submitted: Processing
       accepted: Done
@@ -27,16 +27,16 @@ en:
   guides:
     private:
       deposits:
-        <%= name.underscore.pluralize %>:
-          panel: <%= name %> Blockchain
-          intro: Deposit <%= name %> from your own wallet to your COINDEX account.
+        darkcoins:
+          panel: Darkcoin Blockchain
+          intro: Deposit Darkcoin from your own wallet to your COINDEX account.
           new:
             panel: Deposit
-            default-panel: <%= name %> Deposit History
+            default-panel: Darkcoin Deposit History
 
   admin:
     deposits:
-      <%= name.underscore.pluralize %>:
+      darkcoins:
         update:
           notice: 此笔充值已经成功到账。
         index:
@@ -45,11 +45,11 @@ en:
 
   private:
     deposits:
-      <%= name.underscore.pluralize %>:
-        panel: <%= name %>
+      darkcoins:
+        panel: Darkcoin
         new:
-          panel: <%= name %> Blockchain
+          panel: Darkcoin Blockchain
           step-1: Step one
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Send the desired amount of <%= name %> to the following address
+          send-coin: Send the desired amount of Darkcoin to the following address

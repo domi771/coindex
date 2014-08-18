@@ -21,7 +21,7 @@
 #
 
 module Withdraws
-  class <%= name %> < ::Withdraw
+  class Viacoin < ::Withdraw
     include ::AasmAbsolutely
     include ::Withdraws::Coinable
     include ::FundSourceable

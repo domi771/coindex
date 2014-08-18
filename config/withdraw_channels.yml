@@ -24,4 +24,11 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelLitecoin
+- id: 500
+  key: viacoin
+  currency: via
+  fixed: 8
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelViacoin
 

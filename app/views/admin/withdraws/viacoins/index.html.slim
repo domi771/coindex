@@ -1,0 +1,11 @@
+- unless @one_viacoins.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {viacoins: @one_viacoins}
+- unless @all_viacoins.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {viacoins: @all_viacoins}
+
+- if @all_viacoins.empty? and @one_viacoins.empty?
+  h3.text-info.text-center = t('.empty')

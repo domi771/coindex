@@ -1,5 +1,5 @@
 module Private::Withdraws
-    class <%= name.pluralize %>Controller < ::Private::Withdraws::BaseController
+    class DarkcoinsController < ::Private::Withdraws::BaseController
       include ::Withdraws::CtrlCoinable
     before_action :two_factor_activated!
   end

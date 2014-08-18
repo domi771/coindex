@@ -1,38 +1,38 @@
-en:
+de:
   deposit_channel:
     <%= name.underscore %>:
       key: Block Chain
       title: <%= name %> Blockchain
-      intro: Deposit <%= name %> from your own wallet to your COINDEX account
-      latency: 1 confirmation
-      transfer: Automatic
-      go: Deposit
+      intro: Zahlen Sie <%= name %> von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      latency: 1 Bestätigung
+      transfer: Automatisch
+      go: Einzahlen
 
   activerecord:
     attributes:
       deposits/<%= name.underscore %>:
-        created_at: Created At
-        txid: Transaction ID
-        amount: Amount
-        memo: Confirmation
-        aasm_state_text: State
+        created_at: Erstellt am
+        txid: Transaktions ID
+        amount: Betrag
+        memo: Bestätigungen
+        aasm_state_text: Status
 
   deposits/<%= name.underscore %>:
     aasm_state:
-      submitted: Processing
-      accepted: Done
+      submitted: in Bearbeitung
+      accepted: Erledigt
       checked: Checked
-      warning: Warning
+      warning: Warnung
 
   guides:
     private:
       deposits:
         <%= name.underscore.pluralize %>:
           panel: <%= name %> Blockchain
-          intro: Deposit <%= name %> from your own wallet to your COINDEX account.
+          intro: Zahlen Sie <%= name %> von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
           new:
-            panel: Deposit
-            default-panel: <%= name %> Deposit History
+            panel: Einzahlen
+            default-panel: <%= name %> Einzahlungsverlauf
 
   admin:
     deposits:
@@ -49,7 +49,7 @@ en:
         panel: <%= name %>
         new:
           panel: <%= name %> Blockchain
-          step-1: Step one
+          step-1: Schritt 1
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Send the desired amount of <%= name %> to the following address
+          send-coin: Senden Sie den gewünschten <%= name %> Betrag and die folgende Adresse

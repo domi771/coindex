@@ -1,6 +1,6 @@
 module Private
   module Deposits
-    class <%= name.pluralize %>Controller < ::Private::Deposits::BaseController
+    class DarkcoinsController < ::Private::Deposits::BaseController
       include ::Deposits::CtrlCoinable
     end
   end

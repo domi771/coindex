@@ -1,5 +1,5 @@
 module Deposits
-  class <%= name %> < ::Deposit
+  class Darkcoin < ::Deposit
     include ::AasmAbsolutely
     include ::Deposits::Coinable
   end

@@ -1,23 +1,23 @@
 en:
   deposit_channel:
-    <%= name.underscore %>:
+    viacoin:
       key: Block Chain
-      title: <%= name %> Blockchain
-      intro: Deposit <%= name %> from your own wallet to your COINDEX account
+      title: Viacoin Blockchain
+      intro: Deposit Viacoin from your own wallet to your COINDEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
 
   activerecord:
     attributes:
-      deposits/<%= name.underscore %>:
+      deposits/viacoin:
         created_at: Created At
         txid: Transaction ID
         amount: Amount
         memo: Confirmation
         aasm_state_text: State
 
-  deposits/<%= name.underscore %>:
+  deposits/viacoin:
     aasm_state:
       submitted: Processing
       accepted: Done
@@ -27,16 +27,16 @@ en:
   guides:
     private:
       deposits:
-        <%= name.underscore.pluralize %>:
-          panel: <%= name %> Blockchain
-          intro: Deposit <%= name %> from your own wallet to your COINDEX account.
+        viacoins:
+          panel: Viacoin Blockchain
+          intro: Deposit Viacoin from your own wallet to your COINDEX account.
           new:
             panel: Deposit
-            default-panel: <%= name %> Deposit History
+            default-panel: Viacoin Deposit History
 
   admin:
     deposits:
-      <%= name.underscore.pluralize %>:
+      viacoins:
         update:
           notice: 此笔充值已经成功到账。
         index:
@@ -45,11 +45,11 @@ en:
 
   private:
     deposits:
-      <%= name.underscore.pluralize %>:
-        panel: <%= name %>
+      viacoins:
+        panel: Viacoin
         new:
-          panel: <%= name %> Blockchain
+          panel: Viacoin Blockchain
           step-1: Step one
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Send the desired amount of <%= name %> to the following address
+          send-coin: Send the desired amount of Viacoin to the following address
