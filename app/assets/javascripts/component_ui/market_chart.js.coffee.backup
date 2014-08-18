@@ -5,19 +5,16 @@
       credits:
         enabled: false
 
-      tooltip:
-        valueDecimals: gon.market.bid.fixed
-
       chart:
-        height: 360
         marginRight: 30
         zoomType: "x"
-
         events:
           load: ->
-            series = @series
-            update = ->
-              $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=60", (data) ->
+
+           series = @series
+           setInterval (->
+
+              $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=1", (data) ->
 
                 ohlc = []
                 volume = []
@@ -40,10 +37,8 @@
                 series[0].setData ohlc
                 series[1].setData volume
 
-            update()
-            setInterval ->
-              update
-            , 1
+            ), 3000
+           return
 
       plotOptions:
         candlestick:
@@ -53,16 +48,15 @@
           color: '#227da2'
           groupPadding: 0
 
-      scrollbar:
+      navigator:
         enabled: false
 
-      navigator:
-        top: 300
+      scrollbar:
         enabled: false
 
       rangeSelector:
         inputEnabled: false
-        selected: 0
+        selected: 3
         buttons: [
           {
             type: 'day'
@@ -117,7 +111,7 @@
           dataGrouping:
              enabled: true
              forced: true
-             units: [
+             units: [ 
                [
                 'hour'
                 [1]
@@ -145,10 +139,6 @@
              units: [
                [
                 'hour'
-                [1]
-               ]
-               [
-                'hour'
                 [6]
                ]
                [
@@ -162,4 +152,3 @@
 
   @after 'initialize', ->
     @drawChart()
-

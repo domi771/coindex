@@ -6,14 +6,18 @@ en:
       key: CHF
     litecoin:
       key: LTC
+    viacoin:
+      key: VIA
     name:
       chf: Swiss Franc
       btc: Bitcoin
       ltc: Litecoin
+      via: Viacoin
     code:
       chf: CHF
       btc: BTC
       ltc: LTC
+      via: VIA
     format:
       zero: 'N/A'
       chf: '0,0.00'

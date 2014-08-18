@@ -5,6 +5,7 @@
 
  License: www.highcharts.com/license
 */
+
 (function(){function v(a,b){var c;a||(a={});for(c in b)a[c]=b[c];return a}function y(){var a,b=arguments,c,d={},e=function(a,b){var c,d;typeof a!=="object"&&(a={});for(d in b)b.hasOwnProperty(d)&&(c=b[d],a[d]=c&&typeof c==="object"&&Object.prototype.toString.call(c)!=="[object Array]"&&d!=="renderTo"&&typeof c.nodeType!=="number"?e(a[d]||{},c):b[d]);return a};b[0]===!0&&(d=b[1],b=Array.prototype.slice.call(b,2));c=b.length;for(a=0;a<c;a++)d=e(d,b[a]);return d}function Kb(){for(var a=0,b=arguments,
 c=b.length,d={};a<c;a++)d[b[a++]]=b[a];return d}function I(a,b){return parseInt(a,b||10)}function Oa(a){return typeof a==="string"}function fa(a){return typeof a==="object"}function Pa(a){return Object.prototype.toString.call(a)==="[object Array]"}function la(a){return typeof a==="number"}function Ga(a){return V.log(a)/V.LN10}function oa(a){return V.pow(10,a)}function pa(a,b){for(var c=a.length;c--;)if(a[c]===b){a.splice(c,1);break}}function t(a){return a!==r&&a!==null}function W(a,b,c){var d,e;if(Oa(b))t(c)?
 a.setAttribute(b,c):a&&a.getAttribute&&(e=a.getAttribute(b));else if(t(b)&&fa(b))for(d in b)a.setAttribute(d,b[d]);return e}function ma(a){return Pa(a)?a:[a]}function o(){var a=arguments,b,c,d=a.length;for(b=0;b<d;b++)if(c=a[b],typeof c!=="undefined"&&c!==null)return c}function E(a,b){if(Ha&&!ca&&b&&b.opacity!==r)b.filter="alpha(opacity="+b.opacity*100+")";v(a.style,b)}function $(a,b,c,d,e){a=B.createElement(a);b&&v(a,b);e&&E(a,{padding:0,border:Y,margin:0});c&&E(a,c);d&&d.appendChild(a);return a}
