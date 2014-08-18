@@ -2,15 +2,9 @@ If you want to setup a new currency/coin in Peatio please follow these steps:
 
 (example Setup id done with Litecoin) 
 
-### 1) Deposit Setup
-
-* Currency record
-* DepositChannel record
-* Deposit inheritable model
-* Deposit inheritable controller and views
+### 1) Edit Files
 
 (example Setup id done with Litecoin)
-
 
 ### add currency config to `config/currencies.yml`
 
@@ -51,6 +45,8 @@ If you want to setup a new currency/coin in Peatio please follow these steps:
      can :manage, ::Deposits::Litecoin
      can :manage, ::Withdraws::Litecoin
     
+### make sure to add the new currency/coin as well to the file `config/locales/currency/en.yml`
+
 ### 2) Run the generator located at lib/generator
 
 ### - Deposit go to `lib/generator/deposit` and run

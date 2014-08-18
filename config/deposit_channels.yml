@@ -27,4 +27,10 @@
   sort_order: 4
   min_confirm: 1
   max_confirm: 6
+- id: 230
+  key: darkcoin
+  currency: drk
+  sort_order: 5
+  min_confirm: 1
+  max_confirm: 6
 

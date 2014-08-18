@@ -31,4 +31,11 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelViacoin
+- id: 600
+  key: darkcoin
+  currency: drk
+  fixed: 8
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelDarkcoin
 

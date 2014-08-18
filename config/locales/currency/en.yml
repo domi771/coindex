@@ -8,16 +8,20 @@ en:
       key: LTC
     viacoin:
       key: VIA
+    darkcoin:
+      key: DRK
     name:
       chf: Swiss Franc
       btc: Bitcoin
       ltc: Litecoin
       via: Viacoin
+      drk: Darkcoin
     code:
       chf: CHF
       btc: BTC
       ltc: LTC
       via: VIA
+      drk: DRK
     format:
       zero: 'N/A'
       chf: '0,0.00'
