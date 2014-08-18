@@ -26,7 +26,7 @@ en:
           title: SMS Two-Step Authentication
           description: Providing a phone number will make your account more secure with Two-Factor Authentication by SMS.
           go: Enable
-          verified: Verified
+          verified: Enabled
 
         two_factor_auth:
           title: Google Two-Step Authentication

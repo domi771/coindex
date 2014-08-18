@@ -112,3 +112,6 @@ desc "Generate liability proof"
 task 'solvency:liability_proof' do
   queue "cd #{deploy_to}/current && RAILS_ENV=production bundle exec rake solvency:liability_proof"
 end
+
+set :term_mode, nil
+
