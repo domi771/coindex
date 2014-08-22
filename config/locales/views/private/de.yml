@@ -14,22 +14,38 @@ de:
         bid_order: 'VERKAUF ##sn#'
       ticker:
         markets: Markt
-      account_balance:
         title: Kontostand
         available: Verfügbar %{currency}
-      place_order:
-        place_order: Auftrag Erstellen
+      place_buy_order:
+        place_order: Ankauf
         bid_panel: Ankauf %{currency}
         ask_panel: Verkauf %{currency}
         price: Preis
-        amount: Anzahl
-        total: Total
+        amount: Stück
+        total: Total m 0.00% Geb.
         available: Verfügbar
         last_price: Letzter Preis
-        price_high: Preis mehr als 10% über aktuellem Kurs
-        price_low: Preis mehr als 10% unter aktuellem Kurs
+      place_sell_order:
+        place_order: Verkauf
+        bid_panel: Ankauf %{currency}
+        ask_panel: Verkauf %{currency}
+        price: Preis
+        amount: Stück
+        total: Total m 0.00% Geb.
+        available: Verfügbar
+        last_price: Letzter Preis
+      place_order:
+        price_high: "Achtung: Preis mehr als 10% über dem aktuellem Kurs"
+        price_low: "Achtung: Preis mehr als 10% unter dem aktuellem Kurs"
+        amount: Stück
+        total: Total m 0.00% Geb.
+        price: Preis
       order_book:
         order_book: Auftragsbuch
+      order_book_asks:
+        order_book: Kaufen    
+      order_book_bids:
+        order_book: Verkaufen   
       market_trades:
         trades: Transaktionen
         time: Zeit
@@ -42,6 +58,9 @@ de:
         orders_cancel: Aufträge annulieren
       price_chart:
         price_chart: Preis-Chart
+      market_menu:
+        price_chart: Preis-Chart
+        order_book: Auftragsbuch
       global:
         global_orders_title: AUFTRÄGE
         global_trades_title: TRANSAKTIONEN

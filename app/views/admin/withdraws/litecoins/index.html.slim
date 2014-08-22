@@ -8,4 +8,4 @@
     = render partial: 'table', locals: {litecoins: @all_litecoins}
 
 - if @all_litecoins.empty? and @one_litecoins.empty?
-  h3.text-info.text-center = t('.empty')
+  h5.text-info.text-center = t('.empty')

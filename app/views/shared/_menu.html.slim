@@ -1,6 +1,6 @@
-ul#menu.nav.navbar-nav.navbar-left style="margin-top: 24px;"
+ul#menu.nav.navbar-nav.navbar-left style="margin-top: 10px;"
   a href="/"  
-   = image_tag "logo_small.png", style: "margin-top: -3px; float: left; margin-right: 25px; border: 0px;"
+   = image_tag "logo_small.png", style: "margin-top: -1px; float: left; margin-right: 25px; border: 0px;"
   - if current_user
     = top_nav(t('header.market'), market_path(current_market), 'exchange', market_links)
     = top_nav_link(t('header.deposit'), deposits_path, 'credit-card', controllers: ['deposits'])
@@ -8,7 +8,7 @@ ul#menu.nav.navbar-nav.navbar-left style="margin-top: 24px;"
     = top_nav_link(t('header.history'), order_history_path, 'book')
   - else
     = 
-ul.nav.navbar-nav.navbar-right style="margin-top: 24px;"
+ul.nav.navbar-nav.navbar-right style="margin-top: 10px;"
   - if current_user
     = top_nav_link(t('header.my_profile'), settings_path, 'user', controllers: ['two_factors', 'identities', 'id_documents'])
     - if is_admin?

@@ -1,0 +1,22 @@
+.panel.panel-default.ticker style="height: 112px;"
+  .panel-heading
+    .span
+      = t('.markets')
+      = ":"
+    = @market.name
+     - if @market.name
+       .panel-body
+         ul.list-inline
+           li.col-md-4
+             span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')}
+             span.value.last style = "font-size: 20px; font-weight: bold;"
+             span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+
+     - else
+       .panel-body
+         ul.list-inline
+           li.col-md-4
+             span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')}
+             span.value.last style = "font-size: 20px; font-weight: bold;"
+             span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+

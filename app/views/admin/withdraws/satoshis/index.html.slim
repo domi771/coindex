@@ -8,4 +8,4 @@
     = render partial: 'table', locals: {satoshis: @all_satoshis}
 
 - if @all_satoshis.empty? and @one_satoshis.empty?
-  h3.text-info.text-center = t('.empty')
+  h5.text-info.text-center = t('.empty')

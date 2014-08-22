@@ -20,7 +20,7 @@ ul.list-group
           .col-md-5
             i.fa.fa-clock-o.text-info
             span = time_ago_in_words @ticket.created_at
-  h3 = t('admin.tickets.replies')
+  h5 = t('admin.tickets.replies')
   - @comments.each do |c|
     br
     li.list-group-item

@@ -1,0 +1,44 @@
+.panel.panel-default
+  .panel-heading
+    = t('.place_order')
+    |  
+    = @ask_name
+  .panel-body.place-order
+
+    .tab-content
+      #bid_panel.tab-pane.active
+        = form_for [market, order_bid], :remote => true do |f|
+          = f.hidden_field :ord_type
+          .row style = "margin-bottom: 15px;"
+            .col-md-12.last-price
+              label style = "font-weight: normal;" = t('.last_price')  
+              | :  
+              span.value style = "margin-left: 5px;"
+              |  
+              label.currency style = "font-weight: normal;" = @bid_code
+            .col-md-12.current-balance.clearfix style = "text-align: right;"
+              label.value style = "font-weight: normal;"
+              label.currency style = "font-weight: normal;" = @bid_code
+              label.name style = "font-weight: normal;" = t('.available')
+          .row 
+          p.input-group.price style = "margin-bottom: 15px;"
+            label.input-group-addon style = "min-width: 160px;" = t('.price')
+            = f.text_field :price, class: 'form-control'
+            span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.bid['currency'].upcase
+          p.price-alert
+            span.label.label-danger
+          p.input-group.amount style = "margin-bottom: 15px;"
+            label.input-group-addon style = "min-width: 160px;" = t('.amount')
+            = f.text_field :origin_volume, class: 'form-control'
+            span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.ask['currency'].upcase
+          p.input-group.total style = "margin-bottom: 15px;"
+            label.input-group-addon style = "min-width: 160px;" = t('.total')
+            = f.text_field :total, class: 'form-control'
+            span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.bid['currency'].upcase
+          p.status
+            span.label.label-info
+            span.label.label-success
+            span.label.label-danger
+          p
+            button.btn.btn-primary.btn-lg.btn-block style = "margin-right: auto; width: 35%; margin-left: auto; font-size: 16px" type="submit" = t('.bid_panel', currency: @ask_name)
+

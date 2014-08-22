@@ -2,16 +2,16 @@
   .container style = "max-width: 1150px; width: auto; padding-left: 35px; padding-right: 35px;"
     - if content_for?(:before)
       = yield(:before)
-    .panel.panel-default
+    .panel.panel-default style = "margin-top: 90px;"
       .panel-heading
-        h2.panel-title = guide_panel_title
+        h4.panel-title = guide_panel_title
       .panel-body
         .row.col-wrap
           #guide.col-md-4
             - if content_for?(:guide_title)
               = yield(:guide_title)
             - else
-              h3 = guide_title
+              h5 = guide_title
             p.text-ignore = guide_intro
             - if content_for?(:guide)
               = yield(:guide)

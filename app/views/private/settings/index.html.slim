@@ -1,5 +1,5 @@
 = content_for :before_content do
-  .container style="max-width: 1150px; width: auto; padding-left: 35px; padding-right: 35px;"
+  .container style = " max-width: 1150px; width: auto; padding-left: 35px; padding-right: 35px;"
    = render partial: 'account_balance' 
 
 ul.list-group
@@ -90,7 +90,7 @@ ul.list-group
           = link_to t('.passwords.go'), edit_identity_path, class: 'btn btn-default btn-block'
 
 = content_for :guide_title do
-  h3
+  h5
     i.fa.fa-user
     span = current_user.email
 

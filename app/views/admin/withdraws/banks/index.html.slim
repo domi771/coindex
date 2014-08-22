@@ -9,4 +9,4 @@
     = render partial: 'table', locals: {banks: @all_banks}
 
 - if @all_banks.empty? and @one_banks.empty?
-  h3.text-info.text-center = t('.empty')
+  h5.text-info.text-center = t('.empty')

@@ -24,9 +24,31 @@ module APIv2
     end
     get "/depth" do
       global = Global[params[:market]]
-      asks = global.asks[0,params[:limit]].reverse
-      bids = global.bids[0,params[:limit]]
+      asks = global.asks[0,params[:limit]]
+      bids = global.bids[0,params[:limit]].reverse
       {timestamp: Time.now.to_i, asks: asks, bids: bids}
+    end
+
+    desc 'Get depth or specified market. Both asks and bids are sorted from highest price to lowest.'
+    params do
+      use :market
+      optional :limit, type: Integer, default: 300, range: 1..1000, desc: 'Limit the number of returned price levels. Default to 300.'
+    end
+    get "/bidsdepth" do
+      global = Global[params[:market]]
+      bids = global.bids[0,params[:limit]]
+      {bids: bids}
+    end
+
+    desc 'Get depth or specified market. Both asks and bids are sorted from highest price to lowest.'
+    params do
+      use :market
+      optional :limit, type: Integer, default: 300, range: 1..1000, desc: 'Limit the number of returned price levels. Default to 300.'
+    end
+    get "/asksdepth" do
+      global = Global[params[:market]]
+      asks = global.asks[0,params[:limit]].reverse
+      {asks: asks}
     end
 
   end

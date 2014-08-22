@@ -1,6 +1,6 @@
 window.MarketOrdersUI = flight.component ->
   @.defaultAttrs
-    size: 10,
+    size: 20,
     asksSelector: '.table.asks',
     bidsSelector: '.table.bids',
 

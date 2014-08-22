@@ -1,6 +1,4 @@
-@import 'vars/peatio';
-$grid-gutter-width: 10px;
-$grid-columns: 24;
+@import 'vars/peatio'; $grid-gutter-width: 10px; $grid-columns: 24;
 
 @import 'bootstrap';
 @import 'font-awesome';
@@ -13,21 +11,24 @@ $grid-columns: 24;
 }
 
 #market {
+
+      margin-top: 90px;
+
   table {
     th {
       &.price, &.amount, &.volume {
-        text-align: right;
+#        text-align: right;
       }
     }
 
     td {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 14px !important;
       padding: 2px;
       border: none;
 
       &.price, &.amount, &.volume {
-        text-align: right;
+#        text-align: right;
         font-family: monospace;
       }
     }
@@ -47,7 +48,7 @@ $grid-columns: 24;
   }
 
   .row:last-of-type .panel .panel-body{
-    height: 410px;
+#    height: 410px;
   }
 
   .panel {
@@ -83,11 +84,13 @@ $grid-columns: 24;
       }
 
       &.place-order {
-        height: 390px;
+#        height: 390px;
 
         .input-group-addon {
           min-width: 75px;
           text-align: right;
+          font-size: 12px;
+          font-weight: bold;
         }
 
         .current-balance label {
@@ -116,7 +119,7 @@ $grid-columns: 24;
       span {
 #        display: block;
         &.name {
-          font-size: 16px;
+          font-size: 14px;
           color: #999;
         }
       }

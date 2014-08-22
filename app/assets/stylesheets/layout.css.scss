@@ -2,14 +2,18 @@ $footer-height: 150px;
 
 html, body {
   height: 100%;
-  font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 12px;
 }
 
 header {
-  padding-top: 15px;
+  padding-top: 0px;
   margin-bottom: 30px;
   background: #024D68;
-  min-width: 1000px;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 }
 
 #wrap {
@@ -33,7 +37,7 @@ footer {
 }
 
 #content {
-  font-size: 14px;
+  font-size: 12px;
   border-left: 1px solid #DDD;
   padding-top: 15px;
 
@@ -66,6 +70,6 @@ footer {
 }
 
 #guide {
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 26px;
 }

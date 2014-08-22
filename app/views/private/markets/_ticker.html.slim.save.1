@@ -1,0 +1,67 @@
+- if @bid_code.include? ("CHF")
+ .panel.panel-default.ticker style="height: 112px;"
+  .panel-heading
+    .span
+      = t('.markets')
+      = ":"
+    = @market.name
+  .panel-body
+    ul.list-inline
+      li.col-md-4
+        span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')}
+        span.value.last style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.buy style = "display: block; font-size: 12px;" #{t('global.bid_price')}
+        span.value.buy style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.sell style = "display: block; font-size: 12px;" #{t('global.ask_price')}
+        span.value.sell style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.high style = "display: block; font-size: 12px;" #{t('global.high_price')}
+        span.value.high style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.low style = "display: block; font-size: 12px;" #{t('global.low_price')}
+        span.value.low style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.volume style = "display: block; font-size: 12px;" #{t('global.volume')}
+        span.value.volume style = "font-size: 20px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @ask_code
+- else
+ .panel.panel-default.ticker style="height: 112px;"
+  .panel-heading
+    .span
+      = t('.markets')
+      = ":"
+    = @market.name
+  .panel-body
+    ul.list-inline
+      li.col-md-4
+        span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')}
+        span.value.last style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.buy style = "display: block; font-size: 12px;" #{t('global.bid_price')}
+        span.value.buy style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.sell style = "display: block; font-size: 12px;" #{t('global.ask_price')}
+        span.value.sell style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.high style = "display: block; font-size: 12px;" #{t('global.high_price')}
+        span.value.high style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.low style = "display: block; font-size: 12px;" #{t('global.low_price')}
+        span.value.low style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @bid_code
+      li.col-md-4
+        span.name.volume style = "display: block; font-size: 12px;" #{t('global.volume')}
+        span.value.volume style = "font-size: 14px; font-weight: bold;"
+        span.value style = "font-size: 10px; margin-left: 3px;" = @ask_code
+

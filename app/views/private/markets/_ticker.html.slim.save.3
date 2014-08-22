@@ -1,0 +1,29 @@
+.panel-heading
+  .span style = "text-transform: uppercase; font-weight: bold;" = @market.name
+  .col-md-10 style = "text-transform: uppercase; font-weight: bold;" = @ask_name 
+.panel-body.ticker
+  .row
+      .col-md-8.name.last  style=("text-transform: uppercase") #{t('global.latest_price')}
+      .col-md-10.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+      .hr
+  .row
+      .col-md-8.name.bid  style = "text-transform: uppercase;" #{t('global.bid_price')}
+      .col-md-10.value.last style = "font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+  .row
+      .col-md-8.name.ask  style = "text-transform: uppercase;" #{t('global.ask_price')}
+      .col-md-10.value.last style = "font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+  .row
+      .col-md-8.name.high  style = "text-transform: uppercase;" #{t('global.high_price')}
+      .col-md-10.value.last style = "font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+  .row
+      .col-md-8.name.low  style = "text-transform: uppercase;" #{t('global.low_price')}
+      .col-md-10.value.last style = "font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+  .row
+      .col-md-8.name.volume  style = "text-transform: uppercase;" #{t('global.volume')}
+      .col-md-10.value.last style = "font-weight: bold; text-align: right;"
+      .col-md-4.value style = "text-transform: uppercase; margin-left: 3px;" = @ask_code

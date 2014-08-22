@@ -1,0 +1,16 @@
+.panel.panel-default
+  .panel-heading = t('.my_orders')
+  .panel-body.my-orders
+    table.table.table-condensed.table-striped
+
+.panel.panel-default
+  .tab-content
+    #tabMarketPriceChart.tab-pane.active
+    .panel-heading = t('.price_chart')
+    .panel-body
+      .price-chart style = "height: 288px;"
+    #tabMarketOrderBook.tab-pane
+    .panel-heading = t('.orderbook')
+    .panel-body
+      .orderbook-chart style = "height: 288px;"
+

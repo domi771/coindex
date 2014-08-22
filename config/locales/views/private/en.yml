@@ -14,22 +14,38 @@ en:
         bid_order: 'BID ##sn#'
       ticker:
         markets: Market
-      account_balance:
         title: Account Balance
         available: Available %{currency}
-      place_order:
-        place_order: Place Order
+      place_buy_order:
+        place_order: Buy
         bid_panel: Buy %{currency}
         ask_panel: Sell %{currency}
         price: Price
         last_price: Last Price
-        amount: Amount
-        total: Total
+        amount: Units
+        total: Total w 0.00% Fee
         available: Available
-        price_high: Price exceeds 10% from current Price
-        price_low: Price less then 10% from current Price
+      place_sell_order:
+        place_order: Sell
+        bid_panel: Buy %{currency}
+        ask_panel: Sell %{currency}
+        price: Price
+        last_price: Last Price
+        amount: Units
+        total: Total w 0.00% Fee
+        available: Available
+      place_order:
+        price_high: "Warning: Price exceeds 10% from current Price"
+        price_low: "Warning: Price less then 10% from current Price"
+        amount: Units
+        total: Total w 0.00% Fee
+        price: Price
       order_book:
         order_book: Order Book
+      order_book_asks:
+        order_book: Buying
+      order_book_bids:
+        order_book: Selling
       market_trades:
         trades: Trades
         time: Time
@@ -42,6 +58,9 @@ en:
         orders_cancel: Cancel Orders
       price_chart:
         price_chart: Price Chart
+      market_menu:
+        price_chart: Price Chart
+        order_book: Order Book
       global:
         global_orders_title: ORDERS
         global_trades_title: TRADES

@@ -65,6 +65,8 @@ $ ->
   MarketOrdersUI.attachTo('.orders')
   MarketTradesUI.attachTo('.trades')
   MarketChartUI.attachTo('.price-chart')
+  OrderbookChartUI.attachTo('.orderbook-chart')
+  BuysellratioChartUI.attachTo('.buysellratio-chart')
 
   TransactionsUI.attachTo('#transactions')
   VerifyMobileNumberUI.attachTo('#new_sms_token')

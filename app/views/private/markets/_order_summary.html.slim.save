@@ -1,0 +1,30 @@
+  GNU nano 2.2.6 File: ...iews/private/markets/_price_chart.html.slim           
+
+.panel.panel-default
+  .panel-heading = t('.price_chart')
+  .panel-body
+    .tab-content
+      #tabMarketPriceChart.tab-pane.active
+        .price-chart
+      #tabMarketOrderBook.tab-pane
+        | test
+
+.tab-content
+  #tabSummaryTable.tab-pane.active
+    .row
+      .col-md-12  = render partial: 'order_book_asks'
+      .col-md-12  = render partial: 'order_book_bids'
+    .row
+      .col-md-24  = render partial: 'market_trades'
+
+  #tabOrderBookTable2.tab-pane
+    .row
+      .col-md-12  = render partial: 'order_book_asks'
+      .col-md-12  = render partial: 'order_book_bids'
+
+    #tabMarketHistoryTable2.tab-pane       
+    .row
+      .col-md-24  = render partial: 'market_trades'
+
+
+
