@@ -63,7 +63,7 @@
           size: "165%"
           dataLabels:
             enabled: true
-            distance: -30
+            distance: -25
             style:
               fontWeight: "bold"
               color: "white"

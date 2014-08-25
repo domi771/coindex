@@ -2,11 +2,11 @@
   #tabMarketPriceChart.tab-pane.active 
     .panel.panel-default
       .panel-heading = t('.price_chart')
-      .panel-body
-      .price-chart style = "height: 381px;"
+      .panel-body id = "pricechart-loading" style = "height: 411px; background-size: 30px 30px; background-position: center; background-repeat: no-repeat; background-image: url(https://orchard.herokuapp.com/static/img/spinner.gif)"
+      .price-chart id = "pricechart" style = "height: 0px; display: none;"
   #tabMarketOrderBook.tab-pane
     .panel.panel-default
       .panel-heading = t('.order_book')
       .panel-body 
-      .orderbook-chart style = "max-width: 800px; height: 381px;"
+      .orderbook-chart style = "height: 381px;"
 
