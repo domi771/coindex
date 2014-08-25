@@ -9,7 +9,6 @@
         marginRight: 30
         zoomType: "x"
         height: 375
-        width: 755
 
         events:
           load: ->
