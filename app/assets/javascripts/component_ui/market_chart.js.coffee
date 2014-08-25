@@ -43,14 +43,9 @@
 
                 series[0].setData ohlc
                 series[1].setData volume
-                #document.getElementById("pricechart-loading").style.padding = "0"
-                #document.getElementById("pricechart-loading").style.height = "0px"
-                #document.getElementById("pricechart-loading").style.background = "none"
                 document.getElementById("pricechart-loading").style.display = "none"
                 document.getElementById("pricechart").style.height = "411px"
                 document.getElementById("pricechart").style.display = "block"
-                $(window).trigger('resize')
-                $('#pricechart').fadeIn('slow')
  
             setInterval (->
               $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=1", (data) ->

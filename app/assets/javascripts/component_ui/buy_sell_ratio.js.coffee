@@ -28,11 +28,11 @@
                 #bid = [[478.88,5235.47],[480,5235.37],[480.04,4954.54]]
                 #ask = [[509.9,2.22],[510,24.35],[510.69,24.57],[510.7,24.82]]
 
-                series[0].setData ([parseFloat(i[0]), parseFloat(i[1])] for i in data.bids)
-                series[1].setData ([parseFloat(i[0]), parseFloat(i[1])] for i in data.asks)
-                console.info ([parseFloat(i[0]), parseFloat(i[1])] for i in data.bids)
-                console.info ([parseFloat(i[0]), parseFloat(i[1])] for i in data.asks)
-                console.info series[0]
+                #series[0].setData ([parseFloat(i[0]), parseFloat(i[1])] for i in data.bids)
+                #series[1].setData ([parseFloat(i[0]), parseFloat(i[1])] for i in data.asks)
+                #console.info ([parseFloat(i[0]), parseFloat(i[1])] for i in data.bids)
+                #console.info ([parseFloat(i[0]), parseFloat(i[1])] for i in data.asks)
+                #console.info series[0]
                 #series[0].setData bid
                 #series[1].setData ask
 
