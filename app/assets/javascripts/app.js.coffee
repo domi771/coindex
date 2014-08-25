@@ -76,6 +76,12 @@ $ ->
   $("a[data-toggle=\"tab\"]").on "shown.bs.tab", (e) ->
     $(window).resize()
     return
+  
+  $(window).on "resize", (event) ->
+    $("#pricechart").hide().fadeIn 1000
+    $("#orderbookchart").hide().fadeIn 1000
+    toggle = true
+    return
 
   $('.tab-content').on 'mousewheel DOMMouseScroll', (e) ->
     $(@).scrollTop(@scrollTop + e.deltaY)
