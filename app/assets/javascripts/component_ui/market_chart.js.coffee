@@ -14,10 +14,6 @@
         marginRight: 30
         zoomType: "x"
 
-      loading:
-        hideDuration: 1000
-        #showDuration: 1000
-
         events:
           load: ->
             series = @series
@@ -46,6 +42,8 @@
                 document.getElementById("pricechart-loading").style.display = "none"
                 document.getElementById("pricechart").style.height = "411px"
                 document.getElementById("pricechart").style.display = "block"
+                $(window).trigger('resize')
+                $('#pricechart').fadeIn('slow')
  
             setInterval (->
               $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=1", (data) ->
