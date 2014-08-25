@@ -9,11 +9,12 @@ html, body {
 header {
   padding-top: 0px;
   margin-bottom: 30px;
-  background: #024D68;
-  height: 50px;
+  background: #f8faf7;
+  height: 51px;
   position: fixed;
   width: 100%;
   z-index: 99999;
+  border-bottom: 1px solid #e6ede3;
 }
 
 #wrap {

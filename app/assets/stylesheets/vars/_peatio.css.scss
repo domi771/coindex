@@ -11,11 +11,11 @@ $main-dark-color: darken($main-color, 10%);
 $body-bg: #FFFFFF;
 $btn-primary-bg: $main-dark-color;
 
-$navbar-default-bg: #024D68;
-$navbar-default-link-color: #DCDCDC;
-$navbar-default-link-hover-color: #EFEFEF;
-$navbar-default-link-active-color: #EFEFEF;
-$navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
+$navbar-default-bg: #f8faf7;
+$navbar-default-link-color: #555555;
+$navbar-default-link-hover-color: #2e312c;
+$navbar-default-link-active-color: #2e312c;
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 5%);
 
 $btn-default-bg: #428bca;
 $btn-default-color: #fff;

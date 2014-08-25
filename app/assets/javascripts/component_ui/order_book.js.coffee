@@ -33,7 +33,6 @@
 
               series[0].setData bid.reverse()
               series[1].setData ask
-              $(window).trigger('resize')
 
 
             setInterval (->

@@ -42,8 +42,8 @@
                 document.getElementById("pricechart-loading").style.display = "none"
                 document.getElementById("pricechart").style.height = "411px"
                 document.getElementById("pricechart").style.display = "block"
-                $(window).trigger('resize')
-                $('#pricechart').fadeIn('slow')
+                #$(window).trigger('resize')
+                $(window).resize()
  
             setInterval (->
               $.getJSON "/api/v2/k.json?market=#{gon.market.id}&limit=1000000&period=1", (data) ->

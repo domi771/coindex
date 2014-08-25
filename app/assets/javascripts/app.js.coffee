@@ -73,6 +73,10 @@ $ ->
   FlashMessageUI.attachTo('.flash-message')
   TwoFactorAuth.attachTo('.two-factor-auth-container')
 
+  $("a[data-toggle=\"tab\"]").on "shown.bs.tab", (e) ->
+    $(window).resize()
+    return
+
   $('.tab-content').on 'mousewheel DOMMouseScroll', (e) ->
     $(@).scrollTop(@scrollTop + e.deltaY)
     e.preventDefault()
