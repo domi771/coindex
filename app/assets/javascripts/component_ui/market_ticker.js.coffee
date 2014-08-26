@@ -11,7 +11,7 @@ window.MarketTickerUI = flight.component ->
     text = round(text, gon.market.bid.fixed)
     if el.text() isnt text
       el.fadeOut ->
-        el.text(text).fadeIn().effect("highlight", {}, 1500)
+        el.text(text).fadeIn()
 
   @refresh = (event, data) ->
     @select('volumeSelector').text round(data.volume, gon.market.ask.fixed)
