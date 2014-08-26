@@ -11,7 +11,7 @@ window.MarketTickerUI = flight.component ->
     text = round(text, gon.market.bid.fixed)
     if el.text() isnt text
       el.fadeOut ->
-        el.text(text).fadeIn()
+        el.text(text).fadeIn().effect("highlight", {}, 1500)
 
   @refresh = (event, data) ->
     @select('volumeSelector').text round(data.volume, gon.market.ask.fixed)
@@ -22,7 +22,7 @@ window.MarketTickerUI = flight.component ->
     @update @select('highPriceSelector'), data.high
     @update @select('latestPriceSelector'), data.last
 
-    document.title = "(#{gon.market.bid.currency.toUpperCase()} #{data.last})"
+    document.title = "(#{data.last}) #{gon.market.id.toUpperCase()}"
 
   @after 'initialize', ->
     @refresh 'market::ticker', gon.ticker
