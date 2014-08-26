@@ -34,7 +34,7 @@ class WelcomeController < ApplicationController
   def index
 
 
-      @market = 'btcchf'
+      @market = 'ltcbtc'
 
       @bids   = Global[@market].bids
       @asks   = Global[@market].asks

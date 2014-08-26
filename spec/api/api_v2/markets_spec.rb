@@ -6,7 +6,7 @@ describe APIv2::Markets do
     it "should all available markets" do
       get '/api/v2/markets'
       response.should be_success
-      response.body.should == '[{"id":"btcchf","name":"BTC/CHF"}]'
+      response.body.should == '[{"id":"ltcbtc","name":"BTC/CHF"}]'
     end
   end
 

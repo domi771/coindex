@@ -1,6 +1,6 @@
 require 'spec_helper'
 
 describe Global do
-  let(:global) { Global['btcchf'] }
+  let(:global) { Global['ltcbtc'] }
 end
 

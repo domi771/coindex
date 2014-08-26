@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe Market do
 
-  subject { Market.find('btcchf') }
+  subject { Market.find('ltcbtc') }
 
-  its(:id)          { should == 'btcchf' }
+  its(:id)          { should == 'ltcbtc' }
   its(:name)        { should == 'BTC/CHF' }
   its(:target_unit) { should == 'btc' }
   its(:price_unit)  { should == 'chf' }

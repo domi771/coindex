@@ -10,28 +10,28 @@ describe APIv2::Trades do
   end
   let(:token)  { create(:api_token, member: member) }
 
-  let(:ask) { create(:order_ask, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member) }
-  let(:bid) { create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member) }
+  let(:ask) { create(:order_ask, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member) }
+  let(:bid) { create(:order_bid, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member) }
 
   let!(:ask_trade) { create(:trade, ask: ask, created_at: 2.days.ago) }
   let!(:bid_trade) { create(:trade, bid: bid, created_at: 1.day.ago) }
 
   describe 'GET /api/v2/trades' do
     it "should return all recent trades" do
-      get '/api/v2/trades', market: 'btcchf'
+      get '/api/v2/trades', market: 'ltcbtc'
       response.should be_success
       JSON.parse(response.body).should have(2).trades
     end
 
     it "should return 1 trade" do
-      get '/api/v2/trades', market: 'btcchf', limit: 1
+      get '/api/v2/trades', market: 'ltcbtc', limit: 1
       response.should be_success
       JSON.parse(response.body).should have(1).trade
     end
 
     it "should return trades before timestamp" do
       another = create(:trade, bid: bid, created_at: 6.hours.ago)
-      get '/api/v2/trades', market: 'btcchf', timestamp: 8.hours.ago.to_i, limit: 1
+      get '/api/v2/trades', market: 'ltcbtc', timestamp: 8.hours.ago.to_i, limit: 1
       response.should be_success
       json = JSON.parse(response.body)
       json.should have(1).trade
@@ -40,7 +40,7 @@ describe APIv2::Trades do
 
     it "should return trades between id range" do
       another = create(:trade, bid: bid)
-      get '/api/v2/trades', market: 'btcchf', from: ask_trade.id, to: another.id
+      get '/api/v2/trades', market: 'ltcbtc', from: ask_trade.id, to: another.id
       response.should be_success
       json = JSON.parse(response.body)
       json.should have(1).trade
@@ -48,14 +48,14 @@ describe APIv2::Trades do
     end
 
     it "should sort trades in reverse creation order" do
-      get '/api/v2/trades', market: 'btcchf'
+      get '/api/v2/trades', market: 'ltcbtc'
       response.should be_success
       JSON.parse(response.body).first['id'].should == bid_trade.id
     end
 
     it "should get trades by from and limit" do
       another = create(:trade, bid: bid, created_at: 6.hours.ago)
-      get '/api/v2/trades', market: 'btcchf', from: ask_trade.id, limit: 1, order_by: 'asc'
+      get '/api/v2/trades', market: 'ltcbtc', from: ask_trade.id, limit: 1, order_by: 'asc'
       response.should be_success
       JSON.parse(response.body).first['id'].should == bid_trade.id
     end
@@ -63,13 +63,13 @@ describe APIv2::Trades do
 
   describe 'GET /api/v2/trades/my' do
     it "should require authentication" do
-      get '/api/v2/trades/my', market: 'btcchf', access_key: 'test', tonce: time_to_milliseconds, signature: 'test'
+      get '/api/v2/trades/my', market: 'ltcbtc', access_key: 'test', tonce: time_to_milliseconds, signature: 'test'
       response.code.should == '401'
       response.body.should == '{"error":{"code":2001,"message":"Authorization failed"}}'
     end
 
     it "should return all my recent trades" do
-      signed_get '/api/v2/trades/my', params: {market: 'btcchf'}, token: token
+      signed_get '/api/v2/trades/my', params: {market: 'ltcbtc'}, token: token
       response.should be_success
 
       result = JSON.parse(response.body)
@@ -78,19 +78,19 @@ describe APIv2::Trades do
     end
 
     it "should return 1 trade" do
-      signed_get '/api/v2/trades/my', params: {market: 'btcchf', limit: 1}, token: token
+      signed_get '/api/v2/trades/my', params: {market: 'ltcbtc', limit: 1}, token: token
       response.should be_success
       JSON.parse(response.body).should have(1).trade
     end
 
     it "should return trades before timestamp" do
-      signed_get '/api/v2/trades/my', params: {market: 'btcchf', timestamp: 30.hours.ago.to_i}, token: token
+      signed_get '/api/v2/trades/my', params: {market: 'ltcbtc', timestamp: 30.hours.ago.to_i}, token: token
       response.should be_success
       JSON.parse(response.body).should have(1).trade
     end
 
     it "should return limit out of range error" do
-      signed_get '/api/v2/trades/my', params: {market: 'btcchf', limit: 1024}, token: token
+      signed_get '/api/v2/trades/my', params: {market: 'ltcbtc', limit: 1024}, token: token
       response.code.should == '400'
       response.body.should == '{"error":{"code":1001,"message":"limit must be in range: 1..1000"}}'
     end

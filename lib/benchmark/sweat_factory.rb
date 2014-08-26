@@ -17,7 +17,7 @@ module Benchmark
           bid: :chf,
           ask: :btc,
           state: Order::WAIT,
-          currency: :btcchf,
+          currency: :ltcbtc,
           origin_volume: attrs[:volume],
           source: 'Web'
         }.merge(attrs))

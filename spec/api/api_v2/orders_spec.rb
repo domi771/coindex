@@ -7,14 +7,14 @@ describe APIv2::Orders do
 
   describe "GET /api/v2/orders" do
     before do
-      create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member)
-      create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member, state: Order::CANCEL)
-      create(:order_ask, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member)
-      create(:order_ask, currency: 'btcchf', price: '12.326'.to_d, volume: '123.123456789', member: member, state: Order::DONE)
+      create(:order_bid, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member)
+      create(:order_bid, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member, state: Order::CANCEL)
+      create(:order_ask, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member)
+      create(:order_ask, currency: 'ltcbtc', price: '12.326'.to_d, volume: '123.123456789', member: member, state: Order::DONE)
     end
 
     it "should require authentication" do
-      get "/api/v2/orders", market: 'btcchf'
+      get "/api/v2/orders", market: 'ltcbtc'
       response.code.should == '401'
     end
 
@@ -25,19 +25,19 @@ describe APIv2::Orders do
     end
 
     it "should validate state param" do
-      signed_get '/api/v2/orders', params: {market: 'btcchf', state: 'test'}, token: token
+      signed_get '/api/v2/orders', params: {market: 'ltcbtc', state: 'test'}, token: token
       response.code.should == '400'
       JSON.parse(response.body).should == {"error" => {"code" => 1001,"message" => "state does not have a valid value"}}
     end
 
     it "should return active orders by default" do
-      signed_get '/api/v2/orders', params: {market: 'btcchf'}, token: token
+      signed_get '/api/v2/orders', params: {market: 'ltcbtc'}, token: token
       response.should be_success
       JSON.parse(response.body).size.should == 2
     end
 
     it "should return complete orders" do
-      signed_get '/api/v2/orders', params: {market: 'btcchf', state: Order::DONE}, token: token
+      signed_get '/api/v2/orders', params: {market: 'ltcbtc', state: Order::DONE}, token: token
       response.should be_success
       JSON.parse(response.body).first['state'].should == Order::DONE
     end
@@ -45,7 +45,7 @@ describe APIv2::Orders do
   end
 
   describe "GET /api/v2/order" do
-    let(:order)  { create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '3.14', origin_volume: '12.13', member: member) }
+    let(:order)  { create(:order_bid, currency: 'ltcbtc', price: '12.326'.to_d, volume: '3.14', origin_volume: '12.13', member: member) }
     let!(:trade) { create(:trade, bid: order) }
 
     it "should get specified order" do
@@ -80,7 +80,7 @@ describe APIv2::Orders do
 
     it "should create a sell order and a buy order" do
       params = {
-        market: 'btcchf',
+        market: 'ltcbtc',
         orders: [
           {side: 'sell', volume: '12.13', price: '2014'},
           {side: 'buy',  volume: '17.31', price: '2005'}
@@ -102,7 +102,7 @@ describe APIv2::Orders do
 
     it "should create nothing on error" do
       params = {
-        market: 'btcchf',
+        market: 'ltcbtc',
         orders: [
           {side: 'sell', volume: '12.13', price: '2014'},
           {side: 'buy',  volume: '17.31', price: 'test'} # <- invalid price
@@ -123,7 +123,7 @@ describe APIv2::Orders do
       member.get_account(:btc).update_attributes(balance: 100)
 
       expect {
-        signed_post '/api/v2/orders', token: token, params: {market: 'btcchf', side: 'sell', volume: '12.13', price: '2014'}
+        signed_post '/api/v2/orders', token: token, params: {market: 'ltcbtc', side: 'sell', volume: '12.13', price: '2014'}
         response.should be_success
         JSON.parse(response.body)['id'].should == OrderAsk.last.id
       }.to change(OrderAsk, :count).by(1)
@@ -133,7 +133,7 @@ describe APIv2::Orders do
       member.get_account(:chf).update_attributes(balance: 100000)
 
       expect {
-        signed_post '/api/v2/orders', token: token, params: {market: 'btcchf', side: 'buy', volume: '12.13', price: '2014'}
+        signed_post '/api/v2/orders', token: token, params: {market: 'ltcbtc', side: 'buy', volume: '12.13', price: '2014'}
         response.should be_success
         JSON.parse(response.body)['id'].should == OrderBid.last.id
       }.to change(OrderBid, :count).by(1)
@@ -141,33 +141,33 @@ describe APIv2::Orders do
 
     it "should set order source to APIv2" do
       member.get_account(:chf).update_attributes(balance: 100000)
-      signed_post '/api/v2/orders', token: token, params: {market: 'btcchf', side: 'buy', volume: '12.13', price: '2014'}
+      signed_post '/api/v2/orders', token: token, params: {market: 'ltcbtc', side: 'buy', volume: '12.13', price: '2014'}
       OrderBid.last.source.should == 'APIv2'
     end
 
     it "should return cannot lock funds error" do
       expect {
-        signed_post '/api/v2/orders', params: {market: 'btcchf', side: 'sell', volume: '12.13', price: '2014'}
+        signed_post '/api/v2/orders', params: {market: 'ltcbtc', side: 'sell', volume: '12.13', price: '2014'}
         response.code.should == '400'
         response.body.should == '{"error":{"code":2002,"message":"Failed to create order. Reason: cannot lock funds (amount: 12.13)"}}'
       }.not_to change(OrderAsk, :count).by(1)
     end
 
     it "should give a number as volume parameter" do
-      signed_post '/api/v2/orders', params: {market: 'btcchf', side: 'sell', volume: 'test', price: '2014'}
+      signed_post '/api/v2/orders', params: {market: 'ltcbtc', side: 'sell', volume: 'test', price: '2014'}
       response.code.should == '400'
       response.body.should == '{"error":{"code":2002,"message":"Failed to create order. Reason: Validation failed: Volume must be greater than 0"}}'
     end
 
     it "should give a number as price parameter" do
-      signed_post '/api/v2/orders', params: {market: 'btcchf', side: 'sell', volume: '12.13', price: 'test'}
+      signed_post '/api/v2/orders', params: {market: 'ltcbtc', side: 'sell', volume: '12.13', price: 'test'}
       response.code.should == '400'
       response.body.should == '{"error":{"code":2002,"message":"Failed to create order. Reason: Validation failed: Price must be greater than 0"}}'
     end
   end
 
   describe "POST /api/v2/order/delete" do
-    let!(:order)  { create(:order_bid, currency: 'btcchf', price: '12.326'.to_d, volume: '3.14', origin_volume: '12.13', locked: '20.1082', origin_locked: '38.0882', member: member) }
+    let!(:order)  { create(:order_bid, currency: 'ltcbtc', price: '12.326'.to_d, volume: '3.14', origin_volume: '12.13', locked: '20.1082', origin_locked: '38.0882', member: member) }
 
     context "succesful" do
       before do
@@ -197,8 +197,8 @@ describe APIv2::Orders do
   describe "POST /api/v2/orders/clear" do
 
     before do
-      create(:order_ask, currency: 'btcchf', price: '12.326', volume: '3.14', origin_volume: '12.13', member: member)
-      create(:order_bid, currency: 'btcchf', price: '12.326', volume: '3.14', origin_volume: '12.13', member: member)
+      create(:order_ask, currency: 'ltcbtc', price: '12.326', volume: '3.14', origin_volume: '12.13', member: member)
+      create(:order_bid, currency: 'ltcbtc', price: '12.326', volume: '3.14', origin_volume: '12.13', member: member)
 
       member.get_account(:btc).update_attributes(locked: '5')
       member.get_account(:chf).update_attributes(locked: '50')

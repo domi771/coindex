@@ -4,7 +4,7 @@ describe Worker::Matching do
 
   let(:alice)  { who_is_billionaire }
   let(:bob)    { who_is_billionaire }
-  let(:market) { Market.find('btcchf') }
+  let(:market) { Market.find('ltcbtc') }
 
   subject { Worker::Matching.new }
 
@@ -25,7 +25,7 @@ describe Worker::Matching do
       order = create(:order_bid, price: '4001', volume: '8.0', member: bob)
 
       AMQPQueue.expects(:enqueue)
-        .with(:slave_book, {action: 'update', order: {id: existing.id, timestamp: existing.at, type: :ask, volume: '2.0'.to_d, price: existing.price, market: 'btcchf', ord_type: 'limit'}}, anything)
+        .with(:slave_book, {action: 'update', order: {id: existing.id, timestamp: existing.at, type: :ask, volume: '2.0'.to_d, price: existing.price, market: 'ltcbtc', ord_type: 'limit'}}, anything)
       AMQPQueue.expects(:enqueue)
         .with(:trade_executor, {market_id: market.id, ask_id: existing.id, bid_id: order.id, strike_price: '4001'.to_d, volume: '8.0'.to_d, funds: '32008'.to_d}, anything)
       subject.process({action: 'submit', order: order.to_matching_attributes}, {}, {})
@@ -63,7 +63,7 @@ describe Worker::Matching do
     let!(:bid5) { create(:order_bid, price: '4003', volume: '3.0', member: bob) }
     let!(:bid6) { create(:order_bid, price: '4001', volume: '5.0', member: bob) }
 
-    let!(:orderbook) { Matching::OrderBookManager.new('btcchf', broadcast: false) }
+    let!(:orderbook) { Matching::OrderBookManager.new('ltcbtc', broadcast: false) }
     let!(:engine)    { Matching::Engine.new(market) }
 
     before do

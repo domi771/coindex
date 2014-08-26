@@ -42,7 +42,7 @@ module Private
 
     def set_default_market
       #cookies[:market_id] = @market.id
-      cookies[:market_id] = 'btcchf'
+      cookies[:market_id] = 'ltcbtc'
     end
 
   end

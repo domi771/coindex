@@ -40,7 +40,7 @@ describe OrderBid do
     end
 
     before do
-      global = Global.new('btcchf')
+      global = Global.new('ltcbtc')
       global.stubs(:asks).returns(price_levels)
       Global.stubs(:[]).returns(global)
     end

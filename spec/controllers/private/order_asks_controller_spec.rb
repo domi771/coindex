@@ -8,7 +8,7 @@ describe Private::OrderAsksController do
     }
   end
 
-  let(:market) { Market.find('btcchf') }
+  let(:market) { Market.find('ltcbtc') }
   let(:params) do
     { market_id: market.id,
       market:    market.id,
