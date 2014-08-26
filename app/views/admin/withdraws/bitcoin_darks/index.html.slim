@@ -1,0 +1,11 @@
+- unless @one_bitcoin_darks.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {bitcoin_darks: @one_bitcoin_darks}
+- unless @all_bitcoin_darks.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {bitcoin_darks: @all_bitcoin_darks}
+
+- if @all_bitcoin_darks.empty? and @one_bitcoin_darks.empty?
+  h3.text-info.text-center = t('.empty')

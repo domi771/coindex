@@ -1,0 +1,55 @@
+de:
+  deposit_channel:
+    dogecoin:
+      key: Block Chain
+      title: Dogecoin Blockchain
+      intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      latency: 1 Bestätigung
+      transfer: Automatisch
+      go: Einzahlen
+
+  activerecord:
+    attributes:
+      deposits/dogecoin:
+        created_at: Erstellt am
+        txid: Transaktions ID
+        amount: Betrag
+        memo: Bestätigungen
+        aasm_state_text: Status
+
+  deposits/dogecoin:
+    aasm_state:
+      submitted: in Bearbeitung
+      accepted: Erledigt
+      checked: Checked
+      warning: Warnung
+
+  guides:
+    private:
+      deposits:
+        dogecoins:
+          panel: Dogecoin Blockchain
+          intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          new:
+            panel: Einzahlen
+            default-panel: Dogecoin Einzahlungsverlauf
+
+  admin:
+    deposits:
+      dogecoins:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 充值充值
+          accept_confirm: 确定立刻确认此充值？
+
+  private:
+    deposits:
+      dogecoins:
+        panel: Dogecoin
+        new:
+          panel: Dogecoin Blockchain
+          step-1: Schritt 1
+          open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
+          step-2: Step Two
+          send-coin: Senden Sie den gewünschten Dogecoin Betrag and die folgende Adresse

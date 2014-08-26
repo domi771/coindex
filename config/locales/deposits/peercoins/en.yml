@@ -1,0 +1,55 @@
+en:
+  deposit_channel:
+    peercoin:
+      key: Block Chain
+      title: Peercoin Blockchain
+      intro: Deposit Peercoin from your own wallet to your COINDEX account
+      latency: 1 confirmation
+      transfer: Automatic
+      go: Deposit
+
+  activerecord:
+    attributes:
+      deposits/peercoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        memo: Confirmation
+        aasm_state_text: State
+
+  deposits/peercoin:
+    aasm_state:
+      submitted: Processing
+      accepted: Done
+      checked: Checked
+      warning: Warning
+
+  guides:
+    private:
+      deposits:
+        peercoins:
+          panel: Peercoin Blockchain
+          intro: Deposit Peercoin from your own wallet to your COINDEX account.
+          new:
+            panel: Deposit
+            default-panel: Peercoin Deposit History
+
+  admin:
+    deposits:
+      peercoins:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 充值充值
+          accept_confirm: 确定立刻确认此充值？
+
+  private:
+    deposits:
+      peercoins:
+        panel: Peercoin
+        new:
+          panel: Peercoin Blockchain
+          step-1: Step one
+          open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
+          step-2: Step Two
+          send-coin: Send the desired amount of Peercoin to the following address

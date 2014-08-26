@@ -1,4 +1,4 @@
-$footer-height: 150px;
+$footer-height: 80px;
 
 html, body {
   height: 100%;
@@ -32,6 +32,7 @@ header {
 }
 
 footer {
+  # height: 80px;
   padding-top: 30px;
   background: #f8faf7;
   border-top: 1px solid #e6ede3;

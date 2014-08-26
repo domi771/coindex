@@ -23,6 +23,10 @@ module Admin
       can :manage, ::Deposits::Litecoin
       can :manage, ::Deposits::Viacoin
       can :manage, ::Deposits::Darkcoin
+      can :manage, ::Deposits::BitcoinDark
+      can :manage, ::Deposits::Namecoin
+      can :manage, ::Deposits::Dogecoin
+      can :manage, ::Deposits::Peercoin
 
       can :menu, Withdraw
       can :manage, ::Withdraws::Bank
@@ -30,6 +34,10 @@ module Admin
       can :manage, ::Withdraws::Litecoin
       can :manage, ::Withdraws::Viacoin
       can :manage, ::Withdraws::Darkcoin
+      can :manage, ::Withdraws::Namecoin
+      can :manage, ::Withdraws::Peercoin
+      can :manage, ::Withdraws::BitcoinBlack
+      can :manage, ::Withdraws::Dogecoin
 
       can :stat, ::Member
     end
