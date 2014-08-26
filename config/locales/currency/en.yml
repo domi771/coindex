@@ -13,9 +13,9 @@ en:
     peercoin:
       key: PPC
     bitcoindark:
-      key: BTCD
+      key: BTD
     dogecoin:
-      key: DOGE
+      key: DOG
     namecoin:
       key: NMC
 
@@ -26,8 +26,8 @@ en:
       via: Viacoin
       drk: Darkcoin
       ppc: Peercoin
-      btcd: BitcoinDark
-      doge: Dogecoin
+      btd: BitcoinDark
+      dog: Dogecoin
       nmc: Namecoin
 
     code:
@@ -37,8 +37,8 @@ en:
       via: VIA
       drk: DRK
       ppc: PPC
-      btcd: BTCD
-      doge: DOGE
+      btd: BTCD
+      dog: DOGE
       nmc: NMC
 
     format:
