@@ -10,18 +10,37 @@ en:
       key: VIA
     darkcoin:
       key: DRK
+    peercoin:
+      key: PPC
+    bitcoindark:
+      key: BTCD
+    dogecoin:
+      key: DOGE
+    namecoin:
+      key: NMC
+
     name:
       chf: Swiss Franc
       btc: Bitcoin
       ltc: Litecoin
       via: Viacoin
       drk: Darkcoin
+      ppc: Peercoin
+      btcd: BitcoinDark
+      doge: Dogecoin
+      nmc: Namecoin
+
     code:
       chf: CHF
       btc: BTC
       ltc: LTC
       via: VIA
       drk: DRK
+      ppc: PPC
+      btcd: BTCD
+      doge: DOGE
+      nmc: NMC
+
     format:
       zero: 'N/A'
       chf: '0,0.00'
