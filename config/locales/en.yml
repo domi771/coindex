@@ -3,7 +3,7 @@ en:
   "false": No
 
   slogan: "Europe's Crypto-Exchange"
-  slogan_small: Ttrade Bitcoins with a large selection of alternative cryptocurrencies.
+  slogan_small: Trade Bitcoins with a large selection of alternative cryptocurrencies.
   signup_button: FREE SIGNUP &  START TRADING
   price: Price
   main_1h: Fast, Easy, Stable
@@ -61,6 +61,12 @@ en:
       chf: Swiss Franc
       btc: Bitcoin
       ltc: Litecoin
+      via: Viacoin
+      btd: BitcoinDark
+      dog: Dogecoin
+      nmc: Namecoin
+      ppc: Peercoin
+
     code:
       chf: CHF
       btc: BTC

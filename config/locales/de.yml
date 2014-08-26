@@ -60,6 +60,12 @@ de:
       chf: Schweizer Franken
       btc: Bitcoin
       ltc: Litecoin
+      via: Viacoin
+      btd: BitcoinDark
+      dog: Dogecoin
+      nmc: Namecoin
+      ppc: Peercoin
+
     code:
       chf: CHF
       btc: BTC

@@ -1,8 +1,8 @@
 = content_for :frame do
-  .container style = "max-width: 1150px; width: auto; padding-left: 35px; padding-right: 35px;"
+  .container style = "width: auto; padding-left: 35px; padding-right: 35px;"
     - if content_for?(:before)
       = yield(:before)
-    .panel.panel-default style = "margin-top: 90px;"
+    .panel.panel-default style = "margin-top: 90px; max-width: 1080px;margin-right: auto;margin-left: auto;"
       .panel-heading
         h4.panel-title = guide_panel_title
       .panel-body
