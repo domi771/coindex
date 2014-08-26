@@ -83,6 +83,6 @@ $ ->
     toggle = true
     return
 
-  $('.tab-content').on 'mousewheel DOMMouseScroll', (e) ->
-    $(@).scrollTop(@scrollTop + e.deltaY)
-    e.preventDefault()
+  # $('.tab-content').on 'mousewheel DOMMouseScroll', (e) ->
+  #   $(@).scrollTop(@scrollTop + e.deltaY)
+  #   e.preventDefault()
