@@ -36,7 +36,7 @@ module Admin
       can :manage, ::Withdraws::Darkcoin
       can :manage, ::Withdraws::Namecoin
       can :manage, ::Withdraws::Peercoin
-      can :manage, ::Withdraws::BitcoinBlack
+      can :manage, ::Withdraws::BitcoinDark
       can :manage, ::Withdraws::Dogecoin
 
       can :stat, ::Member
