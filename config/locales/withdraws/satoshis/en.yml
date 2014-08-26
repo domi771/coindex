@@ -3,7 +3,7 @@ en:
     satoshi:
       key: Blockchain
       title: Bitcoin Blockchain
-      intro: Withdraw Bitcoin from COINDEX to your own Bitcoin wallet
+      intro: Withdraw Bitcoin from BITCOIN.JETZT to your own Bitcoin wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
@@ -113,14 +113,14 @@ en:
           panel: Bitcoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Bitcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Bitcoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Bitcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Bitcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Bitcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Bitcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Bitcoin Withdraw History
 

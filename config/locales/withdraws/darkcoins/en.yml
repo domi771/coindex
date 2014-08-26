@@ -3,7 +3,7 @@ en:
     darkcoin:
       key: Blockchain
       title: Darkcoin Blockchain
-      intro: Withdraw Darkcoin from COINDEX to your own Darkcoin wallet
+      intro: Withdraw Darkcoin from BITCOIN.JETZT to your own Darkcoin wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
@@ -113,14 +113,14 @@ en:
           panel: Darkcoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Darkcoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
 

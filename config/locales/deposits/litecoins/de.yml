@@ -3,7 +3,7 @@ de:
     litecoin:
       key: Block Chain
       title: Litecoin Blockchain
-      intro: Zahlen Sie Litecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      intro: Zahlen Sie Litecoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -29,7 +29,7 @@ de:
       deposits:
         litecoins:
           panel: Litecoin Blockchain
-          intro: Zahlen Sie Litecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          intro: Zahlen Sie Litecoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
           new:
             panel: Einzahlen
             default-panel: Litecoin Einzahlungsverlauf

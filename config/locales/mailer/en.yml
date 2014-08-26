@@ -1,15 +1,15 @@
 en:
   member_mailer:
     notify_signin:
-      subject: '[COINDEX] Sie haben sich eben angemeldet / You have just signed in'
+      subject: '[BITCOIN.JETZT] Sie haben sich eben angemeldet / You have just signed in'
   withdraw_mailer:
     withdraw_state:
-      subject: '[COINDEX] Status Ihrer Auszahlung / Your withdraw state'
+      subject: '[BITCOIN.JETZT] Status Ihrer Auszahlung / Your withdraw state'
   token_mailer:
     reset_password:
-      subject: '[COINDEX] Neues Passwort erstellen / Reset Your Password'
+      subject: '[BITCOIN.JETZT] Neues Passwort erstellen / Reset Your Password'
     reset_two_factor:
-      subject: '[COINDEX] Zwei-Faktoren Authentikation Reset / Reset Your Two Factor Auth'
+      subject: '[BITCOIN.JETZT] Zwei-Faktoren Authentikation Reset / Reset Your Two Factor Auth'
     activation:
-      subject: '[COINDEX] Konto Aktivierung / Account Activation'
+      subject: '[BITCOIN.JETZT] Konto Aktivierung / Account Activation'
 

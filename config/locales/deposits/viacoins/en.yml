@@ -3,7 +3,7 @@ en:
     viacoin:
       key: Block Chain
       title: Viacoin Blockchain
-      intro: Deposit Viacoin from your own wallet to your COINDEX account
+      intro: Deposit Viacoin from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -29,7 +29,7 @@ en:
       deposits:
         viacoins:
           panel: Viacoin Blockchain
-          intro: Deposit Viacoin from your own wallet to your COINDEX account.
+          intro: Deposit Viacoin from your own wallet to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: Viacoin Deposit History

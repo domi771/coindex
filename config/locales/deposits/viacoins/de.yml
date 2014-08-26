@@ -3,7 +3,7 @@ de:
     viacoin:
       key: Block Chain
       title: Viacoin Blockchain
-      intro: Zahlen Sie Viacoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      intro: Zahlen Sie Viacoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -29,7 +29,7 @@ de:
       deposits:
         viacoins:
           panel: Viacoin Blockchain
-          intro: Zahlen Sie Viacoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          intro: Zahlen Sie Viacoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
           new:
             panel: Einzahlen
             default-panel: Viacoin Einzahlungsverlauf

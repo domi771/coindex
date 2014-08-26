@@ -3,7 +3,7 @@ de:
     darkcoin:
       key: Blockchain
       title: Darkcoin Blockchain
-      intro: Zahlen Sie Darkcoin von COINDEX zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Darkcoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
@@ -115,14 +115,14 @@ de:
           panel: Darkcoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
 

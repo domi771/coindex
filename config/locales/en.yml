@@ -2,8 +2,8 @@ en:
   "true": Yes
   "false": No
 
-  slogan: SWISS BITCOIN EXCHANGE
-  slogan_small: You can send Bitcoins over the Internet directly to anyone with no middlemen. Bitcoins are traded worldwide. COINDEX is currently the only Bitcoin exchange worldwide where you can trade Bitcoin directly with Swiss Francs.
+  slogan: "Europe's Crypto-Exchange"
+  slogan_small: Ttrade Bitcoins with a large selection of alternative cryptocurrencies.
   signup_button: FREE SIGNUP &  START TRADING
   price: Price
   main_1h: Fast, Easy, Stable
@@ -16,10 +16,10 @@ en:
   main_3a: Support for 2-Factor Authentication. 100% of our customer funds are held in cold storage.
   main_3b: We do not operate a fractional reserve and have partnered with the world's leading DDOS Service.
   main_ann: Announcements
-  main_ann_1t: COINDEX launches Bitcoin ATM's
+  main_ann_1t: BITCOIN.JETZT launches Bitcoin ATM's
   main_ann_1b: During the next few months we will setup several Bitcoin ATM's in various Swiss cities. More info soon.
-  main_ann_2t: COINDEX running in TESTNET
-  main_ann_2b: Since today you can test COINDEX with Testnet Bitcoins. Any feedback welcome at coindex@coindex.ch
+  main_ann_2t: BITCOIN.JETZT running in TESTNET
+  main_ann_2b: Since today you can test BITCOIN.JETZT with Testnet Bitcoins. Any feedback welcome at coindex@coindex.ch
   sprache_de: Deutsch
   sprache_fr: Francais
   sprache_it: Italiano
@@ -41,7 +41,7 @@ en:
   gon:
     ask: Ask
     bid: Bid
-    brand: COINDEX
+    brand: BITCOIN.JETZT
     code: CHF
   back: Back
   invalid_password: Invalid password

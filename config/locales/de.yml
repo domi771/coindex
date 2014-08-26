@@ -2,8 +2,8 @@ de:
   "true": Yes
   "false": No
 
-  slogan: DIE SCHWEIZER BITCOIN BÖRSE
-  slogan_small: Sie können Bitcoins ohne Mittelsmann und an jeden über das Internet versenden. Bitcoins werden weltweit gehandelt. COINDEX ist die zurzeit einzige Bitcoin Börse mit welcher Sie direkt Bitcoin mit Schweizer Franken handeln können.
+  slogan: Europas Crypto-Börse
+  slogan_small: Handeln Sie Bitcoins mit einer grossen Auswahl an Cryptowährungen.
   signup_button: JETZT KOSTENLOS REGISTRIEREN
   main_1h: Einfach & Stabil
   main_1a: Egal ob Bitcoin-Neuling oder erfahrener Händler, Sie werden an unserer Börse gefallen finden. 
@@ -14,11 +14,11 @@ de:
   main_3h: Sicherheit
   main_3a: 2-Faktoren Autentifizierung. 100% der Bitcoins werden offline gelagert.
   main_3b: Wir haben keine fraktionelle Reserve und gegen DDOS attacken geschützt.
-  main_ann_1t: COINDEX Bitcoin ATM's
+  main_ann_1t: BITCOIN.JETZT Bitcoin ATM's
   main_ann_1b: Im Verlauf der nächten Monate werden mehrere Bitcoin ATM's in der ganzen Schweiz platziert werden. Mehr in Kürze.
-  main_ann_2t: COINDEX im TESTNET Betrieb
-  main_ann_2t: COINDEX im TESTNET Betrieb   
-  main_ann_2b: Seit Heute können Sie COINDEX mit Testnet Bitcoin testen! Kontaktieren Sie uns unter coindex@coindex.ch.
+  main_ann_2t: BITCOIN.JETZT im TESTNET Betrieb
+  main_ann_2t: BITCOIN.JETZT im TESTNET Betrieb   
+  main_ann_2b: Seit Heute können Sie BITCOIN.JETZT mit Testnet Bitcoin testen! Kontaktieren Sie uns unter coindex@coindex.ch.
   price: Preis
   sprache_de: Deutsch
   sprache_fr: Francais
@@ -40,7 +40,7 @@ de:
   gon:
     ask: Verkauf
     bid: Ankauf
-    brand: COINDEX
+    brand: BITCOIN.JETZT
     code: CHF
   back: Zurück
   invalid_password: Ungültiges Passwort

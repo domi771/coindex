@@ -3,7 +3,7 @@ de:
     bank:
       key: Banküberweisung
       title: Banküberweisung
-      intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+      intro: Zahlen Sie Schweizer Franken von BITCOIN.JETZT auf Ihr Bankkonto aus.
       latency: 1 Arbeitstag
       transfer: Manuell
       go: Jetzt Auszahlen
@@ -92,7 +92,7 @@ de:
     hints:
       withdraw:
         bank:
-          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr COINDEX Konto angegeben haben</span>
+          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr BITCOIN.JETZT Konto angegeben haben</span>
           sum: "<a target='_balance' href='#'>Gebühren</a>"
           fund_extra: Falls Ihre Bank nicht in der Liste ist kontaktieren Sie bitte den Support
 
@@ -103,14 +103,14 @@ de:
           panel: Banküberweisung
           new:
             panel: Auszahlen
-            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            intro: Zahlen Sie Schweizer Franken von BITCOIN.JETZT auf Ihr Bankkonto aus.
             default-panel: Auszahlungsverlauf Banküberweisung
           edit:
             panel: Auszahlen
-            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            intro: Zahlen Sie Schweizer Franken von BITCOIN.JETZT auf Ihr Bankkonto aus.
             default-panel: Auszahlungsverlauf Banküberweisung
           create:
             panel: Auszahlen
-            intro: Zahlen Sie Schweizer Franken von COINDEX auf Ihr Bankkonto aus.
+            intro: Zahlen Sie Schweizer Franken von BITCOIN.JETZT auf Ihr Bankkonto aus.
             default-panel: Auszahlungsverlauf Banküberweisung
 

@@ -3,7 +3,7 @@ de:
     satoshi:
       key: Blockchain
       title: Bitcoin Blockchain
-      intro: Zahlen Sie Bitcoin von COINDEX zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Bitcoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
@@ -114,14 +114,14 @@ de:
           panel: Bitcoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Bitcoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Bitcoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Bitcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Bitcoin Auszahlungsverlauf
 

@@ -3,7 +3,7 @@ en:
     bank:
       key: Bank Transfer
       title: Bank Transfer
-      intro: Transfer Swiss Francs from your Bank account to your COINDEX account
+      intro: Transfer Swiss Francs from your Bank account to your BITCOIN.JETZT account
       latency: 1 business day
       transfer: Automatic
       go: Deposit
@@ -72,7 +72,7 @@ en:
       deposits:
         banks:
           panel: Bank Transfer
-          intro: Transfer Swiss Francs from your Bank account to your COINDEX account.
+          intro: Transfer Swiss Francs from your Bank account to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: Bank Transfer Deposit History

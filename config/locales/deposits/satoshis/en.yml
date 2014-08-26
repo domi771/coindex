@@ -3,7 +3,7 @@ en:
     satoshi:
       key: Block Chain
       title: Bitcoin Blockchain
-      intro: Deposit Bitcoin from your own wallet to your COINDEX account
+      intro: Deposit Bitcoin from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -29,7 +29,7 @@ en:
       deposits:
         satoshis:
           panel: Bitcoin Blockchain
-          intro: Deposit Bitcoin from your own wallet to your COINDEX account.
+          intro: Deposit Bitcoin from your own wallet to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: Bitcoin Deposit History
