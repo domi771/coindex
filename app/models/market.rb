@@ -21,7 +21,7 @@ class Market < ActiveYamlBase
 
     raise ArgumentError, "market id must be 6 chars long (3 chars base currency code + 3 chars quote currency code, e.g. 'ltcbtc')" if id.size != 6
 
-    @target_unit = id[0,3]
+    @target_unit = id[0,4]
     @price_unit  = id[3,3]
     @name = "#{@target_unit}/#{@price_unit}".upcase
   end
