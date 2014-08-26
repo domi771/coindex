@@ -122,4 +122,5 @@ class Deposit < ActiveRecord::Base
   def calc_fee
     [amount, 0]
   end
+
 end
