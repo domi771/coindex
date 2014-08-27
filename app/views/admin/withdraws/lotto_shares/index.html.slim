@@ -1,0 +1,11 @@
+- unless @one_lotto_shares.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {lotto_shares: @one_lotto_shares}
+- unless @all_lotto_shares.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {lotto_shares: @all_lotto_shares}
+
+- if @all_lotto_shares.empty? and @one_lotto_shares.empty?
+  h3.text-info.text-center = t('.empty')

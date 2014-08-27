@@ -1,0 +1,11 @@
+- unless @one_urocoins.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {urocoins: @one_urocoins}
+- unless @all_urocoins.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {urocoins: @all_urocoins}
+
+- if @all_urocoins.empty? and @one_urocoins.empty?
+  h3.text-info.text-center = t('.empty')

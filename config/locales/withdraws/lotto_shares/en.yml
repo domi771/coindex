@@ -1,0 +1,126 @@
+en:
+  withdraw_channel:
+    lotto_shares:
+      key: Blockchain
+      title: LottoShares Blockchain
+      intro: Withdraw LottoShares from COINDEX to your own LottoShares wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw Now
+
+  activerecord:
+    models:
+      withdraws/lotto_shares: Withdraw
+    attributes:
+      withdraws/lotto_shares:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+    errors:
+      models:
+        withdraws/lotto_shares:
+          attributes:
+            sum:
+              poor: Insufficent account balance
+              greater_than: Invalid withdrawal amount
+            fund_uid:
+              blank: You did not enter a withdrawal address
+              invalid: Invalid withdrawal address
+              ismine: Invalid withdrawal address
+
+  withdraws/lotto_shares:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      coin_ready: Coin Ready
+      coin_done: Coin Done
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+
+  private:
+    withdraws:
+      lotto_shares:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_uid: Use saved address or enter a new address
+          fund_extra: 选择开户行
+          fund_source_label: LottoShares Address
+          manage_fund_source: Manage Funding Sources
+        create:
+          notice: Review the data below and confirm the withdrawal request.
+
+  admin:
+    withdraws:
+      lotto_shares:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+
+  simple_form:
+    labels:
+      withdraw:
+        lotto_shares:
+          fee: Fee
+          sum: Amount
+          fund_uid: LottoShares Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+    placeholders:
+      withdraw:
+        lotto_shares:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+    hints:
+      withdraw:
+        lotto_shares:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+
+  guides:
+    private:
+      withdraws:
+        lotto_shares:
+          panel: LottoShares Blockchain
+          new:
+            panel: Withdraw
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            default-panel: LottoShares Withdraw History
+          create:
+            panel: Withdraw
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            default-panel: Litcoin Withdraw History
+          edit:
+            panel: Withdraw
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            default-panel: Litcoin Withdraw History
+

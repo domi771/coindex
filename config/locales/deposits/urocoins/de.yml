@@ -1,0 +1,55 @@
+de:
+  deposit_channel:
+    urocoin:
+      key: Block Chain
+      title: Urocoin Blockchain
+      intro: Zahlen Sie Urocoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      latency: 1 Bestätigung
+      transfer: Automatisch
+      go: Einzahlen
+
+  activerecord:
+    attributes:
+      deposits/urocoin:
+        created_at: Erstellt am
+        txid: Transaktions ID
+        amount: Betrag
+        memo: Bestätigungen
+        aasm_state_text: Status
+
+  deposits/urocoin:
+    aasm_state:
+      submitted: in Bearbeitung
+      accepted: Erledigt
+      checked: Checked
+      warning: Warnung
+
+  guides:
+    private:
+      deposits:
+        urocoins:
+          panel: Urocoin Blockchain
+          intro: Zahlen Sie Urocoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          new:
+            panel: Einzahlen
+            default-panel: Urocoin Einzahlungsverlauf
+
+  admin:
+    deposits:
+      urocoins:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 充值充值
+          accept_confirm: 确定立刻确认此充值？
+
+  private:
+    deposits:
+      urocoins:
+        panel: Urocoin
+        new:
+          panel: Urocoin Blockchain
+          step-1: Schritt 1
+          open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
+          step-2: Step Two
+          send-coin: Senden Sie den gewünschten Urocoin Betrag and die folgende Adresse

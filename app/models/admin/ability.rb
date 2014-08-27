@@ -27,6 +27,8 @@ module Admin
       can :manage, ::Deposits::Namecoin
       can :manage, ::Deposits::Dogecoin
       can :manage, ::Deposits::Peercoin
+      can :manage, ::Deposits::Urocoin
+      can :manage, ::Deposits::LottoShares
 
       can :menu, Withdraw
       can :manage, ::Withdraws::Bank
@@ -38,6 +40,8 @@ module Admin
       can :manage, ::Withdraws::Peercoin
       can :manage, ::Withdraws::BitcoinDark
       can :manage, ::Withdraws::Dogecoin
+      can :manage, ::Withdraws::Urocoin
+      can :manage, ::Withdraws::LottoShares
 
       can :stat, ::Member
     end

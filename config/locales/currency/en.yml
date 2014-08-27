@@ -18,7 +18,10 @@ en:
       key: DOG
     namecoin:
       key: NMC
-
+    urocoin:
+      key: URO
+    lottoshares:
+      key: LTS
     name:
       chf: Swiss Franc
       btc: Bitcoin
@@ -29,7 +32,8 @@ en:
       btd: BitcoinDark
       dog: Dogecoin
       nmc: Namecoin
-
+      uro: Urocoin
+      lts: LottoShares
     code:
       chf: CHF
       btc: BTC
@@ -40,7 +44,8 @@ en:
       btd: BTCD
       dog: DOGE
       nmc: NMC
-
+      uro: URO
+      lts: LTS
     format:
       zero: 'N/A'
       chf: '0,0.00'
