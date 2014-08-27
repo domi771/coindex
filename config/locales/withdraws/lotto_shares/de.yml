@@ -1,18 +1,18 @@
 de:
   withdraw_channel:
-    lotto_shares:
+    lotto_share:
       key: Blockchain
-      title: LottoShares Blockchain
-      intro: Zahlen Sie LottoShares von COINDEX zu Ihrem eigenen Wallet aus.
+      title: LottoShare Blockchain
+      intro: Zahlen Sie LottoShare von COINDEX zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
 
   activerecord:
     models:
-      withdraws/lotto_shares: Auszahlen
+      withdraws/lotto_share: Auszahlen
     attributes:
-      withdraws/lotto_shares:
+      withdraws/lotto_share:
         id: ID
         member_name: Transaktions ID
         currency_obj_key_text: Währung
@@ -20,7 +20,7 @@ de:
         fund_extra_text: Withdraw Label
         fund_extrat: Withdraw Label
         fund_source: Bank
-        fund_uid: LottoShares Adresse
+        fund_uid: LottoShare Adresse
         created_at: Erstellt am
         sum: Betrag
         amount: Betrag
@@ -30,7 +30,7 @@ de:
         state_and_action: Status
     errors:
       models:
-        withdraws/lotto_shares:
+        withdraws/lotto_share:
           attributes:
             sum:
               poor: Ihr Kontostand ist ungenügend
@@ -40,7 +40,7 @@ de:
               invalid: Dies ist keine gültige Auszahlungsadresse
               ismine: Dies ist keine gültige Auszahlungsadresse 
 
-  withdraws/lotto_shares:
+  withdraws/lotto_share:
     aasm_state:
       submitting: in Bearbeitung
       submitted: in Bearbeitung
@@ -68,8 +68,8 @@ de:
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
           fund_extra: 选择开户行
-          fund_source_label: LottoShares Adresse
-          manage_fund_source: LottoShares Adressen verwalten
+          fund_source_label: LottoShare Adresse
+          manage_fund_source: LottoShare Adressen verwalten
         create:
           notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
@@ -91,38 +91,38 @@ de:
   simple_form:
     labels:
       withdraw:
-        lotto_shares:
+        lotto_share:
           fee: Gebühren
           sum: Betrag
-          fund_uid: LottoShares Adresse
+          fund_uid: LottoShare Adresse
           fund_extra: Memo
           account_balance: Kontostand
           member_name: Konto
     placeholders:
       withdraw:
-        lotto_shares:
+        lotto_share:
           sum: Minimum Betrag 0.001
           fund_extra: Memo für diese Adresse (optional)
     hints:
       withdraw:
-        lotto_shares:
+        lotto_share:
           sum: "<a target='_balance' href='#'>Gebühren</a>"
 
   guides:
     private:
       withdraws:
         lotto_shares:
-          panel: LottoShares Blockchain
+          panel: LottoShare Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShares Auszahlungsverlauf
+            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShare Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShares Auszahlungsverlauf
+            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShare Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShares Auszahlungsverlauf
+            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShare Auszahlungsverlauf
 

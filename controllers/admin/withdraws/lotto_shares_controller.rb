@@ -1,7 +1,7 @@
 module Admin
   module Withdraws
     class LottoSharesController < ::Admin::Withdraws::BaseController
-      load_and_authorize_resource :class => '::Withdraws::LottoShares'
+      load_and_authorize_resource :class => '::Withdraws::LottoShare'
 
       def index
         start_at = DateTime.now.ago(60 * 60 * 24)
@@ -13,12 +13,12 @@ module Admin
       end
 
       def update
-        @lotto_shares.process!
+        @lotto_share.process!
         redirect_to :back, notice: t('.notice')
       end
 
       def destroy
-        @lotto_shares.reject!
+        @lotto_share.reject!
         redirect_to :back, notice: t('.notice')
       end
     end

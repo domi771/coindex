@@ -1,7 +1,7 @@
 module Admin
   module Deposits
     class LottoSharesController < ::Admin::Deposits::BaseController
-      load_and_authorize_resource :class => '::Deposits::LottoShares'
+      load_and_authorize_resource :class => '::Deposits::LottoShare'
 
       def index
         start_at = DateTime.now.ago(60 * 60 * 24)
@@ -11,7 +11,7 @@ module Admin
       end
 
       def update
-        @lotto_shares.accept! if @lotto_shares.may_accept?
+        @lotto_share.accept! if @lotto_share.may_accept?
         redirect_to :back, notice: t('.notice')
       end
     end

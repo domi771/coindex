@@ -1,23 +1,23 @@
 de:
   deposit_channel:
-    lotto_shares:
+    lotto_share:
       key: Block Chain
-      title: LottoShares Blockchain
-      intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      title: LottoShare Blockchain
+      intro: Zahlen Sie LottoShare von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
 
   activerecord:
     attributes:
-      deposits/lotto_shares:
+      deposits/lotto_share:
         created_at: Erstellt am
         txid: Transaktions ID
         amount: Betrag
         memo: Bestätigungen
         aasm_state_text: Status
 
-  deposits/lotto_shares:
+  deposits/lotto_share:
     aasm_state:
       submitted: in Bearbeitung
       accepted: Erledigt
@@ -28,11 +28,11 @@ de:
     private:
       deposits:
         lotto_shares:
-          panel: LottoShares Blockchain
-          intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          panel: LottoShare Blockchain
+          intro: Zahlen Sie LottoShare von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
           new:
             panel: Einzahlen
-            default-panel: LottoShares Einzahlungsverlauf
+            default-panel: LottoShare Einzahlungsverlauf
 
   admin:
     deposits:
@@ -46,10 +46,10 @@ de:
   private:
     deposits:
       lotto_shares:
-        panel: LottoShares
+        panel: LottoShare
         new:
-          panel: LottoShares Blockchain
+          panel: LottoShare Blockchain
           step-1: Schritt 1
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Senden Sie den gewünschten LottoShares Betrag and die folgende Adresse
+          send-coin: Senden Sie den gewünschten LottoShare Betrag and die folgende Adresse
