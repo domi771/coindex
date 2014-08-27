@@ -2,8 +2,8 @@ de:
   withdraw_channel:
     lotto_share:
       key: Blockchain
-      title: LottoShare Blockchain
-      intro: Zahlen Sie LottoShare von COINDEX zu Ihrem eigenen Wallet aus.
+      title: LottoShares Blockchain
+      intro: Zahlen Sie LottoShares von COINDEX zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
@@ -20,7 +20,7 @@ de:
         fund_extra_text: Withdraw Label
         fund_extrat: Withdraw Label
         fund_source: Bank
-        fund_uid: LottoShare Adresse
+        fund_uid: LottoShares Adresse
         created_at: Erstellt am
         sum: Betrag
         amount: Betrag
@@ -68,8 +68,8 @@ de:
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
           fund_extra: 选择开户行
-          fund_source_label: LottoShare Adresse
-          manage_fund_source: LottoShare Adressen verwalten
+          fund_source_label: LottoShares Adresse
+          manage_fund_source: LottoShares Adressen verwalten
         create:
           notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
@@ -94,7 +94,7 @@ de:
         lotto_share:
           fee: Gebühren
           sum: Betrag
-          fund_uid: LottoShare Adresse
+          fund_uid: LottoShares Adresse
           fund_extra: Memo
           account_balance: Kontostand
           member_name: Konto
@@ -112,17 +112,17 @@ de:
     private:
       withdraws:
         lotto_shares:
-          panel: LottoShare Blockchain
+          panel: LottoShares Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShare Auszahlungsverlauf
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShares Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShare Auszahlungsverlauf
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShares Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die LottoShare Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
-            default-panel: LottoShare Auszahlungsverlauf
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            default-panel: LottoShares Auszahlungsverlauf
 

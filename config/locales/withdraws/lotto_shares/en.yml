@@ -2,8 +2,8 @@ en:
   withdraw_channel:
     lotto_share:
       key: Blockchain
-      title: LottoShare Blockchain
-      intro: Withdraw LottoShare from COINDEX to your own LottoShare wallet
+      title: LottoShares Blockchain
+      intro: Withdraw LottoShares from COINDEX to your own LottoShares wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
@@ -66,7 +66,7 @@ en:
           allin: All-In
           fund_uid: Use saved address or enter a new address
           fund_extra: 选择开户行
-          fund_source_label: LottoShare Address
+          fund_source_label: LottoShares Address
           manage_fund_source: Manage Funding Sources
         create:
           notice: Review the data below and confirm the withdrawal request.
@@ -92,7 +92,7 @@ en:
         lotto_share:
           fee: Fee
           sum: Amount
-          fund_uid: LottoShare Address
+          fund_uid: LottoShares Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
@@ -110,17 +110,17 @@ en:
     private:
       withdraws:
         lotto_shares:
-          panel: LottoShare Blockchain
+          panel: LottoShares Blockchain
           new:
             panel: Withdraw
-            intro: Enter the LottoShare address and amount you want to withdraw from your COINDEX account.
-            default-panel: LottoShare Withdraw History
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            default-panel: LottoShares Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the LottoShare address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the LottoShare address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
             default-panel: Litcoin Withdraw History
 
