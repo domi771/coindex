@@ -26,11 +26,11 @@ de:
 
       deposits:
         panel: Einzahlen
-        intro: Laden Sie Ihr Konto mit Schweizer Franken (CHF) auf um Bitcoin zu kaufen oder senden Sie Bitcoin und wechseln Sie diese in Schweizer Franken.
+        intro: Laden Sie Ihr Konto Bitcoins oder Altcoins von Ihrem eigenen Wallet auf.
 
       withdraws:
         panel: Auszahlen
-        intro: Sie können sich Bitcoin zu Ihrem eigenen Wallet auszahlen lassen oder sich Schweizer Franken (CHF) auf Ihr Bankkonto senden lassen.
+        intro: Sie können sich Bitcoins oder Altcoins zu Ihrem eigenen Wallet auszahlen lassen.
         new:
           title: Wählen Sie Ihre gewünschte Auszahlungsart.
           intro: Geben Sie Ihre Auszahlungsadresse an und den gewünschten Betrag.
