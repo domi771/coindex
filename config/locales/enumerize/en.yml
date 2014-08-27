@@ -31,6 +31,14 @@ en:
       address_type:
         satoshi: Bitcoin
         litecoin: Litecoin
+        viacoin: Viacoin
+        darkcoin: Darkcoin
+        peercoin: Peercoin
+        bitcoindark: BitcoinDark
+        dogecoin: DogeCoin
+        namecoin: Namecoin
+        urocoin: Urocoin
+        lottoshare: Lottoshares
         bank: Bank
       admin_aasm_state:
         submitted: 待处理
@@ -53,6 +61,14 @@ en:
       address_type:
         satoshi: Bitcoin
         litecoin: Litecoin
+        viacoin: Viacoin
+        darkcoin: Darkcoin
+        peercoin: Peercoin
+        bitcoindark: BitcoinDark
+        dogecoin: DogeCoin
+        namecoin: Namecoin
+        urocoin: Urocoin
+        lottoshare: Lottoshares
         bank: Bank
       state:
         submitting: Submitting
@@ -69,6 +85,14 @@ en:
       category:
         satoshi: Bitcoin
         litecoin: Litecoin
+        viacoin: Viacoin
+        darkcoin: Darkcoin
+        peercoin: Peercoin
+        bitcoindark: BitcoinDark
+        dogecoin: DogeCoin
+        namecoin: Namecoin
+        urocoin: Urocoin
+        lottoshare: Lottoshares
         bank: Bank
     id_document:
       id_document_type:
