@@ -42,7 +42,7 @@ en:
         currency_text: Currency
         balance_and_locked: Balance / Locked
         balance: Balance
-        locked: Frozen
+        locked: Reserved
       deposit:
         currency-address-type: Currency - Pay type
         state: State

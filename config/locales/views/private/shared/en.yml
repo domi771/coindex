@@ -2,7 +2,7 @@ en:
   private:
     shared:
       balances:
-        locked: Frozen
+        locked: Reserved
         balance: Balance
         available: Available
         title: "%{icon} %{c} Account"

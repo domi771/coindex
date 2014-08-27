@@ -8,8 +8,6 @@
             th style = 'width: 65px;' class='code' = t('Code')
             - %w(currency balance locked).each do |attr|
               th class='#{attr}' = Account.human_attribute_name(attr)
-            th = t('Deposit')
-            th = t('Withdraw')            
   
         tbody
           - @accounts.each do |account|
@@ -18,6 +16,4 @@
               td.name = t("currency.name.#{account.currency}", default: account.currency_obj.code.upcase)
               td.available = account.balance
               td.locked = account.locked
-              td style = "padding: 0px; width: 80px;": a.btn.btn-default.btn-flat style = "font-size: 12px; padding: 4px 12px;" href='' = t("Deposit")
-              td style = "padding: 0px; width: 80px;": a.btn.btn-default.btn-flat style = "font-size: 12px; padding: 4px 12px;" href='' = t("Withdraw")
 
