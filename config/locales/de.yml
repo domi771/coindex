@@ -61,15 +61,25 @@ de:
       btc: Bitcoin
       ltc: Litecoin
       via: Viacoin
+      drk: Darkcoin
+      ppc: Peercoin
       btd: BitcoinDark
       dog: Dogecoin
       nmc: Namecoin
-      ppc: Peercoin
-
+      uro: Urocoin
+      lts: LottoShares
     code:
       chf: CHF
       btc: BTC
       ltc: LTC
+      via: VIA
+      drk: DRK
+      ppc: PPC
+      btd: BTCD
+      dog: DOGE
+      nmc: NMC
+      uro: URO
+      lts: LTS
     format:
       zero: 'N/A'
       chf: '0,0.00'
