@@ -1,0 +1,30 @@
+de:
+  private:
+    api_tokens:
+      index:
+        no_token: Sie haben keine API Tokens.
+        edit: Ändern
+        destroy: Löschen
+        destroy-confirm: Wirklich Löschen
+        create: Neues Token Erstellen
+        http: HTTP API Dokumentation
+        websocket: Websocket API Dokumentation
+        more: "Für weitere Informationen lesen Sie bitte die API Dokumentation:"
+      new:
+        label_hint: Ein Label holft Ihnen den Token gebrauch besser zu merken, optional.
+      create:
+        alert_two_factor: Zwei-Faktoren Authentifikation Fehler.
+        success: API Token wurde erfolgreich erstellt.
+        failed: Fehler beim Erstellen des API Tokens.
+        desc: Bitte kopieren Sie die untenstehenden API Schlüssel und bewahren Sie diese an einem sicheren Ort auf. Der Geheimschlüssel wird nie mehr angezeigt.
+      edit:
+        access_key_hint: Erstellt am  %{created_at}
+        label_hint: Ein Label holft Ihnen den Token gebrauch besser zu merken, optional.
+        ip_whitelist_hint: "Mehrere IP's per Komma trennen. Falls Sie keine IP angeben haben alle IPs Zugriff."
+      update:
+        alert_two_factor: Zwei-Faktoren Authentifikation Fehler.
+        success: Erfolgreich Gespeichert.
+        failed: Fehler beim Speichern des Tokens.
+      destroy:
+        success: Das API Token wurde erfolgreich gelöscht.
+        failed: Fehler beim Löschen des Tokens.

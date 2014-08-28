@@ -52,6 +52,11 @@ de:
           description: Das Passwort ist bei jeder Anmeldung erforderlich.
           go: Passwort ändern
 
+        api_tokens:
+          title: API Tokens
+          description: Erstellen und verwalten Sie Ihre API Tokens.
+          go: Los
+
     otps:
       new:
         step_1: Schritt 1

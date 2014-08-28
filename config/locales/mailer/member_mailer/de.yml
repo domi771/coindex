@@ -1,0 +1,6 @@
+en:
+  member_mailer:
+    notify_signin:
+      subject: Sie haben sich eben angemeldet
+      just_signed_in: Sie haben sich eben angemeldet.
+      please_contact: Falls die Anmeldung nicht durch Sie durchgeführt wurde kontaktieren Sie uns umgehend.
