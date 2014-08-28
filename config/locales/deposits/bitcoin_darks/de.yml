@@ -4,7 +4,7 @@ de:
       key: Block Chain
       code: BTCD
       title: BitcoinDark
-      intro: Zahlen Sie BitcoinDark von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      intro: Zahlen Sie BitcoinDark von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -30,7 +30,7 @@ de:
       deposits:
         bitcoin_darks:
           panel: BitcoinDark Blockchain
-          intro: Zahlen Sie BitcoinDark von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          intro: Zahlen Sie BitcoinDark von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
           new:
             panel: Einzahlen
             default-panel: BitcoinDark Einzahlungsverlauf

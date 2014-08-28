@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: LTS
       title: LottoShares
-      intro: Deposit LottoShares from your own wallet to your COINDEX account
+      intro: Deposit LottoShares from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         lotto_shares:
           panel: LottoShares Blockchain
-          intro: Deposit LottoShares from your own wallet to your COINDEX account.
+          intro: Deposit LottoShares from your own wallet to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: LottoShares Deposit History

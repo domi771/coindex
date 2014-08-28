@@ -4,7 +4,7 @@ de:
       key: Block Chain
       code: LTS
       title: LottoShares
-      intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+      intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -30,7 +30,7 @@ de:
       deposits:
         lotto_shares:
           panel: LottoShares Blockchain
-          intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
+          intro: Zahlen Sie LottoShares von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
           new:
             panel: Einzahlen
             default-panel: LottoShares Einzahlungsverlauf

@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: URO
       title: Urocoin
-      intro: Withdraw Urocoin from COINDEX to your own Urocoin wallet
+      intro: Withdraw Urocoin from BITCOIN.JETZT to your own Urocoin wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
@@ -114,14 +114,14 @@ en:
           panel: Urocoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Urocoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Urocoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Urocoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Urocoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Urocoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Urocoin address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the Urocoin address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
 

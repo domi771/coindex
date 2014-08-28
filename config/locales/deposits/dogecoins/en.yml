@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: DOGE
       title: Dogecoin
-      intro: Deposit Dogecoin from your own wallet to your COINDEX account
+      intro: Deposit Dogecoin from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         dogecoins:
           panel: Dogecoin Blockchain
-          intro: Deposit Dogecoin from your own wallet to your COINDEX account.
+          intro: Deposit Dogecoin from your own wallet to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: Dogecoin Deposit History

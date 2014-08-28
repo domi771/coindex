@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: NMC
       title: Namecoin
-      intro: Zahlen Sie Namecoin von COINDEX zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Namecoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
@@ -116,14 +116,14 @@ de:
           panel: Namecoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Namecoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Namecoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem COINDEX Konto auszahlen wollen.
+            intro: Geben Sie die Namecoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
             default-panel: Namecoin Auszahlungsverlauf
 

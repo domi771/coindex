@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: NMC
       title: Namecoin
-      intro: Deposit Namecoin from your own wallet to your COINDEX account
+      intro: Deposit Namecoin from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         namecoins:
           panel: Namecoin Blockchain
-          intro: Deposit Namecoin from your own wallet to your COINDEX account.
+          intro: Deposit Namecoin from your own wallet to your BITCOIN.JETZT account.
           new:
             panel: Deposit
             default-panel: Namecoin Deposit History

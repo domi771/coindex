@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: LTS
       title: LottoShares
-      intro: Withdraw LottoShares from COINDEX to your own LottoShares wallet
+      intro: Withdraw LottoShares from BITCOIN.JETZT to your own LottoShares wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
@@ -114,14 +114,14 @@ en:
           panel: LottoShares Blockchain
           new:
             panel: Withdraw
-            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the LottoShares address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: LottoShares Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the LottoShares address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the LottoShares address and amount you want to withdraw from your COINDEX account.
+            intro: Enter the LottoShares address and amount you want to withdraw from your BITCOIN.JETZT account.
             default-panel: Litcoin Withdraw History
 
