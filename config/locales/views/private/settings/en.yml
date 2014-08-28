@@ -1,8 +1,8 @@
 en:
   private:
     settings:
-      success: Settings updated successfully
-      failure: Invalid passcode. Please try again
+      success: Settings updated successfully.
+      failure: Invalid passcode. Please try again.
 
       index:
         safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use  Two-factor Authentication
@@ -43,14 +43,19 @@ en:
 
         asset_passwords:
           title: Asset password
-          description: The Asset password will be  needed when you withdrawal your money. It is strongly recommended that you do not use the same password as login password !
+          description: The asset password will be needed when you withdraw your money. It is strongly recommended that you do not use the same password as your account password!
 
           go: Set
 
         passwords:
           title: Password
-          description: This password is required for login, please keep it in mind.
+          description: This password is required for login, please remember it.
           go: Change Password
+
+        api_tokens:
+          title: API Tokens
+          description: Create and manage your API tokens.
+          go: Set
 
     otps:
       new:

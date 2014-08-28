@@ -75,17 +75,17 @@ en:
   admin:
     withdraws:
       satoshis:
-        index:
-          one: 待处理提现订单
-          all: 二十四小时内订单
-          empty: 无任何数据
+        index: 
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
         show:
-          process: 受理
-          succeed: 提现
-          reject: 驳回
-          succeed_confirm: 确定处理提现？
-          reject_confirm: 确定驳回提现？
-          withdraw: 比特币提现
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
 
   simple_form:
     labels:

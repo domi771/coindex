@@ -12,4 +12,8 @@ de:
       subject: '[BITCOIN.JETZT] Zwei-Faktoren Authentikation Reset'
     activation:
       subject: '[BITCOIN.JETZT] Konto Aktivierung'
+  mailer:
+    signature:
+      thanks: Freundliche Grüsse,
+      team: [BITCOIN.JETZT]
 

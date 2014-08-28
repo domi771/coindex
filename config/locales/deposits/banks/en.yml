@@ -96,14 +96,14 @@ en:
     deposits:
       banks:
         index:
-          oneday: Rrequests in 24 hours
-          available: All pending requires
+          oneday: Requests in the last 24 hours
+          available: All Pending Requests
         show:
-          alert: Not find Recharge, can not process.
+          alert: Recharge cannot be located.
           notice: The recharge have been successful.
           deposit: Deposit Request
           accept: Accept
           target_deposit: Wire Transfer
-          confirm: Confirm accept recharge?
+          confirm: Confirm recharge?
         update:
-          blank_txid: Txid can't be blank
+          blank_txid: TxID can't be blank

@@ -1,17 +1,8 @@
-Vielen Dank für das Registrieren Ihres COINDEX Konto. Die Registration ist fast abgeschlossen.
-
-Um Ihr Konto zu aktivieren klicken Sie bitten den Link:
+<%= t(".click_to_verify") %>
 
 <%= @token_url %>
 
-Dieser Aktivierungslink ist während den nächsten 30 Minuten gültig.
+<%= t(".unable_to_click") %>
+<%= t(".link_expire") %>
 
--------------------------
-
-Thank you for registering for a COINDEX account. The registration is nearly complete.
-
-To activate your account, please click the link:
-
-<%= @token_url %>
-
-This activation link is valid during th next 30 minutes.
+<%= mailer_signature %>
