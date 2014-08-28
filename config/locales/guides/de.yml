@@ -9,6 +9,20 @@ de:
         index:
           intro: Kontoeinstellungen verwalten
 
+      api_tokens:
+        panel: API Tokens
+        index:
+          title: Meine Tokens
+          intro: "Eine Liste Ihrer API Tokens. Eine leere 'IP Whitelist' bedeutet dass es jeder IP erlaubt ist den API Token zu benutzen."
+        new:
+          title: API Tokens Erstellen
+        create:
+          title: API Tokens Erstellen
+        edit:
+          title: API Tokens Ändern
+        update:
+          title: API Tokens Ändern
+
       two_factors:
         panel: Google Zwei-Faktoren Authentifizierung
         edit:
