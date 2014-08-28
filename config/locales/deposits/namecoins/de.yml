@@ -2,7 +2,8 @@ de:
   deposit_channel:
     namecoin:
       key: Block Chain
-      title: Namecoin Blockchain
+      code: NMC
+      title: Namecoin
       intro: Zahlen Sie Namecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch

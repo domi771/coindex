@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     peercoin:
       key: Blockchain
-      title: Peercoin Blockchain
+      code: PPC
+      title: Peercoin 
       intro: Withdraw Peercoin from COINDEX to your own Peercoin wallet
       latency: 30 minutes
       transfer: Manual

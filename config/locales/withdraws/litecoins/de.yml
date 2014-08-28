@@ -2,7 +2,8 @@ de:
   withdraw_channel:
     litecoin:
       key: Blockchain
-      title: Litecoin Blockchain
+      code: LTC
+      title: Litecoin
       intro: Zahlen Sie Litecoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell

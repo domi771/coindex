@@ -2,7 +2,8 @@ en:
   deposit_channel:
     bitcoin_dark:
       key: Block Chain
-      title: BitcoinDark Blockchain
+      code: BTCD
+      title: BitcoinDark
       intro: Deposit BitcoinDark from your own wallet to your COINDEX account
       latency: 1 confirmation
       transfer: Automatic

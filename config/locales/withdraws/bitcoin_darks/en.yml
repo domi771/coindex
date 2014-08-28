@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     bitcoin_dark:
       key: Blockchain
-      title: BitcoinDark Blockchain
+      code: BTCD
+      title: BitcoinDark
       intro: Withdraw BitcoinDark from COINDEX to your own BitcoinDark wallet
       latency: 30 minutes
       transfer: Manual

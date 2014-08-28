@@ -2,7 +2,8 @@ de:
   withdraw_channel:
     urocoin:
       key: Blockchain
-      title: Urocoin Blockchain
+      code: URO
+      title: Urocoin
       intro: Zahlen Sie Urocoin von COINDEX zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell

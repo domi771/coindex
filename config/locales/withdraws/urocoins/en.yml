@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     urocoin:
       key: Blockchain
-      title: Urocoin Blockchain
+      code: URO
+      title: Urocoin
       intro: Withdraw Urocoin from COINDEX to your own Urocoin wallet
       latency: 30 minutes
       transfer: Manual

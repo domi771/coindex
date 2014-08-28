@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     lotto_share:
       key: Blockchain
-      title: LottoShares Blockchain
+      code: LTS
+      title: LottoShares
       intro: Withdraw LottoShares from COINDEX to your own LottoShares wallet
       latency: 30 minutes
       transfer: Manual

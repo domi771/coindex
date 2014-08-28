@@ -2,7 +2,8 @@ en:
   deposit_channel:
     lotto_share:
       key: Block Chain
-      title: LottoShares Blockchain
+      code: LTS
+      title: LottoShares
       intro: Deposit LottoShares from your own wallet to your COINDEX account
       latency: 1 confirmation
       transfer: Automatic

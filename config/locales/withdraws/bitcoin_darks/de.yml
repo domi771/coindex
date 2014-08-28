@@ -2,7 +2,8 @@ de:
   withdraw_channel:
     bitcoin_dark:
       key: Blockchain
-      title: BitcoinDark Blockchain
+      code: BTCD
+      title: BitcoinDark
       intro: Zahlen Sie BitcoinDark von COINDEX zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell

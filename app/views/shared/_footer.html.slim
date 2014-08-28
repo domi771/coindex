@@ -6,12 +6,12 @@ footer: .container style = "width: 100%;": .row: .col-md-24.text-center
 
       nav.footer-menu role="navigation" style = "float: right !important;"
     ul.list-inline style = "float: right;"
+      li: a href='http://bitcoin.jetzt/documents/api_v2' API
 
       li.dropdown
-        a.dropdown-toggle href="#" data-toggle="dropdown"
+        a.dropdown-toggle href="" data-toggle="dropdown"
           | #{language_path2}
           b.caret
         ul#languages.dropdown-menu style = "top: inherit; bottom: 100%; width: 100px; left: -30px; font-size: 12px;"
           - I18n.available_locales.each do |lang|
             li: a href="?lang=#{lang}" #{language_path2(lang)}
-

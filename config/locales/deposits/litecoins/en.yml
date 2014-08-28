@@ -2,7 +2,8 @@ en:
   deposit_channel:
     litecoin:
       key: Block Chain
-      title: Litecoin Blockchain
+      code: LTC
+      title: Litecoin
       intro: Deposit Litecoin from your own wallet to your BITCOIN.JETZT account
       latency: 1 confirmation
       transfer: Automatic

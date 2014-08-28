@@ -2,10 +2,18 @@ ul.list-group
   - @channels.each do |c|
     li.list-group-item style = "padding: 0px;" class='withdraws-channel-#{c.id}'
       .row.row-middle
-        .col-md-9
+        .col-md-9 style = "font-size: 12px; margin-top: 8px;"
           .row.row-middle
-            .col-md-7
-              h5 = c.title_text
+            .col-md-1 style = "font-weight: normal;"
+              span = c.code_text
+            .col-md-4 style = "font-weight: bold;"
+              span = c.title_text
+            .col-md-3
+              i.fa.fa-cogs.text-info
+              span = c.transfer_text
+            .col-md-3
+              i.fa.fa-clock-o.text-info
+              span = c.latency_text
         .col-md-2
           a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_withdraws_#{c.key}_path")}' = c.go_text
 

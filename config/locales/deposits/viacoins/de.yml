@@ -2,7 +2,8 @@ de:
   deposit_channel:
     viacoin:
       key: Block Chain
-      title: Viacoin Blockchain
+      code: VIA
+      title: Viacoin
       intro: Zahlen Sie Viacoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch

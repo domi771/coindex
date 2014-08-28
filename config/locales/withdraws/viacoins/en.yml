@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     viacoin:
       key: Blockchain
-      title: Viacoin Blockchain
+      code: VIA
+      title: Viacoin
       intro: Withdraw Viacoin from BITCOIN.JETZT to your own Viacoin wallet
       latency: 30 minutes
       transfer: Manual

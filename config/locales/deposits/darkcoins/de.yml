@@ -2,7 +2,8 @@ de:
   deposit_channel:
     darkcoin:
       key: Block Chain
-      title: Darkcoin Blockchain
+      code: DRK
+      title: Darkcoin
       intro: Zahlen Sie Darkcoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch

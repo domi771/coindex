@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     namecoin:
       key: Blockchain
-      title: Namecoin Blockchain
+      code: NMC
+      title: Namecoin
       intro: Withdraw Namecoin from COINDEX to your own Namecoin wallet
       latency: 30 minutes
       transfer: Manual

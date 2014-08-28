@@ -2,7 +2,8 @@ en:
   withdraw_channel:
     dogecoin:
       key: Blockchain
-      title: Dogecoin Blockchain
+      code: DOGE 
+      title: Dogecoin
       intro: Withdraw Dogecoin from COINDEX to your own Dogecoin wallet
       latency: 30 minutes
       transfer: Manual
