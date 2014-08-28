@@ -2,7 +2,8 @@ de:
   deposit_channel:
     dogecoin:
       key: Block Chain
-      title: Dogecoin Blockchain
+      code: DOGE
+      title: Dogecoin
       intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr COINDEX Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch

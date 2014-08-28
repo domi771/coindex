@@ -2,7 +2,8 @@ en:
   deposit_channel:
     dogecoin:
       key: Block Chain
-      title: Dogecoin Blockchain
+      code: DOGE
+      title: Dogecoin
       intro: Deposit Dogecoin from your own wallet to your COINDEX account
       latency: 1 confirmation
       transfer: Automatic
