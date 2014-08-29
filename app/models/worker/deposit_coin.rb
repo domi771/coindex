@@ -11,6 +11,7 @@ module Worker
 
       channel = DepositChannel.find_by_key(channel_key)
       raw     = channel.currency_obj.api.gettransaction(txid)
+      Rails.logger.info("gettransaction result: #{raw.inspect}") # debugger
       detail  = raw[:details].first.symbolize_keys!
       return if detail[:account] != "payment" || detail[:category] != "receive"
 
