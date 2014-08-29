@@ -38,6 +38,7 @@ en:
       available_btc: BTC
       available_chf: CHF
       available_ltc: LTC
+      available_via: VIA
   gon:
     ask: Ask
     bid: Bid
