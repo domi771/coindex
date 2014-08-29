@@ -1,6 +1,4 @@
 de:
-    activation:
-      subject: '[BITCOIN.JETZT] Konto Aktivierung'
   mailer:
     signature:
       thanks: Freundliche Grüsse,
