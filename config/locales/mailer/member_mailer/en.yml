@@ -1,6 +1,6 @@
 en:
   member_mailer:
     notify_signin:
-      subject: [BITCOIN.JETZT] You have just signed in
+      subject: "[BITCOIN.JETZT] You have just signed in"
       just_signed_in: You have just signed in.
       please_contact: If it's not you, please contact us ASAP.
