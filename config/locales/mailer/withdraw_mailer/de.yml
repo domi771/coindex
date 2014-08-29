@@ -3,3 +3,15 @@ de:
     withdraw_state:
       subject: "[BITCOIN.JETZT] Status Ihrer Auszahlung"
       your_state: "Status Ihrer Auszahlung:"
+      aasm_state:
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Abgelehnt
+        accepted: Aktzeptiert
+        suspect: Suspekt
+        processing: in Bearbeitung
+        coin_ready: Coin Ready
+        coin_done: Coin Done
+        done: Erledigt
+        canceled: Annuliert
+     
