@@ -1,4 +1,4 @@
-en:
+de:
   enumerize:
     account_version:
       reason:
@@ -81,14 +81,14 @@ en:
       state:
         submitting: Submitting
         submitted: Submitted
-        rejected: Rejected
-        accepted: Accepted
-        suspect: Suspect
-        processing: Processing
+        rejected: Abgelehnt
+        accepted: Aktzeptiert
+        suspect: Suspekt
+        processing: in Bearbeitung
         coin_ready: Coin Ready
         coin_done: Coin Done
-        done: Done
-        canceled: Canceled
+        done: Erledigt
+        canceled: Annuliert
     fund_source:
       category:
         satoshi: Bitcoin
