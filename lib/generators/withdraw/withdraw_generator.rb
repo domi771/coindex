@@ -13,6 +13,6 @@ class WithdrawGenerator < Rails::Generators::NamedBase
     template "views/admin/withdraws/index.html.slim.erb", "app/views/admin/withdraws/#{name.underscore.pluralize}/index.html.slim"
     template "views/admin/withdraws/show.html.slim.erb", "app/views/admin/withdraws/#{name.underscore.pluralize}/show.html.slim"
     template "views/admin/withdraws/_table.html.slim.erb", "app/views/admin/withdraws/#{name.underscore.pluralize}/_table.html.slim"
-    template "admin_controller.rb.erb", "controllers/admin/withdraws/#{name.underscore.pluralize}_controller.rb"
+    template "admin_controller.rb.erb", "app/controllers/admin/withdraws/#{name.underscore.pluralize}_controller.rb"
   end
 end
