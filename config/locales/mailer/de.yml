@@ -1,15 +1,4 @@
 de:
-  member_mailer:
-    notify_signin:
-      subject: '[BITCOIN.JETZT] Sie haben sich eben angemeldet'
-  withdraw_mailer:
-    withdraw_state:
-      subject: '[BITCOIN.JETZT] Status Ihrer Auszahlung'
-  token_mailer:
-    reset_password:
-      subject: '[BITCOIN.JETZT] Neues Passwort erstellen'
-    reset_two_factor:
-      subject: '[BITCOIN.JETZT] Zwei-Faktoren Authentikation Reset'
     activation:
       subject: '[BITCOIN.JETZT] Konto Aktivierung'
   mailer:

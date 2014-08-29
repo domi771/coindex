@@ -89,6 +89,17 @@ en:
         coin_done: Coin Done
         done: Done
         canceled: Canceled
+      aasm_state:
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Rejected
+        accepted: Accepted
+        suspect: Suspect
+        processing: Processing
+        coin_ready: Coin Ready
+        coin_done: Coin Done
+        done: Done
+        canceled: Canceled
     fund_source:
       category:
         satoshi: Bitcoin

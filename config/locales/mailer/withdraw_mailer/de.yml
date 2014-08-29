@@ -1,5 +1,5 @@
 de:
   withdraw_mailer:
     withdraw_state:
-      subject: Your withdraw state
-      your_state: "Your withdraw's state:"
+      subject: "[BITCOIN.JETZT] Status Ihrer Auszahlung"
+      your_state: "Status Ihrer Auszahlung:"
