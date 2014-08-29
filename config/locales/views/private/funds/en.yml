@@ -5,6 +5,7 @@ en:
         chf_format: '0.00'
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
+        via_format: '0.00000000'
         account_history: Account History
         reason:
           chf:
@@ -20,6 +21,12 @@ en:
             withdraw: Withdraw
             fix: Fix
           ltc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          via:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
