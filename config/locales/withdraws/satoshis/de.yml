@@ -5,8 +5,8 @@ de:
       code: BTC
       title: Bitcoin
       intro: Zahlen Sie Bitcoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
-      latency: 30 Minuten
-      transfer: Manuell
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:
@@ -106,7 +106,7 @@ de:
     hints:
       withdraw:
         satoshi:
-          sum: "<a target='_balance' href='#'>Gebühren</a>"
+          sum: "<a target='_balance' href='/documents/fees'>Gebühren</a>"
 
   guides:
     private:

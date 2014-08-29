@@ -5,8 +5,8 @@ en:
       code: NMC
       title: Namecoin
       intro: Withdraw Namecoin from BITCOIN.JETZT to your own Namecoin wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

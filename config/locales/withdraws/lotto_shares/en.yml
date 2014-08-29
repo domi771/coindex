@@ -5,8 +5,8 @@ en:
       code: LTS
       title: LottoShares
       intro: Withdraw LottoShares from BITCOIN.JETZT to your own LottoShares wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

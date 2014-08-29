@@ -5,8 +5,8 @@ en:
       code: BTCD
       title: BitcoinDark
       intro: Withdraw BitcoinDark from BITCOIN.JETZT to your own BitcoinDark wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

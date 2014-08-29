@@ -5,8 +5,8 @@ en:
       code: BTC
       title: Bitcoin
       intro: Withdraw Bitcoin from BITCOIN.JETZT to your own Bitcoin wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

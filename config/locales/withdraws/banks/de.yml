@@ -5,7 +5,7 @@ de:
       title: Banküberweisung
       intro: Zahlen Sie Schweizer Franken von BITCOIN.JETZT auf Ihr Bankkonto aus.
       latency: 1 Arbeitstag
-      transfer: Manuell
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:

@@ -5,8 +5,8 @@ de:
       code: BTCD
       title: BitcoinDark
       intro: Zahlen Sie BitcoinDark von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
-      latency: 30 Minuten
-      transfer: Manuell
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:

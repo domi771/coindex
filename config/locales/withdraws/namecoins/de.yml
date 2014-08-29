@@ -5,8 +5,8 @@ de:
       code: NMC
       title: Namecoin
       intro: Zahlen Sie Namecoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
-      latency: 30 Minuten
-      transfer: Manuell
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:

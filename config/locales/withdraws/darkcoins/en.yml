@@ -5,8 +5,8 @@ en:
       code: DRK
       title: Darkcoin
       intro: Withdraw Darkcoin from BITCOIN.JETZT to your own Darkcoin wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

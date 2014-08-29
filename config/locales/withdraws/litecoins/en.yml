@@ -5,8 +5,8 @@ en:
       code: LTC
       title: Litecoin
       intro: Withdraw Litecoin from BITCOIN.JETZT to your own Litecoin wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:

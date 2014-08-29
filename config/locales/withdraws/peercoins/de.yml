@@ -5,8 +5,8 @@ de:
       code: PPC
       title: Peercoin
       intro: Zahlen Sie Peercoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
-      latency: 30 Minuten
-      transfer: Manuell
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:
