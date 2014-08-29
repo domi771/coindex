@@ -35,7 +35,18 @@ Peatio::Application.routes.draw do
 
   get '/documents/api_v2'
   get '/documents/websocket_api'
+  get '/documents/help'
+  get '/documents/news'
+  get '/documents/status'
+  get '/documents/about'
+  get '/documents/privacy'
   get '/documents/fees'
+  get '/documents/terms'
+  get '/documents/bounty'
+  get '/documents/support'
+  get '/documents/contact'
+
+
   resources :documents, only: [:show]
   resources :refresh_two_factors, only: [:show]
 

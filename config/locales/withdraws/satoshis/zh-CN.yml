@@ -102,7 +102,7 @@ zh-CN:
     hints:
       withdraw:
         satoshi:
-          sum: "<a target='_balance' href='#'>资费说明</a>"
+          sum: "<a target='_balance' href='/documents/fees'>资费说明</a>"
 
   guides:
     private:

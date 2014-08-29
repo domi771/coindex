@@ -105,7 +105,7 @@ en:
     hints:
       withdraw:
         litecoin:
-          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          sum: "<a target='_balance' href='/documents/fees'>Fee structure</a>"
 
   guides:
     private:
