@@ -1,15 +1,15 @@
 .row
-  .col-md-24 = render partial: 'market_menu'
-  .col-md-17 = render partial: 'price_chart'
-  .col-md-7 = render partial: 'ticker'
+  .col-md-12 = render partial: 'market_menu'
+  .col-md-8 = render partial: 'price_chart'
+  .col-md-4 = render partial: 'ticker'
   
   - if current_user
     .row
-      .col-md-12  = render partial: 'place_buy_order', locals: {market: @market, order_bid: @order_bid, order_ask: @order_ask}
-      .col-md-12  = render partial: 'place_sell_order', locals: {market: @market, order_bid: @order_bid, order_ask: @order_ask}
+      .col-md-6  = render partial: 'place_buy_order', locals: {market: @market, order_bid: @order_bid, order_ask: @order_ask}
+      .col-md-6  = render partial: 'place_sell_order', locals: {market: @market, order_bid: @order_bid, order_ask: @order_ask}
     .row
-      .col-md-24 = render partial: 'order_menu'
-      .col-md-24 = render partial: 'order_summary'
+      .col-md-12 = render partial: 'order_menu'
+      .col-md-12 = render partial: 'order_summary'
 
       = render 'shared/muut' if muut_enabled?
 

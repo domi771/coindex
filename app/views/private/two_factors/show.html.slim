@@ -1,10 +1,10 @@
 = simple_form_for @two_factor, as: :two_factor, url: two_factor_path(@two_factor) do |f|
-  h4 = t('.step-1')
+  h5 = t('.step-1')
   p
     span = t('.download-app')
     span == t('.guide-link')
 
-  h4 = t('.step-2')
+  h5 = t('.step-2')
   p: span = t('.scan-qr-code')
 
   = f.input :uri do
@@ -17,7 +17,7 @@
         a.btn.btn-default href='#{two_factor_path(:app, refresh: true)}'
           i.fa.fa-refresh
 
-  h4 = t('.step-3')
+  h5 = t('.step-3')
   p: span = t('.enter-passcode')
 
   = f.input :otp
