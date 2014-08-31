@@ -143,9 +143,6 @@
       when (balance - volume) < 0
         balanceAlert.text gon.i18n.place_order.balance_low
         @disableSubmit()
-      when (balance - sum) < 0
-        balanceAlert.text gon.i18n.place_order.balance_low
-        @disableSubmit()
       else
         balanceAlert.text ''
         @enableSubmit()
