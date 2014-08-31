@@ -20,7 +20,6 @@
 //= require jquery.mousewheel
 //= require qrcode
 //= require jquery.msgbox
-//= require jquery.ui.chatbox
 
 //= require_tree ./component_mixin
 //= require_tree ./component_data
