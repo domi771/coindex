@@ -1,4 +1,4 @@
-.tab-content
+<.tab-content
   #tabSummaryTable.tab-pane.active
     .row
       .col-md-6  = render partial: 'order_book_asks'
@@ -8,12 +8,12 @@
 
   #tabOrderBookTable2.tab-pane
     .row
-      .col-md-6  = render partial: 'order_book_asks_full'
-      .col-md-6  = render partial: 'order_book_bids_full'
+      .col-md-6  = render partial: 'order_book_asks'
+      .col-md-6  = render partial: 'order_book_bids'
 
   #tabMarketHistoryTable2.tab-pane       
     .row
-      .col-md-12  = render partial: 'market_trades_full'
+      .col-md-12  = render partial: 'market_trades'
 
   #tabOrderOpenTable.tab-pane
     .row

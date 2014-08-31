@@ -1,15 +1,15 @@
 .panel.panel-default
   .panel-heading = t('.my_orders')
-  .panel-body.my-orders
+  .panel-body.my-orders style = "height: 670px;"
     table.table.table-condensed.table-striped
       thead: tr
-        th class='kind col-md-3' = Order.human_attribute_name('kind')
-        th class='at col-md-9' = Order.human_attribute_name('at')
-        th class='price col-md-5' = Order.human_attribute_name('price')
-        th class='volume col-md-5' = Order.human_attribute_name('volume')
+        th class='kind col-md-1' = Order.human_attribute_name('kind')
+        th class='at col-md-3' = Order.human_attribute_name('at')
+        th class='price col-md-4' = Order.human_attribute_name('price')
+        th class='volume col-md-4' = Order.human_attribute_name('volume')
         th class='operation col-md-2'
 
-    .tab-content style = "height: 325px;"
+    .tab-content style = "height: 650px;"
       #orders_done.tab-pane.active
         table.table.table-condensed.table-striped
           tbody

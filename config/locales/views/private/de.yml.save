@@ -1,0 +1,75 @@
+de:
+  private:
+    markets:
+      show:
+        error: Fehlermeldung beim Übermitteln des Auftrags
+        success: Auftrag erfolgreich übermittelt
+        analysis_panel: Analyse
+        help_panel: Hilfe
+        done: ERLEDIGT
+        cancel: ANNULIEREN
+        cancel_confirm: Auftrag wirklich annulieren?
+        confirm: BESTÄTIGEN
+        ask_order: 'ANKAUF ##sn#'
+        bid_order: 'VERKAUF ##sn#'
+      ticker:
+        markets: Markt
+        title: Kontostand
+        available: Verfügbar %{currency}
+      place_buy_order:
+        place_order: Ankauf
+        bid_panel: Ankauf %{currency}
+        ask_panel: Verkauf %{currency}
+        price: Preis
+        amount: Stück
+        total: Total m 0.25% Geb.
+        available: Verfügbar
+        last_price: Letzter Preis
+      place_sell_order:
+        place_order: Verkauf
+        bid_panel: Ankauf %{currency}
+        ask_panel: Verkauf %{currency}
+        price: Preis
+        amount: Stück
+        total: Total m 0.25% Geb.
+        available: Verfügbar
+        last_price: Letzter Preis
+      place_order:
+        min_price: "Minimum Preis muss grösser als 0.00000001 sein"
+        price_high: "Vorsicht: Preis mehr als 10% über dem aktuellem Kurs"
+        price_low: "Vorsicht: Preis mehr als 10% unter dem aktuellem Kurs"
+        balance_low: "Warnung: Ungenügender Kontostand"
+        amount: Stück
+        total: Total m 0.25% Geb.
+        price: Preis
+      order_book:
+        order_book: Auftragsbuch
+      order_book_asks:
+        order_book: Kaufen    
+      order_book_bids:
+        order_book: Verkaufen   
+      market_trades:
+        trades: Transaktionen
+        time: Datum/Zeit
+        price: Preis
+        volume: Umsatz
+      my_orders:
+        my_orders: Meine Aufträge
+        orders_wait: Offene Aufträge
+        orders_done: Erledigte Aufträge
+        orders_cancel: Aufträge annulieren
+      price_chart:
+        price_chart: Preis-Chart
+      market_menu:
+        price_chart: Preis-Chart
+        order_book: Auftragsbuch
+      
+      global:
+        global_orders_title: AUFTRÄGE
+        global_trades_title: TRANSAKTIONEN
+    withdraws:
+      index:
+        withdraw_history: Auszahlungsverlauf
+    funds:
+      show:
+        account_history: Kontoverlauf

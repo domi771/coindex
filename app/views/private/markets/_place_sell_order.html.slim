@@ -9,13 +9,13 @@
         = form_for [market, order_ask], :remote => true do |f|
           = f.hidden_field :ord_type
           .row style = "margin-bottom: 15px;"
-            .col-md-12.last-price
+            .col-md-6.last-price
               label style = "font-weight: normal;" = t('.last_price')
               | :
               span.value style = "margin-left: 5px;"
               |  
               label.currency style = "font-weight: normal;" = @bid_code
-            .col-md-12.current-balance.clearfix style = "text-align: right;"
+            .col-md-6.current-balance.clearfix style = "text-align: right;"
               label.value style = "font-weight: normal;"
               label.currency style = "font-weight: normal;" = @ask_code
               label.name style = "font-weight: normal;" = t('.available')

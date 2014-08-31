@@ -19,7 +19,6 @@
 //= require helper
 //= require jquery.mousewheel
 //= require qrcode
-//= require jquery.msgbox
 
 //= require_tree ./component_mixin
 //= require_tree ./component_data
