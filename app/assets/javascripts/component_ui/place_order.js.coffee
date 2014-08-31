@@ -137,15 +137,24 @@
     node = @select('currentBalanceSel')
     balance = BigNumber(node.data('balance'))
     volume = @select('volumeSel').val()
+    sum = @select('sumSel').val()
     balanceAlert = @select('balanceAlertSel')
 
-    switch
-      when (balance - volume) < 0
-        balanceAlert.text gon.i18n.place_order.balance_low
-        @disableSubmit()
-      else
-        balanceAlert.text ''
-        @enableSubmit()
+    switch type
+      when 'bid'
+        if (balance - sum) < 0
+          balanceAlert.text gon.i18n.place_order.balance_low
+          @disableSubmit()
+        else
+          balanceAlert.text ''
+          @enableSubmit()
+      when 'ask'
+        if (balance - volume) < 0
+          balanceAlert.text gon.i18n.place_order.balance_low
+          @disableSubmit()
+        else
+          balanceAlert.text ''
+          @enableSubmit()
 
 
   @priceCheck = (event) ->
