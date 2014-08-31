@@ -46,13 +46,18 @@ en:
         order_book: Order Book
       order_book_asks:
         order_book: Buying
+        price: Price
+        volume: Units
       order_book_bids:
         order_book: Selling
+        price: Price
+        volume: Units
       market_trades:
         trades: Trades
         time: Date/Time
         price: Price
-        volume: Volume
+        volume: Units
+        buy_sell: Buy/Sell
       my_orders:
         my_orders: My Orders
         orders_wait: Latest Orders

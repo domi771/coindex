@@ -32,6 +32,12 @@
 #        text-align: right;
         font-family: monospace;
       }
+      &.buy {
+        color: #468847;
+      }
+      &.sell {
+        color: #b94a48;
+      }
     }
 
     tr:hover td {
@@ -177,4 +183,26 @@
     }
   }
 
+}
+
+.buy-arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #468847;
+        padding-top: 8px;
+        margin-left: 30px;
+        margin-top: -21px;
+}
+
+.sell-arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #b94a48;
+        padding-top: 8px;
+        margin-left: 30px;
+        margin-top: -13px;
 }

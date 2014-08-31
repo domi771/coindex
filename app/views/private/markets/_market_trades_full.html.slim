@@ -6,9 +6,17 @@
           th.time
             = t('.time')
           th.price
+            = t('.buy_sell')
+          th.price
             = t('.price')
+            |  (
+            = @bid_code
+            | )
           th.amount
             = t('.volume')
+            |  (
+            = @ask_code
+            | )
       tbody.table-condensed.table-striped
 
 

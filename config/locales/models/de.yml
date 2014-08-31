@@ -101,8 +101,9 @@ de:
         ask: Verkauf
         price: Preis
         total: Toal
-        volume: Umsatz
-        origin_volume: Umsatz
+        volume: Stück
+        origin_volume: Stück
+        cancel: Annulieren
         sum: Summe
         category: Ankauf/Verkauf
         kind: Typ

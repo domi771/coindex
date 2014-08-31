@@ -3,10 +3,18 @@
   .panel-body.my-orders style = "height: 670px;"
     table.table.table-condensed.table-striped
       thead: tr
-        th class='kind col-md-1' = Order.human_attribute_name('kind')
-        th class='at col-md-2' = Order.human_attribute_name('at')
-        th class='price col-md-4' = Order.human_attribute_name('price')
-        th class='volume col-md-4' = Order.human_attribute_name('volume')
+        th class='kind col-md-2' = Order.human_attribute_name('kind')
+        th class='at col-md-3' = Order.human_attribute_name('at')
+        th class='price col-md-3' 
+          = Order.human_attribute_name('price')
+          |  (
+          = @bid_code
+          | )
+        th class='volume col-md-3' 
+          = Order.human_attribute_name('volume')
+          |  (
+          = @ask_code
+          |  )
         th class='operation col-md-2' = Order.human_attribute_name('cancel')
 
     .tab-content style = "height: 650px;"

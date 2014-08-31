@@ -1,18 +1,20 @@
 .panel.panel-default
   .panel-heading = t('.order_book')
-  .panel-body.orders
+  .panel-body.orders style = 'height: 309px; overflow: hidden;'
     table.table.table-condensed.table-striped
       thead: tr
         th.col-md-3
           | ID
         th.col-md-3
           span.line
-          | Size (
+          = t('.price')
+          |  (
           = @bid_code
           | )
         th.col-md-3
           span.line
-          | Bid (
+          = t('.volume')
+          |  (
           = @ask_code
           | )
         table.table.table-condensed.table-striped.bids

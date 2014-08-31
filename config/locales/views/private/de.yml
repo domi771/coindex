@@ -46,13 +46,32 @@ de:
         order_book: Auftragsbuch
       order_book_asks:
         order_book: Kaufen    
+        price: Preis
+        volume: Stück
       order_book_bids:
         order_book: Verkaufen   
+        price: Preis
+        volume: Stück
+      order_book_asks_full:
+        order_book: Kaufen
+        price: Preis
+        volume: Stück
+      order_book_bids_full:
+        order_book: Verkaufen
+        price: Preis
+        volume: Stück
       market_trades:
         trades: Transaktionen
         time: Datum/Zeit
         price: Preis
-        volume: Umsatz
+        volume: Stück
+        buy_sell: Ankauf/Verkauf
+      market_trades_full:
+        trades: Transaktionen
+        time: Datum/Zeit
+        price: Preis
+        volume: Stück
+        buy_sell: Ankauf/Verkauf
       my_orders:
         my_orders: Meine Aufträge
         orders_wait: Offene Aufträge

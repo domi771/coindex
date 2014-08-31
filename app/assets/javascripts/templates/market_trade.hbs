@@ -1,5 +1,7 @@
 <tr>
-  <td class="time">{{{format_time date}}}</td>
-  <td class="price {{trend}}">{{{format_mask_fixed_price price }}}</td>
-  <td class="amount">{{{format_mask_fixed_amount amount }}}</td>
+  <td class="col-md-2 time">{{{format_fulltime date}}}</td>
+  <td class="col-md-3 {{{type}}}" style="text-transform: uppercase;">{{{type}}} <div class="{{{type}}}-arrow"></div></td>
+  <td class="col-md-3 price">{{{format_mask_fixed_price price }}}</td>
+  <td class="col-md-3 amount">{{{format_mask_fixed_amount amount }}}</td>
+  <td class="col-md-2"></td>
 </tr>
