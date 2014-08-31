@@ -33,6 +33,9 @@ Peatio::Application.routes.draw do
     resources :activations, only: [:new, :edit, :update]
   end
 
+
+  get '/market/viabtc'
+  get '/market/ltcbtc'
   get '/documents/api_v2'
   get '/documents/websocket_api'
   get '/documents/help'
@@ -47,6 +50,7 @@ Peatio::Application.routes.draw do
   get '/documents/contact'
 
 
+  # resources :market, only: [:show]
   resources :documents, only: [:show]
   resources :refresh_two_factors, only: [:show]
 

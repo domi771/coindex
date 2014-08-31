@@ -16,3 +16,20 @@ header style="height: 50px;": .container style="width: auto; padding-left: 10px;
     p
         a.btn.btn-success.btn-lg.btn-xs-block href="/signup" role="button"  #{t('signup_button')}
 
+ .row style = "max-width: 1050px; margin-left: 0px; margin-right: 0px; text-align: center;"
+    section.home-hero style="width: 100%; float: left; margin-right: 4%; margin-top: 100px;"
+    h4 style = "color: #55555; font-weight: bold;" #{t('Live Market Data')}
+
+    ul.nav.nav-tabs style = "margin-bottom: 20px;"
+      li.active
+        a data-toggle="tab" href="#tabMarketPriceChart" style="text-transform: uppercase; font-weight: bold;"
+          =
+          | BITCOIN MARKETS
+
+      li
+        a data-toggle="tab" href="#tabMarketOrderBook" style="text-transform: uppercase; font-weight: bold;"
+          = 
+          | LITECOIN MARKETS
+
+ .row style = "max-width: 1050px; margin-left: 0px; margin-right: 0px"
+ 

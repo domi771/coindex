@@ -24,4 +24,5 @@
     @on document, 'flash-info', @info
     @on document, 'flash-notice', @notice
     @on document, 'flash-alert', @alert
+    @on document, 'flash-warning', @warning
 

@@ -4,7 +4,8 @@
     successSel: '.status span.label-success'
     infoSel: '.status span.label-info'
     dangerSel: '.status span.label-danger'
-    priceAlertSel: '.price-alert span.label-danger'
+    priceAlertSel: '.price-alert span.label-warning'
+    balanceAlertSel: '.balance-alert span.label-danger'
 
     priceSel: 'input[id$=price]'
     volumeSel: 'input[id$=volume]'
@@ -55,15 +56,16 @@
 
   @handleSuccess = (event, data) ->
     @cleanMsg()
-    @select('successSel').text(data.message).show().fadeOut(3500)
+    @select('successSel').text(data.message).show().fadeOut(5500)
     @resetForm(event)
     @enableSubmit()
 
   @handleError = (event, data) ->
     @cleanMsg()
     json = JSON.parse(data.responseText)
-    @select('dangerSel').text(json.message).show().fadeOut(3500)
+    @select('dangerSel').text(json.message).show().fadeOut(5500)
     @enableSubmit()
+
 
   @computeSum = (event) ->
     if @select('priceSel').val() and @select('volumeSel').val()
@@ -130,6 +132,20 @@
     lastPrice = @select('lastPrice').text().trim()
     @select('priceSel').val(lastPrice).focus()
 
+  @balanceCheck = (event, data) ->
+    type = @panelType()
+    node = @select('currentBalanceSel')
+    balance = BigNumber(node.data('balance'))
+    volume = @select('volumeSel').val()
+    balanceAlert = @select('balanceAlertSel')
+
+    switch
+      when (balance - volume) < 0
+        balanceAlert.text gon.i18n.place_order.balance_low
+      else
+        balanceAlert.text ''
+
+
   @priceCheck = (event) ->
     currentPrice = Number @select('priceSel').val()
     lastPrice = Number gon.ticker.last
@@ -142,7 +158,6 @@
         priceAlert.text gon.i18n.place_order.price_low
       else
         priceAlert.text ''
-
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan
@@ -160,5 +175,6 @@
     @on @select('priceSel'), 'focusout', @priceCheck
     @on @select('priceSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
+    @on @select('volumeSel'), 'focusout', @balanceCheck
     @on @select('sumSel'), 'change paste keyup', @computeVolume
 

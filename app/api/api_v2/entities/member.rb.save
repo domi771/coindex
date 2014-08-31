@@ -1,0 +1,24 @@
+module APIv2
+  module Entities
+    class Member < Base
+      expose :sn
+      expose :name
+      expose :email
+      expose :activated
+      expose :accounts, using: ::APIv2::Entities::Account
+    end
+  end
+end
+
+
+
+module APIv2
+  module Entities
+    class Account < Base
+      expose :currency
+      expose :balance, format_with: :decimal
+      expose :locked,  format_with: :decimal
+    end
+  end
+end
+

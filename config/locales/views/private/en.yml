@@ -23,7 +23,7 @@ en:
         price: Price
         last_price: Last Price
         amount: Units
-        total: Total w 0.00% Fee
+        total: Total w 0.25% Fee
         available: Available
       place_sell_order:
         place_order: Sell
@@ -32,13 +32,14 @@ en:
         price: Price
         last_price: Last Price
         amount: Units
-        total: Total w 0.00% Fee
+        total: Total w 0.25% Fee
         available: Available
       place_order:
-        price_high: "Warning: Price exceeds 10% from current Price"
-        price_low: "Warning: Price less then 10% from current Price"
+        price_high: "Caution: Price more than 10% from current Price"
+        price_low: "Caution: Price less than 10% from current Price"
+        balance_low: "Warning: Insufficent Balance"
         amount: Units
-        total: Total w 0.00% Fee
+        total: Total w 0.25% Fee
         price: Price
       order_book:
         order_book: Order Book

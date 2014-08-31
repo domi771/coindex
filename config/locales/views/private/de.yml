@@ -2,7 +2,7 @@ de:
   private:
     markets:
       show:
-        error: Fehler beim übermittlen des Auftrags
+        error: Fehlermeldung beim Übermitteln des Auftrags
         success: Auftrag erfolgreich übermittelt
         analysis_panel: Analyse
         help_panel: Hilfe
@@ -22,7 +22,7 @@ de:
         ask_panel: Verkauf %{currency}
         price: Preis
         amount: Stück
-        total: Total m 0.00% Geb.
+        total: Total m 0.25% Geb.
         available: Verfügbar
         last_price: Letzter Preis
       place_sell_order:
@@ -31,14 +31,15 @@ de:
         ask_panel: Verkauf %{currency}
         price: Preis
         amount: Stück
-        total: Total m 0.00% Geb.
+        total: Total m 0.25% Geb.
         available: Verfügbar
         last_price: Letzter Preis
       place_order:
-        price_high: "Achtung: Preis mehr als 10% über dem aktuellem Kurs"
-        price_low: "Achtung: Preis mehr als 10% unter dem aktuellem Kurs"
+        price_high: "Vorsicht: Preis mehr als 10% über dem aktuellem Kurs"
+        price_low: "Vorsicht: Preis mehr als 10% unter dem aktuellem Kurs"
+        balance_low: "Warnung: Ungenügender Kontostand"
         amount: Stück
-        total: Total m 0.00% Geb.
+        total: Total m 0.25% Geb.
         price: Preis
       order_book:
         order_book: Auftragsbuch

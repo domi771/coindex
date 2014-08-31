@@ -5,6 +5,7 @@ module Private
     layout 'market'
 
     def show
+
       @bid = params[:bid]
       @ask = params[:ask]
 

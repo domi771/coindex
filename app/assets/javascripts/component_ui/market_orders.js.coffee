@@ -36,7 +36,7 @@ window.MarketOrdersUI = flight.component ->
     @.on document, 'market::orders', @.refreshOrders
 
     _(10).times (n) =>
-      @.select('asksSelector').prepend("<tr data-order='#{n}'></tr>")
+      @.select('asksSelector').append("<tr data-order='#{n}'></tr>")
       @.select('bidsSelector').append("<tr data-order='#{n}'></tr>")
 
     @.refreshOrders '', {asks: gon.asks, bids: gon.bids}
