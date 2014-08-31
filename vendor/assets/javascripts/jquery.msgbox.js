@@ -1,42 +1,35 @@
 /*!
- * jQuery MsgBox v1.3 - for jQuery 1.3+
- * http://codecanyon.net/item/jquery-msgbox/92626
+ * jQuery MsgBox - for jQuery 1.3+
+ * http://codecanyon.net/item/jquery-msgbox/92626?ref=aeroalquimia
  *
- * Copyright 2010, Eduardo Daniel Sada
- * You need to buy a license if you want use this script.
- * http://codecanyon.net/wiki/buying/howto-buying/licensing/
+ * Copyright (c) 2013, Eduardo Daniel Sada
+ * Released under CodeCanyon Regular License.
+ * http://codecanyon.net/licenses/regular
  *
- * Date: Jun 29 2010
- *
- * Includes jQuery Easing v1.1.2
- * http://gsgd.co.uk/sandbox/jquery.easIng.php
- * Copyright (c) 2007 George Smith
- * Released under the MIT License.
+ * Version: 1.3.6 (Mar 02 2013)
  */
 
 (function($) {
   
-
-   var ie6 = 1;
-/*!   
- *   if ($.proxy === undefined)
- *   {
- *     $.extend({
- *       proxy: function( fn, thisObject ) {
- *         if ( fn )
- *         {
- *           proxy = function() { return fn.apply( thisObject || this, arguments ); };
- *         };
- *         return proxy;
- *       }
- *     });
- *   };
- */
-
-  $.extend( jQuery.easing,
+  var ie6 = !$.support.opacity;
+  
+  if ($.proxy === undefined)
   {
-    easeOutBack: function (x, t, b, c, d, s) {
-      if (s == undefined) s = 1.70158;
+    $.extend({
+      proxy: function( fn, thisObject ) {
+        if ( fn )
+        {
+          proxy = function() { return fn.apply( thisObject || this, arguments ); };
+        };
+        return proxy;
+      }
+    });
+  };
+
+  $.extend($.easing, {
+    easeOutBackMin: function (x, t, b, c, d, s)
+    {
+      if (s === undefined) s = 1;
       return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
     }
   });
@@ -54,20 +47,20 @@
                       zIndex          : 10000,
                       width           : 600,
                       height          : 550,
-                      background      : '#ffffff',
+                      background      : '#FFFFFF',
                       modal           : true,
                       overlay         : {
                                         'background-color'  : '#000000',
-                                        'opacity'           : 0.6
+                                        'opacity'           : 0.5
                                         },
                       showDuration    : 200,
                       closeDuration   : 100,
-                      moveDuration    : 200,
+                      moveDuration    : 250,
                       shake           : {
                                         'distance'   : 0,
                                         'duration'   : 0,
-                                        'transition' : 'easeOutBack',
-                                        'loops'      : 1
+                                        'transition' : 'easeOutBackMin',
+                                        'loops'      : 2
                                       },
                       form            : {
                                         'active'  : false,
@@ -112,7 +105,7 @@
           this.element.click( $.proxy(function(event) {
             if (this.options.hideOnClick)
             {
-              if (!this.options.callback===undefined)
+              if ($.isFunction(this.options.callback))
               {
                 this.options.callback();
               }
@@ -256,7 +249,7 @@
           '-moz-border-radius'      : '6px',
           '-webkit-border-radius'   : '6px',
           'border-radius'           : '6px',
-          'background-color'        : '#fffef0'
+          'background-color'        : this.options.background
         });
         
         this.esqueleto.wrapper = $('<div class="'+this.options.name+'-wrapper"></div>');
@@ -326,7 +319,7 @@
                     }
           }, options || {});
           
-          if (options.buttons === undefined)
+          if (typeof options.buttons === "undefined")
           {
             if (options.type == 'confirm' || options.type == 'prompt')
             {
@@ -347,7 +340,7 @@
             var buttons = options.buttons;
           };
           
-          if (options.inputs === undefined && options.type == 'prompt')
+          if (typeof options.inputs === "undefined" && options.type == 'prompt')
           {
             var inputs = [
               {type: 'text', name: 'prompt', value: ''}
@@ -360,13 +353,21 @@
           
           this.callback = $.isFunction(callback) ? callback : function(e) {};
           
-          if (inputs !== undefined)
+          if (typeof inputs !== "undefined")
           {
             this.esqueleto.inputs = $('<div class="'+this.options.name+'-inputs"></div>');
             this.esqueleto.form.append(this.esqueleto.inputs);
 
             $.each(inputs, $.proxy(function(i, input) {
-              if (input.type == 'text' || input.type == 'password')
+              if (input.type == 'checkbox')
+              {
+                iLabel = input.label ? '<label class="'+this.options.name+'-label">' : '';
+                fLabel = input.label ? input.label+'</label>' : '';
+                input.value = input.value === undefined ? '1' : input.value;
+                iName  = input.name === undefined ? this.options.name+'-label-'+i : input.name;
+                this.esqueleto.inputs.append($(iLabel+'<input type="'+input.type+'" style="display:inline; width:auto;" name="'+iName+'" value="'+input.value+'" autocomplete="off"/> '+fLabel));
+              }
+              else
               {
                 iLabel = input.label ? '<label class="'+this.options.name+'-label">'+input.label : '';
                 fLabel = input.label ? '</label>' : '';
@@ -374,14 +375,6 @@
                 iRequired   = input.required === undefined || input.required == false ? '' : 'required="true"';
                 iName  = input.name === undefined ? this.options.name+'-label-'+i : input.name;
                 this.esqueleto.inputs.append($(iLabel+'<input type="'+input.type+'" name="'+iName+'" value="'+input.value+'" autocomplete="off" '+iRequired+'/>'+fLabel));
-              }
-              else if (input.type == 'checkbox')
-              {
-                iLabel = input.label ? '<label class="'+this.options.name+'-label">' : '';
-                fLabel = input.label ? input.label+'</label>' : '';
-                input.value = input.value === undefined ? '1' : input.value;
-                iName  = input.name === undefined ? this.options.name+'-label-'+i : input.name;
-                this.esqueleto.inputs.append($(iLabel+'<input type="'+input.type+'" style="display:inline; width:auto;" name="'+iName+'" value="'+input.value+'" autocomplete="off"/> '+fLabel));
               }
             }, this));
           }
@@ -399,16 +392,16 @@
             this.options.form.active = false;
           }
           
-          if (options.type == 'alert' || options.type == 'info' || options.type == 'error' || options.type == 'confirm')
+          if (options.type != 'prompt')
           {
             $.each(buttons, $.proxy(function(i, button) {
               if (button.type == 'submit')
               {
-                this.esqueleto.buttons.append($('<button type="submit">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(button.value); e.preventDefault(); }, this)));
+                this.esqueleto.buttons.append($('<button type="submit" class="'+this.options.name+'-button-submit '+(button["class"] || "")+'">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(button.value); e.preventDefault(); }, this)));
               }
               else if (button.type == 'cancel')
               {
-                this.esqueleto.buttons.append($('<button type="button">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(false); e.preventDefault(); }, this)));
+                this.esqueleto.buttons.append($('<button type="button" class="'+this.options.name+'-button-cancel '+(button["class"] || "")+'">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(false); e.preventDefault(); }, this)));
               }
             }, this));
           }
@@ -417,7 +410,7 @@
             $.each(buttons, $.proxy(function(i, button) {
               if (button.type == 'submit')
               {
-                this.esqueleto.buttons.append($('<button type="submit">'+button.value+'</button>').bind('click', $.proxy(function(e) {
+                this.esqueleto.buttons.append($('<button type="submit" class="'+this.options.name+'-button-submit '+(button["class"] || "")+'">'+button.value+'</button>').bind('click', $.proxy(function(e) {
                   if ($('input[required="true"]:not(:value)').length>0)
                   {
                     $('input[required="true"]:not(:value):first').focus();
@@ -437,7 +430,7 @@
               }
               else if (button.type == 'cancel')
               {
-                this.esqueleto.buttons.append($('<button type="button">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(false); e.preventDefault(); }, this)));
+                this.esqueleto.buttons.append($('<button type="button" class="'+this.options.name+'-button-cancel '+(button["class"] || "")+'">'+button.value+'</button>').bind('click', $.proxy(function(e) { this.close(false); e.preventDefault(); }, this)));
               };
             }, this));
           };
@@ -513,7 +506,7 @@
           }, {
             duration  : this.options.moveDuration,
             queue     : false,
-            easing    : 'easeOutBack'
+            easing    : 'easeOutBackMin'
           });
 
         }
@@ -588,6 +581,10 @@
   });
   
   $(function() {
-    $.MsgBoxObject.create();
+    if (parseFloat($.fn.jquery) > 1.0) {
+      $.MsgBoxObject.create();
+    } else {
+      throw "The jQuery version that was loaded is too old. MsgBox requires jQuery 1.3+";
+    }
   });
 })(jQuery);

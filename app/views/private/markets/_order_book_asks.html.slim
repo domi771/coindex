@@ -1,9 +1,9 @@
 .panel.panel-default
   .panel-heading = t('.order_book')
   .panel-body.orders
-    table
-      tr
-        th.col-md-3 
+    table.table.table-condensed.table-striped
+      thead: tr
+        th.col-md-3
           | ID
         th.col-md-3
           span.line
@@ -15,4 +15,7 @@
           | Bid (
           = @ask_code
           | )
-        table.table.asks
+        table.table.table-condensed.table-striped.asks
+
+
+

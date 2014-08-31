@@ -1,27 +1,35 @@
-.row.ticker style="height: 50px; border: 0px none; text-align: center; margin-top: 10px; color: #777777; margin-bottom: 20px; padding-left: 60px;padding-right: 60px;"
-    ul.list-inline
-      li.col-md-4 style ="width: 160px;"
-        span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')} 
-        span.value.last style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.buy style = "display: block; font-size: 12px;" #{t('global.bid_price')}
-        span.value.buy style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.sell style = "display: block; font-size: 12px;" #{t('global.ask_price')}
-        span.value.sell style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.high style = "display: block; font-size: 12px;" #{t('global.high_price')}
-        span.value.high style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.low style = "display: block; font-size: 12px;" #{t('global.low_price')}
-        span.value.low style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.volume style = "display: block; font-size: 12px;" #{t('global.volume')}
-        span.value.volume style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" BTC
+.panel.panel-default.ticker
+  .panel-heading
+    .span  = @market.name
+  .panel-body
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 15px;"
+      .col-md-9.name.last  style=("text-transform: uppercase") #{t('global.latest_price')}
+      .col-md-11.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-9.name.bid  style = "text-transform: uppercase;" #{t('global.bid_price')}
+      .col-md-11.value.buy style = "font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-9.name.ask  style = "text-transform: uppercase;" #{t('global.ask_price')}
+      .col-md-11.value.sell style = "font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-9.name.high  style = "text-transform: uppercase;" #{t('global.high_price')}
+      .col-md-11.value.high style = "font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-9.name.low  style = "text-transform: uppercase;" #{t('global.low_price')}
+      .col-md-11.value.low style = "font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .row style = "margin-bottom: 4px; margin-top: 3px;"
+      .col-md-9.name.volume  style = "text-transform: uppercase;" #{t('global.volume')}
+      .col-md-11.value.volume style = "font-weight: bold; text-align: right;"
+      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @ask_code
+
+.panel.panel-default.account-balance
+  .panel-heading = t('Buy Sell Ratio (24h)')
+  .panel-body
+    .row
+      .buysellratio-chart style = "height: 150px;"
 

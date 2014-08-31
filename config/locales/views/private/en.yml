@@ -50,7 +50,7 @@ en:
         order_book: Selling
       market_trades:
         trades: Trades
-        time: Time
+        time: Date/Time
         price: Price
         volume: Volume
       my_orders:
@@ -63,6 +63,12 @@ en:
       market_menu:
         price_chart: Price Chart
         order_book: Order Book
+      order_menu: 
+        summary: Summary
+        order_book: Orderbook
+        market_history: Market History
+        your_open_ordrs: Your Open Orders
+        your_history: Your History
       global:
         global_orders_title: ORDERS
         global_trades_title: TRADES

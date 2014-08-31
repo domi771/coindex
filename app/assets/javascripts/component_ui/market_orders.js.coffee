@@ -1,4 +1,4 @@
-window.MarketOrdersUI = flight.component ->
+@window.MarketOrdersUI = flight.component ->
   @.defaultAttrs
     size: 20,
     asksSelector: '.table.asks',

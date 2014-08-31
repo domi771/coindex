@@ -105,13 +105,13 @@ de:
         origin_volume: Umsatz
         sum: Summe
         category: Ankauf/Verkauf
-        kind: Kind
-        at: um
+        kind: Typ
+        at: Datum/Zeit
         id: ID
         state: Status
         operation: Operation
       payment_transaction:
-        at: Datum Zeit
+        at: Datum/Zeit
         txid: TX ID
         amount: Betrag
         confirmations: Konfirmationen

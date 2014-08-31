@@ -8,27 +8,13 @@ header style="height: 50px;": .container style="width: auto; padding-left: 10px;
   nav#top-menu.navbar.navbar-default role="navigation" style="border-radius: 0px; height: 59px; border: 0px;margin-top: 60px;"
     = render 'shared/menu'
 
-.container style = "width: auto; max-width: 1150px; padding-left: 35px; padding-right: 35px;"
- .row style = "margin-left: 0px; margin-right: 0px; text-align: center; margin-top: 70px;"
-
-    ul.nav.nav-tabs style = "margin-bottom: 20px;"
-      li.active
-        a href="/market/ltcbtc" style="text-transform: uppercase; font-weight: bold;"
-          =
-          | LTC/BTC
-
-      li
-        a href="/market/viabtc" style="text-transform: uppercase; font-weight: bold;"
-          = 
-          | VIA/BTC
-
- .row style = "max-width: 1050px; margin-left: 0px; margin-right: 0px"
-    .col-md-16  = render partial: 'ticker'
-    .col-md-16  = render partial: 'price_chart'
- .row style = "max-width: 1050px; margin-left: 0px; margin-right: 0px"
-    .col-md-6  = render partial: 'order_book_asks'
-    .col-md-6  = render partial: 'order_book_bids'
- .row style = "max-width: 1050px; margin-left: 0px; margin-right: 0px"
-    .col-md-16  = render partial: 'market_trades'
-
+     .row
+    .col-md-24 = render partial: 'market_menu'
+    .col-md-17 = render partial: 'price_chart'
+    .col-md-7 = render partial: 'ticker'
+    .row
+      .col-md-12  = render partial: 'order_book_asks'
+      .col-md-12  = render partial: 'order_book_bids'
+    .row
+      .col-md-24 = render partial: 'market_trades'
 

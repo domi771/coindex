@@ -13,4 +13,3 @@ json.i18n do
   json.chart_price I18n.t('chart.price')
   json.chart_volume I18n.t('chart.volume')
 end
-

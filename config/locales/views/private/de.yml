@@ -50,7 +50,7 @@ de:
         order_book: Verkaufen   
       market_trades:
         trades: Transaktionen
-        time: Zeit
+        time: Datum/Zeit
         price: Preis
         volume: Umsatz
       my_orders:
@@ -63,6 +63,12 @@ de:
       market_menu:
         price_chart: Preis-Chart
         order_book: Auftragsbuch
+      order_menu:
+        summary: Übersicht
+        order_book: Auftragsbuch
+        market_history: Neuste Transaktionen
+        your_open_orders: Ihre offenen Auträge
+        your_history: Ihr Auftragsverlauf
       global:
         global_orders_title: AUFTRÄGE
         global_trades_title: TRANSAKTIONEN

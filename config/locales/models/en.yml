@@ -108,13 +108,13 @@ en:
         origin_volume: Volume
         sum: Sum
         category: Bid/Ask
-        kind: Kind
-        at: At
+        kind: Type
+        at: Date/Time
         id: ID
         state: State
         operation: Operation
       payment_transaction:
-        at: Date Time
+        at: Date/Time
         txid: Transaction ID
         amount: Amount
         confirmations: Confirmations

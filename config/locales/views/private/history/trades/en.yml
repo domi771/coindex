@@ -4,7 +4,7 @@ en:
       trades:
         trade_history: Trade History
         side: Side
-        created_at: Time
+        created_at: Date/Time
         base_currency: Base Currency
         base_amount: Base Amount
         quote_currency: Quote Currency

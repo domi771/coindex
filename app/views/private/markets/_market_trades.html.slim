@@ -1,13 +1,14 @@
 .panel.panel-default
   .panel-heading = t('.trades')
   .panel-body.trades
-    table.table
-      thead
-        tr
-          td.time
+    table.table.table-condensed.table-striped
+      thead: tr
+          th.time
             = t('.time')
-          td.price
+          th.price
             = t('.price')
-          td.amount
+          th.amount
             = t('.volume')
-      tbody
+      tbody.table-condensed.table-striped
+
+
