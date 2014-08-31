@@ -161,8 +161,9 @@
     currentPrice = Number @select('priceSel').val()
     lastPrice = Number gon.ticker.last
     priceAlert = @select('priceAlertSel')
-
     switch
+      when currentPrice <= 0
+        priceAlert.text gon.i18n.place_order.min_price
       when currentPrice > (lastPrice * 1.1)
         priceAlert.text gon.i18n.place_order.price_high
       when currentPrice < (lastPrice * 0.9)

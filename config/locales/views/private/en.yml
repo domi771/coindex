@@ -35,6 +35,7 @@ en:
         total: Total w 0.25% Fee
         available: Available
       place_order:
+        min_price: "Minimum Price must be bigger than 0.00000001"
         price_high: "Caution: Price more than 10% from current Price"
         price_low: "Caution: Price less than 10% from current Price"
         balance_low: "Warning: Insufficent Balance"

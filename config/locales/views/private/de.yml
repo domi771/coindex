@@ -35,6 +35,7 @@ de:
         available: Verfügbar
         last_price: Letzter Preis
       place_order:
+        min_price: "Minimum Preis muss grösser als 0.00000001 sein"
         price_high: "Vorsicht: Preis mehr als 10% über dem aktuellem Kurs"
         price_low: "Vorsicht: Preis mehr als 10% unter dem aktuellem Kurs"
         balance_low: "Warnung: Ungenügender Kontostand"
