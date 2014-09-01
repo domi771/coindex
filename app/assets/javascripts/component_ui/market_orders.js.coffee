@@ -44,13 +44,13 @@
     @.$node.on 'click', '.asks tr', (e) =>
       $('.bid-panel').click()
       @.trigger document, 'order::plan', @.computeDeep(e, gon.asks)
-      @.trigger document, 'balance::check', @balanceCheck
       @.trigger document, 'price::check', @priceCheck
+      @.trigger document, 'balance::check', @balanceCheck
 
 
     @.$node.on 'click', '.bids tr', (e) =>
       $('.ask-panel').click()
       @.trigger document, 'order::plan', @.computeDeep(e, gon.bids)
-      @.trigger document, 'balance::check', @balanceCheck
       @.trigger document, 'price::check', @priceCheck
+      @.trigger document, 'balance::check', @balanceCheck
 
