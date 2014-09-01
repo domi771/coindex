@@ -3,7 +3,7 @@
     h2.panel-title = t('trade.account_balance.title')
   .panel-body
     .col-md-12
-      table.table.table-condensed.table-striped
+      table.table.table-condensed.table-striped.table-hover
         thead: tr
             th style = 'width: 65px;' class='code' = t('Code')
             - %w(currency balance locked).each do |attr|

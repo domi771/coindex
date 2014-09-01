@@ -35,3 +35,12 @@
   font-size: 100%;
   font-weight: normal;
 }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background: #9BDFFF;
+}
+
+    th:hover {
+     background: none;
+}
+

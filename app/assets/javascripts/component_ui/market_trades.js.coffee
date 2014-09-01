@@ -2,7 +2,7 @@ window.MarketTradesUI = flight.component ->
   @defaultAttrs
     wrap: '.wrap'
     table: 'tbody'
-    defaultHeight: 156
+    #defaultHeight: 156
 
   @refresh = (data) ->
     $table = @select('table')
