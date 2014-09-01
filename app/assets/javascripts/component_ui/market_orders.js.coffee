@@ -35,7 +35,7 @@
   @.after 'initialize', ->
     @.on document, 'market::orders', @.refreshOrders
 
-    _(10).times (n) =>
+    _(25).times (n) =>
       @.select('asksSelector').append("<tr data-order='#{n}'></tr>")
       @.select('bidsSelector').append("<tr data-order='#{n}'></tr>")
 
@@ -44,7 +44,13 @@
     @.$node.on 'click', '.asks tr', (e) =>
       $('.bid-panel').click()
       @.trigger document, 'order::plan', @.computeDeep(e, gon.asks)
+      @.trigger document, 'balance::check', @balanceCheck
+      @.trigger document, 'price::check', @priceCheck
+
 
     @.$node.on 'click', '.bids tr', (e) =>
       $('.ask-panel').click()
       @.trigger document, 'order::plan', @.computeDeep(e, gon.bids)
+      @.trigger document, 'balance::check', @balanceCheck
+      @.trigger document, 'price::check', @priceCheck
+

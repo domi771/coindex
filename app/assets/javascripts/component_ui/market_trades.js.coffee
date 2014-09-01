@@ -10,4 +10,4 @@ window.MarketTradesUI = flight.component ->
 
   @after 'initialize', ->
     @on document, 'market::trades', (event, data) => @refresh(data)
-    @refresh {trades: _.first(gon.trades, 20).reverse()}
+    @refresh {trades: _.first(gon.trades, 100).reverse()}

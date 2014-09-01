@@ -1,5 +1,5 @@
 .panel.panel-default
-  .panel-heading = t('.my_orders')
+  .panel-heading = t('.my_orders_open')
   .panel-body.my-orders style = "height: 670px;"
     table.table.table-condensed.table-striped
       thead: tr
@@ -14,7 +14,7 @@
           = Order.human_attribute_name('volume')
           |  (
           = @ask_code
-          |  )
+          | )
         th class='operation col-md-2' = Order.human_attribute_name('cancel')
 
     .tab-content style = "height: 650px;"

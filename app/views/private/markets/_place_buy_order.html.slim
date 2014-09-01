@@ -34,6 +34,8 @@
             span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.ask['currency'].upcase
           p.balance-alert
             span.label.label-danger
+          p.balance-warning
+            span.label.label-warning
           p.input-group.total style = "margin-bottom: 15px;"
             label.input-group-addon style = "min-width: 160px;" = t('.total')
             = f.text_field :total, class: 'form-control', readonly: true
@@ -43,5 +45,6 @@
             span.label.label-success style="font-size: 150%;"
             span.label.label-danger style="font-size: 150%;"
           p
-            button.btn.btn-default.btn-lg.btn-block style = "margin-right: auto; width: 35%; margin-left: auto; font-size: 16px;" type="submit" = t('.bid_panel', currency: @ask_name)
+            button.btn.btn-default.btn-lg.btn-block' style='margin-right: auto; width: 35%; margin-left: auto; font-size: 16px;' type='submit' disabled=true
+              = t('.bid_panel', currency: @ask_name)
 

@@ -6,6 +6,7 @@
     dangerSel: '.status span.label-danger'
     priceAlertSel: '.price-alert span.label-warning'
     balanceAlertSel: '.balance-alert span.label-danger'
+    balanceWarningSel: '.balance-warning span.label-warning'
 
     priceSel: 'input[id$=price]'
     volumeSel: 'input[id$=volume]'
@@ -26,8 +27,8 @@
     @select('dangerSel').text('')
 
   @resetForm = (event) ->
-    @select('volumeSel').val BigNumber(0)
-    @select('sumSel').val BigNumber(0)
+    @select('volumeSel') BigNumber(0)
+    @select('sumSel') BigNumber(0)
 
   @disableSubmit = ->
     @select('submitButton').addClass('disabled').attr('disabled', 'disabled')
@@ -136,24 +137,36 @@
     type = @panelType()
     node = @select('currentBalanceSel')
     balance = BigNumber(node.data('balance'))
-    volume = @select('volumeSel').val()
-    sum = @select('sumSel').val()
+    volume = BigNumber(@select('volumeSel').val())
+    sum = BigNumber(@select('sumSel').val())
     balanceAlert = @select('balanceAlertSel')
-
+    balanceWarning = @select('balanceWarningSel')
     switch type
       when 'bid'
-        if (balance - sum) < 0
+        if volume < '0.000001'
+          balanceWarning.text gon.i18n.place_order.min_unit
+          balanceAlert.text ''
+          @disableSubmit()
+        else if (balance - sum) < 0
+          balanceWarning.text ''
           balanceAlert.text gon.i18n.place_order.balance_low
           @disableSubmit()
         else
           balanceAlert.text ''
+          balanceWarning.text ''
           @enableSubmit()
       when 'ask'
-        if (balance - volume) < 0
+        if volume < '0.000001'
+          balanceAlert.text ''
+          balanceWarning.text gon.i18n.place_order.min_unit 
+          @disableSubmit()
+        else if (balance - volume) < 0
+          balanceWarning.text ''
           balanceAlert.text gon.i18n.place_order.balance_low
           @disableSubmit()
         else
           balanceAlert.text ''
+          balanceWarning.text ''
           @enableSubmit()
 
 
@@ -164,15 +177,21 @@
     switch
       when currentPrice <= 0
         priceAlert.text gon.i18n.place_order.min_price
-      when currentPrice > (lastPrice * 1.1)
+        @disableSubmit()
+      when currentPrice > (lastPrice * 1.5)
         priceAlert.text gon.i18n.place_order.price_high
-      when currentPrice < (lastPrice * 0.9)
+      when currentPrice < (lastPrice * 0.5)
         priceAlert.text gon.i18n.place_order.price_low
       else
         priceAlert.text ''
+        @enableSubmit()
+
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan
+    @on document, 'price::check', @priceCheck
+    @on document, 'balance::check', @balanceCheck
+
     @on document, 'market::ticker', @updateLastPrice
     @on 'updateAvailable', @updateAvailable
 
@@ -184,9 +203,10 @@
     @on @select('formSel'), 'ajax:success', @handleSuccess
     @on @select('formSel'), 'ajax:error', @handleError
 
-    @on @select('priceSel'), 'focusout', @priceCheck
+    @on @select('priceSel'), 'change paste keyup focusout', @priceCheck
     @on @select('priceSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
-    @on @select('volumeSel'), 'focusout', @balanceCheck
+    @on @select('volumeSel'), 'change paste keyup focusout', @balanceCheck
     @on @select('sumSel'), 'change paste keyup', @computeVolume
+
 

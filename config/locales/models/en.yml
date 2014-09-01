@@ -104,7 +104,7 @@ en:
         ask: Ask
         price: Price
         total: Total
-        volume: Volume
+        volume: Units
         origin_volume: Volume
         sum: Sum
         category: Bid/Ask

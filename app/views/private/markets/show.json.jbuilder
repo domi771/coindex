@@ -21,6 +21,7 @@ json.i18n do
     place_order.price_low I18n.t('private.markets.place_order.price_low')
     place_order.balance_low I18n.t('private.markets.place_order.balance_low')
     place_order.min_price I18n.t('private.markets.place_order.min_price')
+    place_order.min_unit I18n.t('private.markets.place_order.min_unit')
   end
 end
 
