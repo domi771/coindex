@@ -35,11 +35,11 @@ en:
         total: Total w 0.25% Fee
         available: Available
       place_order:
-        min_price: "Minimum Price must be bigger than 0.00000001"
+        min_price: "Minimum Price must be at least  0.00000001"
         price_high: "Caution: Price more than 50% from current Price"
         price_low: "Caution: Price less than 50% from current Price"
         balance_low: "Warning: Insufficent Balance"
-        min_unit: "Minimum Units must be bigger than 0.000001"
+        min_unit: "Minimum Units must be at least 0.000001"
         amount: Units
         total: Total w 0.25% Fee
         price: Price

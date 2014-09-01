@@ -2,7 +2,7 @@ de:
   private:
     markets:
       show:
-        error: Fehlermeldung beim Übermitteln des Auftrags
+        error: Fehler beim Übermitteln des Auftrags
         success: Auftrag erfolgreich übermittelt
         analysis_panel: Analyse
         help_panel: Hilfe
@@ -35,11 +35,11 @@ de:
         available: Verfügbar
         last_price: Letzter Preis
       place_order:
-        min_price: "Minimum Preis muss grösser als 0.00000001 sein"
+        min_price: "Minimum Preis muss mindestens 0.00000001 sein"
         price_high: "Vorsicht: Preis mehr als 50% über dem aktuellem Kurs"
         price_low: "Vorsicht: Preis mehr als 50% unter dem aktuellem Kurs"
         balance_low: "Warnung: Ungenügender Kontostand"
-        min_unit: "Minimum Stück muss grösser als 0.000001 sein"
+        min_unit: "Minimum Stück muss mindestens 0.000001 sein"
         amount: Stück
         total: Total m 0.25% Geb.
         price: Preis
