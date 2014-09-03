@@ -137,16 +137,13 @@
     type = @panelType()
     node = @select('currentBalanceSel')
     balance = BigNumber(node.data('balance'))
-    volume = BigNumber(@select('volumeSel').val())
+    volume = Number @select('volumeSel').val()
     sum = BigNumber(@select('sumSel').val())
-    currentPrice = Number @select('priceSel').val()
     balanceAlert = @select('balanceAlertSel')
     balanceWarning = @select('balanceWarningSel')
     switch type
       when 'bid'
-        if currentPrice <= 0
-          @disableSubmit()
-        else if volume < '0.000001'
+        if volume <= 0
           balanceWarning.text gon.i18n.place_order.min_unit
           balanceAlert.text ''
           @disableSubmit()
@@ -159,11 +156,9 @@
           balanceWarning.text ''
           @enableSubmit()
       when 'ask'
-        if currentPrice <= 0
-          @disableSubmit()
-        else if volume < '0.000001'
+        if volume <= 0
           balanceAlert.text ''
-          balanceWarning.text gon.i18n.place_order.min_unit 
+          balanceWarning.text gon.i18n.place_order.min_unit
           @disableSubmit()
         else if (balance - volume) < 0
           balanceWarning.text ''
@@ -188,9 +183,11 @@
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
           @enableSubmit()
+          @balanceCheck()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
           @enableSubmit()
+          @balanceCheck()
         else
           priceAlert.text ''
           @enableSubmit()
@@ -201,12 +198,16 @@
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
           @enableSubmit()
+          @balanceCheck()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
           @enableSubmit()
+          @balanceCheck()
         else
           priceAlert.text ''
           @enableSubmit()
+
+
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan

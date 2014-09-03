@@ -24,13 +24,13 @@
           .row 
           p.input-group.price style = "margin-bottom: 15px;"
             label.input-group-addon style = "min-width: 160px;" = t('.price')
-            = f.text_field :price, class: 'form-control'
+            = f.text_field :price, class: 'form-control', maxlength: 10
             span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.bid['currency'].upcase
           p.price-alert
             span.label.label-warning
           p.input-group.amount style = "margin-bottom: 15px; margin-top: 14px;"
             label.input-group-addon style = "min-width: 160px;" = t('.amount')
-            = f.text_field :origin_volume, class: 'form-control'
+            = f.text_field :origin_volume, class: 'form-control', maxlength: 10
             span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.ask['currency'].upcase
           p.balance-alert
             span.label.label-danger
