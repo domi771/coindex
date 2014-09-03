@@ -23,6 +23,7 @@ module Private
       @price  = Global[@market].price
       @ticker = Global[@market].ticker
 
+
       # default to limit order
       @order_bid = OrderBid.new ord_type: 'limit'
       @order_ask = OrderAsk.new ord_type: 'limit'
@@ -42,8 +43,8 @@ module Private
     private
 
     def set_default_market
-      #cookies[:market_id] = @market.id
-      cookies[:market_id] = 'ltcbtc'
+      cookies[:market_id] = @market.id
+      #cookies[:market_id] = 'ltcbtc'
     end
 
   end

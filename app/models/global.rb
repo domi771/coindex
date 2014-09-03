@@ -52,6 +52,14 @@ class Global
     })
   end
 
+  def h24_change
+    Rails.cache.fetch key('h24_change', 5) do
+      # old_price = Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
+      # new_price = Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
+      # (new_price - old_price) / old_price * 100
+    end
+  end
+
   def h24_volume
     Rails.cache.fetch key('h24_volume', 5) do
       Trade.with_currency(currency).h24.sum(:volume) || ZERO

@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def document_to(key: nil, title: nil, &block)
     if title
       link_to(title, '', :data => {:remote => "#{main_app.document_path(key)}", :toggle => "modal", :target => '#document_modal'})
@@ -80,6 +81,21 @@ module ApplicationHelper
 
   def currency_format(type)
     t("currency.format.#{type}")
+  end
+
+  def orders_json(orders)
+    Jbuilder.encode do |json|
+      json.array! orders do |order|
+        json.id order.id
+        json.bid order.bid
+        json.ask order.ask
+        json.category order.kind
+        json.volume order.volume
+        json.price order.price
+        json.origin_volume order.origin_volume
+        json.at order.created_at.to_i
+      end
+    end
   end
 
   def orders_json(orders)

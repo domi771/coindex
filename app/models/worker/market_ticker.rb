@@ -23,6 +23,7 @@ module Worker
       ticker[:low]  = get_market_low trade.market.id, trade
       ticker[:high] = get_market_high trade.market.id, trade
       ticker[:last] = trade.price
+      ticker[:trend] = trade.trend
       Rails.logger.info ticker.inspect
       Rails.cache.write "peatio:#{trade.market.id}:ticker", ticker
     end
@@ -53,7 +54,8 @@ module Worker
       @tickers[market.id] = {
         low:  low_trade.try(:price)   || ::Trade::ZERO,
         high: high_trade.try(:price)  || ::Trade::ZERO,
-        last: trades.last.try(:price) || ::Trade::ZERO
+        last: trades.last.try(:price) || ::Trade::ZERO,
+        trend: trades.last.try(:trend) || ::Trade::ZERO
       }
       Rails.cache.write "peatio:#{market.id}:ticker", @tickers[market.id]
     end
