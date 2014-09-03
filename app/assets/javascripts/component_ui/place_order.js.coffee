@@ -138,7 +138,7 @@
     node = @select('currentBalanceSel')
     balance = BigNumber(node.data('balance'))
     volume = Number @select('volumeSel').val()
-    sum = BigNumber(@select('sumSel').val())
+    sum = Number @select('sumSel').val()
     balanceAlert = @select('balanceAlertSel')
     balanceWarning = @select('balanceWarningSel')
     switch type
@@ -191,6 +191,7 @@
         else
           priceAlert.text ''
           @enableSubmit()
+          @balanceCheck()
       when 'bid'
         if currentPrice <= 0
           priceAlert.text gon.i18n.place_order.min_price
@@ -206,6 +207,7 @@
         else
           priceAlert.text ''
           @enableSubmit()
+          @balanceCheck()
 
 
   @checkNumber = (event, data) ->
@@ -226,7 +228,6 @@
     @on document, 'order::plan', @orderPlan
     @on document, 'price::check', @priceCheck
     @on document, 'balance::check', @balanceCheck
-    @on document, 'check::number', @checkNumber
 
     @on document, 'market::ticker', @updateLastPrice
     @on 'updateAvailable', @updateAvailable
@@ -239,13 +240,11 @@
     @on @select('formSel'), 'ajax:success', @handleSuccess
     @on @select('formSel'), 'ajax:error', @handleError
 
+    @on @select('priceSel'), 'keydown', @checkNumber
     @on @select('priceSel'), 'change paste keyup focusout', @priceCheck
     @on @select('priceSel'), 'change paste keyup focusout', @computeSum
-    @on @select('priceSel'), 'keydown', @checkNumber
+    @on @select('volumeSel'), 'keydown', @checkNumber
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @balanceCheck
-    @on @select('volumeSel'), 'keydown', @checkNumber
     @on @select('sumSel'), 'change paste keyup', @computeVolume
-
-
 
