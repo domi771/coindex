@@ -206,3 +206,32 @@
         margin-left: 30px;
         margin-top: -13px;
 }
+
+.up-arrow {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 5px solid #468847;
+        margin-top: 6px;
+        float: left;
+}
+
+.down-arrow {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 5px solid #b94a48;
+        margin-top: 6px;
+        float: left;
+}
+
+.up {
+        color: #468847;
+}
+
+.down {
+        color: #b94a48;
+}
+
