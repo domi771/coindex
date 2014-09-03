@@ -208,11 +208,25 @@
           @enableSubmit()
 
 
+  @checkNumber = (event, data) ->
+
+    $("input").keypress (e) ->
+      a = []
+      k = e.which
+      i = 48
+      while i < 58
+        a.push i
+        i++
+      a.push(46);
+      e.preventDefault()  unless a.indexOf(k) >= 0
+      return
+
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan
     @on document, 'price::check', @priceCheck
     @on document, 'balance::check', @balanceCheck
+    @on document, 'check::number', @checkNumber
 
     @on document, 'market::ticker', @updateLastPrice
     @on 'updateAvailable', @updateAvailable
@@ -227,8 +241,11 @@
 
     @on @select('priceSel'), 'change paste keyup focusout', @priceCheck
     @on @select('priceSel'), 'change paste keyup focusout', @computeSum
+    @on @select('priceSel'), 'keydown', @checkNumber
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @balanceCheck
+    @on @select('volumeSel'), 'keydown', @checkNumber
     @on @select('sumSel'), 'change paste keyup', @computeVolume
+
 
 
