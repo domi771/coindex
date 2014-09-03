@@ -139,11 +139,14 @@
     balance = BigNumber(node.data('balance'))
     volume = BigNumber(@select('volumeSel').val())
     sum = BigNumber(@select('sumSel').val())
+    currentPrice = Number @select('priceSel').val()
     balanceAlert = @select('balanceAlertSel')
     balanceWarning = @select('balanceWarningSel')
     switch type
       when 'bid'
-        if volume < '0.000001'
+        if currentPrice <= 0
+          @disableSubmit()
+        else if volume < '0.000001'
           balanceWarning.text gon.i18n.place_order.min_unit
           balanceAlert.text ''
           @disableSubmit()
@@ -156,7 +159,9 @@
           balanceWarning.text ''
           @enableSubmit()
       when 'ask'
-        if volume < '0.000001'
+        if currentPrice <= 0
+          @disableSubmit()
+        else if volume < '0.000001'
           balanceAlert.text ''
           balanceWarning.text gon.i18n.place_order.min_unit 
           @disableSubmit()
@@ -182,8 +187,10 @@
           @disableSubmit()
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
+          @enableSubmit()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
+          @enableSubmit()
         else
           priceAlert.text ''
           @enableSubmit()
@@ -193,8 +200,10 @@
           @disableSubmit()
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
+          @enableSubmit()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
+          @enableSubmit()
         else
           priceAlert.text ''
           @enableSubmit()
