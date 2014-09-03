@@ -36,7 +36,7 @@ class Global
   end
 
   def default_ticker
-    {low: ZERO, high: ZERO, last: ZERO, volume: ZERO}
+    {low: ZERO, high: ZERO, last: ZERO, volume: ZERO, change: ZERO}
   end
 
   def ticker
@@ -46,6 +46,7 @@ class Global
 
     ticker.merge({
       volume: h24_volume,
+      change: h24_change,
       sell: best_sell_price,
       buy: best_buy_price,
       at: at,
@@ -54,9 +55,13 @@ class Global
 
   def h24_change
     Rails.cache.fetch key('h24_change', 5) do
-      # old_price = Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
-      # new_price = Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
-      # (new_price - old_price) / old_price * 100
+
+      old_price = Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
+      new_price = Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
+      (new_price - old_price) / old_price * 100 rescue 0
+
+      #Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
+      #Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
     end
   end
 

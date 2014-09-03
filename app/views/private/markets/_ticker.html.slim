@@ -5,8 +5,8 @@
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 15px;"
       .col-md-6.name.last  style=("text-transform: uppercase") #{t('global.latest_price')}
       .col-md-3.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
-      = content_tag(:div, "#{@bid_code}", class: "col-md-1 #{@ticker[:trend]}", style: "text-transform: uppercase;")
-      = content_tag(:div, "", class: "col-md-1 #{@ticker[:trend]}-arrow", style: "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 3px;")
+      = content_tag(:div, "#{@bid_code}", class: "col-md-1", style: "text-transform: uppercase;")
+      = content_tag(:div, "", class: "col-md-1 #{@ticker[:trend]}-arrow", style: "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;")
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
       .col-md-6.name.bid  style = "text-transform: uppercase;" #{t('global.bid_price')}
       .col-md-3.value.buy style = "font-weight: bold; text-align: right; padding-right: 0px;"

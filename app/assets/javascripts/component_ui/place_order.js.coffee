@@ -170,22 +170,34 @@
           @enableSubmit()
 
 
-  @priceCheck = (event) ->
+  @priceCheck = (event, data) ->
+    type = @panelType()
     currentPrice = Number @select('priceSel').val()
     lastPrice = Number gon.ticker.last
     priceAlert = @select('priceAlertSel')
-    switch
-      when currentPrice <= 0
-        priceAlert.text gon.i18n.place_order.min_price
-        @disableSubmit()
-      when currentPrice > (lastPrice * 1.5)
-        priceAlert.text gon.i18n.place_order.price_high
-      when currentPrice < (lastPrice * 0.5)
-        priceAlert.text gon.i18n.place_order.price_low
-      else
-        priceAlert.text ''
-        @enableSubmit()
-
+    switch type
+      when 'ask'
+        if currentPrice <= 0
+          priceAlert.text gon.i18n.place_order.min_price
+          @disableSubmit()
+        else if currentPrice > (lastPrice * 1.5)
+          priceAlert.text gon.i18n.place_order.price_high
+        else if currentPrice < (lastPrice * 0.5)
+          priceAlert.text gon.i18n.place_order.price_low
+        else
+          priceAlert.text ''
+          @enableSubmit()
+      when 'bid'
+        if currentPrice <= 0
+          priceAlert.text gon.i18n.place_order.min_price
+          @disableSubmit()
+        else if currentPrice > (lastPrice * 1.5)
+          priceAlert.text gon.i18n.place_order.price_high
+        else if currentPrice < (lastPrice * 0.5)
+          priceAlert.text gon.i18n.place_order.price_low
+        else
+          priceAlert.text ''
+          @enableSubmit()
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan
