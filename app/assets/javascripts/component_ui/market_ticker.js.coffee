@@ -19,6 +19,15 @@ window.MarketTickerUI = flight.component ->
         el.fadeOut ->
           el.text(text).fadeIn()
 
+  @updateTrend = (text) ->
+    el = @select('trendSelector')
+    el.removeClass('up-arrow').removeClass('down-arrow')
+
+    if text is 'up'
+      el.addClass('up-arrow')
+    else
+      el.addClass('down-arrow')
+
   @refresh = (event, data) ->
     @select('volumeSelector').text round(data.volume, gon.market.ask.fixed)
 
@@ -27,7 +36,7 @@ window.MarketTickerUI = flight.component ->
     @update @select('lowPriceSelector'), data.low
     @update @select('highPriceSelector'), data.high
     @update @select('latestPriceSelector'), data.last
-    @update @select('trendSelector'), data.trend
+    @updateTrend data.trend
 
     document.title = "(#{data.last}) #{gon.market.id.toUpperCase()}"
 
