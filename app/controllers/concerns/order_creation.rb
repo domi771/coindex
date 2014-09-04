@@ -30,7 +30,19 @@ module Concerns
     def success_result
       Jbuilder.encode do |json|
         json.result true
-        json.message I18n.t("private.markets.show.success")
+        json.message I18n.t("private.markets.show.success") 
+        json.market params[:market]
+        json.bid params[:bid]
+        json.ask params[:ask]
+          if params[:order_ask]
+            json.price params[:order_ask][:price]
+            json.volume params[:order_ask][:volume]
+            json.total params[:order_ask][:total]
+          else
+            json.price params[:order_bid][:price]
+            json.volume params[:order_bid][:volume]
+            json.total params[:order_bid][:total]
+          end
       end
     end
 

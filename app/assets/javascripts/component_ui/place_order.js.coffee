@@ -2,6 +2,7 @@
   @defaultAttrs
     formSel: 'form'
     successSel: '.status span.label-success'
+    successSelinfo: '.status span.label-success-info'
     infoSel: '.status span.label-info'
     dangerSel: '.status span.label-danger'
     priceAlertSel: '.price-alert span.label-warning'
@@ -23,6 +24,7 @@
 
   @cleanMsg = ->
     @select('successSel').text('')
+    @select('successSelinfo').text('')
     @select('infoSel').text('')
     @select('dangerSel').text('')
 
@@ -56,8 +58,11 @@
       jqXHR.abort()
 
   @handleSuccess = (event, data) ->
+    suctext = gon.i18n.place_order.price + ": " + data.price + " - " + gon.i18n.place_order.volume + ": " + data.volume + " - Total: " + data.total
+
     @cleanMsg()
-    @select('successSel').text(data.message).show().fadeOut(5500)
+    @select('successSel').text(data.message).show().fadeOut(7500)
+    @select('successSelinfo').text(suctext).show().fadeOut(7500)
     @resetForm(event)
     @enableSubmit()
 
@@ -253,6 +258,7 @@
         a.push i
         i++
       a.push(46);
+      a.push(8);
       e.preventDefault()  unless a.indexOf(k) >= 0
       return
 
@@ -280,4 +286,3 @@
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @balanceCheck
     @on @select('sumSel'), 'change paste keyup', @computeVolume
-
