@@ -133,6 +133,24 @@
     lastPrice = @select('lastPrice').text().trim()
     @select('priceSel').val(lastPrice).focus()
 
+  @balancePRECheck = (event, data) ->
+    type = @panelType()
+    node = @select('currentBalanceSel')
+    volume = Number @select('volumeSel').val()
+    balanceAlert = @select('balanceAlertSel')
+    balanceWarning = @select('balanceWarningSel')
+    switch type
+      when 'bid'
+        if volume <= 0
+          balanceAlert.text ''
+          @disableSubmit()
+      when 'ask'
+        if volume <= 0
+          balanceAlert.text ''
+          @disableSubmit()
+
+
+
   @balanceCheck = (event, data) ->
     type = @panelType()
     node = @select('currentBalanceSel')
@@ -155,6 +173,7 @@
           balanceAlert.text ''
           balanceWarning.text ''
           @enableSubmit()
+          @pricePRECheck()
       when 'ask'
         if volume <= 0
           balanceAlert.text ''
@@ -168,6 +187,20 @@
           balanceAlert.text ''
           balanceWarning.text ''
           @enableSubmit()
+          @pricePRECheck()
+
+
+  @pricePRECheck = (event, data) ->
+    type = @panelType()
+    currentPrice = Number @select('priceSel').val()
+    switch type
+      when 'ask'
+        if currentPrice <= 0
+          @disableSubmit()
+    switch type
+      when 'bid'
+        if currentPrice <= 0
+          @disableSubmit()
 
 
   @priceCheck = (event, data) ->
@@ -183,15 +216,15 @@
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
         else
           priceAlert.text ''
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
       when 'bid'
         if currentPrice <= 0
           priceAlert.text gon.i18n.place_order.min_price
@@ -199,15 +232,15 @@
         else if currentPrice > (lastPrice * 1.5)
           priceAlert.text gon.i18n.place_order.price_high
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
         else if currentPrice < (lastPrice * 0.5)
           priceAlert.text gon.i18n.place_order.price_low
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
         else
           priceAlert.text ''
           @enableSubmit()
-          @balanceCheck()
+          @balancePRECheck()
 
 
   @checkNumber = (event, data) ->
