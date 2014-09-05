@@ -1,5 +1,4 @@
 @OrderbookChartUI = flight.component ->
-
   @drawChart = ->
     @$node.highcharts "Chart",
       credits:
