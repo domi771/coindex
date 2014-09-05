@@ -6,6 +6,10 @@ class ActionDispatch::Routing::Mapper
   end
 end
 
+Rails.application.routes.draw do
+  mount MadChatter::RailsEngine => "/chat"
+end
+
 Peatio::Application.routes.draw do
 
   root 'welcome#index'

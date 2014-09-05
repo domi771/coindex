@@ -69,6 +69,9 @@ gem 'twilio-ruby', '~> 3.11'
 gem 'unread', git: 'https://github.com/poshboytl/unread.git'
 gem 'carrierwave', '~> 0.10.0'
 
+gem 'thin'
+gem 'mad_chatter', github: 'madchatter/mad_chatter'
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'

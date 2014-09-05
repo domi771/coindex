@@ -30,8 +30,7 @@
       .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
 
 .panel.panel-default.account-balance
-  .panel-heading = t('Buy Sell Ratio (24h)')
-  .panel-body
-    .row
-      .buysellratio-chart style = "height: 150px;"
+  .panel-heading = t('Chat')
+  .panel-body style = "padding-bottom: 0px;"
+    iframe#cboxmain allowtransparency="true" frameborder="0" marginheight="1" marginwidth="1" name="cboxmain" scrolling="no" seamless="seamless" src="/chat" style=("height: 161px; overflow:scroll; width: 100%") 
 
