@@ -1,0 +1,10 @@
+module Private::TickerHelper
+
+  def ticker_trend(ticker)
+    ticker.trend == data.trend ? 'sell' : 'buy'
+  end
+
+end
+
+
+
