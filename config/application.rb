@@ -22,7 +22,7 @@ module Peatio
       # Explicitly register the extensions we are interested in compiling
       app.config.assets.precompile.push(Proc.new do |path|
         File.extname(path).in? [
-          '.html', '.erb', '.haml', '.coffee', '.js', '.eco'  # Templates
+          '.html', '.erb', '.haml', '.coffee', '.js', '.eco',  # Templates
           '.png',  '.gif', '.jpg', '.jpeg',          # Images
           '.eot',  '.otf', '.svc', '.woff', '.ttf',  # Fonts
         ]
