@@ -55,13 +55,9 @@ class Global
 
   def h24_change
     Rails.cache.fetch key('h24_change', 5) do
-
-      old_price = Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
-      new_price = Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
+      old_price = Trade.with_currency(currency).h24.order('id asc').first.try(:price) || ::Trade::ZERO
+      new_price = Trade.with_currency(currency).h24.order('id desc').first.try(:price) || ::Trade::ZERO
       (new_price - old_price) / old_price * 100 rescue 0
-
-      #Trade.with_currency(currency).select("price").h24.limit(1) || ZERO
-      #Trade.with_currency(currency).select("price").reverse_order.limit(1) || ZERO
     end
   end
 

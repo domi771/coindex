@@ -1,6 +1,7 @@
 window.MarketTickerUI = flight.component ->
   @defaultAttrs
     volumeSelector: '.value.volume'
+    changeSelector: '.value.change'
     askPriceSelector: '.value.sell'
     bidPriceSelector: '.value.buy'
     lowPriceSelector: '.value.low'
@@ -40,6 +41,7 @@ window.MarketTickerUI = flight.component ->
 
   @refresh = (event, data) ->
     @select('volumeSelector').text round(data.volume, gon.market.ask.fixed)
+    @select('changeSelector').text ((data.change * 100) / 100).toFixed(2)
 
     @update @select('askPriceSelector'), data.sell
     @update @select('bidPriceSelector'), data.buy

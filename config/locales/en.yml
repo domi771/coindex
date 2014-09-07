@@ -172,11 +172,12 @@ en:
   global:
     ask_price: Ask
     bid_price: Bid
-    high_price: High
-    low_price: Low
-    volume: Volume
+    high_price: "24H High"
+    low_price: "24H Low"
+    volume: 24H Volume
     latest_price: Last
-
+    change: 24H Change
+ 
   chart:
     price: Price
     volume: Volume
