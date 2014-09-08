@@ -43,12 +43,14 @@ window.MarketTickerUI = flight.component ->
 
   @updatechangetrend = (text) ->
     el = @select('changetrendSelector')
-    el.removeClass('up-arrow').removeClass('down-arrow')
+    el.removeClass('up-arrow').removeClass('down-arrow').removeClass('same-arrow')
 
     if text is 'up'
       el.addClass('up-arrow').fadeIn()
-    else
+    else if text is 'down'
       el.addClass('down-arrow').fadeIn()
+    else 
+      el.addClass('same-arrow').fadeIn()
 
   @updatechangetrend2 = (text) ->
     el = @select('changetrendSelector2')
