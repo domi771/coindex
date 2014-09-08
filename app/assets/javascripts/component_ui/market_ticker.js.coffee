@@ -2,6 +2,8 @@ window.MarketTickerUI = flight.component ->
   @defaultAttrs
     volumeSelector: '.value.volume'
     changeSelector: '.value.change'
+    changetrendSelector: '.value.changetrend'
+    changetrendSelector2: '.value.change'
     askPriceSelector: '.value.sell'
     bidPriceSelector: '.value.buy'
     lowPriceSelector: '.value.low'
@@ -39,6 +41,25 @@ window.MarketTickerUI = flight.component ->
     else
       el.addClass('down')
 
+  @updatechangetrend = (text) ->
+    el = @select('changetrendSelector')
+    el.removeClass('up-arrow').removeClass('down-arrow')
+
+    if text is 'up'
+      el.addClass('up-arrow').fadeIn()
+    else
+      el.addClass('down-arrow').fadeIn()
+
+  @updatechangetrend2 = (text) ->
+    el = @select('changetrendSelector2')
+    el.removeClass('up').removeClass('down')
+
+    if text is 'up'
+      el.addClass('up')
+    else
+      el.addClass('down')
+
+
   @refresh = (event, data) ->
     @select('volumeSelector').text round(data.volume, gon.market.ask.fixed)
     @select('changeSelector').text ((data.change * 100) / 100).toFixed(2)
@@ -50,6 +71,8 @@ window.MarketTickerUI = flight.component ->
     @update @select('latestPriceSelector'), data.last
     @updateTrend data.trend
     @updateTrend2 data.trend
+    @updatechangetrend data.change_trend
+    @updatechangetrend2 data.change_trend
 
     document.title = "(#{data.last}) #{gon.market.id.toUpperCase()}"
 

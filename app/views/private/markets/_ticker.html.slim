@@ -1,12 +1,17 @@
 .panel.panel-default.ticker
   .panel-heading
     .span  = @market.name
-  .panel-body
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 0px;"
+  .panel-body style = "padding-bottom: 10px;"
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
       .col-md-6.name.last  style=("text-transform: uppercase") #{t('global.latest_price')}
       .col-md-3.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
       .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
       .col-md-1.value.trend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-6.name.change  style = "text-transform: uppercase;" #{t('global.change')}
+      .col-md-3.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.name.change style = "text-transform: uppercase;" #{t('%')}
+      .col-md-1.value.changetrend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
       .col-md-6.name.bid  style = "text-transform: uppercase;" #{t('global.bid_price')}
       .col-md-3.value.buy style = "font-weight: bold; text-align: right; padding-right: 0px;"
@@ -24,14 +29,10 @@
       .col-md-6.name.low  style = "text-transform: uppercase;" #{t('global.low_price')}
       .col-md-3.value.low style = "font-weight: bold; text-align: right; padding-right: 0px;"
       .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+    .row style = "margin-bottom: 0px; margin-top: 3px;"
       .col-md-6.name.volume  style = "text-transform: uppercase;" #{t('global.volume')}
       .col-md-3.value.volume style = "font-weight: bold; text-align: right; padding-right: 0px;"
       .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-    .row style = "margin-bottom: 0px; margin-top: 3px;"
-      .col-md-6.name.change  style = "text-transform: uppercase;" #{t('global.change')}
-      .col-md-3.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.name.change style = "text-transform: uppercase;" #{t('%')}
 
 
 .panel.panel-default.account-balance

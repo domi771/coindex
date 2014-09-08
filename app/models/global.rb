@@ -36,7 +36,7 @@ class Global
   end
 
   def default_ticker
-    {low: ZERO, high: ZERO, last: ZERO, volume: ZERO, change: ZERO}
+    {low: ZERO, high: ZERO, last: ZERO, volume: ZERO, change: ZERO, change_trend: ZERO}
   end
 
   def ticker
@@ -47,6 +47,7 @@ class Global
     ticker.merge({
       volume: h24_volume,
       change: h24_change,
+      change_trend: change_trend,
       sell: best_sell_price,
       buy: best_buy_price,
       at: at,
@@ -60,6 +61,17 @@ class Global
       (new_price - old_price) / old_price * 100 rescue 0
     end
   end
+
+  def change_trend
+    if h24_change > 0
+      @change_trend = 'up'
+    elsif h24_change == 0
+      @change_trend = ''
+    else h24_change < 0
+      @change_trend = 'down'
+    end
+  end
+
 
   def h24_volume
     Rails.cache.fetch key('h24_volume', 5) do
