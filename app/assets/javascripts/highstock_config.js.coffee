@@ -11,4 +11,13 @@ if gon.local is "de"
       months: ['Januar', 'Februar', 'Maerz', 'April', 'Mai', 'Juni', 'Juli','August', 'September', 'Oktober', 'November', 'Dezember']
       shortMonths: ['Jan', 'Feb',  'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
       weekdays: ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+    global:
+      timezoneOffset: -2 * 60
+      useUTC: true
+
+if gon.local is "en"
+  Highcharts.setOptions
+    global:
+      timezoneOffset: -2 * 60
+      useUTC: true
 

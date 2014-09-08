@@ -7,46 +7,21 @@ module APIv2
       present Market.all, with: APIv2::Entities::Market
     end
 
-    params do
-      #use :Market.all, with: APIv2::Entities::Market_Ticker
-      use :market
-    end
 
     get "/markets_ticker" do
 
-      # present Market.all, with: APIv2::Entities::Market
-      present Market.all, with: APIv2::Entities::Market
+      hashes = [ { "attributes" => { "id" => "usdeur", "code" => 4 },
+             "name"       => "USD/EUR"
+           },
+           { "attributes" => { "id" => "eurgbp", "code" => 5 },
+             "name"       => "EUR/GBP"
+           } ] 
 
-      # ticker = Global[params[:market]].ticker
-      # present ticker
-      
-      #present Market.all.select{|t| t == id.ticker} with: APIv2::Entities::Marke
-     #Market.all.each do |t|
-     # ticker = t.id
-     # present ticker
-     #end
+      xx = hashes.map {|hash| hash["attributes"]["id"] }
+      xx.each do |i|
+       p i
+      end
 
-
-     # Token.all.each do |t|
-     # id = Member.find_by_identity_id(t.member_id)
-     # t.update_column :member_id, id
-     # end
-     
-     # ticker = Global[params[:market]].ticker
-
-     # { at: ticker[:at],
-     #   ticker: {
-     #     buy: ticker[:buy],
-     #     sell: ticker[:sell],
-     #     low: ticker[:low],
-     #     high: ticker[:high],
-     #     last: ticker[:last],
-     #     vol: ticker[:volume],
-     #     trend: ticker[:trend]
-     #   }
-     # }
-
-#     present Market.all, with: APIv2::Entities::Market_Ticker
      
      
 

@@ -5,7 +5,7 @@
 
       credits:
         enabled: false
-
+ 
       tooltip:
         valueDecimals: gon.market.bid.fixed
 
@@ -90,7 +90,7 @@
       rangeSelector:
         enabled: true
         inputEnabled: false
-        selected: 2
+        selected: 3
         allButtonsEnabled: true
         buttons: [
           {

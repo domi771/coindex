@@ -22,5 +22,18 @@ module APIv2
       }
     end
 
+    get "/tickers_all" do
+
+    #a1 = ["some", "thing"]
+    #a2 = ["another", "thing"]
+
+    a1 = ["ltcbtc"]
+    a2 = json
+
+    a1.concat a2
+    present a1
+    end
+
+
   end
 end
