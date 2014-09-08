@@ -65,7 +65,7 @@ class Global
   def change_trend
     if h24_change > 0
       @change_trend = 'up'
-    elsif h24_change == 0
+    elsif  h24_change.nil? || h24_change == 0
       @change_trend = ''
     else h24_change < 0
       @change_trend = 'down'

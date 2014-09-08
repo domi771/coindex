@@ -56,8 +56,10 @@ window.MarketTickerUI = flight.component ->
 
     if text is 'up'
       el.addClass('up')
-    else
+    else if text is 'down'
       el.addClass('down')
+    else
+      el.addClass('')
 
 
   @refresh = (event, data) ->
