@@ -1,6 +1,7 @@
 - if address.address.blank?
   p = t('.gen_address_html')
 - else
+
   p
     h4 = t('.step-1')
     p = send_coin
@@ -10,6 +11,9 @@
     .form-control.form-control-static = address.address
     .input-group-addon
       i.fa.fa-copy data-clipboard-text = address.address
+    .input-group-addon
+      span.countdown.hint style='display:none;' = t('.countdown')
+      = link_to t('.generate-new'), url_for(action: 'gen_address'), class: 'generate-link', method: :post, remote: true, onclick: "$('span.countdown').show();$(this).hide();"
 
   p
     div style = "margin-bottom: 10px;"

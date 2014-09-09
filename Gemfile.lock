@@ -21,7 +21,13 @@ GIT
       sinatra
 
 GIT
-  remote: https://github.com/poshboytl/unread.git
+  remote: git://github.com/galetahub/simple-captcha.git
+  revision: 2602bf19a63df25929960b5a7721a9d265281ec1
+  specs:
+    simple_captcha (0.1.6)
+
+GIT
+  remote: git://github.com/poshboytl/unread.git
   revision: b8fa0502e9558c93388a104bcbe20376cf43027d
   specs:
     unread (0.4.0)
@@ -31,6 +37,10 @@ GIT
   remote: https://github.com/activerecord-hackery/ransack.git
   revision: 8009ae93e3e00325e41edd231b4b917c45a2c6c2
   branch: rails-4
+
+GIT
+  remote: git://github.com/tomlion/mina-slack.git
+  revision: 5b7571a34f1979784720c0bfef555591e89ca3a7
   specs:
     ransack (1.1.0)
       actionpack (>= 4.0)
@@ -80,8 +90,6 @@ GEM
     amqp (1.3.0)
       amq-protocol (>= 1.9.2)
       eventmachine
-    annotate (2.5.0)
-      rake
     arel (4.0.2)
     atomic (1.1.16)
     awesome_print (1.2.0)
@@ -191,7 +199,7 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
-    faker (1.2.0)
+    faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.3)
     figaro (0.7.0)
@@ -305,8 +313,6 @@ GEM
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
-    polyamorous (0.6.4)
-      activerecord (>= 3.0)
     polyglot (0.3.3)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -353,6 +359,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
     rbtree (0.4.2)
+    rdoc (4.1.1)
+      json (~> 1.4)
     redis (3.0.7)
     redis-actionpack (4.0.0)
       actionpack (~> 4)
@@ -370,8 +378,9 @@ GEM
       redis-store (~> 1.1.0)
     redis-store (1.1.4)
       redis (>= 2.2)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rest-client (1.6.8)
+      mime-types (~> 1.16)
+      rdoc (>= 2.4.2)
     rotp (1.6.1)
     rspec-core (2.14.7)
     rspec-expectations (2.14.5)
@@ -471,7 +480,6 @@ DEPENDENCIES
   active_hash
   acts-as-taggable-on
   amqp (~> 1.3.0)
-  annotate (~> 2.5.0)
   bcrypt-ruby (~> 3.1.2)
   better_errors
   binding_of_caller
@@ -495,7 +503,7 @@ DEPENDENCIES
   enumerize
   eventmachine (~> 1.0.3)
   factory_girl_rails
-  faker
+  faker (~> 1.4.3)
   figaro
   flot-rails
   font-awesome-sass
@@ -535,7 +543,6 @@ DEPENDENCIES
   rails
   rails-i18n
   rails-observers
-  ransack!
   rbtree
   redis-rails
   rotp
@@ -544,6 +551,7 @@ DEPENDENCIES
   selenium-webdriver
   settingslogic
   shoulda-matchers
+  simple_captcha!
   simple_form (= 3.0.1)
   slim-rails
   thin

@@ -1,31 +1,10 @@
-# == Schema Information
-#
-# Table name: members
-#
-#  id                    :integer          not null, primary key
-#  sn                    :string(255)
-#  display_name          :string(255)
-#  email                 :string(255)
-#  identity_id           :integer
-#  created_at            :datetime
-#  updated_at            :datetime
-#  state                 :integer
-#  activated             :boolean
-#  country_code          :integer
-#  phone_number          :string(255)
-#  phone_number_verified :boolean
-#  disabled              :boolean          default(FALSE)
-#  api_disabled          :boolean          default(FALSE)
-#  inviter_id            :integer
-#  referral_code_reward  :boolean          default(FALSE)
-#
-
 class Member < ActiveRecord::Base
   acts_as_taggable
   acts_as_reader
 
   has_many :orders
   has_many :accounts
+  has_many :payment_addresses, through: :accounts
   has_many :withdraws
   has_many :fund_sources
   has_many :deposits
@@ -58,8 +37,7 @@ class Member < ActiveRecord::Base
 
   class << self
     def from_auth(auth_hash)
-      member = locate_auth(auth_hash) || locate_email(auth_hash) || create_from_auth(auth_hash)
-      member.disabled? ? nil : member
+      locate_auth(auth_hash) || locate_email(auth_hash) || create_from_auth(auth_hash)
     end
 
     def current
@@ -68,6 +46,31 @@ class Member < ActiveRecord::Base
 
     def current=(user)
       Thread.current[:user] = user
+    end
+
+    def admins
+      Figaro.env.admin.split(',')
+    end
+
+    def search(field: nil, term: nil)
+      result = case field
+               when 'email'
+                 where('members.email LIKE ?', "%#{term}%")
+               when 'phone_number'
+                 where('members.phone_number LIKE ?', "%#{term}%")
+               when 'name'
+                 joins(:id_document).where('id_documents.name LIKE ?', "%#{term}%")
+               when 'wallet_address'
+                 members = joins(:fund_sources).where('fund_sources.uid' => term)
+                 if members.empty?
+                  members = joins(:payment_addresses).where('payment_addresses.address' => term)
+                 end
+                 members
+               else
+                 all
+               end
+
+      result.order(:id).reverse_order
     end
 
     private
@@ -89,10 +92,6 @@ class Member < ActiveRecord::Base
       member.send_activation
       member
     end
-  end
-
-  def self.admins
-    Figaro.env.admin.split(',')
   end
 
   def trades

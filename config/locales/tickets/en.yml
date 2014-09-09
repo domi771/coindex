@@ -1,6 +1,8 @@
 en:
   private:
     tickets:
+      index:
+        new_ticket: New Ticket
       new:
         intro: If you experience any problems or simply have a question or feedback please submit a ticket here.
       ticket_create_succ: Ticket created successfully.

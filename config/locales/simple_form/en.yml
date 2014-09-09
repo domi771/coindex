@@ -65,6 +65,7 @@ en:
       session:
         email: Sign In E-mail
         password: Sign In Password
+        captcha: Captcha
       identity:
         email: Login E-mail
         old_password: Current Password

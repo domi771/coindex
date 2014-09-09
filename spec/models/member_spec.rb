@@ -1,25 +1,3 @@
-# == Schema Information
-#
-# Table name: members
-#
-#  id                    :integer          not null, primary key
-#  sn                    :string(255)
-#  display_name          :string(255)
-#  email                 :string(255)
-#  identity_id           :integer
-#  created_at            :datetime
-#  updated_at            :datetime
-#  state                 :integer
-#  activated             :boolean
-#  country_code          :integer
-#  phone_number          :string(255)
-#  phone_number_verified :boolean
-#  disabled              :boolean          default(FALSE)
-#  api_disabled          :boolean          default(FALSE)
-#  inviter_id            :integer
-#  referral_code_reward  :boolean          default(FALSE)
-#
-
 require 'spec_helper'
 
 describe Member do
@@ -114,6 +92,62 @@ describe Member do
     it "should not raise but return nil when authentication is not found" do
       member = create(:member)
       expect(member.identity).to be_nil
+    end
+  end
+
+  describe 'Member.search' do
+    before do
+      create(:member)
+      create(:member)
+      create(:member)
+    end
+
+    describe 'search without any condition' do
+      subject { Member.search(field: nil, term: nil) }
+
+      it { expect(subject.count).to eq(3) }
+    end
+
+    describe 'search by email' do
+      let(:member) { create(:member) }
+      subject { Member.search(field: 'email', term: member.email) }
+
+      it { expect(subject.count).to eq(1) }
+      it { expect(subject).to be_include(member) }
+    end
+
+    describe 'search by phone number' do
+      let(:member) { create(:member) }
+      subject { Member.search(field: 'phone_number', term: member.phone_number) }
+
+      it { expect(subject.count).to eq(1) }
+      it { expect(subject).to be_include(member) }
+    end
+
+    describe 'search by name' do
+      let(:member) { create(:verified_member) }
+      subject { Member.search(field: 'name', term: member.name) }
+
+      it { expect(subject.count).to eq(1) }
+      it { expect(subject).to be_include(member) }
+    end
+
+    describe 'search by wallet address' do
+      let(:fund_source) { create(:btc_fund_source) }
+      let(:member) { fund_source.member }
+      subject { Member.search(field: 'wallet_address', term: fund_source.uid) }
+
+      it { expect(subject.count).to eq(1) }
+      it { expect(subject).to be_include(member) }
+    end
+
+    describe 'search by deposit address' do
+      let(:payment_address) { create(:btc_payment_address) }
+      let(:member) { payment_address.account.member }
+      subject { Member.search(field: 'wallet_address', term: payment_address.address) }
+
+      it { expect(subject.count).to eq(1) }
+      it { expect(subject).to be_include(member) }
     end
   end
 
