@@ -66,7 +66,7 @@
 
     p Now we hav a signed request which can be used like this:
     pre: code
-      | curl -X GET 'https://bitcoin.jetzt/api/v2/markets?access_key=xxx&foo=bar&tonce=123456789&signature=e324059be4491ed8e528aa7b8735af1e96547fbec96db962d51feb7bf1b64dee'
+      | curl -X GET 'https://eurocex.com/api/v2/markets?access_key=xxx&foo=bar&tonce=123456789&signature=e324059be4491ed8e528aa7b8735af1e96547fbec96db962d51feb7bf1b64dee'
 
 .panel.panel-default
   .panel-heading
@@ -100,7 +100,7 @@
         tr
           td Member
           td: pre: code
-            | {"sn":"PEA5TFFOGQHTIO","name":"foo","email":"foo@bitcoin.jetzt","activated":true,"accounts":[{"currency":"btc","balance":"100243840.0","locked":"0.0"},{"currency":"ltc","balance":"99999708.26","locked":"210.8"}]}
+            | {"sn":"PEA5TFFOGQHTIO","name":"foo","email":"foo@eurocex.com","activated":true,"accounts":[{"currency":"btc","balance":"100243840.0","locked":"0.0"},{"currency":"ltc","balance":"99999708.26","locked":"210.8"}]}
           td
             p sn: Unique identifier of user
             p name: User name
@@ -155,11 +155,11 @@
   .panel-body
     p Buy 1LTC at price 0.02BTC:
     pre: code
-      | curl -X POST ''https://bitcoin.jetzt/api/v2/orders' -d 'access_key=your_access_key&tonce=1234567&signature=computed_signature&market=btcltc&price=0.02&side=buy&volume=1'
+      | curl -X POST ''https://eurocex.com/api/v2/orders' -d 'access_key=your_access_key&tonce=1234567&signature=computed_signature&market=btcltc&price=0.02&side=buy&volume=1'
 
     p Create multiple orders with a single request:
     pre: code
-      | curl -X POST ''https://bitcoin.jetzt/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=btcltc&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
+      | curl -X POST ''https://eurocex.com/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=btcltc&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
 
 .panel.panel-default
   .panel-heading
