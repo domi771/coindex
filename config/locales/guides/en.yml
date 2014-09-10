@@ -109,10 +109,10 @@ en:
       panel: Sign In
       new:
         title: User Login
-        intro: Login to BITCOIN.JETZT and buy/sell Bitcoins.
+        intro: Login to EUROCEX and buy/sell Bitcoins.
       failure:
         title: User Login
-        intro: Login to BITCOIN.JETZT and buy/sell Bitcoins.
+        intro: Login to EUROCEX and buy/sell Bitcoins.
 
     identities:
       panel: Sign Up

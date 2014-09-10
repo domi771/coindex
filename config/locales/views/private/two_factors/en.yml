@@ -7,7 +7,7 @@ en:
         otp_placeholder: 6-digit password
         google_app: Google Auth.
         sms: SMS Code
-        sms_message: "Your BITCOIN.JETZT phone number verification code is: %{code}"
+        sms_message: "Your EUROCEX phone number verification code is: %{code}"
         send_code: Send Code
         send_code_alt: Resend in COUNT seconds
         hints:
@@ -15,7 +15,7 @@ en:
           sms: We'll send a text message to you phone with verify code.
       edit:
         submit: Disable
-        warning: "Tip: If you have lost your two-factor authentication by some reason and can't login your BITCOIN.JETZT account, please contact our online customer service."
+        warning: "Tip: If you have lost your two-factor authentication by some reason and can't login your EUROCEX account, please contact our online customer service."
       show:
         step-1: Step 1
         step-2: Step 2

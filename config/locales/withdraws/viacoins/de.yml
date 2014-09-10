@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: VIA
       title: Viacoin
-      intro: Zahlen Sie Viacoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Viacoin von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: Direkt
       transfer: Automatisch
       go: Jetzt Auszahlen
@@ -116,14 +116,14 @@ de:
           panel: Viacoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Viacoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Viacoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Viacoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Viacoin Auszahlungsverlauf
 

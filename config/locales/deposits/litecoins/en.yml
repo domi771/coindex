@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: LTC
       title: Litecoin
-      intro: Deposit Litecoin from your own wallet to your BITCOIN.JETZT account
+      intro: Deposit Litecoin from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         litecoins:
           panel: Litecoin Blockchain
-          intro: Deposit Litecoin from your own wallet to your BITCOIN.JETZT account.
+          intro: Deposit Litecoin from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
             default-panel: Litecoin Deposit History

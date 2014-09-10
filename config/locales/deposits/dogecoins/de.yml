@@ -4,7 +4,7 @@ de:
       key: Block Chain
       code: DOGE
       title: Dogecoin
-      intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
+      intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -30,7 +30,7 @@ de:
       deposits:
         dogecoins:
           panel: Dogecoin Blockchain
-          intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
+          intro: Zahlen Sie Dogecoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
           new:
             panel: Einzahlen
             default-panel: Dogecoin Einzahlungsverlauf

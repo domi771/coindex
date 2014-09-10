@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: URO
       title: Urocoin
-      intro: Deposit Urocoin from your own wallet to your BITCOIN.JETZT account
+      intro: Deposit Urocoin from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         urocoins:
           panel: Urocoin Blockchain
-          intro: Deposit Urocoin from your own wallet to your BITCOIN.JETZT account.
+          intro: Deposit Urocoin from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
             default-panel: Urocoin Deposit History

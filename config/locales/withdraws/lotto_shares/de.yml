@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: LTS
       title: LottoShares
-      intro: Zahlen Sie LottoShares von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie LottoShares von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: Direkt
       transfer: Automatisch
       go: Jetzt Auszahlen
@@ -116,14 +116,14 @@ de:
           panel: LottoShares Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: LottoShares Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: LottoShares Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die LottoShares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: LottoShares Auszahlungsverlauf
 

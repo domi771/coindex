@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: DRK
       title: Darkcoin
-      intro: Deposit Darkcoin from your own wallet to your BITCOIN.JETZT account
+      intro: Deposit Darkcoin from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         darkcoins:
           panel: Darkcoin Blockchain
-          intro: Deposit Darkcoin from your own wallet to your BITCOIN.JETZT account.
+          intro: Deposit Darkcoin from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
             default-panel: Darkcoin Deposit History

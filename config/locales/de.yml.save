@@ -14,11 +14,11 @@ de:
   main_3h: Sicherheit
   main_3a: 2-Faktoren Autentifizierung. 100% der Bitcoins werden offline gelagert.
   main_3b: Wir haben keine fraktionelle Reserve und gegen DDOS attacken geschützt.
-  main_ann_1t: BITCOIN.JETZT Bitcoin ATM's
+  main_ann_1t: EUROCEX Bitcoin ATM's
   main_ann_1b: Im Verlauf der nächten Monate werden mehrere Bitcoin ATM's in der ganzen Schweiz platziert werden. Mehr in Kürze.
-  main_ann_2t: BITCOIN.JETZT im TESTNET Betrieb
-  main_ann_2t: BITCOIN.JETZT im TESTNET Betrieb   
-  main_ann_2b: Seit Heute können Sie BITCOIN.JETZT mit Testnet Bitcoin testen! Kontaktieren Sie uns unter coindex@coindex.ch.
+  main_ann_2t: EUROCEX im TESTNET Betrieb
+  main_ann_2t: EUROCEX im TESTNET Betrieb   
+  main_ann_2b: Seit Heute können Sie EUROCEX mit Testnet Bitcoin testen! Kontaktieren Sie uns unter coindex@coindex.ch.
   price: Preis
   sprache_de: Deutsch
   sprache_fr: Francais
@@ -41,7 +41,7 @@ de:
   gon:
     ask: Verkauf
     bid: Ankauf
-    brand: BITCOIN.JETZT
+    brand: EUROCEX
     code: CHF
   back: Zurück
   invalid_password: Ungültiges Passwort

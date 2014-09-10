@@ -33,17 +33,6 @@ class WelcomeController < ApplicationController
 
   def index
 
-
-      @market = 'ltcbtc'
-
-      @bids   = Global[@market].bids
-      @asks   = Global[@market].asks
-      @trades = Global[@market].trades
-      @price  = Global[@market].price
-      @ticker = Global[@market].ticker
-
-      gon.jbuilder
-
     if current_user
       redirect_to market_path(current_market) and return
     end

@@ -73,7 +73,7 @@ de:
       deposits:
         banks:
           panel: Banküberweisung
-          intro: Zahlen Sie Schweizer Franken per Banküberweisung auf Ihr BITCOIN.JETZT Konto ein.
+          intro: Zahlen Sie Schweizer Franken per Banküberweisung auf Ihr EUROCEX Konto ein.
           new:
             panel: Einzahlen
             default-panel: Einzahlungsverlauf Banküberweisung
@@ -99,7 +99,7 @@ de:
         bank:
           sum: "<a target='_balance' href='#'>Gebühren</a>"
           fund_extra: Falls Ihre Bank nicht in der Liste ist kontaktieren Sie bitte den Support
-          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr BITCOIN.JETZT Konto angegeben haben</span>
+          member_name: <span class='text-danger'>Das Bankkonto muss auf den selben Namen lauten den Sie für Ihr EUROCEX Konto angegeben haben</span>
           sn: <span class='text-danger'>Bitte kopieren Sie die ID und geben Sie diese als Mitteilung bei Ihrer Banküberweisung an.</span>
 
 

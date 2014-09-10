@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: PPC
       title: Peercoin 
-      intro: Withdraw Peercoin from BITCOIN.JETZT to your own Peercoin wallet
+      intro: Withdraw Peercoin from EUROCEX to your own Peercoin wallet
       latency: Instant
       transfer: Automatic
       go: Withdraw Now
@@ -114,14 +114,14 @@ en:
           panel: Peercoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Peercoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Peercoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Peercoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Peercoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Peercoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Peercoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Peercoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
 

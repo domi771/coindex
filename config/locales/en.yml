@@ -16,10 +16,10 @@ en:
   main_3a: Support for 2-Factor Authentication. 100% of our customer funds are held in cold storage.
   main_3b: We do not operate a fractional reserve and have partnered with the world's leading DDOS Service.
   main_ann: Announcements
-  main_ann_1t: BITCOIN.JETZT launches Bitcoin ATM's
+  main_ann_1t: EUROCEX launches Bitcoin ATM's
   main_ann_1b: During the next few months we will setup several Bitcoin ATM's in various Swiss cities. More info soon.
-  main_ann_2t: BITCOIN.JETZT running in TESTNET
-  main_ann_2b: Since today you can test BITCOIN.JETZT with Testnet Bitcoins. Any feedback welcome at coindex@coindex.ch
+  main_ann_2t: EUROCEX running in TESTNET
+  main_ann_2b: Since today you can test EUROCEX with Testnet Bitcoins. Any feedback welcome at coindex@coindex.ch
   sprache_de: Deutsch
   sprache_fr: Francais
   sprache_it: Italiano
@@ -42,7 +42,7 @@ en:
   gon:
     ask: Ask
     bid: Bid
-    brand: BITCOIN.JETZT
+    brand: EUROCEX
     code: CHF
   back: Back
   invalid_password: Invalid password

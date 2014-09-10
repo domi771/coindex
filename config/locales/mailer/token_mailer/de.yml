@@ -1,16 +1,16 @@
 de:
   token_mailer:
     activation:
-      subject: '[BITCOIN.JETZT] Konto Aktivierung'
-      click_to_verify: 'Vielen Dank für das Registrieren Ihres [BITCOIN.JETZT] Konto. Die Registration ist fast abgeschlossen. Um Ihr Konto zu aktivieren klicken Sie bitten den Link:'
+      subject: '[EUROCEX] Konto Aktivierung'
+      click_to_verify: 'Vielen Dank für das Registrieren Ihres [EUROCEX] Konto. Die Registration ist fast abgeschlossen. Um Ihr Konto zu aktivieren klicken Sie bitten den Link:'
       unable_to_click: Kopieren Sie den Link und öffnen Sie Ihren Browser falls Sie den Link nicht anklicken können.
       link_expire: Dieser Link ist während den nächsten 30 Minuten gültig.
     reset_password:
-      subject: '[BITCOIN.JETZT] Passwort Zurücksetzen'
+      subject: '[EUROCEX] Passwort Zurücksetzen'
       hi: ''
       follow_the_link: 'Bitte benutzen Sie den untenstehenden Link um Ihr Passwort zurückzusetzen:'
     reset_two_factor:
-      subject: '[BITCOIN.JETZT] Zwei-Faktoren Authentifizierung Zurücksetzen'
+      subject: '[EUROCEX] Zwei-Faktoren Authentifizierung Zurücksetzen'
       follow_the_link: 'Bitte benutzen Sie den untenstehenden Link um die Zwei-Faktoren Authentifizierung zurückzusetzen:'
       note: Die Zwei-Faktoren Authentifizierung wird deaktiviert dadurch.
 

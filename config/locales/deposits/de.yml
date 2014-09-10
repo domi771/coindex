@@ -4,7 +4,7 @@ de:
       shared:
         new:
           step-1: Schritt 1
-          open-wallet:  Benutzen Sie Ihren externes Wallet um Ihr BITCOIN.JETZT Konto mit Bitcoin zu laden.
+          open-wallet:  Benutzen Sie Ihren externes Wallet um Ihr EUROCEX Konto mit Bitcoin zu laden.
           step-2: Schritt 2
           gen_address_html: Ihre persönliche Adresse wird generiert. Bitte warten Sie einen Moment und klicken Sie dann <a href='javascript:window.location.reload();'>hier</a>.
           or:  

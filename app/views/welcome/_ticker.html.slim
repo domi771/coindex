@@ -1,27 +1,22 @@
-.row.ticker style="height: 50px; border: 0px none; text-align: center; margin-top: 10px; color: #777777; margin-bottom: 20px; padding-left: 60px;padding-right: 60px;"
-    ul.list-inline
-      li.col-md-4 style ="width: 160px;"
-        span.name.last style = "display: block; font-size: 12px;" #{t('global.latest_price')} 
-        span.value.last style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.buy style = "display: block; font-size: 12px;" #{t('global.bid_price')}
-        span.value.buy style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.sell style = "display: block; font-size: 12px;" #{t('global.ask_price')}
-        span.value.sell style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.high style = "display: block; font-size: 12px;" #{t('global.high_price')}
-        span.value.high style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.low style = "display: block; font-size: 12px;" #{t('global.low_price')}
-        span.value.low style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" CHF
-      li.col-md-4 style ="width: 160px;"
-        span.name.volume style = "display: block; font-size: 12px;" #{t('global.volume')}
-        span.value.volume style = "font-size: 16px; font-weight: bold;"
-        span style = "font-size: 12px; margin-left: 3px;" BTC
+.panel.panel-default.ticker
+  .panel-heading
+    .span style="height: 15px;"
+      .col-md-1.name.last  style=("text-transform: uppercase; white-space: nowrap;") #{t('Market')}
+      .col-md-1.name.last  style=("text-transform: uppercase; white-space: nowrap;") #{t('global.latest_price')}
+      .col-md-1.name.change  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.change')}
+      .col-md-1.name.bid  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.bid_price')}
+      .col-md-1.name.ask  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.ask_price')}
+      .col-md-1.name.high  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.high_price')}
+      .col-md-1.name.low  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.low_price')}
+      .col-md-1.name.volume  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.volume')}
+  .panel-body style = "padding-bottom: 10px;"
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
 
+      .col-md-1.name.last  style=("text-transform: uppercase; white-space: nowrap;") #{t('LTC/BTC')}
+      .col-md-1.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.buy style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.sell style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.high style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.low style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.volume style = "font-weight: bold; text-align: right; padding-right: 0px;"

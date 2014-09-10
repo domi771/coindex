@@ -4,7 +4,7 @@ de:
       key: Block Chain
       code: DRK
       title: Darkcoin
-      intro: Zahlen Sie Darkcoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
+      intro: Zahlen Sie Darkcoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
       latency: 1 Bestätigung
       transfer: Automatisch
       go: Einzahlen
@@ -30,7 +30,7 @@ de:
       deposits:
         darkcoins:
           panel: Darkcoin Blockchain
-          intro: Zahlen Sie Darkcoin von Ihrem eigenen Wallet auf Ihr BITCOIN.JETZT Konto ein.
+          intro: Zahlen Sie Darkcoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
           new:
             panel: Einzahlen
             default-panel: Darkcoin Einzahlungsverlauf

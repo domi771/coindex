@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: PPC
       title: Peercoin
-      intro: Zahlen Sie Peercoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Peercoin von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: Direkt
       transfer: Automatisch
       go: Jetzt Auszahlen
@@ -116,14 +116,14 @@ de:
           panel: Peercoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Peercoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Peercoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Peercoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Peercoin Auszahlungsverlauf
 

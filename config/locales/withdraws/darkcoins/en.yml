@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: DRK
       title: Darkcoin
-      intro: Withdraw Darkcoin from BITCOIN.JETZT to your own Darkcoin wallet
+      intro: Withdraw Darkcoin from EUROCEX to your own Darkcoin wallet
       latency: Instant
       transfer: Automatic
       go: Withdraw Now
@@ -114,14 +114,14 @@ en:
           panel: Darkcoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Darkcoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Darkcoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Darkcoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
 

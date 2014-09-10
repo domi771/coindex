@@ -97,11 +97,11 @@ de:
       new:
         panel: Anmelden
         title: Passwort anfordern
-        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf BITCOIN.JETZT registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
+        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf EUROCEX registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
       create:
         panel: Anmelden
         title: Passwort anfordern
-        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf BITCOIN.JETZT registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
+        intro: Bitte geben Sie Ihre Email-Adresse ein, mit der Sie sich auf EUROCEX registriert haben. Wir senden Ihnen unverzüglich eine Email mit weiteren Informationen.
       edit:
         title: Neues Passwort erstellen
       update:
@@ -111,10 +111,10 @@ de:
       panel: Anmelden
       new:
         title: Kunden-Login
-        intro: Melden Sie sich jetzt bei BITCOIN.JETZT an um Bitcoins zu kaufen und verkaufen.
+        intro: Melden Sie sich jetzt bei EUROCEX an um Bitcoins zu kaufen und verkaufen.
       failure:
         title: Kunden-Login    
-        intro: Melden Sie sich jetzt bei BITCOIN.JETZT an um Bitcoins zu kaufen und verkaufen.
+        intro: Melden Sie sich jetzt bei EUROCEX an um Bitcoins zu kaufen und verkaufen.
 
     identities:
       panel: Registrieren

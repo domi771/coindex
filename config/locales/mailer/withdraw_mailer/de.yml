@@ -1,7 +1,7 @@
 de:
   withdraw_mailer:
     withdraw_state:
-      subject: "[BITCOIN.JETZT] Status Ihrer Auszahlung"
+      subject: "[EUROCEX] Status Ihrer Auszahlung"
       your_state: "Status Ihrer Auszahlung:"
       aasm_state:
         submitting: Submitting

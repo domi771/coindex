@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: BTCD
       title: BitcoinDark
-      intro: Deposit BitcoinDark from your own wallet to your BITCOIN.JETZT account
+      intro: Deposit BitcoinDark from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         bitcoin_darks:
           panel: BitcoinDark Blockchain
-          intro: Deposit BitcoinDark from your own wallet to your BITCOIN.JETZT account.
+          intro: Deposit BitcoinDark from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
             default-panel: BitcoinDark Deposit History

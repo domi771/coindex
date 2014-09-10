@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: LTC
       title: Litecoin
-      intro: Withdraw Litecoin from BITCOIN.JETZT to your own Litecoin wallet
+      intro: Withdraw Litecoin from EUROCEX to your own Litecoin wallet
       latency: Instant
       transfer: Automatic
       go: Withdraw Now
@@ -114,14 +114,14 @@ en:
           panel: Litecoin Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Litecoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Litecoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litecoin Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Litecoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Litecoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Litecoin address and amount you want to withdraw from your BITCOIN.JETZT account.
+            intro: Enter the Litecoin address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
 

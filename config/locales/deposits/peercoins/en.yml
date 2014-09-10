@@ -4,7 +4,7 @@ en:
       key: Block Chain
       code: PPC
       title: Peercoin
-      intro: Deposit Peercoin from your own wallet to your BITCOIN.JETZT account
+      intro: Deposit Peercoin from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
@@ -30,7 +30,7 @@ en:
       deposits:
         peercoins:
           panel: Peercoin Blockchain
-          intro: Deposit Peercoin from your own wallet to your BITCOIN.JETZT account.
+          intro: Deposit Peercoin from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
             default-panel: Peercoin Deposit History

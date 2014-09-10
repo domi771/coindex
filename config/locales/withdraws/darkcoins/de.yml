@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: DRK
       title: Darkcoin
-      intro: Zahlen Sie Darkcoin von BITCOIN.JETZT zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Darkcoin von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: Direkt
       transfer: Automatisch
       go: Jetzt Auszahlen
@@ -116,14 +116,14 @@ de:
           panel: Darkcoin Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem BITCOIN.JETZT Konto auszahlen wollen.
+            intro: Geben Sie die Darkcoin Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
             default-panel: Darkcoin Auszahlungsverlauf
 

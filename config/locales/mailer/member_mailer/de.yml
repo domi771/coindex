@@ -1,6 +1,6 @@
 de:
   member_mailer:
     notify_signin:
-      subject: "[BITCOIN.JETZT] Sie haben sich eben angemeldet"
+      subject: "[EUROCEX] Sie haben sich eben angemeldet"
       just_signed_in: Sie haben sich eben angemeldet.
       please_contact: Falls die Anmeldung nicht durch Sie durchgeführt wurde kontaktieren Sie uns umgehend.

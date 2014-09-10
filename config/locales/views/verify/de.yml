@@ -15,7 +15,7 @@ de:
         phone_number: "+41794403020"
         input_verify_code: Geben Sie den 6-Zeichen Code ein
         submit: Speichern
-        sms_message: "Ihr BITCOIN.JETZT SMS Verifikations Code ist: %{code}"
+        sms_message: "Ihr EUROCEX SMS Verifikations Code ist: %{code}"
         notice:
           send_code_success: SMS Code erfolgreich versendet
           verify_code_success: SMS Zwei-Faktoren Authentifizierung erfolgreich aktiviert.
