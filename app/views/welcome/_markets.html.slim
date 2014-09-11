@@ -1,8 +1,9 @@
 .container style = "width: 100%;"
   ul.nav.nav-tabs style="margin-top: 0px;" role='tablist'
-    li.active = link_to t('Bitcoin Markets'), order_history_path
-    li = link_to t('Litecoin Markets'), trade_history_path
-
+    li.active
+      a data-toggle="tab" href="#tabBitcoinMarkets" style="text-transform: uppercase; font-weight: bold;"
+        = t('Bitcoin Markets')
+        
   .panel.panel-default#markets
     .panel-heading
       | &nbsp;
@@ -10,17 +11,10 @@
         a data-toggle="dropdown" href="#"
           = t('Search')
           span.caret
-        ul.dropdown-menu
-          li
-            a = t('all')
-          li
-            a.deposit = t('header.deposit')
-          li
-            a.withdraw = t('header.withdraw')
     .panel-body
       .col-md-12
-        table.table.table-condensed.table-striped.table-hover
-          thead: tr
+        table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
+          thead: tr style = "cursor: pointer;"
             th class="sort" data-sort="market"
               span = t('Market')
               i class="fa fa-sort"
@@ -42,4 +36,4 @@
             th class="sort" data-sort="low"
               span = t('24h Low')
               i class="fa fa-sort"
-          tbody.list
+          tbody.list style = "text-align: left; color: #526273; font-size: 12px;"

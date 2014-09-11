@@ -75,7 +75,7 @@ module APIv2
           low: ticker[:low],
           high: ticker[:high],
           last: ticker[:last],
-          vol: ticker[:volume],
+          vol: ticker[:volume],          
           change: ticker[:change],
           change_trend: ticker[:change_trend]
         }
