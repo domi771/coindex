@@ -25,10 +25,10 @@ window.MarketsUI = flight.component ->
 
   @after 'initialize', ->
 
-    markets = []
 
     $.getJSON "/api/v2/tickers", (data) ->
 
+      markets = []
       for own cur of data
         ticker = data[cur].ticker
         item = {}
@@ -49,13 +49,13 @@ window.MarketsUI = flight.component ->
       console.log markets
       #return
 
-    markets.sort (a, b)->
-      a.volume - b.volume
+      markets.sort (a, b)->
+        a.volume - b.volume
 
-    @refresh {markets: markets}
+      @refresh {markets: markets}
 
-    @initList()
+      @initList()
 
-    @on @select('filter'), 'click', @filter
+      @on @select('filter'), 'click', @filter
 
 
