@@ -2,38 +2,35 @@
   ul.nav.nav-tabs style="margin-top: 0px;" role='tablist'
     li.active
       a data-toggle="tab" href="#tabBitcoinMarkets" style="text-transform: uppercase; font-weight: bold;"
-        = t('Bitcoin Markets')
-        
+        | Bitcoin  
+        = t('global.markets')
+
   .panel.panel-default#markets
     .panel-heading
       | &nbsp;
-      span.dropdown.pull-right
-        a data-toggle="dropdown" href="#"
-          = t('Search')
-          span.caret
     .panel-body
       .col-md-12
         table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
           thead: tr style = "cursor: pointer;"
-            th class="sort" data-sort="market"
-              span = t('Market')
+            th style="width: 14.285%" class="sort" data-sort="market"
+              span = t('global.market')
               i class="fa fa-sort"
-            th class="sort" data-sort="currency"
-              span = t('Currency')
+            th style="width: 14.285%" class="sort" data-sort="currency"
+              span = t('global.currency')
               i class="fa fa-sort"
-            th class="sort" data-sort="volume"
-              span = t('Volume')
+            th style="width: 14.285%" class="sort" data-sort="volume"
+              span = t('global.volume')
               i class="fa fa-sort"
-            th class="sort" data-sort="change"
-              span = t('24h Change')
+            th style="width: 14.285%" class="sort" data-sort="change"
+              span = t('global.change')
               i class="fa fa-sort"
-            th class="sort" data-sort="last"
-              span = t('Last Trade')
+            th style="width: 14.285%" class="sort" data-sort="last"
+              span = t('global.latest_price')
               i class="fa fa-sort"
-            th class="sort" data-sort="high"
-              span = t('24h High')
+            th style="width: 14.285%" class="sort" data-sort="high"
+              span = t('global.high_price')
               i class="fa fa-sort"
-            th class="sort" data-sort="low"
-              span = t('24h Low')
+            th style="width: 14.285%" class="sort" data-sort="low"
+              span = t('global.low_price')
               i class="fa fa-sort"
           tbody.list style = "text-align: left; color: #526273; font-size: 12px;"

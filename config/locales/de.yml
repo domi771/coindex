@@ -195,6 +195,9 @@ de:
     volume: Tagesumsatz
     latest_price: Letzter Preis
     change: Tagesänderung
+    market: Markt
+    markets: Märkte
+    currency: Währung
 
   chart:
     price: Preis

@@ -177,6 +177,9 @@ en:
     volume: 24H Volume
     latest_price: Last
     change: 24H Change
+    market: Market
+    markets: Markets
+    currency: Currency
  
   chart:
     price: Price

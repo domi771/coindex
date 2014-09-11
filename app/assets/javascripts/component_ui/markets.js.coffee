@@ -7,7 +7,6 @@ window.MarketsUI = flight.component ->
     $table = @select('table')
     $table.prepend(JST['market'](market)) for market in data.markets
     console.log data.markets
-    console.log markets
 
 
   @filter = (event) ->
@@ -43,19 +42,19 @@ window.MarketsUI = flight.component ->
           return
 
         item.volume = ticker.vol
-        item.market = cur
-        item.currency = cur.substring(3)
+        item.market = cur.substring(0, 3) + "/" + cur.substring(3)
+        item.currency = cur.substring(0, 3) 
         markets.push item
       console.log markets
-      #return
 
-      markets.sort (a, b)->
-        a.volume - b.volume
+    markets = [{"market":"ltcbtc","currency":"ltc","volume":"2.009","change":"12.5","last":"0.34","high":"0.43","low":"0.23","change_trend":"down"},{"market":"viabtc","currency":"via","volume":"14.04","change":"-10","last":"0.34","high":"0.43","low":"0.23","change_trend":"down"}]
+    markets.sort (a, b)->
+      a.volume - b.volume
 
-      @refresh {markets: markets}
+    @.refresh {markets: markets}
 
-      @initList()
+    @.initList()
 
-      @on @select('filter'), 'click', @filter
+    @.on @select('filter'), 'click', @filter
 
 
