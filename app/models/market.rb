@@ -48,5 +48,4 @@ class Market < ActiveYamlBase
   def to_s
     id
   end
-
 end

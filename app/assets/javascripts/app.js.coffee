@@ -69,6 +69,7 @@ $ ->
   BuysellratioChartUI.attachTo('.buysellratio-chart')
 
   TransactionsUI.attachTo('#transactions')
+  WelcomeUI.attachTo('#markets')
   VerifyMobileNumberUI.attachTo('#new_sms_token')
   FlashMessageUI.attachTo('.flash-message')
   TwoFactorAuth.attachTo('.two-factor-auth-container')

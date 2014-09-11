@@ -1,0 +1,45 @@
+.container style = "width: 100%;"
+  ul.nav.nav-tabs style="margin-top: 0px;" role='tablist'
+    li.active = link_to t('Bitcoin Markets'), order_history_path
+    li = link_to t('Litecoin Markets'), trade_history_path
+
+  .panel.panel-default#markets
+    .panel-heading
+      | &nbsp;
+      span.dropdown.pull-right
+        a data-toggle="dropdown" href="#"
+          = t('Search')
+          span.caret
+        ul.dropdown-menu
+          li
+            a = t('all')
+          li
+            a.deposit = t('header.deposit')
+          li
+            a.withdraw = t('header.withdraw')
+    .panel-body
+      .col-md-12
+        table.table.table-condensed.table-striped.table-hover
+          thead: tr
+            th class="sort" data-sort="market"
+              span = t('Market')
+              i class="fa fa-sort"
+            th class="sort" data-sort="currency"
+              span = t('Currency')
+              i class="fa fa-sort"
+            th class="sort" data-sort="volume"
+              span = t('Volume')
+              i class="fa fa-sort"
+            th class="sort" data-sort="change"
+              span = t('24h Change')
+              i class="fa fa-sort"
+            th class="sort" data-sort="last"
+              span = t('Last Trade')
+              i class="fa fa-sort"
+            th class="sort" data-sort="high"
+              span = t('24h High')
+              i class="fa fa-sort"
+            th class="sort" data-sort="low"
+              span = t('24h Low')
+              i class="fa fa-sort"
+          tbody.list
