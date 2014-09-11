@@ -6,7 +6,6 @@ window.TransactionsUI = flight.component ->
   @refresh = (data) ->
     $table = @select('table')
     $table.prepend(JST['transaction'](transaction)) for transaction in data.transactions
-    console.log data.transactions
 
   @filter = (event) ->
     type = event.target.className
