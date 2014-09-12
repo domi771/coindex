@@ -48,6 +48,7 @@ class Global
       volume: h24_volume,
       change: h24_change,
       change_trend: change_trend,
+      trend: trend,
       sell: best_sell_price,
       buy: best_buy_price,
       at: at,
