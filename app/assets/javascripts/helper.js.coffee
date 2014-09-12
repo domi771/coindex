@@ -17,7 +17,7 @@ window.round = (str, fixed) ->
   BigNumber(str).round(fixed, BigNumber.ROUND_DOWN).toF(fixed)
 
 window.round2 = (str, fixed) ->
-  BigNumber(str).round(fixed, BigNumber.ROUND_DOWN).toFixed(2)
+  str.toFixed(2)
 
 window.fix = (type, str) ->
   if type is 'ask'
