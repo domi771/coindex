@@ -86,10 +86,13 @@ window.MarketsUI = flight.component ->
           item.currency = cur.substring(0, 3)
           markets.push item
 
+        markets.sort (a, b)->
+          a.volume - b.volume
+
         @refresh {markets: markets}
         @initList()
         @on @select('filter'), 'click', @filter
         return
 
 
-    ), 5000
+    ), 30000

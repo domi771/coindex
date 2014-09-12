@@ -13,7 +13,7 @@ class ResetPasswordsController < ApplicationController
     if @reset_password.save
       redirect_to signin_path, notice: t('.success')
     else
-      redirect_to url_for(action: :new), alert: @reset_password.errors.full_messages_for(:email).join(', ')
+      redirect_to url_for(action: :new), alert: @reset_password.errors.full_messages.join(', ')
     end
   end
 
@@ -22,6 +22,7 @@ class ResetPasswordsController < ApplicationController
 
   def update
     if @token.update_attributes(reset_password_update_params)
+      @token.confirmed
       redirect_to signin_path, notice: t('.success')
     else
       render :edit
