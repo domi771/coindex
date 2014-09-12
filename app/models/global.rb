@@ -77,7 +77,7 @@ class Global
   def h24_change
     Rails.cache.fetch key('h24_change', 5) do
       old_price = Trade.with_currency(currency).where("created_at < ?", 24.to_i.hours.ago).order('id desc').first.try(:price) || ::Trade::ZERO
-      new_price = Trade.with_currency(currency).h24.order('id desc').first.try(:price) || ::Trade::ZERO
+      new_price = Trade.with_currency(currency).order('id desc').first.try(:price) || ::Trade::ZERO
 
       if old_price == 0 || old_price.nil?
         @h24_change = 1 - 1
