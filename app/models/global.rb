@@ -54,6 +54,25 @@ class Global
     })
   end
 
+  def trend
+    Rails.cache.fetch key('trend', 1) do
+      prev = Trade.with_currency(currency).order('id desc').limit(1).offset(1).first.try(:price)
+      last = Trade.with_currency(currency).h24.order('id desc').first.try(:price)
+
+      if prev.nil?
+        @trend = 'up'
+      elsif last.nil?
+        @trend = 'same'
+      elsif last  > prev
+        @trend = 'up'
+      elsif last < prev
+        @trend = 'down'
+      else
+        @trend = 'same'
+      end
+    end
+  end
+
   def h24_change
     Rails.cache.fetch key('h24_change', 5) do
       old_price = Trade.with_currency(currency).h24.order('id asc').first.try(:price) || ::Trade::ZERO
@@ -76,7 +95,6 @@ class Global
       @change_trend = 'same'
     end
   end
-
 
   def h24_volume
     Rails.cache.fetch key('h24_volume', 5) do

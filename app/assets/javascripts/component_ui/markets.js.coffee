@@ -16,9 +16,9 @@ window.MarketsUI = flight.component ->
 
   @initList = ->
     options =
-      valueNames: [ 'market', 'currency', 'vol', 'change',
+      valueNames: [ 'market', 'currency', 'volume', 'change',
       'last', 'high', 'low']
-    @list = new List('marketsX', options)
+    @list = new List('markets', options)
 
   @after 'initialize', ->
  
