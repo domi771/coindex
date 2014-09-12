@@ -58,7 +58,8 @@ class Global
     Rails.cache.fetch key('h24_change', 5) do
       old_price = Trade.with_currency(currency).h24.order('id asc').first.try(:price) || ::Trade::ZERO
       new_price = Trade.with_currency(currency).h24.order('id desc').first.try(:price) || ::Trade::ZERO
-      if old_price == 0 || old_price.nil? || old_price.empty?
+
+      if old_price == 0 || old_price.nil?
         @h24_change = 1 - 1
       else
         (new_price - old_price) / old_price * 100 rescue 0
