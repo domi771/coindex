@@ -5,6 +5,7 @@ window.MarketsUI = flight.component ->
 
   @refresh = (data) ->
     $table = @select('table')
+    $table.empty()
     $table.prepend(JST['market'](market)) for market in data.markets
 
   @filter = (event) ->
@@ -56,3 +57,42 @@ window.MarketsUI = flight.component ->
       @on @select('filter'), 'click', @filter
       return
 
+
+    setInterval (=>
+
+      $.ajax
+        url: "/api/v2/tickers"
+        success: (data, status, XHR) ->
+          handleData data
+          return
+
+      handleData = (data) =>
+        markets = []
+        for own cur of data
+          ticker = data[cur].ticker
+          item = {}
+          [
+            "change"
+            "change_trend"
+            "last"
+            "high"
+            "low"
+          ].forEach (key) ->
+            item[key] = ticker[key]
+            return
+
+          item.volume = ticker.vol
+          item.market = cur.substring(0, 3) + "/" + cur.substring(3)
+          item.currency = cur.substring(0, 3)
+          markets.push item
+
+        markets.sort (a, b)->
+          a.volume - b.volume
+
+        @refresh {markets: markets}
+        @initList()
+        @on @select('filter'), 'click', @filter
+        return
+
+
+    ), 5000
