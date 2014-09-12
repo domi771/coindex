@@ -6,8 +6,6 @@ window.MarketsUI = flight.component ->
   @refresh = (data) ->
     $table = @select('table')
     $table.prepend(JST['market'](market)) for market in data.markets
-    console.log data.markets
-
 
   @filter = (event) ->
     type = event.target.className
@@ -23,10 +21,14 @@ window.MarketsUI = flight.component ->
     @list = new List('marketsX', options)
 
   @after 'initialize', ->
+ 
+    $.ajax
+      url: "/api/v2/tickers"
+      success: (data, status, XHR) ->
+        handleData data
+        return
 
-
-    $.getJSON "/api/v2/tickers", (data) ->
-
+    handleData = (data) =>
       markets = []
       for own cur of data
         ticker = data[cur].ticker
@@ -43,18 +45,14 @@ window.MarketsUI = flight.component ->
 
         item.volume = ticker.vol
         item.market = cur.substring(0, 3) + "/" + cur.substring(3)
-        item.currency = cur.substring(0, 3) 
+        item.currency = cur.substring(0, 3)
         markets.push item
-      console.log markets
 
-    markets = [{"market":"ltcbtc","currency":"ltc","volume":"2.009","change":"12.5","last":"0.34","high":"0.43","low":"0.23","change_trend":"down"},{"market":"viabtc","currency":"via","volume":"14.04","change":"-10","last":"0.34","high":"0.43","low":"0.23","change_trend":"down"}]
-    markets.sort (a, b)->
-      a.volume - b.volume
-
-    @.refresh {markets: markets}
-
-    @.initList()
-
-    @.on @select('filter'), 'click', @filter
-
+      markets.sort (a, b)->
+        a.volume - b.volume
+     
+      @refresh {markets: markets}
+      @initList() 
+      @on @select('filter'), 'click', @filter
+      return
 

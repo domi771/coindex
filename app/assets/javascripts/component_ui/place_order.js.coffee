@@ -259,6 +259,8 @@
         i++
       a.push(46);
       a.push(8);
+      a.push(9);
+      a.push(13);
       e.preventDefault()  unless a.indexOf(k) >= 0
       return
 
