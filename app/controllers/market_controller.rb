@@ -1,9 +1,6 @@
 class MarketController < ApplicationController
-  layout 'landing'
 
-   def market
-      @market = Global[params[:id]].market
-   end
+  layout 'market'
 
    def show
       @bid = params[:bid]
@@ -12,8 +9,7 @@ class MarketController < ApplicationController
       @ask_name = I18n.t("currency.name.#{@ask}")
       @bid_name = I18n.t("currency.name.#{@bid}")
 
-      #@market = Market.find(params[:market])
-      @market = Global[params[:id]].market
+      @market = Market.find(params[:market]) 
 
       @bids   = Global[@market].bids
       @asks   = Global[@market].asks
@@ -21,16 +17,12 @@ class MarketController < ApplicationController
       @price  = Global[@market].price
       @ticker = Global[@market].ticker
 
-      @order_bid = OrderBid.empty
-      @order_ask = OrderAsk.empty
-
       gon.jbuilder
-    end
+   end
 
-    def set_default_market
-      #cookies[:market_id] = @market.id
-      cookies[:market_id] = Global[params[:id]].market  
-    end
+   #if current_user
+   #  redirect_to market_path(current_market) and return
+   #end
 
 end
 

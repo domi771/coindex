@@ -1,0 +1,104 @@
+en:
+  private:
+    markets:
+      show:
+        error: Failed to submit order
+        success: Order submitted successfully
+        analysis_panel: Analysis
+        help_panel: Help
+        done: DONE
+        cancel: CANCEL
+        cancel_confirm: Are your sure cancel order?
+        confirm: CONFIRM
+        ask_order: 'ASK ##sn#'
+        bid_order: 'BID ##sn#'
+      ticker:
+        markets: Market
+        title: Account Balance
+        available: Available %{currency}
+      place_buy_order:
+        place_order: Buy
+        bid_panel: Buy %{currency}
+        ask_panel: Sell %{currency}
+        price: Price
+        last_price: Last Price
+        amount: Units
+        total: Total w 0.25% Fee
+        available: Available
+      place_sell_order:
+        place_order: Sell
+        bid_panel: Buy %{currency}
+        ask_panel: Sell %{currency}
+        price: Price
+        last_price: Last Price
+        amount: Units
+        total: Total w 0.25% Fee
+        available: Available
+      place_order:
+        min_price: "Minimum Price must be at least  0.00000001"
+        price_high: "Caution: Price more than 50% from current Price"
+        price_low: "Caution: Price less than 50% from current Price"
+        balance_low: "Warning: Insufficent Balance"
+        min_unit: "Minimum Units must be at least 0.000001"
+        amount: Units
+        total: Total w 0.25% Fee
+        price: Price
+      order_book:
+        order_book: Order Book
+      order_book_asks_full:
+        order_book: Buying
+        price: Price
+        volume: Units
+      order_book_bids_full:
+        order_book: Selling
+        price: Price
+        volume: Units
+      order_book_asks:
+        order_book: Buying
+        price: Price
+        volume: Units
+      order_book_bids:
+        order_book: Selling
+        price: Price
+        volume: Units
+      market_trades:
+        trades: Market History
+        time: Date/Time
+        price: Price
+        volume: Units
+        buy_sell: Buy/Sell
+      market_trades_full:
+        trades: Market History
+        time: Date/Time
+        price: Price
+        volume: Units
+        buy_sell: Buy/Sell
+      my_orders_history:
+        my_orders_history: Your Order History
+      my_orders_open:
+        my_orders_open: Your Open Orders
+      my_orders:
+        my_orders: My Orders
+        orders_wait: Latest Orders
+        orders_done: Done Orders
+        orders_cancel: Cancel Orders
+      price_chart:
+        price_chart: Price Chart
+      market_menu:
+        price_chart: Price Chart
+        order_book: Order Book
+      order_menu: 
+        summary: Summary
+        order_book: Orderbook
+        market_history: Market History
+        your_open_orders: Your Open Orders
+        your_history: Your History
+      global:
+        global_orders_title: ORDERS
+        global_trades_title: TRADES
+    withdraws:
+      index:
+        withdraw_history: Withdrawal History
+    funds:
+      show:
+        account_history: Account History

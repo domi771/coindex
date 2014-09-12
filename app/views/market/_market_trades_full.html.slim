@@ -1,6 +1,6 @@
 .panel.panel-default
   .panel-heading = t('.trades')
-  .panel-body.trades style = "height: 301px; overflow: hidden;"
+  .panel-body.trades style = "height: 670px;"
     table.table.table-condensed.table-striped
       thead: tr
           th.time
@@ -8,12 +8,12 @@
           th.price
             = t('.buy_sell')
           th.price
-            = t('.price') 
+            = t('.price')
             |  (
             = @bid_code
             | )
           th.amount
-            = t('.volume') 
+            = t('.volume')
             |  (
             = @ask_code
             | )

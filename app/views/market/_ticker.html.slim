@@ -1,34 +1,40 @@
 .panel.panel-default.ticker
   .panel-heading
-  .panel-body
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 15px;"
-      .col-md-9.name.last  style=("text-transform: uppercase") #{t('global.latest_price')}
-      .col-md-11.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+    .span  = @market.name
+  .panel-body style = "padding-bottom: 10px;"
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-9.name.bid  style = "text-transform: uppercase;" #{t('global.bid_price')}
-      .col-md-11.value.buy style = "font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+      .col-md-4.name.last  style=("text-transform: uppercase; white-space: nowrap;") #{t('global.latest_price')}
+      .col-md-5.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
+      .col-md-1.value.trend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-9.name.ask  style = "text-transform: uppercase;" #{t('global.ask_price')}
-      .col-md-11.value.sell style = "font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+      .col-md-4.name.change  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.change')}
+      .col-md-5.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.name.change style = "text-transform: uppercase;" #{t('%')}
+      .col-md-1.value.changetrend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-9.name.high  style = "text-transform: uppercase;" #{t('global.high_price')}
-      .col-md-11.value.high style = "font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
+      .col-md-4.name.bid  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.bid_price')}
+      .col-md-5.value.buy style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
+      .col-md-1.value style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 3px;"
     .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-9.name.low  style = "text-transform: uppercase;" #{t('global.low_price')}
-      .col-md-11.value.low style = "font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @bid_code
-    .row style = "margin-bottom: 4px; margin-top: 3px;"
-      .col-md-9.name.volume  style = "text-transform: uppercase;" #{t('global.volume')}
-      .col-md-11.value.volume style = "font-weight: bold; text-align: right;"
-      .col-md-3.value style = "text-transform: uppercase; margin-left: 3px;" = @ask_code
+      .col-md-4.name.ask  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.ask_price')}
+      .col-md-5.value.sell style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-4.name.high  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.high_price')}
+      .col-md-5.value.high style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
+    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
+      .col-md-4.name.low  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.low_price')}
+      .col-md-5.value.low style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
+    .row style = "margin-bottom: 0px; margin-top: 3px;"
+      .col-md-4.name.volume  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.volume')}
+      .col-md-5.value.volume style = "font-weight: bold; text-align: right; padding-right: 0px;"
+      .col-md-1.value.currency style = "text-transform: uppercase;" = @ask_code
+
 
 .panel.panel-default.account-balance
-  .panel-heading = t('Buy Sell Ratio (24h)')
-  .panel-body
-    .row
-      .buysellratio-chart style = "height: 150px;"
-
+  .panel-heading = t('Chat')
+  .panel-body style = "padding-bottom: 0px;"

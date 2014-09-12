@@ -1,25 +1,17 @@
 .tab-content
   #tabSummaryTable.tab-pane.active
     .row
-      .col-md-12  = render partial: 'order_book_asks'
-      .col-md-12  = render partial: 'order_book_bids'
+      .col-md-6  = render partial: 'order_book_asks'
+      .col-md-6  = render partial: 'order_book_bids'
     .row
-      .col-md-24  = render partial: 'market_trades'
+      .col-md-12  = render partial: 'market_trades'
 
   #tabOrderBookTable2.tab-pane
     .row
-      .col-md-12  = render partial: 'order_book_asks'
-      .col-md-12  = render partial: 'order_book_bids'
+      .col-md-6  = render partial: 'order_book_asks_full'
+      .col-md-6  = render partial: 'order_book_bids_full'
 
   #tabMarketHistoryTable2.tab-pane       
     .row
-      .col-md-24  = render partial: 'market_trades'
-
-  #tabOrderOpenTable.tab-pane
-    .row
-      .col-md-24  = render partial: 'my_orders_open'
-
-  #tabOrderHistoryTable.tab-pane
-    .row
-      .col-md-24  = render partial: 'my_orders_history'
+      .col-md-12  = render partial: 'market_trades_full'
 
