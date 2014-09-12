@@ -16,6 +16,9 @@ $.fn.extend
 window.round = (str, fixed) ->
   BigNumber(str).round(fixed, BigNumber.ROUND_DOWN).toF(fixed)
 
+window.round2 = (str, fixed) ->
+  BigNumber(str).round(fixed, BigNumber.ROUND_DOWN).toFixed(2)
+
 window.fix = (type, str) ->
   if type is 'ask'
     window.round(str, gon.market.ask.fixed)
@@ -54,6 +57,9 @@ Handlebars.registerHelper 'format_fix_ask', (volume) ->
 
 Handlebars.registerHelper 'format_fix_bid', (price) ->
   fixBid price
+
+Handlebars.registerHelper 'format_change', (change) ->
+  round2(change)
 
 Handlebars.registerHelper 'format_volume', (origin, volume) ->
   if (origin is volume) or (BigNumber(volume).isZero())
