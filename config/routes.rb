@@ -53,7 +53,7 @@ Peatio::Application.routes.draw do
   get '/documents/contact'
 
 
-  resources :market, only: [:show]
+#  resources :market, only: [:show]
   resources :documents, only: [:show]
   resources :refresh_two_factors, only: [:show]
 

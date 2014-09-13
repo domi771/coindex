@@ -3,13 +3,21 @@ class MarketController < ApplicationController
   layout 'market'
 
    def show
-      @bid = params[:bid]
-      @ask = params[:ask]
+
+      @market = Market.find(params[:market])
+
+      s = params[:market]
+      @bid = s[3,3]
+
+      s = params[:market]
+      @ask = s[0,3]
 
       @ask_name = I18n.t("currency.name.#{@ask}")
       @bid_name = I18n.t("currency.name.#{@bid}")
 
-      @market = Market.find(params[:market]) 
+      @ask_code = I18n.t("currency.code.#{@ask}")
+      @bid_code = I18n.t("currency.code.#{@bid}")
+
 
       @bids   = Global[@market].bids
       @asks   = Global[@market].asks
