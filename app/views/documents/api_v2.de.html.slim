@@ -4,7 +4,7 @@
   br
   small Response format: JSON
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 Public/Private API
 
@@ -25,9 +25,9 @@
         td 6000 requests/keypair/5minutes, you can contact us if you need more.
       tr
         td Ready to use
-        td You need to genereate access/secret key first
+        td You need to generate access/secret key first
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;" 
   .panel-heading
     h5 Authentication
 
@@ -68,7 +68,7 @@
     pre: code
       | curl -X GET 'https://eurocex.com/api/v2/markets?access_key=xxx&foo=bar&tonce=123456789&signature=e324059be4491ed8e528aa7b8735af1e96547fbec96db962d51feb7bf1b64dee'
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 Response Format
 
@@ -148,7 +148,7 @@
           td
             p OrderBook shows orders on market.
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 Some Examples
 
@@ -161,7 +161,7 @@
     pre: code
       | curl -X POST ''https://eurocex.com/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=btcltc&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 Tips/Caveats
 
@@ -179,12 +179,12 @@
           td POST /api/v2/orders/clear
           td Cancel all your orders is an asynchronous operation. A success response only means your request has been accepted. The orders in response may or may not have been cancelled yet.
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 API List
 
   .panel-body
     p All API are listed below with details. Those require access_key/tonce/signature are private API.
 
-.row
+.row style="max-width: 1150px; margin-right: auto; margin-left: auto;"
   #swagger-ui-container.swagger-ui-wrap
