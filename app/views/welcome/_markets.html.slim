@@ -8,7 +8,9 @@
   .panel.panel-default#markets
     .panel-heading
       | &nbsp;
-    .panel-body
+    .panel-body id = "markets-loading" style = ""
+      p Loading ... 
+    .panel-body id = "markets-all" style = "display: none;"
       .col-md-12
         table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
           thead: tr style = "cursor: pointer;"

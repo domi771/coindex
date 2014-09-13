@@ -52,7 +52,9 @@ window.MarketsUI = flight.component ->
 
       markets.sort (a, b)->
         a.volume - b.volume
-     
+      document.getElementById("markets-loading").style.display = "none"      
+      document.getElementById("markets-all").style.display = "block"
+
       @refresh {markets: markets}
       @initList() 
       @on @select('filter'), 'click', @filter

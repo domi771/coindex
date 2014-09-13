@@ -28,7 +28,7 @@
     @select('infoSel').text('')
     @select('dangerSel').text('')
 
-  @resetForm = (event) ->
+  @resetForm = ->
     @select('volumeSel') BigNumber(0)
     @select('sumSel') BigNumber(0)
 
@@ -42,13 +42,31 @@
     confirmType = @select('submitButton').text()
     price = @select('priceSel').val()
     volume = @select('volumeSel').val()
+    volume = parseFloat(volume).toFixed(8)
     sum = @select('sumSel').val()
+    type = @panelType()
+    switch type
+      when 'bid'
+        sum_without_fee = (sum / 1.0025).toFixed(8)
+        fee = sum - sum_without_fee 
+        fee = parseFloat(fee).toFixed(8)
+      when 'ask'
+        sum_without_fee = (sum / 0.9975).toFixed(8)
+        fee = sum_without_fee - sum
+        fee = parseFloat(fee).toFixed(8)
+
     """
     #{gon.i18n.place_order.confirm_submit} "#{confirmType}"?
 
-    #{gon.i18n.place_order.price}: #{price}
-    #{gon.i18n.place_order.volume}: #{volume}
-    #{gon.i18n.place_order.sum}: #{sum}
+    #{gon.i18n.place_order.price}: 			                #{price}
+    #{gon.i18n.place_order.volume}: 			                #{volume}
+    #{gon.i18n.place_order.subtotal}: 			#{sum_without_fee}
+    #{gon.i18n.place_order.fee}: 			#{fee}
+    #{gon.i18n.place_order.sum}: 	#{sum}
+
+
+    Disclaimer:
+    Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.
     """
 
   @beforeSend = (event, jqXHR) ->
@@ -63,7 +81,7 @@
     @cleanMsg()
     @select('successSel').text(data.message).show().fadeOut(7500)
     @select('successSelinfo').text(suctext).show().fadeOut(7500)
-    @resetForm(event)
+    @resetForm()
     @enableSubmit()
 
   @handleError = (event, data) ->
@@ -82,9 +100,17 @@
       if not @select('volumeSel').is(target)
         @select('volumeSel').fixAsk()
 
+      type = @panelType()
       price  = BigNumber(@select('priceSel').val())
       volume = BigNumber(@select('volumeSel').val())
-      sum    = price.times(volume)
+      sum_no = price.times(volume)
+      switch type
+        when 'bid'
+          fee = sum_no.times(0.0025)
+          sum = sum_no.plus(fee)
+        when 'ask'
+          fee = sum_no.times(0.0025)
+          sum = sum_no.minus(fee)
 
       @select('sumSel').val(sum).fixBid()
       @trigger 'updateAvailable', {sum: sum, volume: volume}
