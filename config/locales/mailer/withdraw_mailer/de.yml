@@ -3,15 +3,9 @@ de:
     withdraw_state:
       subject: "[EUROCEX] Status Ihrer Auszahlung"
       your_state: "Status Ihrer Auszahlung:"
-      aasm_state:
-        submitting: Submitting
-        submitted: Submitted
-        rejected: Abgelehnt
-        accepted: Aktzeptiert
-        suspect: Suspekt
-        processing: in Bearbeitung
-        coin_ready: Coin Ready
-        coin_done: Coin Done
-        done: Erledigt
-        canceled: Annuliert
-     
+    accepted:
+      subject: "[EUROCEX] Ihre Auszahlung - In Bearbeitung"
+      content: "Ihr Auszahlungsauftrag von %{currency} wurde aktzeptiert."
+    done:
+      subject: "[EUROCEX] Ihre Auszahlung - Erledigt"
+      content: "Ihr Auszahlungsauftrag von %{currency} ist erledigt."

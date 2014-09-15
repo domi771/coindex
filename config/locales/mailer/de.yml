@@ -1,6 +1,7 @@
 de:
   mailer:
-    signature:
-      thanks: Freundliche Grüsse,
-      team: [EUROCEX]
+    dear_user: "Lieber User,"
+    signature: [EUROCEX]
+
+
 

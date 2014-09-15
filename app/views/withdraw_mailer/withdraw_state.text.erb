@@ -1,7 +1,6 @@
-<%= t(".your_state") %>
+app/views/withdraw_mailer/withdraw_state.text.erb
+<%= t('mailer.dear_user') %>
 
-<%= @withdraw.aasm_state %>
+<%= t(".your_state") %><%= @withdraw.aasm_state %>
 
-<%= @withdraw.id %>
-<%= @withdraw.amount %>
-
+<%= t("mailer.signature") %>

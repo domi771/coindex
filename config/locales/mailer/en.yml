@@ -1,5 +1,4 @@
 en:
   mailer:
-    signature:
-      thanks: Best regards,
-      team: [EUROCEX]
+    dear_user: "Dear user,"
+    signature: [EUROCEX]

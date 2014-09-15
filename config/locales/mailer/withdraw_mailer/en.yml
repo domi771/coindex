@@ -3,3 +3,9 @@ en:
     withdraw_state:
       subject: "[EUROCEX] Your withdraw state"
       your_state: "Your withdraw's state:"
+    accepted:
+      subject: "[EUROCEX] Your withdrawal - Accepted"
+      content: "The request of your %{currency} withdrawal has been accepted."
+    done:
+      subject: "[EUROCEX] Your withdrawal - Completed"
+      content: "The request of your %{currency} withdrawal is completed."

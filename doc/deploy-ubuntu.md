@@ -144,6 +144,10 @@ Next, we need to update the Nginx configuration to point Passenger to the versio
 find the following lines, and uncomment them:
 
     passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
+    passenger_ruby /usr/bin/ruby;
+
+update the second line to read:
+
     passenger_ruby /home/deploy/.rbenv/shims/ruby;
 
 ### 8. Install JavaScript Runtime
@@ -161,6 +165,7 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 #### 10. Setup production environment variable
 
     echo "export RAILS_ENV=production" >> ~/.bashrc
+    source ~/.bashrc
 
 ##### Clone the Source
 
@@ -220,6 +225,12 @@ More details to visit [pusher official website](http://pusher.com)
 
     # You can do the same when you start all daemons:
     TRADE_EXECUTOR=4 rake daemons:start
+
+**SSL Certificate setting**
+
+For security reason, you must setup SSL Certificate for production environment, if your SSL Certificated is been configured, please change the following line at `config/environments/production.rb`
+
+    config.force_ssl = true
 
 **Passenger:**
 
