@@ -110,95 +110,94 @@ $ ->
     e.preventDefault();
     bid = $("#market_bid").text()
     ask = $("#market_ask").text()
-    market = bid + "/" + ask
+    market = ask + "/" + bid
     price = $("#order_bid_price").val()
     volume = $("#order_bid_origin_volume").val()
     sum = $("#order_bid_total").val()
+    price = parseFloat(price).toFixed(8)
     volume = parseFloat(volume).toFixed(8)
     sum_without_fee = (sum / 1.0025).toFixed(8)
     fee = sum - sum_without_fee
     fee = parseFloat(fee).toFixed(8)
 
     bootbox.dialog
-      title: "Confirm Buy Order"
+      title: "#{gon.i18n.place_order.confirm_buy_title}"
       message:      "<div class=\"row\" style=\"margin-bottom:10px\">" + "
-                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">Type:</h4></div>" + "
-                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">Limit Buy</h4></div>" + "
-                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">Market:</h4></div>" + "
+                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">#{gon.i18n.place_order.type}:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">#{gon.i18n.place_order.type_buy}</h4></div>" + "
+                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">#{gon.i18n.place_order.market}:</h4></div>" + "
                         <div class=\"col-sm-3\"><h4>" + market + "</h4></div>" + "
                     </div>" + "
                     <div id=\"form-container\">" + "
                         <form role=\"form\" class=\"form-horizontal\">" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Quantity:" + "
+                                     #{gon.i18n.place_order.volume}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" + volume + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Price:" + "
+                                     #{gon.i18n.place_order.price}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" +price + "\">" + "
-                                        <span class=\"input-group-addon\">" + bid  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + bid  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Subtotal:" + "
+                                     #{gon.i18n.place_order.subtotal}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeSubTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum_without_fee + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Commission:" + "
+                                     #{gon.i18n.place_order.fee}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeCommission\" type=\"text\" readonly=\"readonly\" value=\"" + fee + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Total:" + "
+                                     #{gon.i18n.place_order.confirm_total}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                         </form>" + "
                     </div>" + "
-
-                    <div data-bind=\"html: order.orderModalAlert\"></div>" + "
-                    <div class=\"bs-callout bs-callout-warning\">" + "
-                        <h4>Disclaimer</h4>" + "
-                        <p>Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</p>" + "
+                    <div style=\"margin-top: 30px;\">" + "
+                        <h5> #{gon.i18n.place_order.disclaimer_header}</h5>" + "
+                        <p>#{gon.i18n.place_order.disclaimer_body}</p>" + "
                     </div>" + "
                 </div>"
       buttons:
         cancel:
-          label: "Cancel"
-          className: "btn-primary"
+          label: "#{gon.i18n.place_order.cancel}"
+          className: "btn-info"
         main:
-          label: "Confirm"
+          label: "#{gon.i18n.place_order.confirm}"
           className: "btn-primary"
           callback: (result) ->
             if(result)
@@ -211,95 +210,94 @@ $ ->
     e.preventDefault();
     bid = $("#market_bid").text()
     ask = $("#market_ask").text()
-    market = bid + "/" + ask
-    price = $("#order_bid_price").val()
-    volume = $("#order_bid_origin_volume").val()
-    sum = $("#order_bid_total").val()
+    market = ask + "/" + bid
+    price = $("#order_ask_price").val()
+    volume = $("#order_ask_origin_volume").val()
+    sum = $("#order_ask_total").val()
+    price = parseFloat(price).toFixed(8)
     volume = parseFloat(volume).toFixed(8)
     sum_without_fee = (sum / 0.9975).toFixed(8)
     fee = sum_without_fee - sum
     fee = parseFloat(fee).toFixed(8)
 
     bootbox.dialog
-      title: "Confirm Sell Order"
+      title: "#{gon.i18n.place_order.confirm_sell_title}"
       message:      "<div class=\"row\" style=\"margin-bottom:10px\">" + "
-                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">Type:</h4></div>" + "
-                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">Limit Sell</h4></div>" + "
-                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">Market:</h4></div>" + "
+                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">#{gon.i18n.place_order.type}:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">#{gon.i18n.place_order.type_sell}</h4></div>" + "
+                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">#{gon.i18n.place_order.market}:</h4></div>" + "
                         <div class=\"col-sm-3\"><h4>" + market + "</h4></div>" + "
                     </div>" + "
                     <div id=\"form-container\">" + "
                         <form role=\"form\" class=\"form-horizontal\">" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Quantity:" + "
+                                     #{gon.i18n.place_order.volume}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" + volume + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Price:" + "
+                                     #{gon.i18n.place_order.price}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" +price + "\">" + "
-                                        <span class=\"input-group-addon\">" + bid  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + bid  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Subtotal:" + "
+                                     #{gon.i18n.place_order.subtotal}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeSubTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum_without_fee + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Commission:" + "
+                                     #{gon.i18n.place_order.fee}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeCommission\" type=\"text\" readonly=\"readonly\" value=\"" + fee + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                             <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
                                 <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
-                                    Total:" + "
+                                     #{gon.i18n.place_order.confirm_total}:" + "
                                 </h5>" + "
                                 <div class=\"col-sm-7\">" + "
                                     <div class=\"input-group\">" + "
                                         <input class=\"form-control text-right\" data-bind=\"value: order.tradeTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum + "\">" + "
-                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                        <span class=\"input-group-addon\" style=\"min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;\">" + ask  + "</span>" + "
                                     </div>" + "
                                 </div>" + "
                             </div>" + "
                         </form>" + "
                     </div>" + "
-
-                    <div data-bind=\"html: order.orderModalAlert\"></div>" + "
-                    <div class=\"bs-callout bs-callout-warning\">" + "
-                        <h4>Disclaimer</h4>" + "
-                        <p>Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</p>" + "
+                    <div style=\"margin-top: 30px;\">" + "
+                        <h5> #{gon.i18n.place_order.disclaimer_header}</h5>" + "
+                        <p>#{gon.i18n.place_order.disclaimer_body}</p>" + "
                     </div>" + "
                 </div>"
       buttons:
         cancel:
-          label: "Cancel"
-          className: "btn-primary"
+          label: "#{gon.i18n.place_order.cancel}"
+          className: "btn-info"
         main:
-          label: "Confirm"
+          label: "#{gon.i18n.place_order.confirm}"
           className: "btn-primary"
           callback: (result) ->
             if(result)

@@ -41,10 +41,20 @@ en:
         balance_low: "Warning: Insufficent Balance"
         min_unit: "Minimum Units must be at least 0.000001"
         amount: Units
-        total: Total w 0.25% Fee
+        confirm_total: Total
         price: Price
-        fee: Fees
+        fee: Commission
         subtotal: Subtotal
+        disclaimer_header: Disclaimer
+        disclaimer_body: "Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund."
+        market: Market
+        confirm_buy_title: "Confirm Buy Order"
+        confirm_sell_title: "Confirm Sell Order"
+        type: Type
+        type_buy: Limit Buy
+        type_sell: Limit Sell
+        cancel: Cancel
+        confirm: Confirm
       order_book:
         order_book: Order Book
       order_book_asks_full:

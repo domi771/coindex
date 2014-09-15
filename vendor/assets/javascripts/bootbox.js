@@ -30,7 +30,7 @@
   var templates = {
     dialog:
       "<div class='bootbox modal' tabindex='-1' role='dialog'>" +
-        "<div class='modal-dialog' style='margin-top: 150px;'>" +
+        "<div class='modal-dialog' style='margin-top: 100px;'>" +
           "<div class='modal-content'>" +
             "<div class='modal-body'><div class='bootbox-body'></div></div>" +
           "</div>" +

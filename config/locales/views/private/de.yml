@@ -45,6 +45,17 @@ de:
         price: Preis
         fee: Gebühren
         subtotal: Subtotal
+        disclaimer_header: Disclaimer
+        disclaimer_body: "Bitte überprüfen Sie diesen Auftrag vor der Bestätigung. Alle Aufträge sind endgültig und wir sind nicht in der Lage Ihnen eine Rückerstattung zu gewährleisten."
+        market: Markt
+        confirm_buy_title: "Bestätigung Ankaufsauftrag"
+        confirm_sell_title: "Bestätigung Verkaufsauftrag"
+        type: Typ
+        type_buy: Ankauf
+        type_sell: Verkauf
+        cancel: Annulieren
+        confirm: Bestätigen
+        confirm_total: Total
       order_book:
         order_book: Auftragsbuch
       order_book_asks:

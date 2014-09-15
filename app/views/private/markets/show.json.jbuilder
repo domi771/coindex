@@ -24,6 +24,18 @@ json.i18n do
     place_order.balance_low I18n.t('private.markets.place_order.balance_low')
     place_order.min_price I18n.t('private.markets.place_order.min_price')
     place_order.min_unit I18n.t('private.markets.place_order.min_unit')
+    place_order.subtotal I18n.t('private.markets.place_order.subtotal')
+    place_order.disclaimer_header I18n.t('private.markets.place_order.disclaimer_header')
+    place_order.disclaimer_body I18n.t('private.markets.place_order.disclaimer_body')
+    place_order.market I18n.t('private.markets.place_order.market')
+    place_order.confirm_buy_title I18n.t('private.markets.place_order.confirm_buy_title')
+    place_order.confirm_sell_title I18n.t('private.markets.place_order.confirm_sell_title')
+    place_order.confirm_total I18n.t('private.markets.place_order.confirm_total')
+    place_order.type I18n.t('private.markets.place_order.type')
+    place_order.type_buy I18n.t('private.markets.place_order.type_buy')
+    place_order.type_sell I18n.t('private.markets.place_order.type_sell')
+    place_order.cancel I18n.t('private.markets.place_order.cancel')
+    place_order.confirm I18n.t('private.markets.place_order.confirm')
   end
 end
 
