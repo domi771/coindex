@@ -38,42 +38,8 @@
   @enableSubmit = ->
     @select('submitButton').removeClass('disabled').removeAttr('disabled')
 
-  @confirmDialogMsg = ->
-    confirmType = @select('submitButton').text()
-    price = @select('priceSel').val()
-    volume = @select('volumeSel').val()
-    volume = parseFloat(volume).toFixed(8)
-    sum = @select('sumSel').val()
-    type = @panelType()
-    switch type
-      when 'bid'
-        sum_without_fee = (sum / 1.0025).toFixed(8)
-        fee = sum - sum_without_fee 
-        fee = parseFloat(fee).toFixed(8)
-      when 'ask'
-        sum_without_fee = (sum / 0.9975).toFixed(8)
-        fee = sum_without_fee - sum
-        fee = parseFloat(fee).toFixed(8)
-
-    """
-    #{gon.i18n.place_order.confirm_submit} "#{confirmType}"?
-
-    #{gon.i18n.place_order.price}: 			                #{price}
-    #{gon.i18n.place_order.volume}: 			                #{volume}
-    #{gon.i18n.place_order.subtotal}: 			#{sum_without_fee}
-    #{gon.i18n.place_order.fee}: 			#{fee}
-    #{gon.i18n.place_order.sum}: 	#{sum}
-
-
-    Disclaimer:
-    Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.
-    """
-
   @beforeSend = (event, jqXHR) ->
-    if confirm(@confirmDialogMsg())
-      @disableSubmit()
-    else
-      jqXHR.abort()
+    @disableSubmit()
 
   @handleSuccess = (event, data) ->
     suctext = gon.i18n.place_order.price + ": " + data.price + " - " + gon.i18n.place_order.volume + ": " + data.volume + " - Total: " + data.total

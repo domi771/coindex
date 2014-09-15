@@ -31,7 +31,7 @@
           p.input-group.amount style = "margin-bottom: 15px; margin-top: 14px;"
             label.input-group-addon style = "min-width: 160px;" = t('.amount')
             = f.text_field :origin_volume, class: 'form-control', maxlength: 10
-            span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.ask['currency'].upcase
+            span.input-group-addon  id = "market_ask" style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.ask['currency'].upcase
           p.balance-alert
             span.label.label-danger
           p.balance-warning
@@ -39,13 +39,13 @@
           p.input-group.total style = "margin-bottom: 15px; margin-top: 14px;"
             label.input-group-addon style = "min-width: 160px;" = t('.total')
             = f.text_field :total, class: 'form-control', readonly: true
-            span.input-group-addon style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.bid['currency'].upcase
+            span.input-group-addon id = "market_bid" style="min-width: 60px; text-align: center; font-size: 10px; font-weight: normal;" = market.bid['currency'].upcase
           p.status style="position: fixed; z-index: 9999999999; bottom: 0; left: 0; font-size: 150%;"
             span.label.label-info style="font-size: 150%; font-weight: bold; padding: 8px; border-radius: 0;"
             span.label.label-success style="font-size: 150%; font-weight: bold; padding: 8px; border-radius: 0; float: left; width: 435px;"
-            span.label.label-success-info style="font-size: 80%; font-weight: normal; padding: 8px; border-radius: 0; background: #5cb85c; width: 435px; margin-top: 43px; margin-left: -435px; height: 35px; float: left;"
+            span.label.label-success-info style="font-size: 80%; font-weight: normal; padding: 8px; border-radius: 0; background: #5cb85c; width: 435px; margin-top: 42px; margin-left: -435px; height: 35px; float: left;"
             span.label.label-danger style="font-size: 150%; font-weight: bold; padding: 8px; border-radius: 0; float: left; width: 435 px;"
           p
-            button.btn.btn-default.btn-lg.btn-block' style='margin-right: auto; width: 35%; margin-left: auto; font-size: 16px;' type='submit' disabled=true
+            button.btn.btn-default.btn-lg.btn-block' id="buy_order_btn" style='margin-right: auto; width: 35%; margin-left: auto; font-size: 16px;' type='submit' disabled=true
               = t('.bid_panel', currency: @ask_name)
 

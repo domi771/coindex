@@ -19,6 +19,8 @@
 //= require helper
 //= require jquery.mousewheel
 //= require qrcode
+//= require jquery.jconfirm-1.0
+//= require bootbox
 
 //= require_tree ./component_mixin
 //= require_tree ./component_data

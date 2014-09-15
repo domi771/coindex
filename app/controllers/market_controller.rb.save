@@ -1,0 +1,52 @@
+class MarketController < ApplicationController
+  layout 'landing'
+
+   def show
+      @bid = params[:bid]
+      @ask = params[:ask]
+
+      @ask_name = I18n.t("currency.name.#{@ask}")
+      @bid_name = I18n.t("currency.name.#{@bid}")
+
+      #@market = Market.find(params[:market])
+      #@market = params[:market]
+      #@market = Global[current_market]
+
+      params do
+        use :market
+      end
+      get "/:market" do
+        @market =  params[:market]
+      end
+
+      #@market = Global[params[:market]]
+
+      @bids   = Global[@market].bids
+      @asks   = Global[@market].asks
+      @trades = Global[@market].trades
+      @price  = Global[@market].price
+      @ticker = Global[@market].ticker
+
+      @order_bid = OrderBid.empty
+      @order_ask = OrderAsk.empty
+
+      gon.jbuilder
+
+      if current_user
+        redirect_to market_path(current_market) and return
+      end
+    end
+
+    def index
+       if current_user
+         redirect_to market_path(current_market) and return
+       end
+    end
+
+    def set_default_market
+      #cookies[:market_id] = @market.id
+      cookies[:market_id] = params[:market]  
+    end
+
+end
+

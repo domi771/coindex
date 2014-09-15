@@ -43,6 +43,8 @@ de:
         amount: Stück
         total: Total m 0.25% Geb.
         price: Preis
+        fee: Gebühren
+        subtotal: Subtotal
       order_book:
         order_book: Auftragsbuch
       order_book_asks:

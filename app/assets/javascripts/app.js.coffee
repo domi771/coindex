@@ -90,71 +90,220 @@ $ ->
 
 
 #$ ->
-#  $("#new_order_bid").submit ->
-#    $.msgbox "
-#<div class=\"modal-header\">
-#<h4 class=\"modal-title\" id=\"label_ConfirmOrder\" data-bind=\"text: order.orderModalTitle\">Confirm Buy Order</h4>
-#                </div>
-#                <div class=\"modal-body\">
-#                    <div class=\"row\" style=\"margin-bottom:10px\">
-#                        <div class=\"col-sm-4\"><h4 style=\"font-weight:bold\">Type:</h4></div>
-#                        <div class=\"col-sm-8\"><h4 data-bind=\"text:order.tradeType\">Limit Buy</h4></div>
-#                        <div class=\"col-sm-4\"><h4 style=\"font-weight:bold\">Market:</h4></div>
-#                        <div class=\"col-sm-8\"><h4>BTC-RAW</h4></div>
-#                    </div>
-#<div class=\"row\" style=\"margin-bottom:10px;\">
-#<form role=\"form\" class=\"form-horizontal\" accept-charset=\"UTF-8\" action=\"/markets/ltcbtc/order_bids\" class=\"new_order_bid\" data-remote=\"true\" id=\"new_order_bid\" method=\"post\"> 
-#<div class=\"form-group\" style=\"margin-bottom:10px; text-align: right;\"> 
-#<h5 class=\"col-sm-6\"> Quantity: </h5> 
-#<div class=\"col-sm-16\"> <div class=\"input-group\"> <input class=\"form-control text-right\" data-bind=\"value: order.tradeQuantity\" type=\"text\" readonly=\"readonly\" value=\"0\"> <span class=\"input-group-addon\">RAW</span> </div> </div> </div> 
-#<div class=\"form-group\" style=\"margin-bottom:10px; text-align: right;\"> 
-#<h5 class=\"col-sm-6\"> Price: </h5> 
-#<div class=\"col-sm-16\"> <div class=\"input-group\"> <input class=\"form-control text-right\" data-bind=\"value: order.tradePrice\" type=\"text\" readonly=\"readonly\" value=\"0\"> <span class=\"input-group-addon\">BTC</span> </div> </div> </div> 
-#<div class=\"form-group\" style=\"margin-bottom:10px; text-align: right;\"> 
-#<h5 class=\"col-sm-6\"> Subtotal: </h5> 
-#<div class=\"col-sm-16\"> <div class=\"input-group\"> <input class=\"form-control text-right\" data-bind=\"value: order.tradeSubTotal\" type=\"text\" readonly=\"readonly\" value=\"0\"> <span class=\"input-group-addon\">BTC</span> </div> </div> </div> 
-#<div class=\"form-group\" style=\"margin-bottom:10px; text-align: right;\"> 
-#<h5 class=\"col-sm-6\"> Commission: </h5> 
-#<div class=\"col-sm-16\"> <div class=\"input-group\"> <input class=\"form-control text-right\" data-bind=\"value: order.tradeCommission\" type=\"text\" readonly=\"readonly\" value=\"0\"> <span class=\"input-group-addon\">BTC</span> </div> </div> </div> 
-#<div class=\"form-group\" style=\"margin-bottom:10px; text-align: right;\"> 
-#<h5 class=\"col-sm-6\"> Total: </h5> 
-#<div class=\"col-sm-16\"> <div class=\"input-group\"> <input class=\"form-control text-right\" data-bind=\"value: order.tradeTotal\" type=\"text\" readonly=\"readonly\" value=\"0\"> <span class=\"input-group-addon\">BTC</span> </div> </div> </div> 
-#</form>
-#
-#                    <div style=\"text-align: left; margin-top: 40px;\">
-#                        <h4>Disclaimer</h4>
-#                        <p>Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</$
-#                    </div>
-#                </div>
-# </div>
-#
-#
-#",
-#
-#     form: {
-#          active: true,
-#          method: 'post',
-#          action: '/markets/ltcbtc/order_bids'
-#        },
-#     type: 'confirm',
-#      buttons: [
-#        {
-#          type: "submit"
-#          value: "Confirm"
-#        }
-#        {
-#          type: "cancel"
-#          value: "Cancel"
-#        }
-#      ]
-#
-#    ,(buttonPressed) ->
-#      
-#      # do things
-#      $("new_order_bid").send()  if buttonPressed
-#      return
-#
+#  $("#buy_order_btn").click ->
+#    bootbox.confirm "Are you sure?", (result) ->
+#      if(result)
+#        $("#new_order_bid").trigger "submit"
+#        return
+#   false
+
+#$ ->
+#  $("#sell_order_btn").click ->
+#    bootbox.confirm "Are you sure?", (result) ->
+#      if(result)
+#        $("#new_order_ask").trigger "submit"
+#        return
 #    false
-#
-#  return
+
+$ ->
+  $("#buy_order_btn").click (e) =>
+    e.preventDefault();
+    bid = $("#market_bid").text()
+    ask = $("#market_ask").text()
+    market = bid + "/" + ask
+    price = $("#order_bid_price").val()
+    volume = $("#order_bid_origin_volume").val()
+    sum = $("#order_bid_total").val()
+    volume = parseFloat(volume).toFixed(8)
+    sum_without_fee = (sum / 1.0025).toFixed(8)
+    fee = sum - sum_without_fee
+    fee = parseFloat(fee).toFixed(8)
+
+    bootbox.dialog
+      title: "Confirm Buy Order"
+      message:      "<div class=\"row\" style=\"margin-bottom:10px\">" + "
+                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">Type:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">Limit Buy</h4></div>" + "
+                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">Market:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4>" + market + "</h4></div>" + "
+                    </div>" + "
+                    <div id=\"form-container\">" + "
+                        <form role=\"form\" class=\"form-horizontal\">" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Quantity:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" + volume + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Price:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" +price + "\">" + "
+                                        <span class=\"input-group-addon\">" + bid  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Subtotal:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeSubTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum_without_fee + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Commission:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeCommission\" type=\"text\" readonly=\"readonly\" value=\"" + fee + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Total:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                        </form>" + "
+                    </div>" + "
+
+                    <div data-bind=\"html: order.orderModalAlert\"></div>" + "
+                    <div class=\"bs-callout bs-callout-warning\">" + "
+                        <h4>Disclaimer</h4>" + "
+                        <p>Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</p>" + "
+                    </div>" + "
+                </div>"
+      buttons:
+        cancel:
+          label: "Cancel"
+          className: "btn-primary"
+        main:
+          label: "Confirm"
+          className: "btn-primary"
+          callback: (result) ->
+            if(result)
+              $("#new_order_bid").trigger "submit"
+              return
+
+
+$ ->
+  $("#sell_order_btn").click (e) =>
+    e.preventDefault();
+    bid = $("#market_bid").text()
+    ask = $("#market_ask").text()
+    market = bid + "/" + ask
+    price = $("#order_bid_price").val()
+    volume = $("#order_bid_origin_volume").val()
+    sum = $("#order_bid_total").val()
+    volume = parseFloat(volume).toFixed(8)
+    sum_without_fee = (sum / 0.9975).toFixed(8)
+    fee = sum_without_fee - sum
+    fee = parseFloat(fee).toFixed(8)
+
+    bootbox.dialog
+      title: "Confirm Sell Order"
+      message:      "<div class=\"row\" style=\"margin-bottom:10px\">" + "
+                        <div class=\"col-sm-offset-1 col-sm-2\"><h4 style=\"font-weight:bold\">Type:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4 data-bind=\"text:order.tradeType\">Limit Sell</h4></div>" + "
+                        <div class=\"col-sm-2\"><h4 style=\"font-weight:bold\">Market:</h4></div>" + "
+                        <div class=\"col-sm-3\"><h4>" + market + "</h4></div>" + "
+                    </div>" + "
+                    <div id=\"form-container\">" + "
+                        <form role=\"form\" class=\"form-horizontal\">" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Quantity:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" + volume + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Price:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" type=\"text\" readonly=\"readonly\" value=\"" +price + "\">" + "
+                                        <span class=\"input-group-addon\">" + bid  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Subtotal:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeSubTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum_without_fee + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Commission:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeCommission\" type=\"text\" readonly=\"readonly\" value=\"" + fee + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                            <div class=\"form-group\" style=\"margin-bottom:10px\">" + "
+                                <h5 class=\"col-sm-offset-1 col-sm-3\">" + "
+                                    Total:" + "
+                                </h5>" + "
+                                <div class=\"col-sm-7\">" + "
+                                    <div class=\"input-group\">" + "
+                                        <input class=\"form-control text-right\" data-bind=\"value: order.tradeTotal\" type=\"text\" readonly=\"readonly\" value=\"" + sum + "\">" + "
+                                        <span class=\"input-group-addon\">" + ask  + "</span>" + "
+                                    </div>" + "
+                                </div>" + "
+                            </div>" + "
+                        </form>" + "
+                    </div>" + "
+
+                    <div data-bind=\"html: order.orderModalAlert\"></div>" + "
+                    <div class=\"bs-callout bs-callout-warning\">" + "
+                        <h4>Disclaimer</h4>" + "
+                        <p>Please verify this order before confirming. All orders are final once submitted and we will be unable to issue you a refund.</p>" + "
+                    </div>" + "
+                </div>"
+      buttons:
+        cancel:
+          label: "Cancel"
+          className: "btn-primary"
+        main:
+          label: "Confirm"
+          className: "btn-primary"
+          callback: (result) ->
+            if(result)
+              $("#new_order_ask").trigger "submit"
+              return
+
 

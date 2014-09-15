@@ -43,6 +43,8 @@ en:
         amount: Units
         total: Total w 0.25% Fee
         price: Price
+        fee: Fees
+        subtotal: Subtotal
       order_book:
         order_book: Order Book
       order_book_asks_full:
