@@ -17,7 +17,7 @@ Peatio::Application.configure do
   # config.cache_store = :file_store, "tmp"
   config.cache_store = :redis_store, { expires_in: 24.hours }
 
-  config.session_store :redis_store, :key => '_peatio_session', :expire_after => ENV['SESSION_EXPIRE'].to_i.minutes
+  config.session_store :redis_store, :key => '_eurocex_session', :expire_after => ENV['SESSION_EXPIRE'].to_i.minutes
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

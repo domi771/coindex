@@ -1,104 +1,117 @@
 de:
-  private:
-    markets:
-      show:
-        error: Fehler beim Übermitteln des Auftrags
-        success: Auftrag erfolgreich übermittelt
-        analysis_panel: Analyse
-        help_panel: Hilfe
-        done: ERLEDIGT
-        cancel: ANNULIEREN
-        cancel_confirm: Auftrag wirklich annulieren?
-        confirm: BESTÄTIGEN
-        ask_order: 'ANKAUF ##sn#'
-        bid_order: 'VERKAUF ##sn#'
-      ticker:
-        markets: Markt
-        title: Kontostand
-        available: Verfügbar %{currency}
-      place_buy_order:
-        place_order: Ankauf
-        bid_panel: Ankauf %{currency}
-        ask_panel: Verkauf %{currency}
-        price: Preis
-        amount: Stück
-        total: Total m 0.25% Geb.
-        available: Verfügbar
-        last_price: Letzter Preis
-      place_sell_order:
-        place_order: Verkauf
-        bid_panel: Ankauf %{currency}
-        ask_panel: Verkauf %{currency}
-        price: Preis
-        amount: Stück
-        total: Total m 0.25% Geb.
-        available: Verfügbar
-        last_price: Letzter Preis
-      place_order:
-        min_price: "Minimum Preis muss mindestens 0.00000001 sein"
-        price_high: "Vorsicht: Preis mehr als 50% über dem aktuellem Kurs"
-        price_low: "Vorsicht: Preis mehr als 50% unter dem aktuellem Kurs"
-        balance_low: "Warnung: Ungenügender Kontostand"
-        min_unit: "Minimum Stück muss mindestens 0.000001 sein"
-        amount: Stück
-        total: Total m 0.25% Geb.
-        price: Preis
-      order_book:
-        order_book: Auftragsbuch
-      order_book_asks:
-        order_book: Kaufen    
-        price: Preis
-        volume: Stück
-      order_book_bids:
-        order_book: Verkaufen   
-        price: Preis
-        volume: Stück
-      order_book_asks_full:
-        order_book: Kaufen
-        price: Preis
-        volume: Stück
-      order_book_bids_full:
-        order_book: Verkaufen
-        price: Preis
-        volume: Stück
-      market_trades:
-        trades: Neuste Transaktionen
-        time: Datum/Zeit
-        price: Preis
-        volume: Stück
-        buy_sell: Ankauf/Verkauf
-      market_trades_full:
-        trades: Neuste Transaktionen
-        time: Datum/Zeit
-        price: Preis
-        volume: Stück
-        buy_sell: Ankauf/Verkauf
-      my_orders_history:
-        my_orders_history: Ihr Auftragsverlauf
-      my_orders_open:
-        my_orders_open: Ihre offenen Aufträge
-      my_orders:
-        my_orders: Meine Aufträge
-        orders_wait: Offene Aufträge
-        orders_done: Erledigte Aufträge
-        orders_cancel: Aufträge annulieren
-      price_chart:
-        price_chart: Preis-Chart
-      market_menu:
-        price_chart: Preis-Chart
-        order_book: Auftragsbuch
-      order_menu:
-        summary: Übersicht
-        order_book: Auftragsbuch
-        market_history: Neuste Transaktionen
-        your_open_orders: Ihre offenen Auträge
-        your_history: Ihr Auftragsverlauf
-      global:
-        global_orders_title: AUFTRÄGE
-        global_trades_title: TRANSAKTIONEN
-    withdraws:
-      index:
-        withdraw_history: Auszahlungsverlauf
-    funds:
-      show:
-        account_history: Kontoverlauf
+  market:
+    show:
+      error: Fehler beim Übermitteln des Auftrags
+      success: Auftrag erfolgreich übermittelt
+      analysis_panel: Analyse
+      help_panel: Hilfe
+      done: ERLEDIGT
+      cancel: ANNULIEREN
+      cancel_confirm: Auftrag wirklich annulieren?
+      confirm: BESTÄTIGEN
+      ask_order: 'ANKAUF ##sn#'
+      bid_order: 'VERKAUF ##sn#'
+    ticker:
+      markets: Markt
+      title: Kontostand
+      available: Verfügbar %{currency}
+    place_buy_order:
+      place_order: Ankauf
+      bid_panel: Ankauf %{currency}
+      ask_panel: Verkauf %{currency}
+      price: Preis
+      amount: Stück
+      total: Total m 0.25% Geb.
+      available: Verfügbar
+      last_price: Letzter Preis
+    place_sell_order:
+      place_order: Verkauf
+      bid_panel: Ankauf %{currency}
+      ask_panel: Verkauf %{currency}
+      price: Preis
+      amount: Stück
+      total: Total m 0.25% Geb.
+      available: Verfügbar
+      last_price: Letzter Preis
+    place_order:
+      min_price: "Minimum Preis muss mindestens 0.00000001 sein"
+      price_high: "Vorsicht: Preis mehr als 50% über dem aktuellem Kurs"
+      price_low: "Vorsicht: Preis mehr als 50% unter dem aktuellem Kurs"
+      balance_low: "Warnung: Ungenügender Kontostand"
+      min_unit: "Minimum Stück muss mindestens 0.000001 sein"
+      amount: Stück
+      total: Total m 0.25% Geb.
+      price: Preis
+      fee: Gebühren
+      subtotal: Subtotal
+      disclaimer_header: Disclaimer
+      disclaimer_body: "Bitte überprüfen Sie diesen Auftrag vor der Bestätigung. Alle Aufträge sind endgültig und wir sind nicht in der Lage Ihnen eine Rückerstattung zu gewährleisten."
+      market: Markt
+      confirm_buy_title: "Bestätigung Ankaufsauftrag"
+      confirm_sell_title: "Bestätigung Verkaufsauftrag"
+      type: Typ
+      type_buy: Ankauf
+      type_sell: Verkauf
+      cancel: Annulieren
+      confirm: Bestätigen
+      confirm_total: Total
+    order_book:
+      order_book: Auftragsbuch
+    order_book_asks:
+      order_book: Kaufen
+      price: Preis
+      volume: Stück
+    order_book_bids:
+      order_book: Verkaufen
+      price: Preis
+      volume: Stück
+    order_book_asks_full:
+      order_book: Kaufen
+      price: Preis
+      volume: Stück
+    order_book_bids_full:
+      order_book: Verkaufen
+      price: Preis
+      volume: Stück
+    market_trades:
+      trades: Neuste Transaktionen
+      time: Datum/Zeit
+      price: Preis
+      volume: Stück
+      buy_sell: Ankauf/Verkauf
+    market_trades_full:
+      trades: Neuste Transaktionen
+      time: Datum/Zeit
+      price: Preis
+      volume: Stück
+      buy_sell: Ankauf/Verkauf
+    my_orders_history:
+      my_orders_history: Ihr Auftragsverlauf
+    my_orders_open:
+      my_orders_open: Ihre offenen Aufträge
+    my_orders:
+      my_orders: Meine Aufträge
+      orders_wait: Offene Aufträge
+      orders_done: Erledigte Aufträge
+      orders_cancel: Aufträge annulieren
+    price_chart:
+      price_chart: Preis-Chart
+    market_menu:
+      price_chart: Preis-Chart
+      order_book: Auftragsbuch
+    order_menu:
+      summary: Übersicht
+      order_book: Auftragsbuch
+      market_history: Neuste Transaktionen
+      your_open_orders: Ihre offenen Auträge
+      your_history: Ihr Auftragsverlauf
+    global:
+      global_orders_title: AUFTRÄGE
+      global_trades_title: TRANSAKTIONEN
+  withdraws:
+    index:
+      withdraw_history: Auszahlungsverlauf
+  funds:
+    show:
+      account_history: Kontoverlauf
+
