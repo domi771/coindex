@@ -7,7 +7,7 @@ class MarketController < ApplicationController
       @market = Market.find(params[:market])
 
       s = params[:market]
-      @bid = s[3,3]
+      @bid = s[3,10]
 
       s = params[:market]
       @ask = s[0,3]
