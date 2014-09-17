@@ -110,7 +110,7 @@ $ ->
     e.preventDefault();
     bid = $("#market_bid").text()
     ask = $("#market_ask").text()
-    market = ask + "/" + bid
+    market = bid + "/" + ask
     price = $("#order_bid_price").val()
     volume = $("#order_bid_origin_volume").val()
     sum = $("#order_bid_total").val()
@@ -210,7 +210,7 @@ $ ->
     e.preventDefault();
     bid = $("#market_bid").text()
     ask = $("#market_ask").text()
-    market = ask + "/" + bid
+    market = bid + "/" + ask
     price = $("#order_ask_price").val()
     volume = $("#order_ask_origin_volume").val()
     sum = $("#order_ask_total").val()
