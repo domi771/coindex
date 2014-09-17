@@ -63,8 +63,8 @@ de:
       via: Viacoin
       drk: Darkcoin
       ppc: Peercoin
-      btd: BitcoinDark
-      dog: Dogecoin
+      btcd: BitcoinDark
+      doge: Dogecoin
       nmc: Namecoin
       uro: Urocoin
       lts: LottoShares
@@ -75,8 +75,8 @@ de:
       via: VIA
       drk: DRK
       ppc: PPC
-      btd: BTCD
-      dog: DOGE
+      btcd: BTCD
+      doge: DOGE
       nmc: NMC
       uro: URO
       lts: LTS

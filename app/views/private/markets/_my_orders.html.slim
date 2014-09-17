@@ -12,12 +12,12 @@
         th class='at col-md-2' = Order.human_attribute_name('at')
         th class='price col-md-4' = Order.human_attribute_name('price')
                                   |  (
-                                  = @ask_code
+                                  = @bid_code
                                   | )
 
         th class='volume col-md-4' = Order.human_attribute_name('volume')
                                    |  (
-                                   = @ask_code
+                                   = @bid_code
                                    | )
 
         th class='operation col-md-2'

@@ -8,12 +8,12 @@
         th class='price col-md-3' 
           = Order.human_attribute_name('price')
           |  (
-          = @bid_code
+          = @ask_code
           | )
         th class='volume col-md-3' 
           = Order.human_attribute_name('volume')
           |  (
-          = @ask_code
+          = @bid_code
           | )
         th class='operation col-md-2' = Order.human_attribute_name('cancel')
 

@@ -47,7 +47,7 @@ window.MarketsUI = flight.component ->
         item.volume = ticker.vol
         item.market = cur.substring(0, 3) + "/" + cur.substring(3)
         item.market_link = cur
-        item.currency = cur.substring(0, 3)
+        item.currency = cur.substring(3)
         markets.push item
 
       markets.sort (a, b)->

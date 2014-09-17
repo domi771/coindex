@@ -1,9 +1,13 @@
 - id: ltcbtc
   code: 3
+  base_unit: ltc
+  quote_unit: btc
   bid: {fee: 0, currency: chf, fixed: 2}
   ask: {fee: 0, currency: btc, fixed: 4}
 - id: ptsbtc
   code: 6
+  base_unit: pts
+  quote_unit: btc
   bid: {fee: 0, currency: btc, fixed: 4}
   ask: {fee: 0, currency: pts, fixed: 4}
   visible: false
