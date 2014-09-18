@@ -3,10 +3,10 @@
 # *sellers* who submit *ask* orders, and people exchange B for A *buyers*
 # who submit *bid* orders.
 #
-# ID of market is always in the form "#{B}#{A}". For example, in 'ltcbtc'
-# market, the commodity pair is `{btc, chf}`. Sellers sell out _btc_ for
+# ID of market is always in the form "#{B}#{A}". For example, in 'btccny'
+# market, the commodity pair is `{btc, cny}`. Sellers sell out _btc_ for
 # _cny_, buyers buy in _btc_ with _cny_. _btc_ is the `base_unit`, while
-# is the `price`.		+# _cny_ is the `quote_unit`.
+# _cny_ is the `quote_unit`.
 
 class Market < ActiveYamlBase
   field :visible, default: true
@@ -24,6 +24,7 @@ class Market < ActiveYamlBase
 
   def initialize(*args)
     super
+
     raise "missing base_unit or quote_unit: #{args}" unless base_unit.present? && quote_unit.present?
     @name = "#{base_unit}/#{quote_unit}".upcase
   end
