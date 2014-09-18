@@ -175,6 +175,7 @@ en:
     high_price: "24H High"
     low_price: "24H Low"
     volume: 24H Volume
+    volume_btc: Volume BTC
     latest_price: Last
     change: 24H Change
     market: Market

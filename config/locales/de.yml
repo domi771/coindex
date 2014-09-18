@@ -193,6 +193,7 @@ de:
     high_price: Tageshoch
     low_price: Tagestief
     volume: Tagesumsatz
+    volume_btc: Umsatz BTC
     latest_price: Letzter Preis
     change: Tagesänderung
     market: Markt

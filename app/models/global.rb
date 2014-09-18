@@ -46,6 +46,7 @@ class Global
 
     ticker.merge({
       volume: h24_volume,
+      volume_btc: h24_volume_btc,
       change: h24_change,
       change_trend: change_trend,
       trend: trend,
@@ -100,6 +101,12 @@ class Global
   def h24_volume
     Rails.cache.fetch key('h24_volume', 5) do
       Trade.with_currency(currency).h24.sum(:volume) || ZERO
+    end
+  end
+
+  def h24_volume_btc
+    Rails.cache.fetch key('h24_volume_btc', 5) do
+      Trade.with_currency(currency).h24.sum(:funds) || ZERO
     end
   end
 

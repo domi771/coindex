@@ -44,7 +44,7 @@ window.MarketsUI = flight.component ->
           item[key] = ticker[key]
           return
 
-        item.volume = ticker.vol
+        item.volume = ticker.vol_btc
         item.market = cur.substring(0, 3) + "/" + cur.substring(3)
         item.market_link = cur
         item.currency = cur.substring(3)
