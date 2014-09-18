@@ -3,7 +3,7 @@ ul.nav.nav-tabs style = "margin-bottom: 20px;"
     a data-toggle="tab" href="#tabMarketPriceChart" style="text-transform: uppercase; font-weight: bold;" 
       = @market.name 
       |  (
-      = @bid_name
+      = @ask_name
       | ) 
       = t('.price_chart')
 
@@ -11,6 +11,6 @@ ul.nav.nav-tabs style = "margin-bottom: 20px;"
     a data-toggle="tab" href="#tabMarketOrderBook" style="text-transform: uppercase; font-weight: bold;"
       = @market.name
       |  (
-      = @bid_name
+      = @ask_name
       | ) 
       = t('.order_book')

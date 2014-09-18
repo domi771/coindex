@@ -2,7 +2,7 @@
   .panel-heading
     = t('.place_order')
     |  
-    = @bid_name
+    = @ask_name
   .panel-body.place-order
 
       #ask_panel.tab-pane
@@ -14,10 +14,10 @@
               | :
               span.value style = "margin-left: 5px;"
               |  
-              label.currency style = "font-weight: normal;" = @ask_code
+              label.currency style = "font-weight: normal;" = @bid_code
             .col-md-6.current-balance.clearfix style = "text-align: right;"
               label.value style = "font-weight: normal;"
-              label.currency style = "font-weight: normal;" = @bid_code
+              label.currency style = "font-weight: normal;" = @ask_code
               label.name style = "font-weight: normal;" = t('.available')
           .row
           p.input-group.price style = "margin-bottom: 15px;"
@@ -44,5 +44,5 @@
             span.label.label-success-info style="font-size: 80%; font-weight: normal; padding: 8px; border-radius: 0; background: #5cb85c; width: 435px; margin-top: 42px; margin-left: -435px; height: 35px; float: left;"
             span.label.label-danger style="font-size: 150%; font-weight: bold; padding: 8px; border-radius: 0; float: left; width: 435 px;"
           p
-            button.btn.btn-default.btn-lg.btn-block id="sell_order_btn" style = "margin-right: auto; width: 35%; margin-left: auto; font-size: 16px" type="submit" disabled='true' = t('.ask_panel', currency: @bid_name)
+            button.btn.btn-default.btn-lg.btn-block id="sell_order_btn" style = "margin-right: auto; width: 35%; margin-left: auto; font-size: 16px" type="submit" disabled='true' = t('.ask_panel', currency: @ask_name)
 
