@@ -1,0 +1,11 @@
+- unless @one_syscoins.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {syscoins: @one_syscoins}
+- unless @all_syscoins.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {syscoins: @all_syscoins}
+
+- if @all_syscoins.empty? and @one_syscoins.empty?
+  h3.text-info.text-center = t('.empty')
