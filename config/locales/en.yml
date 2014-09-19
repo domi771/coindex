@@ -145,6 +145,11 @@ en:
     privacy: Privacy
     contact: Contact
     price: Price
+    all_rights_reserved: All Rights Reserved
+    terms: Terms
+    fees: Fees
+    api: API
+
 
   actions:
     go: Go

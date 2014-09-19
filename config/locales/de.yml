@@ -157,8 +157,12 @@ de:
   footer:
     about: Über uns
     privacy: Privatsphäre
-    contact: Kontakt
+    contact: Impressum
     price: Preis
+    all_rights_reserved: Alle Rechte vorbehalten
+    terms: Geschäftsbedingungen
+    fees: Gebühren
+    api: API
 
   recaptcha:
     errors:

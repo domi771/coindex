@@ -1,0 +1,24 @@
+doctype html
+html lang="en"
+  head
+    = stylesheet_link_tag "api_v2", :media => "all"
+    = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    = javascript_include_tag "api_v2"
+    = render 'shared/html5'
+    = render 'shared/meta'
+  body id='#{controller_name}-#{action_name}' data-lang="#{I18n.locale.to_s.downcase}"
+    #wrap
+      = render 'shared/browser'
+
+      - if content_for(:header)
+        = yield(:header)
+      - else
+        = render 'shared/header'
+        = yield
+      #push
+    - if content_for(:footer)
+      = yield(:footer)
+    - else
+      = render 'shared/footer'
+
+

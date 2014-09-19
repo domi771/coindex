@@ -2,13 +2,14 @@ footer: .container style = "width: 100%;": .row: .col-md-24.text-center
   .container style = "width: 100%;"
     .text-muted.footer-content style = "float: left;"
       ul.nav.nav-pills.social-icons
-        li Copyright &copy; 2014 | All Rights Reserved
+        li Copyright &copy; 2014 | #{t('footer.all_rights_reserved')}
 
       nav.footer-menu role="navigation" style = "float: right !important;"
     ul.list-inline style = "float: right;"
-      li: a href='/documents/terms' Terms
-      li: a href='/documents/fees' Fees
-      li: a href='/documents/api_v2' API
+      li: a href='/documents/contact' #{t('footer.contact')}
+      li: a href='/documents/terms' #{t('footer.terms')}
+      li: a href='/documents/fees' #{t('footer.fees')}
+      li: a href='/documents/api_v2' #{t('footer.api')}
 
       li.dropdown
         a.dropdown-toggle href="#" data-toggle="dropdown"

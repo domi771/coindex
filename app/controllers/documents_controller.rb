@@ -25,4 +25,8 @@ class DocumentsController < ApplicationController
     render 'terms', layout: 'api_v2'
   end
 
+  def contact
+    render 'contact', layout: 'api_v2'
+  end
+
 end
