@@ -22,6 +22,8 @@ en:
       key: URO
     lottoshares:
       key: LTS
+    syscoin:
+      key: SYS
     name:
       chf: Swiss Franc
       btc: Bitcoin
@@ -34,6 +36,7 @@ en:
       nmc: Namecoin
       uro: Urocoin
       lts: LottoShares
+      sys: Syscoin
     code:
       chf: CHF
       btc: BTC
@@ -46,6 +49,7 @@ en:
       nmc: NMC
       uro: URO
       lts: LTS
+      sys: SYS
     format:
       zero: 'N/A'
       chf: '0,0.00'

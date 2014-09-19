@@ -30,6 +30,7 @@ de:
       nmc: NMC
       uro: URO
       lts: LTS
+      sys: SYS
     order:
       state:
         done: DONE
@@ -47,6 +48,7 @@ de:
         namecoin: Namecoin
         urocoin: Urocoin
         lottoshare: Lottoshares
+        syscoin: Syscoin
         bank: Bank
       admin_aasm_state:
         submitted: 待处理
@@ -77,6 +79,7 @@ de:
         namecoin: Namecoin
         urocoin: Urocoin
         lottoshare: Lottoshares
+        syscoin: Syscoin
         bank: Bank
       state:
         submitting: Submitting
@@ -112,6 +115,7 @@ de:
         namecoin: Namecoin
         urocoin: Urocoin
         lottoshare: Lottoshares
+        syscoin: Syscoin
         bank: Bank
     id_document:
       id_document_type:

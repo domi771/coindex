@@ -70,7 +70,7 @@ en:
       nmc: Namecoin
       uro: Urocoin
       lts: LottoShares
-
+      sys: Syscoin
     code:
       chf: CHF
       btc: BTC
@@ -83,6 +83,7 @@ en:
       nmc: NMC
       uro: URO
       lts: LTS
+      sys: SYS
 
   reset_two_factors:
     create:

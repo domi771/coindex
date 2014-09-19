@@ -11,5 +11,6 @@ json.i18n do
   json.nmc I18n.t('currency.name.nmc')
   json.uro I18n.t('currency.name.uro')
   json.lts I18n.t('currency.name.lts')
+  json.sys I18n.t('currency.name.sys')
 end
 
