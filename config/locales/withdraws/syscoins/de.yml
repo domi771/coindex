@@ -5,8 +5,8 @@ de:
       code: SYS
       title: Syscoin
       intro: Zahlen Sie Syscoin von EUROCEX zu Ihrem eigenen Wallet aus.
-      latency: Automatisch
-      transfer: Direkt
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:

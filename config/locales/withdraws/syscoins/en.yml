@@ -5,8 +5,8 @@ en:
       code: SYS
       title: Syscoin 
       intro: Withdraw Syscoin from EUROCEX to your own Syscoin wallet
-      latency: Automatic
-      transfer: Instant
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:
