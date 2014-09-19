@@ -5,7 +5,7 @@ en:
       code: NMC
       title: Namecoin
       intro: Deposit Namecoin from your own wallet to your EUROCEX account
-      latency: 1 confirmation
+      latency: 3 confirmations
       transfer: Automatic
       go: Deposit
 

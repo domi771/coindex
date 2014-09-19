@@ -5,7 +5,7 @@ en:
       code: VIA
       title: Viacoin
       intro: Deposit Viacoin from your own wallet to your EUROCEX account
-      latency: 1 confirmation
+      latency: 10 confirmations
       transfer: Automatic
       go: Deposit
 

@@ -5,7 +5,7 @@ de:
       code: URO
       title: Urocoin
       intro: Zahlen Sie Urocoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      latency: 3 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 

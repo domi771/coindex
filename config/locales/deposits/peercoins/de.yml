@@ -5,7 +5,7 @@ de:
       code: PPC
       title: Peercoin
       intro: Zahlen Sie Peercoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      latency: 3 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 

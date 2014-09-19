@@ -5,7 +5,7 @@ de:
       code: LTC
       title: Litecoin
       intro: Zahlen Sie Litecoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      latency: 3 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 

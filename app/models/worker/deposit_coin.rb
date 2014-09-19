@@ -13,6 +13,11 @@ module Worker
       raw     = channel.currency_obj.api.gettransaction(txid)
       Rails.logger.info("gettransaction result: #{raw.inspect}") # debugger
       detail  = raw[:details].first.symbolize_keys!
+
+      unless detail.nil?
+      detail = raw[:details].last.symbolize_keys!
+      end
+
       return if detail[:account] != "payment" || detail[:category] != "receive"
 
       ActiveRecord::Base.transaction do

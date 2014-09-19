@@ -5,7 +5,7 @@ de:
       code: BTC
       title: Bitcoin
       intro: Zahlen Sie Bitcoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      latency: 2 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 

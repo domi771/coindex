@@ -5,7 +5,7 @@ de:
       code: SYS
       title: Syscoin 
       intro: Zahlen Sie Syscoin von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      latency: 10 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 

@@ -5,7 +5,7 @@ en:
       code: BTCD
       title: BitcoinDark
       intro: Deposit BitcoinDark from your own wallet to your EUROCEX account
-      latency: 1 confirmation
+      latency: 10 confirmations
       transfer: Automatic
       go: Deposit
 
