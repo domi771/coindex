@@ -22,4 +22,11 @@
   sort_order: 5
   min_confirm: 1
   max_confirm: 6
+- id: 240
+  key: dogecoin
+  currency: doge
+  sort_order: 5
+  min_confirm: 1
+  max_confirm: 6
+
 
