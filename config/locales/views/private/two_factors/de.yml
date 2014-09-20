@@ -2,7 +2,7 @@ de:
   private:
     two_factors:
       auth:
-        please_active_two_factor: Bitte aktivieren Sie zuerst die SMS oder Google Zwei-Faktoren Authentifizierung.
+        please_active_two_factor: Bitte aktivieren Sie zuerst die Google Zwei-Faktoren Authentifizierung.
         submit: Ausführen
         otp_placeholder: 6-Zeichen Passwort
         google_app: Google Auth.

@@ -32,7 +32,7 @@ module Verify
 
     def auth_success
       session[:member_id] = session.delete :temp_member_id
-      save_session_key current_user.id, cookies['_peatio_session']
+      save_session_key current_user.id, cookies['_eurocex_session']
       MemberMailer.notify_signin(current_user.id).deliver if current_user.activated?
       redirect_to settings_path
     end

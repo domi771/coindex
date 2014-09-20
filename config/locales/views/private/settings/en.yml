@@ -5,7 +5,7 @@ en:
       failure: Invalid passcode. Please try again.
 
       index:
-        safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use  Two-factor Authentication
+        safety_instruction: In order to protect your crypto coins and personal information, we strongly suggest that you use  Two-factor Authentication
         reset_password: Reset your Password
 
         reauthenticate: Authentication
@@ -32,7 +32,7 @@ en:
           title: Google Two-Step Authentication
           description: Google Two-Step authentication provides another layer of security to your account.
           enable: Enable
-          disable: Disable
+          disable: Enabled
 
         verification:
           title: KYC Verification

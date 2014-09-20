@@ -5,7 +5,7 @@ de:
       failure: Ungültiges Passwort. Bitte versuchen Sie es nocheinmal
 
       index:
-        safety_instruction: Um Ihre Bitcoin und privaten Informationen zu schützen, empfehlen wir Ihnen ausdrücklich die Zwei-Faktoren Authentifizierung zu aktiviern.
+        safety_instruction: Um Ihre Cryptocoins sowie Ihre privaten Informationen zu schützen, empfehlen wir Ihnen ausdrücklich die Zwei-Faktoren Authentifizierung zu aktiviern.
         reset_password: Rest your Password
 
         reauthenticate: Authentifikation
@@ -32,7 +32,7 @@ de:
           title: Google Zwei-Faktoren Authentifizierung
           description: Google Zwei-Faktoren Authentifikation gibt Ihrem Konto die ultimative Sicherheit gegen Missbrauch.
           enable: Aktivieren
-          disable: Deaktivieren
+          disable: Aktiviert
 
         verification:
           title: KYC Verifizierung
