@@ -28,11 +28,11 @@
       - t.column :amount, class: 'col-md-1'
       - t.column :fee, class: 'col-md-1'
       - t.column :state_and_action, class: 'col-md-2' do |x|
-        - if x.cancelable?
-          span = "#{x.aasm_state_text} / "
-          = link_to t('actions.cancel'), url_for([x]), method: :delete
-        - else
-          span = x.aasm_state_text
+        //- if x.cancelable?
+        //  span = "#{x.aasm_state_text} / "
+        //  = link_to t('actions.cancel'), url_for([x]), method: :delete
+        //- else
+        span = x.aasm_state_text
 
 = content_for :scripts
   javascript:
