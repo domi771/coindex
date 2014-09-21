@@ -82,7 +82,7 @@ window.MarketTickerUI = flight.component ->
     @updatechangetrend data.change_trend
     @updatechangetrend2 data.change_trend
 
-    document.title = "(#{data.last}) #{gon.market.id.toUpperCase()}"
+    document.title = "(#{data.last}) #{gon.market.quote_unit.toUpperCase()}/#{gon.market.base_unit.toUpperCase()}"
 
   @after 'initialize', ->
     @refresh 'market::ticker', gon.ticker
