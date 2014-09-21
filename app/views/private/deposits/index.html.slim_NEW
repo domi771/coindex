@@ -1,0 +1,55 @@
+.container style = "margin-bottom: -60px; width: auto; padding-left: 35px; padding-right: 35px;"
+  .panel.panel-default.account-balance style = "margin-top: 90px;"
+    .panel-heading
+      h2.panel-title = t('trade.account_balance.title')
+    .panel-body
+      .col-md-12
+        table.table.table-condensed.table-striped.table-hover
+          thead: tr
+              th style = 'width: 65px;' class='code' = t('Code')
+
+          tbody
+            - @deposits.each do |d|
+              tr class="#{d.code_text}"
+                td.code = t("d.code_text.upcase", default: d.code_text.upcase)
+                td.name = t("d.transfer_text}", default: d.transfer_text.upcase)
+                td.available = d.latency_text
+                td
+                  a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_deposits_#{d.key}_path")}' = t('.go')
+
+
+table.table.table-condensed.table-hover
+                           - @deposits.each do |d|
+                             tr
+                               td
+                                 span = d.code_text
+                               td
+                                 span = d.title_text
+                               td
+                                 i.fa.fa-clock-o.text-info
+                                 span = d.transfer_text
+                               td
+                                 i.fa.fa-clock-o.text-info
+                                 span = d.latency_text
+                               td
+                                 a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_deposits_#{d.key}_path")}' = t('.go')
+
+
+ul.list-group
+  - @deposits.each do |d|
+    li.list-group-item style = "padding: 0px;" class='deposit-channel-#{d.id}'
+      .row.row-middle
+        .col-md-9 style = "font-size: 12px; margin-top: 8px;"
+          .row.row-middle
+            .col-md-1 style = "font-weight: normal;"
+              span = d.code_text
+            .col-md-4 style = "font-weight: bold;"
+              span = d.title_text
+            .col-md-3
+              i.fa.fa-cogs.text-info
+              span = d.transfer_text
+            .col-md-4
+              i.fa.fa-clock-o.text-info
+              span = d.latency_text
+        .col-md-2
+          a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_deposits_#{d.key}_path")}' = t('.go')
