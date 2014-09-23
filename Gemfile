@@ -70,7 +70,6 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha', github: 'galetahub/simple-captcha'
 
 gem 'thin'
-gem 'mad_chatter', github: 'madchatter/mad_chatter'
 gem 'turbolinks'
 
 group :development, :test do

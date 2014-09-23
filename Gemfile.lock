@@ -7,20 +7,6 @@ GIT
       rest-client (~> 1.6.7)
 
 GIT
-  remote: git://github.com/madchatter/mad_chatter.git
-  revision: 47c672ec5f62ea4812fd471138b76f77875f16c8
-  specs:
-    mad_chatter (1.0.0)
-      backbone-on-rails
-      bcrypt-ruby
-      bootstrap-sass
-      jquery-rails
-      rails (> 3.1.0)
-      redis
-      sass-rails
-      sinatra
-
-GIT
   remote: git://github.com/galetahub/simple-captcha.git
   revision: 2602bf19a63df25929960b5a7721a9d265281ec1
   specs:
