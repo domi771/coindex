@@ -231,6 +231,12 @@ ActiveRecord::Schema.define(version: 20140904204759) do
     t.boolean  "api_disabled",          default: false
   end
 
+  create_table "messages", force: true do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
     t.integer  "bid"
     t.integer  "ask"

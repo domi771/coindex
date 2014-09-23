@@ -6,9 +6,9 @@ class ActionDispatch::Routing::Mapper
   end
 end
 
-#Rails.application.routes.draw do
-#  mount MadChatter::RailsEngine => "/chat"
-#end
+Rails.application.routes.draw do
+  mount MadChatter::RailsEngine => "/chat"
+end
 
 Peatio::Application.routes.draw do
 
@@ -53,7 +53,9 @@ Peatio::Application.routes.draw do
   get '/documents/contact'
 
 
-  resources :messages, only: [:show, :update, :edit, :index, :create]
+#  resources :market, only: [:show]
+  resources :messages , :only => :index
+
 
   resources :documents, only: [:show]
   resources :refresh_two_factors, only: [:show]

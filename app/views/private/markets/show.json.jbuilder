@@ -57,3 +57,4 @@ json.orders do
   }.flatten
   json.cancel *([@orders_cancel] + Order::ATTRIBUTES)
 end
+

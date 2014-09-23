@@ -21,6 +21,7 @@
 //= require qrcode
 //= require jquery.jconfirm-1.0
 //= require bootbox
+//= require messages
 
 //= require_tree ./component_mixin
 //= require_tree ./component_data

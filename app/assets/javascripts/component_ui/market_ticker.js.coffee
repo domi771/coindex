@@ -1,11 +1,11 @@
 window.MarketTickerUI = flight.component ->
   @defaultAttrs
-    volumeSelector: '.value.volume'
+    volumeSelector: '.value.volume_t'
     changeSelector: '.value.change'
     changetrendSelector: '.value.changetrend'
     changetrendSelector2: '.value.change'
-    askPriceSelector: '.value.sell'
-    bidPriceSelector: '.value.buy'
+    askPriceSelector: '.value.sell_t'
+    bidPriceSelector: '.value.buy_t'
     lowPriceSelector: '.value.low'
     highPriceSelector: '.value.high'
     latestPriceSelector: '.value.last'

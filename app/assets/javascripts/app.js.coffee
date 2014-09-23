@@ -88,6 +88,20 @@ $ ->
   #   $(@).scrollTop(@scrollTop + e.deltaY)
   #   e.preventDefault()
 
+  $(window).on "load", (event) ->
+    height = 0
+    $("#chat li").each (i, value) ->
+      height += parseInt($(this).height())
+      return
+
+    height += ""
+    $("#chat").animate scrollTop: height
+    # $("#chat").scrollTop(height)
+
+  # $("#chat").bind "mousewheel", (ev, delta) ->
+  #  scrollTop = $(this).scrollTop()
+  #  $(this).scrollTop scrollTop - Math.round(delta)
+  #  return
 
 #$ ->
 #  $("#buy_order_btn").click ->

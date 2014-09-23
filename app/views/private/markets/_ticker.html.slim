@@ -2,39 +2,51 @@
   .panel-heading
     .span  = @market.name
   .panel-body style = "padding-bottom: 10px;"
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.last  style=("text-transform: uppercase; white-space: nowrap;") #{t('global.latest_price')}
-      .col-md-5.value.last style = "text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-      .col-md-1.value.trend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.change  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.change')}
-      .col-md-5.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.name.change style = "text-transform: uppercase;" #{t('%')}
-      .col-md-1.value.changetrend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px;"
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.bid  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.bid_price')}
-      .col-md-5.value.buy style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-      .col-md-1.value style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 3px;"
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.ask  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.ask_price')}
-      .col-md-5.value.sell style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.high  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.high_price')}
-      .col-md-5.value.high style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-    .row style = "border-bottom: 1px solid #dddddd; margin-bottom: 3px; margin-top: 3px;"
-      .col-md-4.name.low  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.low_price')}
-      .col-md-5.value.low style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @bid_code
-    .row style = "margin-bottom: 0px; margin-top: 3px;"
-      .col-md-4.name.volume  style = "text-transform: uppercase; white-space: nowrap;" #{t('global.volume')}
-      .col-md-5.value.volume style = "font-weight: bold; text-align: right; padding-right: 0px;"
-      .col-md-1.value.currency style = "text-transform: uppercase;" = @ask_code
 
+    .col-md-12 style = "padding: 0px;"
+      table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
+        tbody.list style = "text-align: left; color: #526273; font-size: 12px;"
+          tr
+            td.name.last class="col-md-5" style=("padding-left: 5px; border-top: 1px solid #FFFFFF; text-transform: uppercase; white-space: nowrap;") #{t('global.latest_price')}
+            td.value.last class="col-md-5" style = "border-top: 1px solid #FFFFFF; text-transform: uppercase; font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency class="col-md-1" style = "border-top: 1px solid #FFFFFF; text-transform: uppercase; padding-left: 10px;" = @ask_code
+            td class="col-md-1" style = "border-top: 1px solid #FFFFFF;"
+              .value.trend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px; margin-right: 10px;"
+          tr
+            td.name.change  style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.change')}
+            td.value.change style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.name.change style = "text-transform: uppercase; padding-left: 10px;" #{t('%')}
+            td class="col-md-1"
+              .value.changetrend style = "padding: 0px; width: 12px; text-transform: uppercase; margin-left: 10px; margin-right: 10px;"
+          tr
+            td.name.bid  style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.bid_price')}
+            td.value.buy_t style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency style = "text-transform: uppercase; padding-left: 10px;" = @ask_code
+            td class="col-md-1"
+          tr
+            td.name.ask  style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.ask_price')}
+            td.value.sell_t style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency style = "text-transform: uppercase; padding-left: 10px;" = @ask_code
+            td class="col-md-1"
+          tr
+            td.name.high  style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.high_price')}
+            td.value.high style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency style = "text-transform: uppercase; padding-left: 10px;" = @ask_code
+            td class="col-md-1"
+          tr
+            td.name.low  style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.low_price')}
+            td.value.low style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency style = "text-transform: uppercase; padding-left: 10px;" = @ask_code
+            td class="col-md-1"
+          tr
+            td.name.volume_t style = "padding-left: 5px; text-transform: uppercase; white-space: nowrap;" #{t('global.volume')}
+            td.value.volume_t style = "font-weight: bold; text-align: right; padding-right: 0px;"
+            td.value.currency style = "text-transform: uppercase; padding-left: 10px;" = @bid_code
+            td class="col-md-1"
 
 .panel.panel-default.account-balance
   .panel-heading = t('Chat')
   .panel-body style = "padding-bottom: 0px;"
+    .row
+      .col-md-12 = render partial: 'chat_box'
+

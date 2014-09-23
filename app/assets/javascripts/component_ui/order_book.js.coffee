@@ -7,7 +7,7 @@
       chart:
         marginRight: 30
         zoomType: "x"
-        height: 375
+        height: 410
 
         events:
           load: ->

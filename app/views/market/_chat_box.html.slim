@@ -1,0 +1,7 @@
+.chat-container
+  ul#chat style=("height: 131px; overflow-y: hidden; overflow-x: hidden; list-style: none; padding-left: 5px; margin-bottom: 8px; line-height: 2.2;") 
+    = @messages
+  = form_for Message.new, remote: true do |f|
+    = f.text_field :content, :readonly => "readonly", :value => "Sign In to chat", :class => "form-control readonly", :style => "color: silver; max-width: 60%; float: left; margin-right: 5px; font-size: 12px; height: 26px;"
+    = f.submit "Send", :class => "btn btn-default btn-flat disabled", :style => "height: 26px; padding-top: 2px;"
+

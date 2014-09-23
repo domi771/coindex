@@ -23,14 +23,17 @@
       when 'ask_panel' then 'ask'
 
   @cleanMsg = ->
-    @select('successSel').text('')
-    @select('successSelinfo').text('')
-    @select('infoSel').text('')
-    @select('dangerSel').text('')
+    $(".label-warning").text('')
+    $(".label-danger").text('')
 
   @resetForm = ->
-    @select('volumeSel') BigNumber(0)
-    @select('sumSel') BigNumber(0)
+    $('#order_bid_price').val('')
+    $('#order_ask_price').val('')
+    $('#order_bid_origin_volume').val('')
+    $('#order_ask_origin_volume').val('')
+    $('#order_bid_total').val('')
+    $('#order_ask_total').val('')
+    $('.btn-block').addClass('disabled').attr('disabled', 'disabled')
 
   @disableSubmit = ->
     @select('submitButton').addClass('disabled').attr('disabled', 'disabled')
@@ -45,10 +48,10 @@
     suctext = gon.i18n.place_order.price + ": " + data.price + " - " + gon.i18n.place_order.volume + ": " + data.volume + " - Total: " + data.total
 
     @cleanMsg()
-    @select('successSel').text(data.message).show().fadeOut(7500)
-    @select('successSelinfo').text(suctext).show().fadeOut(7500)
+    @select('successSel').text(data.message).show().fadeOut(10500)
+    @select('successSelinfo').text(suctext).show().fadeOut(10500)
     @resetForm()
-    @enableSubmit()
+    @disableSubmit()
 
   @handleError = (event, data) ->
     @cleanMsg()
@@ -92,7 +95,8 @@
 
       sum    = BigNumber(@select('sumSel').val())
       price  = BigNumber(@select('priceSel').val())
-      volume = sum.dividedBy(price)
+      # volume = sum.dividedBy(price)
+      volume = BigNumber(@select('volumeSel').val())
 
       @select('volumeSel').val(volume).fixAsk()
       @trigger 'updateAvailable', {sum: sum, volume: volume}
@@ -141,10 +145,14 @@
         if volume <= 0
           balanceAlert.text ''
           @disableSubmit()
+        else
+          @balanceCheck()
       when 'ask'
         if volume <= 0
           balanceAlert.text ''
           @disableSubmit()
+        else
+          @balanceCheck()
 
 
 
@@ -242,7 +250,8 @@
 
   @checkNumber = (event, data) ->
 
-    $("input").keypress (e) ->
+    # $("input").keypress (e) ->
+    $('#order_ask_price').keypress (e) ->
       a = []
       k = e.which
       i = 48
@@ -256,6 +265,47 @@
       e.preventDefault()  unless a.indexOf(k) >= 0
       return
 
+    $('#order_bid_price').keypress (e) ->
+      a = []
+      k = e.which
+      i = 48
+      while i < 58
+        a.push i
+        i++
+      a.push(46);
+      a.push(8);
+      a.push(9);
+      a.push(13);
+      e.preventDefault()  unless a.indexOf(k) >= 0
+      return
+
+    $('#order_bid_origin_volume').keypress (e) ->
+      a = []
+      k = e.which
+      i = 48
+      while i < 58
+        a.push i
+        i++
+      a.push(46);
+      a.push(8);
+      a.push(9);
+      a.push(13);
+      e.preventDefault()  unless a.indexOf(k) >= 0
+      return
+
+    $('#order_ask_origin_volume').keypress (e) ->
+      a = []
+      k = e.which
+      i = 48
+      while i < 58
+        a.push i
+        i++
+      a.push(46);
+      a.push(8);
+      a.push(9);
+      a.push(13);
+      e.preventDefault()  unless a.indexOf(k) >= 0
+      return
 
   @after 'initialize', ->
     @on document, 'order::plan', @orderPlan
@@ -280,3 +330,4 @@
     @on @select('volumeSel'), 'change paste keyup focusout', @computeSum
     @on @select('volumeSel'), 'change paste keyup focusout', @balanceCheck
     @on @select('sumSel'), 'change paste keyup', @computeVolume
+

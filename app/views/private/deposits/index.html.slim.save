@@ -1,0 +1,35 @@
+table.table.table-condensed.table-hover
+                           - @deposits.each do |d|
+                             .row.row-middle
+                               .col-md-4
+                                 span = d.code_text
+                               .col-md-4
+                                 span = d.title_text
+                               .col-md-4
+                                 i.fa.fa-clock-o.text-info
+                                 span = d.transfer_text
+                               .col-md-4
+                                 i.fa.fa-clock-o.text-info
+                                 span = d.latency_text
+                               .col-md-2
+                                 a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_deposits_#{d.key}_path")}' = t('.go')
+
+
+ul.list-group
+  - @deposits.each do |d|
+    li.list-group-item style = "padding: 0px;" class='deposit-channel-#{d.id}'
+      .row.row-middle
+        .col-md-9 style = "font-size: 12px; margin-top: 8px;"
+          .ro
+            .col-md-1 style = "font-weight: normal;"
+              span = d.code_text
+            .col-md-4 style = "font-weight: bold;"
+              span = d.title_text
+            .col-md-3
+              i.fa.fa-cogs.text-info
+              span = d.transfer_text
+            .col-md-4
+              i.fa.fa-clock-o.text-info
+              span = d.latency_text
+        .col-md-2
+          a.btn.btn-default.btn-flat style = "font-size: 12px;" href='#{send("new_deposits_#{d.key}_path")}' = t('.go')

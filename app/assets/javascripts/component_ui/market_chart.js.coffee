@@ -40,7 +40,7 @@
                 series[0].setData ohlc
                 series[1].setData volume
                 document.getElementById("pricechart-loading").style.display = "none"
-                document.getElementById("pricechart").style.height = "411px"
+                document.getElementById("pricechart").style.height = "440px"
                 document.getElementById("pricechart").style.display = "block"
                 #$(window).trigger('resize')
                 $(window).resize()
