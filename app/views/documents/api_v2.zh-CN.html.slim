@@ -4,7 +4,7 @@
   br
   small 返回结果格式: JSON
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 Public/Private API
 
@@ -27,7 +27,7 @@
         td 无需准备立即可用
         td 先要向貔貅管理员申请access/secret key
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 如何签名 (验证)
 
@@ -69,7 +69,7 @@
     pre: code
       | curl -X GET 'https://www.eurocex.com/api/v2/markets?access_key=xxx&foo=bar&tonce=123456789&signature=e324059be4491ed8e528aa7b8735af1e96547fbec96db962d51feb7bf1b64dee'
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 返回结果
 
@@ -157,7 +157,7 @@
             p asks: 卖单列表
             p bids: 买单列表
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 一些例子
 
@@ -170,7 +170,7 @@
     pre: code
       | curl -X POST 'https://www.eurocex.com/api/v2/orders/multi' -d 'access_key=your_access_key&tonce=123456789&signature=computed_signature&market=ltcbtc&orders[][price]=4000&orders[][side]=sell&orders[][volume]=0.5&orders[][price]=3999&orders[][side]=sell&orders[][volume]=0.99'
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 注意事项
 
@@ -188,7 +188,7 @@
           td POST /api/v2/orders/clear
           td 取消你所有的挂单. 取消挂单是一个异步操作, api成功返回代表取消请求已经提交,服务器正在处理. api返回的结果是你当前挂单的集合,结果中的订单不一定处于取消状态.
 
-.panel.panel-default
+.panel.panel-default style = "max-width: 1150px; margin-right: auto; margin-left: auto;"
   .panel-heading
     h5 API列表
 
