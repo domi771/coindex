@@ -90,7 +90,7 @@
       rangeSelector:
         enabled: true
         inputEnabled: false
-        selected: 3
+        selected: 5
         allButtonsEnabled: true
         buttons: [
           {
