@@ -7,10 +7,10 @@ update = ->
     $('#chat').empty()
     for m in msgsSorted
       d = moment(m.created_at)
-      $('#chat').append('<li>' +
-      '<span class="created_at">' + d.format('HH:mm') + '</span>' +
+      $('#chat').append('<li style="padding-bottom: 3px; padding-top: 3px;">' +
+      '<span class="created_at" style="background: #f9f9f9;">' + d.format('HH:mm') + '</span><span class="message" style="color: #526273; background: #f9f9f9;">' +
       m.content +
-      '</li>')
+      '</span></li>')
 
     $("#chat").mouseover ->
       $("#chat").stop()

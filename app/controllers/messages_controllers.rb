@@ -1,7 +1,7 @@
  class MessagesController < ApplicationController
 
   def index
-    @messages = Message.all.order('created_at DESC').limit(5)
+    @messages = Message.all.order('created_at DESC').limit(6)
   end
 
   def create
