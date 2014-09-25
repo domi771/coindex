@@ -73,6 +73,7 @@ en:
       uro: Urocoin
       lts: LottoShares
       sys: Syscoin
+      pts: Bitshares PTS
     code:
       chf: CHF
       btc: BTC
@@ -86,6 +87,7 @@ en:
       uro: URO
       lts: LTS
       sys: SYS
+      pts: PTS
 
   reset_two_factors:
     create:
