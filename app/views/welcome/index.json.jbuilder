@@ -6,7 +6,6 @@ json.i18n do
   json.ppc I18n.t('currency.name.ppc')
   json.btcd I18n.t('currency.name.btcd')
   json.doge I18n.t('currency.name.doge')
-  json.lts I18n.t('currency.name.lts')
   json.pts I18n.t('currency.name.pts')
 end
 
