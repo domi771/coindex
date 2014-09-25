@@ -1,7 +1,7 @@
 module Admin
   module Withdraws
     class BitsharesController < ::Admin::Withdraws::BaseController
-      load_and_authorize_resource :class => '::Withdraws::Bitshares'
+      load_and_authorize_resource :class => '::Withdraws::Bitshare'
 
       def index
         start_at = DateTime.now.ago(60 * 60 * 24)
@@ -13,12 +13,12 @@ module Admin
       end
 
       def update
-        @bitshares.process!
+        @bitshare.process!
         redirect_to :back, notice: t('.notice')
       end
 
       def destroy
-        @bitshares.reject!
+        @bitshare.reject!
         redirect_to :back, notice: t('.notice')
       end
     end

@@ -2,27 +2,27 @@
   .col-md-8
     .panel.panel-primary
       .panel-heading
-        span = t('.withdraw', sn: @bitshares.id)
+        span = t('.withdraw', sn: @bitshare.id)
       .panel-body
         = description_for :withdraw do
-          = item_for @bitshares, :id
-          = item_for @bitshares, :created_at
-          = item_for @bitshares, :aasm_state_text
+          = item_for @bitshare, :id
+          = item_for @bitshare, :created_at
+          = item_for @bitshare, :aasm_state_text
           hr.split
-          = item_for @bitshares.member, :name
-          = item_for @bitshares, :fund_extra
-          = item_for @bitshares, :fund_uid do
-            span = @bitshares.fund_uid.truncate(22)
-          = item_for @bitshares, :amount
+          = item_for @bitshare.member, :name
+          = item_for @bitshare, :fund_extra
+          = item_for @bitshare, :fund_uid do
+            span = @bitshare.fund_uid.truncate(22)
+          = item_for @bitshare, :amount
           hr.split
-          = item_for @bitshares, :remark
+          = item_for @bitshare, :remark
           hr.split
           ul.list-inline.pull-right
-            - if @bitshares.may_process?
+            - if @bitshare.may_process?
               li
-                = link_to t('.reject'), url_for([:admin, @bitshares]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
-            - if @bitshares.may_process?
+                = link_to t('.reject'), url_for([:admin, @bitshare]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @bitshare.may_process?
               li
-                = link_to t('.process'), url_for([:admin, @bitshares]), class: 'btn btn-primary', method: 'PATCH'
+                = link_to t('.process'), url_for([:admin, @bitshare]), class: 'btn btn-primary', method: 'PATCH'
   .col-md-8
-    = render partial: 'shared/admin/member', locals: {member: @bitshares.member} 
+    = render partial: 'shared/admin/member', locals: {member: @bitshare.member} 

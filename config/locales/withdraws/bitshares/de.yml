@@ -1,19 +1,19 @@
 de:
   withdraw_channel:
-    bitshares:
+    bitshare:
       key: Blockchain
       code: PTS
-      title: Bitshares
-      intro: Zahlen Sie Bitshares von EUROCEX zu Ihrem eigenen Wallet aus.
+      title: Bitshare
+      intro: Zahlen Sie Bitshare von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: 30 Minuten
       transfer: Manuell
       go: Jetzt Auszahlen
 
   activerecord:
     models:
-      withdraws/bitshares: Auszahlen
+      withdraws/bitshare: Auszahlen
     attributes:
-      withdraws/bitshares:
+      withdraws/bitshare:
         id: ID
         member_name: Transaktions ID
         currency_obj_key_text: Währung
@@ -21,7 +21,7 @@ de:
         fund_extra_text: Withdraw Label
         fund_extrat: Withdraw Label
         fund_source: Bank
-        fund_uid: Bitshares Adresse
+        fund_uid: Bitshare Adresse
         created_at: Erstellt am
         sum: Betrag
         amount: Betrag
@@ -31,7 +31,7 @@ de:
         state_and_action: Status
     errors:
       models:
-        withdraws/bitshares:
+        withdraws/bitshare:
           attributes:
             sum:
               poor: Ihr Kontostand ist ungenügend
@@ -41,7 +41,7 @@ de:
               invalid: Dies ist keine gültige Auszahlungsadresse
               ismine: Dies ist keine gültige Auszahlungsadresse 
 
-  withdraws/bitshares:
+  withdraws/bitshare:
     aasm_state:
       submitting: in Bearbeitung
       submitted: in Bearbeitung
@@ -69,8 +69,8 @@ de:
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
           fund_extra: 选择开户行
-          fund_source_label: Bitshares Adresse
-          manage_fund_source: Bitshares Adressen verwalten
+          fund_source_label: Bitshare Adresse
+          manage_fund_source: Bitshare Adressen verwalten
         create:
           notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
@@ -92,38 +92,38 @@ de:
   simple_form:
     labels:
       withdraw:
-        bitshares:
+        bitshare:
           fee: Gebühren
           sum: Betrag
-          fund_uid: Bitshares Adresse
+          fund_uid: Bitshare Adresse
           fund_extra: Memo
           account_balance: Kontostand
           member_name: Konto
     placeholders:
       withdraw:
-        bitshares:
+        bitshare:
           sum: Minimum Betrag 0.001
           fund_extra: Memo für diese Adresse (optional)
     hints:
       withdraw:
-        bitshares:
+        bitshare:
           sum: "<a target='_balance' href='#'>Gebühren</a>"
 
   guides:
     private:
       withdraws:
         bitshares:
-          panel: Bitshares Blockchain
+          panel: Bitshare Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Bitshares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshares Auszahlungsverlauf
+            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshare Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Bitshares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshares Auszahlungsverlauf
+            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshare Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Bitshares Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshares Auszahlungsverlauf
+            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshare Auszahlungsverlauf
 

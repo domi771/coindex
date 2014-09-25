@@ -1,7 +1,7 @@
 module Admin
   module Deposits
     class BitsharesController < ::Admin::Deposits::BaseController
-      load_and_authorize_resource :class => '::Deposits::Bitshares'
+      load_and_authorize_resource :class => '::Deposits::Bitshare'
 
       def index
         start_at = DateTime.now.ago(60 * 60 * 24)
@@ -11,7 +11,7 @@ module Admin
       end
 
       def update
-        @bitshares.accept! if @bitshares.may_accept?
+        @bitshare.accept! if @bitshare.may_accept?
         redirect_to :back, notice: t('.notice')
       end
     end

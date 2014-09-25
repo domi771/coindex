@@ -1,24 +1,24 @@
 en:
   deposit_channel:
-    bitshares:
+    bitshare:
       key: Block Chain
       code: PTS
-      title: Bitshares 
-      intro: Deposit Bitshares from your own wallet to your EUROCEX account
+      title: Bitshare 
+      intro: Deposit Bitshare from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic
       go: Deposit
 
   activerecord:
     attributes:
-      deposits/bitshares:
+      deposits/bitshare:
         created_at: Created At
         txid: Transaction ID
         amount: Amount
         memo: Confirmation
         aasm_state_text: State
 
-  deposits/bitshares:
+  deposits/bitshare:
     aasm_state:
       submitted: Processing
       accepted: Done
@@ -29,11 +29,11 @@ en:
     private:
       deposits:
         bitshares:
-          panel: Bitshares Blockchain
-          intro: Deposit Bitshares from your own wallet to your EUROCEX account.
+          panel: Bitshare Blockchain
+          intro: Deposit Bitshare from your own wallet to your EUROCEX account.
           new:
             panel: Deposit
-            default-panel: Bitshares Deposit History
+            default-panel: Bitshare Deposit History
 
   admin:
     deposits:
@@ -47,10 +47,10 @@ en:
   private:
     deposits:
       bitshares:
-        panel: Bitshares
+        panel: Bitshare
         new:
-          panel: Bitshares Blockchain
+          panel: Bitshare Blockchain
           step-1: Step one
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Send the desired amount of Bitshares to the following address
+          send-coin: Send the desired amount of Bitshare to the following address

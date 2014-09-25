@@ -1,19 +1,19 @@
 en:
   withdraw_channel:
-    bitshares:
+    bitshare:
       key: Blockchain
       code: PTS
-      title: Bitshares 
-      intro: Withdraw Bitshares from EUROCEX to your own Bitshares wallet
+      title: Bitshare 
+      intro: Withdraw Bitshare from EUROCEX to your own Bitshare wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw Now
 
   activerecord:
     models:
-      withdraws/bitshares: Withdraw
+      withdraws/bitshare: Withdraw
     attributes:
-      withdraws/bitshares:
+      withdraws/bitshare:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
@@ -29,7 +29,7 @@ en:
         fee: Fee
     errors:
       models:
-        withdraws/bitshares:
+        withdraws/bitshare:
           attributes:
             sum:
               poor: Insufficent account balance
@@ -39,7 +39,7 @@ en:
               invalid: Invalid withdrawal address
               ismine: Invalid withdrawal address
 
-  withdraws/bitshares:
+  withdraws/bitshare:
     aasm_state:
       submitting: Submitting
       submitted: Submitted
@@ -67,7 +67,7 @@ en:
           allin: All-In
           fund_uid: Use saved address or enter a new address
           fund_extra: 选择开户行
-          fund_source_label: Bitshares Address
+          fund_source_label: Bitshare Address
           manage_fund_source: Manage Funding Sources
         create:
           notice: Review the data below and confirm the withdrawal request.
@@ -90,38 +90,38 @@ en:
   simple_form:
     labels:
       withdraw:
-        bitshares:
+        bitshare:
           fee: Fee
           sum: Amount
-          fund_uid: Bitshares Address
+          fund_uid: Bitshare Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
     placeholders:
       withdraw:
-        bitshares:
+        bitshare:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
     hints:
       withdraw:
-        bitshares:
+        bitshare:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
 
   guides:
     private:
       withdraws:
         bitshares:
-          panel: Bitshares Blockchain
+          panel: Bitshare Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Bitshares address and amount you want to withdraw from your EUROCEX account.
-            default-panel: Bitshares Withdraw History
+            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
+            default-panel: Bitshare Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Bitshares address and amount you want to withdraw from your EUROCEX account.
+            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Bitshares address and amount you want to withdraw from your EUROCEX account.
+            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
 
