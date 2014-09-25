@@ -24,6 +24,8 @@ de:
       key: LTS
     syscoins:
       key: SYS
+    bitshares:
+      key: PTS
     name:
       chf: Swiss Franc
       btc: Bitcoin
@@ -37,6 +39,7 @@ de:
       uro: Urocoin
       lts: LottoShares
       sys: Syscoin
+      pts: Bitshares
     code:
       chf: CHF
       btc: BTC
@@ -50,6 +53,7 @@ de:
       uro: URO
       lts: LTS
       sys: SYS
+      pts: PTS
     format:
       zero: 'N/A'
       chf: '0,0.00'
