@@ -28,7 +28,7 @@ module Admin
       can :manage, ::Deposits::Urocoin
       can :manage, ::Deposits::LottoShare
       can :manage, ::Deposits::Syscoin
-      can :manage, ::Deposits::Bitshares
+      can :manage, ::Deposits::Bitshare
 
       can :menu, Withdraw
       can :manage, ::Withdraws::Bank
@@ -43,7 +43,7 @@ module Admin
       can :manage, ::Withdraws::Urocoin
       can :manage, ::Withdraws::LottoShare
       can :manage, ::Withdraws::Syscoin
-      can :manage, ::Withdraws::Bitshares
+      can :manage, ::Withdraws::Bitshare
 
       can :stat, ::Member
 
