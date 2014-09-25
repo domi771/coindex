@@ -3,7 +3,7 @@ en:
     bitshare:
       key: Block Chain
       code: PTS
-      title: Bitshare 
+      title: Bitshares PTS
       intro: Deposit Bitshare from your own wallet to your EUROCEX account
       latency: 1 confirmation
       transfer: Automatic

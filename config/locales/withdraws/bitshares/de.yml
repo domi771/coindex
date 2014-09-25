@@ -3,10 +3,10 @@ de:
     bitshare:
       key: Blockchain
       code: PTS
-      title: Bitshare
+      title: Bitshares PTS
       intro: Zahlen Sie Bitshare von EUROCEX zu Ihrem eigenen Wallet aus.
-      latency: 30 Minuten
-      transfer: Manuell
+      latency: Direkt
+      transfer: Automatisch
       go: Jetzt Auszahlen
 
   activerecord:

@@ -3,10 +3,10 @@ en:
     bitshare:
       key: Blockchain
       code: PTS
-      title: Bitshare 
+      title: Bitshares PTS
       intro: Withdraw Bitshare from EUROCEX to your own Bitshare wallet
-      latency: 30 minutes
-      transfer: Manual
+      latency: Instant
+      transfer: Automatic
       go: Withdraw Now
 
   activerecord:
