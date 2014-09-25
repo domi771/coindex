@@ -65,4 +65,5 @@ json.i18n do
   json.uro I18n.t('currency.name.uro')
   json.lts I18n.t('currency.name.lts')
   json.sys I18n.t('currency.name.sys')
+  json.pts I18n.t('currency.name.pts')
 end

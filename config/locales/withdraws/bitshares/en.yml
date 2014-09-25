@@ -4,7 +4,7 @@ en:
       key: Blockchain
       code: PTS
       title: Bitshares PTS
-      intro: Withdraw Bitshare from EUROCEX to your own Bitshare wallet
+      intro: Withdraw Bitshares PTS from EUROCEX to your own Bitshares PTS  wallet
       latency: Instant
       transfer: Automatic
       go: Withdraw Now
@@ -67,7 +67,7 @@ en:
           allin: All-In
           fund_uid: Use saved address or enter a new address
           fund_extra: 选择开户行
-          fund_source_label: Bitshare Address
+          fund_source_label: Bitshares PTS Address
           manage_fund_source: Manage Funding Sources
         create:
           notice: Review the data below and confirm the withdrawal request.
@@ -93,7 +93,7 @@ en:
         bitshare:
           fee: Fee
           sum: Amount
-          fund_uid: Bitshare Address
+          fund_uid: Bitshares PTS Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
@@ -111,17 +111,17 @@ en:
     private:
       withdraws:
         bitshares:
-          panel: Bitshare Blockchain
+          panel: Bitshares PTS Blockchain
           new:
             panel: Withdraw
-            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
-            default-panel: Bitshare Withdraw History
+            intro: Enter the Bitshares PTS address and amount you want to withdraw from your EUROCEX account.
+            default-panel: Bitshares PTS Withdraw History
           create:
             panel: Withdraw
-            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
+            intro: Enter the Bitshares PTS address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
           edit:
             panel: Withdraw
-            intro: Enter the Bitshare address and amount you want to withdraw from your EUROCEX account.
+            intro: Enter the Bitshares PTS address and amount you want to withdraw from your EUROCEX account.
             default-panel: Litcoin Withdraw History
 

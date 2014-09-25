@@ -4,7 +4,7 @@ de:
       key: Blockchain
       code: PTS
       title: Bitshares PTS
-      intro: Zahlen Sie Bitshare von EUROCEX zu Ihrem eigenen Wallet aus.
+      intro: Zahlen Sie Bitshares PTS von EUROCEX zu Ihrem eigenen Wallet aus.
       latency: Direkt
       transfer: Automatisch
       go: Jetzt Auszahlen
@@ -21,7 +21,7 @@ de:
         fund_extra_text: Withdraw Label
         fund_extrat: Withdraw Label
         fund_source: Bank
-        fund_uid: Bitshare Adresse
+        fund_uid: Bitshares PTS Adresse
         created_at: Erstellt am
         sum: Betrag
         amount: Betrag
@@ -69,8 +69,8 @@ de:
           allin: All-In
           fund_uid: Gespeicherte Adresse oder Neue erstellen
           fund_extra: 选择开户行
-          fund_source_label: Bitshare Adresse
-          manage_fund_source: Bitshare Adressen verwalten
+          fund_source_label: Bitshares PTS Adresse
+          manage_fund_source: Bitshares PTS Adressen verwalten
         create:
           notice: Bitte überprüfen Sie untenstehende Daten und bestätigen Sie die Auzahlung.
 
@@ -95,7 +95,7 @@ de:
         bitshare:
           fee: Gebühren
           sum: Betrag
-          fund_uid: Bitshare Adresse
+          fund_uid: Bitshares PTS Adresse
           fund_extra: Memo
           account_balance: Kontostand
           member_name: Konto
@@ -113,17 +113,17 @@ de:
     private:
       withdraws:
         bitshares:
-          panel: Bitshare Blockchain
+          panel: Bitshares PTS Blockchain
           new:
             panel: Auszahlen
-            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshare Auszahlungsverlauf
+            intro: Geben Sie die Bitshares PTS Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshares PTS Auszahlungsverlauf
           create:
             panel: Auszahlen
-            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshare Auszahlungsverlauf
+            intro: Geben Sie die Bitshares PTS Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshares PTS Auszahlungsverlauf
           edit:
             panel: Auszahlen
-            intro: Geben Sie die Bitshare Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
-            default-panel: Bitshare Auszahlungsverlauf
+            intro: Geben Sie die Bitshares PTS Adresse sowie den Betrag an welchen Sie von Ihrem EUROCEX Konto auszahlen wollen.
+            default-panel: Bitshares PTS Auszahlungsverlauf
 

@@ -4,8 +4,8 @@ de:
       key: Block Chain
       code: PTS
       title: Bitshares PTS
-      intro: Zahlen Sie Bitshare von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
-      latency: 1 Bestätigung
+      intro: Zahlen Sie Bitshares PTS von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
+      latency: 3 Bestätigungen
       transfer: Automatisch
       go: Einzahlen
 
@@ -29,11 +29,11 @@ de:
     private:
       deposits:
         bitshares:
-          panel: Bitshare Blockchain
-          intro: Zahlen Sie Bitshare von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
+          panel: Bitshares PTS Blockchain
+          intro: Zahlen Sie Bitshares PTS von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
           new:
             panel: Einzahlen
-            default-panel: Bitshare Einzahlungsverlauf
+            default-panel: Bitshares PTS Einzahlungsverlauf
 
   admin:
     deposits:
@@ -47,10 +47,10 @@ de:
   private:
     deposits:
       bitshares:
-        panel: Bitshare
+        panel: Bitshares PTS
         new:
-          panel: Bitshare Blockchain
+          panel: Bitshares PTS Blockchain
           step-1: Schritt 1
           open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
           step-2: Step Two
-          send-coin: Senden Sie den gewünschten Bitshare Betrag and die folgende Adresse
+          send-coin: Senden Sie den gewünschten Bitshares PTS Betrag and die folgende Adresse
