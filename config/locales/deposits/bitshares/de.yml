@@ -1,0 +1,56 @@
+de:
+  deposit_channel:
+    bitshares:
+      key: Block Chain
+      code: PTS
+      title: Bitshares 
+      intro: Zahlen Sie Bitshares von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
+      latency: 1 Bestätigung
+      transfer: Automatisch
+      go: Einzahlen
+
+  activerecord:
+    attributes:
+      deposits/bitshares:
+        created_at: Erstellt am
+        txid: Transaktions ID
+        amount: Betrag
+        memo: Bestätigungen
+        aasm_state_text: Status
+
+  deposits/bitshares:
+    aasm_state:
+      submitted: in Bearbeitung
+      accepted: Erledigt
+      checked: Checked
+      warning: Warnung
+
+  guides:
+    private:
+      deposits:
+        bitshares:
+          panel: Bitshares Blockchain
+          intro: Zahlen Sie Bitshares von Ihrem eigenen Wallet auf Ihr EUROCEX Konto ein.
+          new:
+            panel: Einzahlen
+            default-panel: Bitshares Einzahlungsverlauf
+
+  admin:
+    deposits:
+      bitshares:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 充值充值
+          accept_confirm: 确定立刻确认此充值？
+
+  private:
+    deposits:
+      bitshares:
+        panel: Bitshares
+        new:
+          panel: Bitshares Blockchain
+          step-1: Schritt 1
+          open-wallet: Open your common wallet services, local wallet, mobile terminal or online wallet and create a new outgoing transaction.
+          step-2: Step Two
+          send-coin: Senden Sie den gewünschten Bitshares Betrag and die folgende Adresse

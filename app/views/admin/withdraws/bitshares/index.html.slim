@@ -1,0 +1,11 @@
+- unless @one_bitshares.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {bitshares: @one_bitshares}
+- unless @all_bitshares.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {bitshares: @all_bitshares}
+
+- if @all_bitshares.empty? and @one_bitshares.empty?
+  h3.text-info.text-center = t('.empty')
