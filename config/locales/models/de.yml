@@ -46,6 +46,7 @@ de:
         currency_text: Währung
         balance: Kontostand
         locked: Reserviert
+        available: Verfügbar
       deposit:
         currency-address-type: Währung - Einzahlungsart
         state: Status

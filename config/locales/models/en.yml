@@ -49,6 +49,7 @@ en:
         balance_and_locked: Balance / Locked
         balance: Balance
         locked: Reserved
+        available: Available
       deposit:
         currency-address-type: Currency - Pay type
         state: State

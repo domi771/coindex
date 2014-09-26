@@ -40,11 +40,11 @@ en:
 
       deposits:
         panel: Deposit
-        intro: You can recharge your Bitcoins and all Altcoins from your own wallet.
+        intro: You can recharge your Bitcoins and all other cryptocurrencies from your own wallet.
 
       withdraws:
         panel: Withdraw
-        intro: You can withdraw Bitcoins and all  Altcoins to your own wallet.
+        intro: You can withdraw Bitcoins and all other cryptocurrencies to your own wallet.
         new:
           title: Select your preferred withdrawal option
           intro: Select  your withdrawals address and enter the amount you want to withdraw.
