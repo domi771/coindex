@@ -69,3 +69,8 @@ Handlebars.registerHelper 'format_volume', (origin, volume) ->
 
 Handlebars.registerHelper 't', (key) -> gon.i18n[key]
 
+Handlebars.registerHelper 'link', (code) ->
+  if (code is 'btc')
+    code
+  else
+    code = new Handlebars.SafeString("<a href='/markets/btc" + code + "'>" + code + "</a>")

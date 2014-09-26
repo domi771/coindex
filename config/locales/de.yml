@@ -210,6 +210,11 @@ de:
     market: Markt
     markets: Märkte
     currency: Währung
+    available: Verfügbar
+    locked: Reserviert
+    est_btc: "Unge. BTC Wert"
+    code: Code
+
 
   chart:
     price: Preis

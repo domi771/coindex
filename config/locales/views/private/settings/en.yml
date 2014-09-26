@@ -1,6 +1,6 @@
 en:
   private:
-    settings:
+    settings:    
       success: Settings updated successfully.
       failure: Invalid passcode. Please try again.
 

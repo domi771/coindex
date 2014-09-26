@@ -191,6 +191,10 @@ en:
     market: Market
     markets: Markets
     currency: Currency
+    available: Available
+    locked: Reserved
+    est_btc: "Est. BTC Value"
+    code: Code
  
   chart:
     price: Price

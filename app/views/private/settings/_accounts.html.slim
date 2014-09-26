@@ -5,13 +5,24 @@
     .col-md-12
       table.table.table-condensed.table-striped.table-hover
         thead: tr style = "cursor: pointer;"
-            th style = 'width: 65px;' class="sort" data-sort ='code' 
-              span = t('Code')
+            th class="sort col-md-2" data-sort ='currency' 
+              span = t('global.currency')
               i class="fa fa-sort"
-            - %w(currency available locked).each do |attr|
-              th data-sort='#{attr}' class="sort"
-                span = Account.human_attribute_name(attr)
-                i class="fa fa-sort"
-        
+            th class="sort col-md-2" data-sort ='code'
+              span = t('global.code')
+              i class="fa fa-sort"
+            th class="sort col-md-2" data-sort ='available'
+              span = t('global.available')
+              i class="fa fa-sort"
+            th class="sort col-md-2" data-sort ='locked'
+              span = t('global.locked')
+              i class="fa fa-sort"
+            th class="sort col-md-2" data-sort ='total'
+              span = t('global.total')
+              i class="fa fa-sort"
+            th class="sort col-md-2" data-sort ='est_btc'
+              span = t('global.est_btc')
+              i class="fa fa-sort"
+
         tbody.list
 
