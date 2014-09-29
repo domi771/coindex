@@ -9,4 +9,3 @@
 
   @after 'initialize', ->
     @on document, 'trade::account', @updateAccount
-

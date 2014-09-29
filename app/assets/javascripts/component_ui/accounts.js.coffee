@@ -68,7 +68,11 @@ window.AccountsUI = flight.component ->
 
 
       accounts.sort (a, b)->
-        a.currency < b.currency
+        # a.currency < b.currency
+        b.currency.localeCompare(a.currency)
+
+      console.log accounts
+
       @refresh {accounts: accounts}
 
       @initList()
