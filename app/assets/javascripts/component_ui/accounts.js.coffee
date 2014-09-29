@@ -9,21 +9,27 @@ window.AccountsUI = flight.component ->
     $table.prepend(JST['account'](account)) for account in data.accounts
     @select('total_btc').text(fixAsk data.total_btc)
 
-
+    checkZero = (currentTr) ->
+      if $("#filter2").is(":checked")
+        $(currentTr).find("td").eq(4).text() isnt "0.00000000"
+      else
+        true
     getStstus = localStorage.getItem("zerobalance")
     if getStstus is "true"
-      document.getElementById("filterCheckBox").setAttribute "checked", "checked"
+      document.getElementById("filter2").setAttribute "checked", "checked"
       $(".searchable tr").hide()
       $(".searchable tr").filter(->
-        $(this).find("td").eq(4).text() isnt "0.00000000"
+        checkZero(this)
       ).show()
       $(".no-data").hide()
       $(".no-data").show()  if $(".searchable tr:visible").length is 0
-      localStorage.setItem "zerobalance", "true"
     else
-      $(".searchable tr").show()
+      # localStorage.setItem "zerobalance", "false"
+      $(".searchable tr").filter(->
+        matchesSearch this
+      ).show()
       $(".no-data").hide()
-      localStorage.setItem "zerobalance", "false"
+      $(".no-data").show()  if $(".searchable tr:visible").length is 0
 
 
   @filter = (event) ->

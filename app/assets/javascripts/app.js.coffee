@@ -6,35 +6,43 @@
 $ ->
   BigNumber.config(ERRORS: false)
 
+  checkZero = (currentTr) ->
+    if $("#filter2").is(":checked")
+      $(currentTr).find("td").eq(4).text() isnt "0.00000000"
+    else
+      true
+  matchesSearch = (currentTr) ->
+    rex = new RegExp($("#filter").val(), "i")
+    rex.test $(currentTr).text()
   $("#filter").keyup ->
     rex = new RegExp($(this).val(), "i")
     $(".searchable tr").hide()
     $(".searchable tr").filter(->
-      if document.getElementById("filterCheckBox").checked
-        $(this).find("td").eq(4).text() isnt "0.00000000"
-        rex.test $(this).text()
-      else
-        rex.test $(this).text()      
+      matchesSearch(this) and checkZero(this)
     ).show()
     $(".no-data").hide()
     $(".no-data").show()  if $(".searchable tr:visible").length is 0
     return
 
-  $("#filterCheckBox").on "change", ->
+  $("#filter2").on "click", ->
     if @checked
+      localStorage.setItem "zerobalance", "true"
       $(".searchable tr").hide()
       $(".searchable tr").filter(->
-        $(this).find("td").eq(4).text() isnt "0.00000000"
+        checkZero(this) and matchesSearch(this)
       ).show()
       $(".no-data").hide()
       $(".no-data").show()  if $(".searchable tr:visible").length is 0
-      localStorage.setItem "zerobalance", "true"
     else
-      $(".searchable tr").show()
-      $(".no-data").hide()
       localStorage.setItem "zerobalance", "false"
-    return
+      $(".searchable tr").filter(->
+        matchesSearch this
+      ).show()
+      $(".no-data").hide()
+      $(".no-data").show()  if $(".searchable tr:visible").length is 0
+      return
 
+  # $("#filter2").trigger "click"
 
   if $('#assets-index').length
     $.scrollIt
