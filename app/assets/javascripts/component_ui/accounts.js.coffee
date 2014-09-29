@@ -9,6 +9,7 @@ window.AccountsUI = flight.component ->
     $table.prepend(JST['account'](account)) for account in data.accounts
     @select('total_btc').text(fixAsk data.total_btc)
 
+
     getStstus = localStorage.getItem("zerobalance")
     if getStstus is "true"
       document.getElementById("filterCheckBox").setAttribute "checked", "checked"
@@ -101,18 +102,16 @@ window.AccountsUI = flight.component ->
         total = total.plus(accounts[i].est_btc)
         i++
 
-      # console.log total
 
       total_btc =  BigNumber(total)
-      # total_btc =  total
 
       accounts.sort (a, b)->
-        # a.currency < b.currency
+        #a.currency < b.currency
         b.currency.localeCompare(a.currency)
 
-      console.log accounts
-      console.log accounts1
-      console.log accounts2
+      # console.log accounts
+      # console.log accounts1
+      # console.log accounts2
 
 
       @refresh {accounts: accounts, total_btc: total_btc}

@@ -77,6 +77,6 @@ Handlebars.registerHelper 'link', (code) ->
 
 Handlebars.registerHelper 'change', (change) ->
   if !change?
-    change = round2(0)
+    round2(0)
   else
     round2(change)
