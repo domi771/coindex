@@ -10,11 +10,31 @@ $ ->
     rex = new RegExp($(this).val(), "i")
     $(".searchable tr").hide()
     $(".searchable tr").filter(->
-      rex.test $(this).text()
+      if document.getElementById("filterCheckBox").checked
+        $(this).find("td").eq(4).text() isnt "0.00000000"
+        rex.test $(this).text()
+      else
+        rex.test $(this).text()      
     ).show()
     $(".no-data").hide()
     $(".no-data").show()  if $(".searchable tr:visible").length is 0
     return
+
+  $("#filterCheckBox").on "change", ->
+    if @checked
+      $(".searchable tr").hide()
+      $(".searchable tr").filter(->
+        $(this).find("td").eq(4).text() isnt "0.00000000"
+      ).show()
+      $(".no-data").hide()
+      $(".no-data").show()  if $(".searchable tr:visible").length is 0
+      localStorage.setItem "zerobalance", "true"
+    else
+      $(".searchable tr").show()
+      $(".no-data").hide()
+      localStorage.setItem "zerobalance", "false"
+    return
+
 
   if $('#assets-index').length
     $.scrollIt

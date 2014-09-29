@@ -74,3 +74,9 @@ Handlebars.registerHelper 'link', (code) ->
     code
   else
     code = new Handlebars.SafeString("<a href='/markets/btc" + code + "'>" + code + "</a>")
+
+Handlebars.registerHelper 'change', (change) ->
+  if !change?
+    change = '0.0'
+  else
+    change
