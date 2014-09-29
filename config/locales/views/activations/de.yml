@@ -4,4 +4,4 @@ de:
       tip: Eine E-mail mit Ihrem Aktivierungslink wurde an %{email} gesendet
       spam: Mail maybe in your spam box, please checkout.
     edit:
-      notice: Konto erfolgreich aktiviert! Bitte melden Sie sich an.
+      notice: Ihr Konto wurde erfolgreich aktiviert!

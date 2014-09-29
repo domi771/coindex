@@ -77,7 +77,7 @@ window.AccountsUI = flight.component ->
         # a.currency < b.currency
         b.currency.localeCompare(a.currency)
 
-      # console.log accounts
+      console.log accounts
 
       @refresh {accounts: accounts, total_btc: total_btc}
    

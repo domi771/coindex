@@ -8,6 +8,8 @@ module Private
       @accounts    = current_user.accounts.order("balance desc")
       @two_factor  = current_user.two_factors.by_type(:app).activated?
 
+      @deposits = DepositChannel.all.sort
+
       gon.jbuilder controller: self
 
     end

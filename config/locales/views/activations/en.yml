@@ -4,4 +4,4 @@ en:
       tip: Activation link was sent to %{email}
       spam: Please check your spam folder for the activation link.
     edit:
-      notice: Account activated successfully! Please sign in below.
+      notice: Your account was successfully activated!
