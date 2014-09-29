@@ -6,6 +6,16 @@
 $ ->
   BigNumber.config(ERRORS: false)
 
+  $("#filter").keyup ->
+    rex = new RegExp($(this).val(), "i")
+    $(".searchable tr").hide()
+    $(".searchable tr").filter(->
+      rex.test $(this).text()
+    ).show()
+    $(".no-data").hide()
+    $(".no-data").show()  if $(".searchable tr:visible").length is 0
+    return
+
   if $('#assets-index').length
     $.scrollIt
       topOffset: -180

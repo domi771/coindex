@@ -7,11 +7,18 @@
       | : 
       span.total_btc.value
       |  BTC)
-
+      label.cb-panel-heading style = "float: right; margin-top: -4px; margin-right: 17px; font-weight: normal;"
+         input#filterCheckBox type="checkbox" style = "vertical-align: bottom;"
+         |  Hide zero balances
+     
   .panel-body
     .col-md-12
+      #balanceTable_filter.dataTables_filter style=("text-align: right; margin-bottom: 3px; margin-top: -6px;") 
+        label style = "font-weight: normal;"
+          | Search: 
+          input id="filter" placeholder="" type="search" /
       table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
-        thead: tr style = "cursor: pointer;"
+        thead: tr style = "cursor: pointer; border-top: 1px solid #dee3ea;"
             th class="sort col-md-2" data-sort ='currency' 
               span = t('global.currency')
               i class="fa fa-sort"
@@ -31,5 +38,7 @@
               span = t('global.est_btc')
               i class="fa fa-sort"
 
-        tbody.list style = "font-size: 12px;"
+        tbody.list class = "searchable" style = "font-size: 12px;"
+             tr.no-data
+               td colspan="6" style="text-transform: none;"  No matching records found
 
