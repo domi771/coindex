@@ -25,12 +25,6 @@ window.AccountsUI = flight.component ->
       $(".no-data").show()  if $(".searchable tr:visible").length is 0
     else
       # localStorage.setItem "zerobalance", "false"
-      $(".searchable tr").filter(->
-        matchesSearch this
-      ).show()
-      $(".no-data").hide()
-      $(".no-data").show()  if $(".searchable tr:visible").length is 0
-
 
   @filter = (event) ->
     type = event.target.className
