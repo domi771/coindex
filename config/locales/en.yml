@@ -193,7 +193,7 @@ en:
     currency: Currency
     available: Available
     locked: Reserved
-    est_btc: "Est. BTC Value"
+    est_btc: "BTC Value"
     code: Code
     estimated_value: "Estimated Value"
  

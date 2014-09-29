@@ -19,30 +19,27 @@
           input id="filter" placeholder="" type="search" /
       table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
         thead: tr style = "cursor: pointer; border-top: 1px solid #dee3ea; white-space: nowrap;"
-            th class="sort col-md-2" data-sort ='currency' 
+            th class="sort" style = "width: 16.66%;" data-sort ='currency' 
               span = t('global.currency')
               i class="fa fa-sort"
-            th class="sort col-md-2" data-sort ='code'
+            th class="sort" style = "width: 16.66%;" data-sort ='code'
               span = t('global.code')
               i class="fa fa-sort"
-            th class="sort col-md-2" data-sort ='available'
+            th class="sort" style = "width: 16.66%;" data-sort ='available'
               span = t('global.available')
               i class="fa fa-sort"
-            th class="sort col-md-2" data-sort ='locked'
+            th class="sort" style = "width: 16.66%;" data-sort ='locked'
               span = t('global.locked')
               i class="fa fa-sort"
-            th class="sort col-md-2" data-sort ='total'
-              span = t('global.total')
-              i class="fa fa-sort"
-            th class="sort col-md-2" data-sort ='est_btc'
+            th class="sort" style = "width: 16.66%;" data-sort ='est_btc'
               span = t('global.est_btc')
               i class="fa fa-sort"
-            th class="sort col-md-2" style = "padding-right: 24px;" data-sort ="change"
+            th class="sort" style = "width: 16.66%; padding-right: 24px;" data-sort ="change"
               span = t('global.change')
               i class="fa fa-sort"
 
 
         tbody.list class = "searchable" style = "font-size: 12px;"
              tr.no-data
-               td colspan="7" style="text-transform: none;"  No matching records found
+               td colspan="6" style="text-transform: none; background-color: #f9f9f9;"  No matching records found
 

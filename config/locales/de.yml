@@ -212,7 +212,7 @@ de:
     currency: Währung
     available: Verfügbar
     locked: Reserviert
-    est_btc: "Unge. BTC Wert"
+    est_btc: "BTC Wert"
     code: Code
     estimated_value: "Geschätzter Wert"
 

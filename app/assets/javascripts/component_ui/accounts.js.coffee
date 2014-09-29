@@ -35,7 +35,7 @@ window.AccountsUI = flight.component ->
 
   @initList = ->
     options =
-      valueNames: [ 'code', 'currency', 'available', 'locked', 'total', 'est_btc', 'change']
+      valueNames: [ 'code', 'currency', 'available', 'locked', 'est_btc', 'change']
     @list = new List('accounts', options)
 
   @after 'initialize', ->
