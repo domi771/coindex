@@ -79,15 +79,16 @@ window.AccountsUI = flight.component ->
           return
 
         item.currency = cur.substring(3)
+        item.merge = cur.substring(3)
         accounts2.push item
             
         while i < accounts2.length
-          obj2[accounts2[i].currency] = accounts2[i]
+          obj2[accounts2[i].merge] = accounts2[i]
           i++
 
       accounts = []
       for key of obj1
-        accounts.push merge_options(obj1[key], obj2[key])
+        accounts.push merge_options(obj2[key], obj1[key])
    
       
       i = 0
@@ -109,7 +110,9 @@ window.AccountsUI = flight.component ->
         # a.currency < b.currency
         b.currency.localeCompare(a.currency)
 
-      # console.log accounts
+      console.log accounts
+      console.log accounts1
+      console.log accounts2
 
 
       @refresh {accounts: accounts, total_btc: total_btc}
