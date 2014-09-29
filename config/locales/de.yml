@@ -214,7 +214,7 @@ de:
     locked: Reserviert
     est_btc: "Unge. BTC Wert"
     code: Code
-
+    estimated_value: "Geschätzter Wert"
 
   chart:
     price: Preis

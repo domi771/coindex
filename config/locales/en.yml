@@ -195,6 +195,7 @@ en:
     locked: Reserved
     est_btc: "Est. BTC Value"
     code: Code
+    estimated_value: "Estimated Value"
  
   chart:
     price: Price

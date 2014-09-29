@@ -1,6 +1,13 @@
 .panel.panel-default id = "accounts" style = "margin-top: 90px;"
-  .panel-heading
-    h2.panel-title = t('trade.account_balance.title')
+  .panel-heading.total_btc
+    h2.panel-title 
+      = t('trade.account_balance.title')
+      |  (
+      = t('global.estimated_value') 
+      | : 
+      span.total_btc.value
+      |  BTC)
+
   .panel-body
     .col-md-12
       table.table.table-condensed.table-striped.table-hover style = "text-transform: uppercase; color: #526273; font-size: 11px;"
