@@ -14,6 +14,7 @@ $ ->
   matchesSearch = (currentTr) ->
     rex = new RegExp($("#filter").val(), "i")
     rex.test $(currentTr).text()
+
   $("#filter").keyup ->
     rex = new RegExp($(this).val(), "i")
     $(".searchable tr").hide()
