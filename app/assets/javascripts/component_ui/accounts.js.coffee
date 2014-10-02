@@ -106,7 +106,7 @@ window.AccountsUI = flight.component ->
       total_btc =  BigNumber(total)
 
       accounts.sort (a, b)->
-        #a.currency < b.currency
+        # a.currency < b.currency
         b.currency.localeCompare(a.currency)
 
       # console.log accounts

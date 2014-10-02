@@ -5,7 +5,7 @@ en:
       failure: Invalid passcode. Please try again.
 
       index:
-        safety_instruction: In order to protect your crypto coins and personal information, we strongly suggest that you use  Two-factor Authentication
+        safety_instruction: In order to protect your crypto coins withdrawals are only possible with Two-factor Authentication verification.
         reset_password: Reset your Password
 
         reauthenticate: Authentication

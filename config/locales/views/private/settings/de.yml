@@ -5,7 +5,7 @@ de:
       failure: Ungültiges Passwort. Bitte versuchen Sie es nocheinmal
 
       index:
-        safety_instruction: Um Ihre Cryptocoins sowie Ihre privaten Informationen zu schützen, empfehlen wir Ihnen ausdrücklich die Zwei-Faktoren Authentifizierung zu aktiviern.
+        safety_instruction: Um Ihre Cryptocoins zu schützen sind Auszahlungen nur mit aktivierter Zwei-Faktoren Authentifizierung möglich.
         reset_password: Rest your Password
 
         reauthenticate: Authentifikation
